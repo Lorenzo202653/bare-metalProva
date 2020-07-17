@@ -1228,8 +1228,20 @@ HDL_ATTRIBUTE.MARK_DEBUG {true} \
   create_bd_addr_seg -range 0x80000000 -offset 0x00000000 [get_bd_addr_spaces VDMA/ddr_to_axis_reader_0/Data_m_axi_base_ddr_addr] [get_bd_addr_segs zynq_ultra_ps_e_0/SAXIGP2/HP0_DDR_LOW] SEG_zynq_ultra_ps_e_0_HP0_DDR_LOW
 
   # Exclude Address Segments
+  create_bd_addr_seg -range 0x01000000 -offset 0xFF000000 [get_bd_addr_spaces OV7670_GRAYSCALE_TO_AXIS/ddr_to_axis_reader_SD_0/Data_m_axi_base_ddr_addr] [get_bd_addr_segs zynq_ultra_ps_e_0/SAXIGP4/HP2_LPS_OCM] SEG_zynq_ultra_ps_e_0_HP2_LPS_OCM
+  exclude_bd_addr_seg [get_bd_addr_segs OV7670_GRAYSCALE_TO_AXIS/ddr_to_axis_reader_SD_0/Data_m_axi_base_ddr_addr/SEG_zynq_ultra_ps_e_0_HP2_LPS_OCM]
+
+  create_bd_addr_seg -range 0x01000000 -offset 0xFF000000 [get_bd_addr_spaces VDMA/axis_to_ddr_writer_0/Data_m_axi_base_ddr_addr] [get_bd_addr_segs zynq_ultra_ps_e_0/SAXIGP3/HP1_LPS_OCM] SEG_zynq_ultra_ps_e_0_HP1_LPS_OCM
+  exclude_bd_addr_seg [get_bd_addr_segs VDMA/axis_to_ddr_writer_0/Data_m_axi_base_ddr_addr/SEG_zynq_ultra_ps_e_0_HP1_LPS_OCM]
+
+  create_bd_addr_seg -range 0x01000000 -offset 0xFF000000 [get_bd_addr_spaces VDMA/axis_to_ddr_writer_CHROMA/Data_m_axi_base_ddr_addr] [get_bd_addr_segs zynq_ultra_ps_e_0/SAXIGP3/HP1_LPS_OCM] SEG_zynq_ultra_ps_e_0_HP1_LPS_OCM
+  exclude_bd_addr_seg [get_bd_addr_segs VDMA/axis_to_ddr_writer_CHROMA/Data_m_axi_base_ddr_addr/SEG_zynq_ultra_ps_e_0_HP1_LPS_OCM]
+
   create_bd_addr_seg -range 0x01000000 -offset 0xFF000000 [get_bd_addr_spaces VDMA/axis_to_ddr_writer_LUMA/Data_m_axi_base_ddr_addr] [get_bd_addr_segs zynq_ultra_ps_e_0/SAXIGP3/HP1_LPS_OCM] SEG_zynq_ultra_ps_e_0_HP1_LPS_OCM
   exclude_bd_addr_seg [get_bd_addr_segs VDMA/axis_to_ddr_writer_LUMA/Data_m_axi_base_ddr_addr/SEG_zynq_ultra_ps_e_0_HP1_LPS_OCM]
+
+  create_bd_addr_seg -range 0x01000000 -offset 0xFF000000 [get_bd_addr_spaces VDMA/ddr_to_axis_reader_0/Data_m_axi_base_ddr_addr] [get_bd_addr_segs zynq_ultra_ps_e_0/SAXIGP2/HP0_LPS_OCM] SEG_zynq_ultra_ps_e_0_HP0_LPS_OCM
+  exclude_bd_addr_seg [get_bd_addr_segs VDMA/ddr_to_axis_reader_0/Data_m_axi_base_ddr_addr/SEG_zynq_ultra_ps_e_0_HP0_LPS_OCM]
 
 
 

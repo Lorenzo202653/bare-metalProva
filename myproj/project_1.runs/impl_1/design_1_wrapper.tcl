@@ -69,16 +69,26 @@ set rc [catch {
   set_param power.enableCarry8RouteBelPower 1
   set_param power.enableUnconnectedCarry8PinPower 1
   set_param power.BramSDPPropagationFix 1
-  set_param iopl.placeRegionalClockInstsInIOPlacer 0
-  set_param iopl.placeGlobalClockInstsInIOPlacer 0
-  reset_param project.defaultXPMLibraries 
-  open_checkpoint /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/impl_1/design_1_wrapper.dcp
+  create_project -in_memory -part xczu3eg-sbva484-1-e
+  set_property board_part em.avnet.com:ultra96:part0:1.0 [current_project]
+  set_property design_mode GateLvl [current_fileset]
+  set_param project.singleFileAddWarning.threshold 0
   set_property webtalk.parent_dir /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.cache/wt [current_project]
   set_property parent.project_path /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.xpr [current_project]
   set_property ip_repo_paths /media/kidre/Dati/GIT_TEST/bare-metalProva/SmartCamera [current_project]
   set_property ip_output_repo /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
+  add_files -quiet /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/design_1_wrapper.dcp
+  set_msg_config -source 4 -id {BD 41-1661} -limit 0
+  set_param project.isImplRun true
+  add_files /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/design_1.bd
+  set_param project.isImplRun false
+  read_xdc /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/constrs_1/new/design_1_wrapper.xdc
+  set_param project.isImplRun true
+  link_design -top design_1_wrapper -part xczu3eg-sbva484-1-e
+  set_param project.isImplRun false
+  write_hwdef -force -file design_1_wrapper.hwdef
   close_msg_db -file init_design.pb
 } RESULT]
 if {$rc} {

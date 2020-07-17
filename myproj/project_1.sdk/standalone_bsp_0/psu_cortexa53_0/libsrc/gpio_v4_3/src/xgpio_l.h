@@ -159,7 +159,7 @@ extern "C" {
 *
 ****************************************************************************/
 #define XGpio_WriteReg(BaseAddress, RegOffset, Data) \
-	XGpio_Out32((BaseAddress) + (RegOffset), (u32)(Data))
+XGpio_Out32((BaseAddress) + (RegOffset), (u32)(Data))
 
 /****************************************************************************/
 /**

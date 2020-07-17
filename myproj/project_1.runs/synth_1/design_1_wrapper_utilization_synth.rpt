@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
-| Date         : Mon Jul  6 10:14:25 2020
+| Date         : Fri Jul 17 10:57:39 2020
 | Host         : kidre-N551JX running 64-bit Ubuntu 16.04.6 LTS
 | Command      : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
 | Design       : design_1_wrapper
@@ -164,8 +164,6 @@ Table of Contents
 | design_1_xbar_2                              |    1 |
 | design_1_xbar_1                              |    1 |
 | design_1_xbar_0                              |    1 |
-| design_1_s01_mmu_0                           |    1 |
-| design_1_s00_mmu_0                           |    1 |
 | design_1_reset_25M_0                         |    1 |
 | design_1_reset_24M_0                         |    1 |
 | design_1_reset_100M_0                        |    1 |

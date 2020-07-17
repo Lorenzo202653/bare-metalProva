@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="35">
   <CompositeFile CompositeFileTopName="design_1" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1594021661"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1594021661"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1594021661"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1594021661"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1594975266"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1594975266"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1594975266"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1594975266"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip/design_1_ENABLE_RAW_STREAM_0/design_1_ENABLE_RAW_STREAM_0.xci" Type="IP">
         <Instance HierarchyPath="ENABLE_RAW_STREAM"/>
@@ -56,6 +56,7 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip/design_1_processing_system7_0_axi_periph_0/design_1_processing_system7_0_axi_periph_0.xci" Type="IP">
+        <Instance HierarchyPath="processing_system7_0_axi_periph"/>
         <Properties IsEditable="false" IsVisible="false" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -111,6 +112,7 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip/design_1_axi_mem_intercon_reader_0/design_1_axi_mem_intercon_reader_0.xci" Type="IP">
+        <Instance HierarchyPath="VDMA/axi_mem_intercon_reader"/>
         <Properties IsEditable="false" IsVisible="false" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -118,6 +120,7 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip/design_1_axi_mem_intercon_writer_0/design_1_axi_mem_intercon_writer_0.xci" Type="IP">
+        <Instance HierarchyPath="VDMA/axi_mem_intercon_writer"/>
         <Properties IsEditable="false" IsVisible="false" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -197,6 +200,7 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip/design_1_axi_interconnect_0_0/design_1_axi_interconnect_0_0.xci" Type="IP">
+        <Instance HierarchyPath="OV7670_GRAYSCALE_TO_AXIS/axi_interconnect_0"/>
         <Properties IsEditable="false" IsVisible="false" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -204,6 +208,7 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip/design_1_axi_interconnect_1_0/design_1_axi_interconnect_1_0.xci" Type="IP">
+        <Instance HierarchyPath="OV7670_GRAYSCALE_TO_AXIS/axi_interconnect_1"/>
         <Properties IsEditable="false" IsVisible="false" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -359,22 +364,6 @@
       </File>
       <File Name="ip/design_1_auto_pc_1/design_1_auto_pc_1.xci" Type="IP">
         <Instance HierarchyPath="processing_system7_0_axi_periph/m00_couplers/auto_pc"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip/design_1_s00_mmu_0/design_1_s00_mmu_0.xci" Type="IP">
-        <Instance HierarchyPath="VDMA/axi_mem_intercon_writer/s00_mmu"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip/design_1_s01_mmu_0/design_1_s01_mmu_0.xci" Type="IP">
-        <Instance HierarchyPath="VDMA/axi_mem_intercon_writer/s01_mmu"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

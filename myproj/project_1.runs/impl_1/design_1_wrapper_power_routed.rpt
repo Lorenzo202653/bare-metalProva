@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
-| Date             : Mon Jul  6 12:27:18 2020
+| Date             : Fri Jul 17 11:17:04 2020
 | Host             : kidre-N551JX running 64-bit Ubuntu 16.04.6 LTS
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -30,11 +30,11 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 2.214        |
+| Total On-Chip Power (W)  | 2.242        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.896        |
-| Device Static (W)        | 0.318        |
+| Dynamic (W)              | 1.902        |
+| Device Static (W)        | 0.340        |
 | Effective TJA (C/W)      | 2.7          |
 | Max Ambient (C)          | 93.9         |
 | Junction Temperature (C) | 31.1         |
@@ -53,25 +53,25 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.036 |        6 |       --- |             --- |
-| CLB Logic                |     0.031 |    39349 |       --- |             --- |
-|   LUT as Logic           |     0.025 |    14079 |     70560 |           19.95 |
+| CLB Logic                |     0.030 |    38969 |       --- |             --- |
+|   LUT as Logic           |     0.025 |    13935 |     70560 |           19.75 |
 |   LUT as Shift Register  |     0.002 |      571 |     28800 |            1.98 |
-|   Register               |     0.002 |    18767 |    141120 |           13.30 |
+|   Register               |     0.002 |    18585 |    141120 |           13.17 |
 |   LUT as Distributed RAM |    <0.001 |      376 |     28800 |            1.31 |
 |   CARRY8                 |    <0.001 |      191 |      8820 |            2.17 |
-|   BUFG                   |    <0.001 |        3 |        24 |           12.50 |
-|   Others                 |     0.000 |     1027 |       --- |             --- |
+|   Others                 |     0.000 |     1008 |       --- |             --- |
 |   F7/F8 Muxes            |     0.000 |       48 |     70560 |            0.07 |
-| Signals                  |     0.030 |    30768 |       --- |             --- |
+|   BUFG                   |     0.000 |        2 |        24 |            8.33 |
+| Signals                  |     0.031 |    30476 |       --- |             --- |
 | Block RAM                |     0.012 |     11.5 |       216 |            5.32 |
 | MMCM                     |     0.000 |        0 |       --- |             --- |
 | DSPs                     |     0.001 |       11 |       360 |            3.06 |
-| I/O                      |     0.001 |       15 |        82 |           18.29 |
+| I/O                      |     0.007 |       15 |        82 |           18.29 |
 | PS8                      |     1.785 |        1 |       --- |             --- |
-| Static Power             |     0.318 |          |           |                 |
-|   PS Static              |     0.101 |          |           |                 |
-|   PL Static              |     0.216 |          |           |                 |
-| Total                    |     2.214 |          |           |                 |
+| Static Power             |     0.340 |          |           |                 |
+|   PS Static              |     0.102 |          |           |                 |
+|   PL Static              |     0.239 |          |           |                 |
+| Total                    |     2.242 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -81,12 +81,12 @@ Table of Contents
 +-----------------+-------------+-----------+-------------+------------+
 | Source          | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------------+-------------+-----------+-------------+------------+
-| Vccint          |       0.850 |     0.183 |       0.129 |      0.055 |
+| Vccint          |       0.850 |     0.184 |       0.129 |      0.055 |
 | Vccint_io       |       0.850 |     0.027 |       0.000 |      0.027 |
 | Vccbram         |       0.850 |     0.002 |       0.002 |      0.001 |
 | Vccaux          |       1.800 |     0.048 |       0.000 |      0.048 |
-| Vccaux_io       |       1.800 |     0.026 |       0.000 |      0.025 |
-| Vcco33          |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io       |       1.800 |     0.026 |       0.001 |      0.025 |
+| Vcco33          |       3.300 |     0.008 |       0.002 |      0.007 |
 | Vcco25          |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18          |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15          |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -168,7 +168,7 @@ Table of Contents
 +-------------------------------------------------------------------------------------------+-----------+
 | Name                                                                                      | Power (W) |
 +-------------------------------------------------------------------------------------------+-----------+
-| design_1_wrapper                                                                          |     1.896 |
+| design_1_wrapper                                                                          |     1.902 |
 |   PCLK_IBUF_inst                                                                          |    <0.001 |
 |   data_in_V_IBUF[0]_inst                                                                  |    <0.001 |
 |   data_in_V_IBUF[1]_inst                                                                  |    <0.001 |
@@ -179,7 +179,7 @@ Table of Contents
 |   data_in_V_IBUF[6]_inst                                                                  |    <0.001 |
 |   data_in_V_IBUF[7]_inst                                                                  |    <0.001 |
 |   design_1_i                                                                              |     1.895 |
-|     OV7670_GRAYSCALE_TO_AXIS                                                              |     0.009 |
+|     OV7670_GRAYSCALE_TO_AXIS                                                              |     0.010 |
 |       LF_valid_to_AXIS                                                                    |    <0.001 |
 |         inst                                                                              |    <0.001 |
 |       axi_interconnect_0                                                                  |     0.003 |
@@ -309,8 +309,8 @@ Table of Contents
 |           buffer_U                                                                        |    <0.001 |
 |             ddr_to_axis_readebkb_ram_U                                                    |    <0.001 |
 |           ddr_to_axis_reader_SD_AXILiteS_s_axi_U                                          |    <0.001 |
-|           ddr_to_axis_reader_SD_base_ddr_addr_m_axi_U                                     |     0.003 |
-|             bus_read                                                                      |     0.003 |
+|           ddr_to_axis_reader_SD_base_ddr_addr_m_axi_U                                     |     0.004 |
+|             bus_read                                                                      |     0.004 |
 |               buff_rdata                                                                  |     0.002 |
 |               fifo_rctl                                                                   |    <0.001 |
 |               fifo_rreq                                                                   |    <0.001 |
@@ -323,7 +323,7 @@ Table of Contents
 |         inst                                                                              |    <0.001 |
 |       ov7670_interface_0                                                                  |    <0.001 |
 |         inst                                                                              |    <0.001 |
-|     VDMA                                                                                  |     0.042 |
+|     VDMA                                                                                  |     0.041 |
 |       axi_mem_intercon_reader                                                             |     0.002 |
 |         s00_couplers                                                                      |     0.002 |
 |           auto_us                                                                         |     0.002 |
@@ -340,11 +340,11 @@ Table of Contents
 |                 si_register_slice_inst                                                    |    <0.001 |
 |                   ar.ar_pipe                                                              |    <0.001 |
 |                   aw.aw_pipe                                                              |    <0.001 |
-|       axi_mem_intercon_writer                                                             |     0.007 |
-|         s00_couplers                                                                      |     0.002 |
-|           auto_us                                                                         |     0.002 |
-|             inst                                                                          |     0.002 |
-|               gen_upsizer.gen_full_upsizer.axi_upsizer_inst                               |     0.002 |
+|       axi_mem_intercon_writer                                                             |     0.006 |
+|         s00_couplers                                                                      |     0.001 |
+|           auto_us                                                                         |     0.001 |
+|             inst                                                                          |     0.001 |
+|               gen_upsizer.gen_full_upsizer.axi_upsizer_inst                               |     0.001 |
 |                 USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst                    |    <0.001 |
 |                   r.r_pipe                                                                |    <0.001 |
 |                 USE_READ.gen_non_fifo_r_upsizer.read_data_inst                            |    <0.001 |
@@ -356,12 +356,6 @@ Table of Contents
 |                 si_register_slice_inst                                                    |    <0.001 |
 |                   ar.ar_pipe                                                              |    <0.001 |
 |                   aw.aw_pipe                                                              |    <0.001 |
-|         s00_mmu                                                                           |    <0.001 |
-|           inst                                                                            |    <0.001 |
-|             decerr_slave_inst                                                             |    <0.001 |
-|             register_slice_inst                                                           |    <0.001 |
-|               ar.ar_pipe                                                                  |    <0.001 |
-|               aw.aw_pipe                                                                  |    <0.001 |
 |         s01_couplers                                                                      |     0.002 |
 |           auto_us                                                                         |     0.002 |
 |             inst                                                                          |     0.002 |
@@ -377,12 +371,6 @@ Table of Contents
 |                 si_register_slice_inst                                                    |    <0.001 |
 |                   ar.ar_pipe                                                              |    <0.001 |
 |                   aw.aw_pipe                                                              |    <0.001 |
-|         s01_mmu                                                                           |    <0.001 |
-|           inst                                                                            |    <0.001 |
-|             decerr_slave_inst                                                             |    <0.001 |
-|             register_slice_inst                                                           |    <0.001 |
-|               ar.ar_pipe                                                                  |    <0.001 |
-|               aw.aw_pipe                                                                  |    <0.001 |
 |         s02_couplers                                                                      |     0.001 |
 |           auto_us                                                                         |     0.001 |
 |             inst                                                                          |     0.001 |
@@ -479,12 +467,12 @@ Table of Contents
 |                     gr1.gr1_int.rfwft                                                     |    <0.001 |
 |                     gr1.grdc2.rdc                                                         |     0.000 |
 |                     gras.rsts                                                             |    <0.001 |
-|                       c0                                                                  |     0.000 |
-|                       c1                                                                  |     0.000 |
+|                       c0                                                                  |    <0.001 |
+|                       c1                                                                  |    <0.001 |
 |                     rpntr                                                                 |    <0.001 |
 |                   gntv_or_sync_fifo.gl0.wr                                                |    <0.001 |
 |                     gwas.wsts                                                             |    <0.001 |
-|                       c1                                                                  |    <0.001 |
+|                       c1                                                                  |     0.000 |
 |                       c2                                                                  |    <0.001 |
 |                     wpntr                                                                 |     0.000 |
 |                   gntv_or_sync_fifo.mem                                                   |    <0.001 |
@@ -513,12 +501,12 @@ Table of Contents
 |                     gr1.gr1_int.rfwft                                                     |    <0.001 |
 |                     gr1.grdc2.rdc                                                         |     0.000 |
 |                     gras.rsts                                                             |    <0.001 |
-|                       c0                                                                  |    <0.001 |
-|                       c1                                                                  |    <0.001 |
+|                       c0                                                                  |     0.000 |
+|                       c1                                                                  |     0.000 |
 |                     rpntr                                                                 |    <0.001 |
 |                   gntv_or_sync_fifo.gl0.wr                                                |    <0.001 |
 |                     gwas.wsts                                                             |    <0.001 |
-|                       c1                                                                  |     0.000 |
+|                       c1                                                                  |    <0.001 |
 |                       c2                                                                  |    <0.001 |
 |                     wpntr                                                                 |     0.000 |
 |                   gntv_or_sync_fifo.mem                                                   |    <0.001 |
@@ -536,12 +524,12 @@ Table of Contents
 |       axis_to_ddr_writer_0                                                                |     0.008 |
 |         inst                                                                              |     0.008 |
 |           axis_to_ddr_writer_AXILiteS_s_axi_U                                             |    <0.001 |
-|           axis_to_ddr_writer_base_ddr_addr_m_axi_U                                        |     0.005 |
+|           axis_to_ddr_writer_base_ddr_addr_m_axi_U                                        |     0.004 |
 |             bus_read                                                                      |    <0.001 |
 |               buff_rdata                                                                  |    <0.001 |
 |               rs_rdata                                                                    |    <0.001 |
 |             bus_write                                                                     |     0.004 |
-|               buff_wdata                                                                  |     0.003 |
+|               buff_wdata                                                                  |     0.002 |
 |               bus_equal_gen.fifo_burst                                                    |    <0.001 |
 |               fifo_resp                                                                   |    <0.001 |
 |               fifo_resp_to_user                                                           |    <0.001 |
@@ -550,14 +538,14 @@ Table of Contents
 |             wreq_throttl                                                                  |    <0.001 |
 |           buffer_U                                                                        |    <0.001 |
 |             axis_to_ddr_writebkb_ram_U                                                    |    <0.001 |
-|       axis_to_ddr_writer_CHROMA                                                           |     0.008 |
-|         inst                                                                              |     0.008 |
+|       axis_to_ddr_writer_CHROMA                                                           |     0.009 |
+|         inst                                                                              |     0.009 |
 |           axis_to_ddr_writer_AXILiteS_s_axi_U                                             |    <0.001 |
-|           axis_to_ddr_writer_base_ddr_addr_m_axi_U                                        |     0.005 |
+|           axis_to_ddr_writer_base_ddr_addr_m_axi_U                                        |     0.006 |
 |             bus_read                                                                      |    <0.001 |
 |               buff_rdata                                                                  |    <0.001 |
 |               rs_rdata                                                                    |    <0.001 |
-|             bus_write                                                                     |     0.004 |
+|             bus_write                                                                     |     0.005 |
 |               buff_wdata                                                                  |     0.003 |
 |               bus_equal_gen.fifo_burst                                                    |    <0.001 |
 |               fifo_resp                                                                   |    <0.001 |
@@ -574,7 +562,7 @@ Table of Contents
 |             bus_read                                                                      |    <0.001 |
 |               buff_rdata                                                                  |    <0.001 |
 |               rs_rdata                                                                    |    <0.001 |
-|             bus_write                                                                     |     0.005 |
+|             bus_write                                                                     |     0.004 |
 |               buff_wdata                                                                  |     0.003 |
 |               bus_equal_gen.fifo_burst                                                    |    <0.001 |
 |               fifo_resp                                                                   |    <0.001 |
@@ -985,8 +973,8 @@ Table of Contents
 |           inst                                                                            |     0.005 |
 |             gen_downsizer.gen_simple_downsizer.axi_downsizer_inst                         |     0.005 |
 |               USE_READ.read_addr_inst                                                     |     0.002 |
-|                 cmd_queue                                                                 |     0.001 |
-|                   inst                                                                    |     0.001 |
+|                 cmd_queue                                                                 |     0.002 |
+|                   inst                                                                    |     0.002 |
 |                     fifo_gen_inst                                                         |    <0.001 |
 |                       inst_fifo_gen                                                       |    <0.001 |
 |                         gconvfifo.rf                                                      |    <0.001 |

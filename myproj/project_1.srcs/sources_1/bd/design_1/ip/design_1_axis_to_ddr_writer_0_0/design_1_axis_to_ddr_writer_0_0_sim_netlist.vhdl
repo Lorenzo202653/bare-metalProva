@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
--- Date        : Mon Jul  6 10:04:52 2020
+-- Date        : Mon Jul  6 10:04:46 2020
 -- Host        : kidre-N551JX running 64-bit Ubuntu 16.04.6 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_axis_to_ddr_writer_0_0/design_1_axis_to_ddr_writer_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top design_1_axis_to_ddr_writer_0_0 -prefix
+--               design_1_axis_to_ddr_writer_0_0_ design_1_axis_to_ddr_writer_0_0_sim_netlist.vhdl
 -- Design      : design_1_axis_to_ddr_writer_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -34,8 +34,6 @@ entity design_1_axis_to_ddr_writer_0_0_axis_to_ddr_writebkb_ram is
     \inputStream_V_0_payload_A_reg[7]\ : in STD_LOGIC_VECTOR ( 7 downto 0 );
     inputStream_V_0_sel : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_axis_to_ddr_writer_0_0_axis_to_ddr_writebkb_ram : entity is "axis_to_ddr_writebkb_ram";
 end design_1_axis_to_ddr_writer_0_0_axis_to_ddr_writebkb_ram;
 
 architecture STRUCTURE of design_1_axis_to_ddr_writer_0_0_axis_to_ddr_writebkb_ram is
@@ -887,8 +885,6 @@ entity design_1_axis_to_ddr_writer_0_0_axis_to_ddr_writer_AXILiteS_s_axi is
     \BASE_ADDRESS_r_reg[28]_0\ : in STD_LOGIC_VECTOR ( 28 downto 0 );
     s_axi_AXILiteS_AWADDR : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_axis_to_ddr_writer_0_0_axis_to_ddr_writer_AXILiteS_s_axi : entity is "axis_to_ddr_writer_AXILiteS_s_axi";
 end design_1_axis_to_ddr_writer_0_0_axis_to_ddr_writer_AXILiteS_s_axi;
 
 architecture STRUCTURE of design_1_axis_to_ddr_writer_0_0_axis_to_ddr_writer_AXILiteS_s_axi is
@@ -5957,8 +5953,6 @@ entity design_1_axis_to_ddr_writer_0_0_axis_to_ddr_writer_base_ddr_addr_m_axi_bu
     exitcond_reg_714 : in STD_LOGIC;
     \usedw_reg[0]_0\ : in STD_LOGIC_VECTOR ( 6 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_axis_to_ddr_writer_0_0_axis_to_ddr_writer_base_ddr_addr_m_axi_buffer : entity is "axis_to_ddr_writer_base_ddr_addr_m_axi_buffer";
 end design_1_axis_to_ddr_writer_0_0_axis_to_ddr_writer_base_ddr_addr_m_axi_buffer;
 
 architecture STRUCTURE of design_1_axis_to_ddr_writer_0_0_axis_to_ddr_writer_base_ddr_addr_m_axi_buffer is
@@ -9878,8 +9872,6 @@ entity design_1_axis_to_ddr_writer_0_0_axis_to_ddr_writer_base_ddr_addr_m_axi_fi
     invalid_len_event_reg2_reg : in STD_LOGIC_VECTOR ( 0 to 0 );
     \could_multi_bursts.AWVALID_Dummy_reg\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_axis_to_ddr_writer_0_0_axis_to_ddr_writer_base_ddr_addr_m_axi_fifo : entity is "axis_to_ddr_writer_base_ddr_addr_m_axi_fifo";
 end design_1_axis_to_ddr_writer_0_0_axis_to_ddr_writer_base_ddr_addr_m_axi_fifo;
 
 architecture STRUCTURE of design_1_axis_to_ddr_writer_0_0_axis_to_ddr_writer_base_ddr_addr_m_axi_fifo is
@@ -13121,8 +13113,6 @@ entity design_1_axis_to_ddr_writer_0_0_axis_to_ddr_writer_base_ddr_addr_m_axi_re
     \exitcond_flatten_reg_674_reg[0]\ : in STD_LOGIC;
     ap_enable_reg_pp0_iter0 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_axis_to_ddr_writer_0_0_axis_to_ddr_writer_base_ddr_addr_m_axi_reg_slice : entity is "axis_to_ddr_writer_base_ddr_addr_m_axi_reg_slice";
 end design_1_axis_to_ddr_writer_0_0_axis_to_ddr_writer_base_ddr_addr_m_axi_reg_slice;
 
 architecture STRUCTURE of design_1_axis_to_ddr_writer_0_0_axis_to_ddr_writer_base_ddr_addr_m_axi_reg_slice is
@@ -14288,8 +14278,6 @@ entity design_1_axis_to_ddr_writer_0_0_axis_to_ddr_writer_base_ddr_addr_m_axi_th
     E : in STD_LOGIC_VECTOR ( 0 to 0 );
     ap_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_axis_to_ddr_writer_0_0_axis_to_ddr_writer_base_ddr_addr_m_axi_throttl : entity is "axis_to_ddr_writer_base_ddr_addr_m_axi_throttl";
 end design_1_axis_to_ddr_writer_0_0_axis_to_ddr_writer_base_ddr_addr_m_axi_throttl;
 
 architecture STRUCTURE of design_1_axis_to_ddr_writer_0_0_axis_to_ddr_writer_base_ddr_addr_m_axi_throttl is
@@ -14550,8 +14538,6 @@ entity design_1_axis_to_ddr_writer_0_0_axis_to_ddr_writebkb is
     \inputStream_V_0_payload_A_reg[7]\ : in STD_LOGIC_VECTOR ( 7 downto 0 );
     inputStream_V_0_sel : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_axis_to_ddr_writer_0_0_axis_to_ddr_writebkb : entity is "axis_to_ddr_writebkb";
 end design_1_axis_to_ddr_writer_0_0_axis_to_ddr_writebkb;
 
 architecture STRUCTURE of design_1_axis_to_ddr_writer_0_0_axis_to_ddr_writebkb is
@@ -14589,8 +14575,6 @@ entity design_1_axis_to_ddr_writer_0_0_axis_to_ddr_writer_base_ddr_addr_m_axi_re
     ap_rst_n : in STD_LOGIC;
     m_axi_base_ddr_addr_RVALID : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_axis_to_ddr_writer_0_0_axis_to_ddr_writer_base_ddr_addr_m_axi_read : entity is "axis_to_ddr_writer_base_ddr_addr_m_axi_read";
 end design_1_axis_to_ddr_writer_0_0_axis_to_ddr_writer_base_ddr_addr_m_axi_read;
 
 architecture STRUCTURE of design_1_axis_to_ddr_writer_0_0_axis_to_ddr_writer_base_ddr_addr_m_axi_read is
@@ -14759,8 +14743,6 @@ entity design_1_axis_to_ddr_writer_0_0_axis_to_ddr_writer_base_ddr_addr_m_axi_wr
     A : in STD_LOGIC_VECTOR ( 28 downto 0 );
     \offset_1_reg_733_reg[28]\ : in STD_LOGIC_VECTOR ( 28 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_axis_to_ddr_writer_0_0_axis_to_ddr_writer_base_ddr_addr_m_axi_write : entity is "axis_to_ddr_writer_base_ddr_addr_m_axi_write";
 end design_1_axis_to_ddr_writer_0_0_axis_to_ddr_writer_base_ddr_addr_m_axi_write;
 
 architecture STRUCTURE of design_1_axis_to_ddr_writer_0_0_axis_to_ddr_writer_base_ddr_addr_m_axi_write is
@@ -19642,8 +19624,6 @@ entity design_1_axis_to_ddr_writer_0_0_axis_to_ddr_writer_base_ddr_addr_m_axi is
     A : in STD_LOGIC_VECTOR ( 28 downto 0 );
     \offset_1_reg_733_reg[28]\ : in STD_LOGIC_VECTOR ( 28 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_axis_to_ddr_writer_0_0_axis_to_ddr_writer_base_ddr_addr_m_axi : entity is "axis_to_ddr_writer_base_ddr_addr_m_axi";
 end design_1_axis_to_ddr_writer_0_0_axis_to_ddr_writer_base_ddr_addr_m_axi;
 
 architecture STRUCTURE of design_1_axis_to_ddr_writer_0_0_axis_to_ddr_writer_base_ddr_addr_m_axi is
@@ -19858,8 +19838,6 @@ entity design_1_axis_to_ddr_writer_0_0_axis_to_ddr_writer is
   attribute C_S_AXI_DATA_WIDTH of design_1_axis_to_ddr_writer_0_0_axis_to_ddr_writer : entity is 32;
   attribute C_S_AXI_WSTRB_WIDTH : integer;
   attribute C_S_AXI_WSTRB_WIDTH of design_1_axis_to_ddr_writer_0_0_axis_to_ddr_writer : entity is 4;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_axis_to_ddr_writer_0_0_axis_to_ddr_writer : entity is "axis_to_ddr_writer";
   attribute ap_ST_fsm_pp0_stage0 : string;
   attribute ap_ST_fsm_pp0_stage0 of design_1_axis_to_ddr_writer_0_0_axis_to_ddr_writer : entity is "11'b00000001000";
   attribute ap_ST_fsm_pp1_stage0 : string;

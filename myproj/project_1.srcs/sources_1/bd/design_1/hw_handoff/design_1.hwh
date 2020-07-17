@@ -1,32 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jul  6 09:47:40 2020" VIVADOVERSION="2018.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Jul 17 10:41:05 2020" VIVADOVERSION="2018.1">
 
   <SYSTEMINFO ARCH="zynquplus" BOARD="em.avnet.com:ultra96:part0:1.0" DEVICE="xczu3eg" NAME="design_1" PACKAGE="sbva484" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
-    <PORT CLKFREQUENCY="24000000" DIR="I" NAME="PCLK" SIGIS="clk" SIGNAME="External_Ports_PCLK">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="reset_24M" PORT="slowest_sync_clk"/>
-        <CONNECTION INSTANCE="OV7670_GRAYSCALE_TO_AXIS_LF_valid_to_AXIS" PORT="ap_clk"/>
-        <CONNECTION INSTANCE="OV7670_GRAYSCALE_TO_AXIS_ddr_to_axis_reader_SD_0" PORT="ap_clk"/>
-        <CONNECTION INSTANCE="OV7670_GRAYSCALE_TO_AXIS_mux_sd_ov_1" PORT="ap_clk"/>
-        <CONNECTION INSTANCE="OV7670_GRAYSCALE_TO_AXIS_ov7670_LUMA_CHROMA_0" PORT="ap_clk"/>
-        <CONNECTION INSTANCE="OV7670_GRAYSCALE_TO_AXIS_ov7670_interface_0" PORT="ap_clk"/>
-        <CONNECTION INSTANCE="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_1" PORT="ACLK"/>
-        <CONNECTION INSTANCE="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_1" PORT="M00_ACLK"/>
-        <CONNECTION INSTANCE="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_1" PORT="S00_ACLK"/>
-        <CONNECTION INSTANCE="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_0" PORT="ACLK"/>
-        <CONNECTION INSTANCE="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_0" PORT="S00_ACLK"/>
-        <CONNECTION INSTANCE="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_0" PORT="M01_ACLK"/>
-        <CONNECTION INSTANCE="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_0" PORT="M00_ACLK"/>
-        <CONNECTION INSTANCE="VDMA_axis_data_fifo_pipeline_to_writer" PORT="s_axis_aclk"/>
-        <CONNECTION INSTANCE="VDMA_axis_data_fifo_raw_CHROMA" PORT="s_axis_aclk"/>
-        <CONNECTION INSTANCE="VDMA_axis_data_fifo_raw_LUMA" PORT="s_axis_aclk"/>
-        <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M06_ACLK"/>
-        <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxihpm1_fpd_aclk"/>
-        <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxihp2_fpd_aclk"/>
-      </CONNECTIONS>
-    </PORT>
     <PORT DIR="O" LEFT="0" NAME="LED_FRAME_VALID" RIGHT="0" SIGIS="data" SIGNAME="OV7670_GRAYSCALE_TO_AXIS_c_counter_binary_0_THRESH0">
       <CONNECTIONS>
         <CONNECTION INSTANCE="OV7670_GRAYSCALE_TO_AXIS_c_counter_binary_0" PORT="THRESH0"/>
@@ -60,6 +37,29 @@
     <PORT DIR="I" LEFT="0" NAME="vsync_V" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_vsync_V">
       <CONNECTIONS>
         <CONNECTION INSTANCE="OV7670_GRAYSCALE_TO_AXIS_ov7670_interface_0" PORT="vsync_V"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="24000000" DIR="I" NAME="PCLK" SIGIS="clk" SIGNAME="External_Ports_PCLK">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="reset_24M" PORT="slowest_sync_clk"/>
+        <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxihpm1_fpd_aclk"/>
+        <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxihp2_fpd_aclk"/>
+        <CONNECTION INSTANCE="OV7670_GRAYSCALE_TO_AXIS_LF_valid_to_AXIS" PORT="ap_clk"/>
+        <CONNECTION INSTANCE="OV7670_GRAYSCALE_TO_AXIS_ddr_to_axis_reader_SD_0" PORT="ap_clk"/>
+        <CONNECTION INSTANCE="OV7670_GRAYSCALE_TO_AXIS_mux_sd_ov_1" PORT="ap_clk"/>
+        <CONNECTION INSTANCE="OV7670_GRAYSCALE_TO_AXIS_ov7670_LUMA_CHROMA_0" PORT="ap_clk"/>
+        <CONNECTION INSTANCE="OV7670_GRAYSCALE_TO_AXIS_ov7670_interface_0" PORT="ap_clk"/>
+        <CONNECTION INSTANCE="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_1" PORT="ACLK"/>
+        <CONNECTION INSTANCE="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_1" PORT="M00_ACLK"/>
+        <CONNECTION INSTANCE="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_1" PORT="S00_ACLK"/>
+        <CONNECTION INSTANCE="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_0" PORT="ACLK"/>
+        <CONNECTION INSTANCE="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_0" PORT="S00_ACLK"/>
+        <CONNECTION INSTANCE="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_0" PORT="M01_ACLK"/>
+        <CONNECTION INSTANCE="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_0" PORT="M00_ACLK"/>
+        <CONNECTION INSTANCE="VDMA_axis_data_fifo_pipeline_to_writer" PORT="s_axis_aclk"/>
+        <CONNECTION INSTANCE="VDMA_axis_data_fifo_raw_CHROMA" PORT="s_axis_aclk"/>
+        <CONNECTION INSTANCE="VDMA_axis_data_fifo_raw_LUMA" PORT="s_axis_aclk"/>
+        <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M06_ACLK"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -2700,6 +2700,7 @@
       </BUSINTERFACES>
       <MEMORYMAP>
         <MEMRANGE ADDRESSBLOCK="HP2_DDR_LOW" BASENAME="C_BASEADDR" BASEVALUE="0x00000000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x7FFFFFFF" INSTANCE="zynq_ultra_ps_e_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="m_axi_base_ddr_addr" MEMTYPE="MEMORY" SLAVEBUSINTERFACE="S_AXI_HP2_FPD"/>
+        <MEMRANGE ADDRESSBLOCK="HP2_LPS_OCM" BASENAME="C_BASEADDR" BASEVALUE="0xFF000000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0xFFFFFFFF" INSTANCE="zynq_ultra_ps_e_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="m_axi_base_ddr_addr" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="S_AXI_HP2_FPD"/>
       </MEMORYMAP>
       <PERIPHERALS>
         <PERIPHERAL INSTANCE="zynq_ultra_ps_e_0"/>
@@ -4493,7 +4494,7 @@
             <CONNECTION INSTANCE="VDMA_axis_to_ddr_writer_CHROMA" PORT="m_axi_base_ddr_addr_AWLOCK"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="S01_AXI_awregion" SIGIS="undef" SIGNAME="VDMA_axi_mem_intercon_writer_S01_AXI_awregion">
+        <PORT DIR="I" LEFT="3" NAME="S01_AXI_awregion" RIGHT="0" SIGIS="undef" SIGNAME="VDMA_axi_mem_intercon_writer_S01_AXI_awregion">
           <CONNECTIONS>
             <CONNECTION INSTANCE="VDMA_axis_to_ddr_writer_CHROMA" PORT="m_axi_base_ddr_addr_AWREGION"/>
           </CONNECTIONS>
@@ -4588,7 +4589,7 @@
             <CONNECTION INSTANCE="VDMA_axis_to_ddr_writer_CHROMA" PORT="m_axi_base_ddr_addr_ARLOCK"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="S01_AXI_arregion" SIGIS="undef" SIGNAME="VDMA_axi_mem_intercon_writer_S01_AXI_arregion">
+        <PORT DIR="I" LEFT="3" NAME="S01_AXI_arregion" RIGHT="0" SIGIS="undef" SIGNAME="VDMA_axi_mem_intercon_writer_S01_AXI_arregion">
           <CONNECTIONS>
             <CONNECTION INSTANCE="VDMA_axis_to_ddr_writer_CHROMA" PORT="m_axi_base_ddr_addr_ARREGION"/>
           </CONNECTIONS>
@@ -4843,7 +4844,7 @@
             <CONNECTION INSTANCE="VDMA_axis_to_ddr_writer_0" PORT="m_axi_base_ddr_addr_AWLOCK"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="S00_AXI_awregion" SIGIS="undef" SIGNAME="VDMA_axi_mem_intercon_writer_S00_AXI_awregion">
+        <PORT DIR="I" LEFT="3" NAME="S00_AXI_awregion" RIGHT="0" SIGIS="undef" SIGNAME="VDMA_axi_mem_intercon_writer_S00_AXI_awregion">
           <CONNECTIONS>
             <CONNECTION INSTANCE="VDMA_axis_to_ddr_writer_0" PORT="m_axi_base_ddr_addr_AWREGION"/>
           </CONNECTIONS>
@@ -4938,7 +4939,7 @@
             <CONNECTION INSTANCE="VDMA_axis_to_ddr_writer_0" PORT="m_axi_base_ddr_addr_ARLOCK"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="S00_AXI_arregion" SIGIS="undef" SIGNAME="VDMA_axi_mem_intercon_writer_S00_AXI_arregion">
+        <PORT DIR="I" LEFT="3" NAME="S00_AXI_arregion" RIGHT="0" SIGIS="undef" SIGNAME="VDMA_axi_mem_intercon_writer_S00_AXI_arregion">
           <CONNECTIONS>
             <CONNECTION INSTANCE="VDMA_axis_to_ddr_writer_0" PORT="m_axi_base_ddr_addr_ARREGION"/>
           </CONNECTIONS>
@@ -6510,6 +6511,7 @@
       </BUSINTERFACES>
       <MEMORYMAP>
         <MEMRANGE ADDRESSBLOCK="HP1_DDR_LOW" BASENAME="C_BASEADDR" BASEVALUE="0x00000000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x7FFFFFFF" INSTANCE="zynq_ultra_ps_e_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="m_axi_base_ddr_addr" MEMTYPE="MEMORY" SLAVEBUSINTERFACE="S_AXI_HP1_FPD"/>
+        <MEMRANGE ADDRESSBLOCK="HP1_LPS_OCM" BASENAME="C_BASEADDR" BASEVALUE="0xFF000000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0xFFFFFFFF" INSTANCE="zynq_ultra_ps_e_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="m_axi_base_ddr_addr" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="S_AXI_HP1_FPD"/>
       </MEMORYMAP>
       <PERIPHERALS>
         <PERIPHERAL INSTANCE="zynq_ultra_ps_e_0"/>
@@ -7296,6 +7298,7 @@
       </BUSINTERFACES>
       <MEMORYMAP>
         <MEMRANGE ADDRESSBLOCK="HP1_DDR_LOW" BASENAME="C_BASEADDR" BASEVALUE="0x00000000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x7FFFFFFF" INSTANCE="zynq_ultra_ps_e_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="m_axi_base_ddr_addr" MEMTYPE="MEMORY" SLAVEBUSINTERFACE="S_AXI_HP1_FPD"/>
+        <MEMRANGE ADDRESSBLOCK="HP1_LPS_OCM" BASENAME="C_BASEADDR" BASEVALUE="0xFF000000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0xFFFFFFFF" INSTANCE="zynq_ultra_ps_e_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="m_axi_base_ddr_addr" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="S_AXI_HP1_FPD"/>
       </MEMORYMAP>
       <PERIPHERALS>
         <PERIPHERAL INSTANCE="zynq_ultra_ps_e_0"/>
@@ -8860,6 +8863,7 @@
       </BUSINTERFACES>
       <MEMORYMAP>
         <MEMRANGE ADDRESSBLOCK="HP0_DDR_LOW" BASENAME="C_BASEADDR" BASEVALUE="0x00000000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x7FFFFFFF" INSTANCE="zynq_ultra_ps_e_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="m_axi_base_ddr_addr" MEMTYPE="MEMORY" SLAVEBUSINTERFACE="S_AXI_HP0_FPD"/>
+        <MEMRANGE ADDRESSBLOCK="HP0_LPS_OCM" BASENAME="C_BASEADDR" BASEVALUE="0xFF000000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0xFFFFFFFF" INSTANCE="zynq_ultra_ps_e_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="m_axi_base_ddr_addr" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="S_AXI_HP0_FPD"/>
       </MEMORYMAP>
       <PERIPHERALS>
         <PERIPHERAL INSTANCE="zynq_ultra_ps_e_0"/>
@@ -11840,10 +11844,19 @@
         <ADDRESSBLOCK ACCESS="" INTERFACE="SAXIGP4" NAME="HP2_DDR_LOW" RANGE="0x80000000" USAGE="memory"/>
       </ADDRESSBLOCKS>
       <ADDRESSBLOCKS>
-        <ADDRESSBLOCK ACCESS="" INTERFACE="SAXIGP3" NAME="HP1_DDR_LOW" RANGE="0x80000000" USAGE="memory"/>
+        <ADDRESSBLOCK ACCESS="" INTERFACE="SAXIGP4" NAME="HP2_LPS_OCM" RANGE="0x1000000" USAGE="register"/>
       </ADDRESSBLOCKS>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="" INTERFACE="SAXIGP3" NAME="HP1_DDR_LOW" RANGE="0x80000000" USAGE="memory"/>
+      </ADDRESSBLOCKS>
+      <ADDRESSBLOCKS>
+        <ADDRESSBLOCK ACCESS="" INTERFACE="SAXIGP3" NAME="HP1_LPS_OCM" RANGE="0x1000000" USAGE="register"/>
+      </ADDRESSBLOCKS>
+      <ADDRESSBLOCKS>
+        <ADDRESSBLOCK ACCESS="" INTERFACE="SAXIGP3" NAME="HP1_DDR_LOW" RANGE="0x80000000" USAGE="memory"/>
+      </ADDRESSBLOCKS>
+      <ADDRESSBLOCKS>
+        <ADDRESSBLOCK ACCESS="" INTERFACE="SAXIGP3" NAME="HP1_LPS_OCM" RANGE="0x1000000" USAGE="register"/>
       </ADDRESSBLOCKS>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="" INTERFACE="SAXIGP3" NAME="HP1_DDR_LOW" RANGE="0x80000000" USAGE="memory"/>
@@ -11853,6 +11866,9 @@
       </ADDRESSBLOCKS>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="" INTERFACE="SAXIGP2" NAME="HP0_DDR_LOW" RANGE="0x80000000" USAGE="memory"/>
+      </ADDRESSBLOCKS>
+      <ADDRESSBLOCKS>
+        <ADDRESSBLOCK ACCESS="" INTERFACE="SAXIGP2" NAME="HP0_LPS_OCM" RANGE="0x1000000" USAGE="register"/>
       </ADDRESSBLOCKS>
       <PARAMETERS>
         <PARAMETER NAME="C_DP_USE_AUDIO" VALUE="0"/>
@@ -13462,8 +13478,8 @@
         <PARAMETER NAME="PSU_SD1_INTERNAL_BUS_WIDTH" VALUE="4"/>
         <PARAMETER NAME="Component_Name" VALUE="design_1_zynq_ultra_ps_e_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-        <PARAMETER NAME="C_BASEADDR" VALUE="0x00000000"/>
-        <PARAMETER NAME="C_HIGHADDR" VALUE="0x7FFFFFFF"/>
+        <PARAMETER NAME="C_BASEADDR" VALUE="0xFF000000"/>
+        <PARAMETER NAME="C_HIGHADDR" VALUE="0xFFFFFFFF"/>
       </PARAMETERS>
       <PORTS>
         <PORT CLKFREQUENCY="99999999" DIR="I" NAME="maxihpm0_fpd_aclk" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
@@ -14474,13 +14490,16 @@
         <PORT DIR="O" NAME="pl_resetn0" SIGIS="rst"/>
         <PORT CLKFREQUENCY="99999999" DIR="O" NAME="pl_clk0" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="ACLK"/>
-            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="S00_ACLK"/>
-            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M00_ACLK"/>
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxihp1_fpd_aclk"/>
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxihp0_fpd_aclk"/>
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxihpm0_fpd_aclk"/>
             <CONNECTION INSTANCE="clk_gen_25M_24M" PORT="clk_in1"/>
+            <CONNECTION INSTANCE="axi_gpio_frame_intr" PORT="s_axi_aclk"/>
+            <CONNECTION INSTANCE="reset_100M" PORT="slowest_sync_clk"/>
+            <CONNECTION INSTANCE="axi_gpio_pl_reset" PORT="s_axi_aclk"/>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="ACLK"/>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="S00_ACLK"/>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M00_ACLK"/>
             <CONNECTION INSTANCE="VDMA_axis_data_fifo_pipeline_to_writer" PORT="m_axis_aclk"/>
             <CONNECTION INSTANCE="VDMA_axis_data_fifo_raw_CHROMA" PORT="m_axis_aclk"/>
             <CONNECTION INSTANCE="VDMA_axis_data_fifo_raw_LUMA" PORT="m_axis_aclk"/>
@@ -14501,9 +14520,6 @@
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M03_ACLK"/>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M04_ACLK"/>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M05_ACLK"/>
-            <CONNECTION INSTANCE="axi_gpio_frame_intr" PORT="s_axi_aclk"/>
-            <CONNECTION INSTANCE="reset_100M" PORT="slowest_sync_clk"/>
-            <CONNECTION INSTANCE="axi_gpio_pl_reset" PORT="s_axi_aclk"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
