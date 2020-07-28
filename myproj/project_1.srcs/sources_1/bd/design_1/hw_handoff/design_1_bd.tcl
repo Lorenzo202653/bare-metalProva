@@ -168,12 +168,9 @@ proc create_hier_cell_VDMA { parentCell nameHier } {
   create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:aximm_rtl:1.0 s_axi_AXILite_raw_LUMA
 
   # Create pins
-  create_bd_pin -dir I -from 0 -to 0 ap_start
   create_bd_pin -dir I -from 0 -to 0 -type rst aresetn_in
-  create_bd_pin -dir I -from 0 -to 0 -type rst aresetn_out
   create_bd_pin -dir I -from 0 -to 0 -type rst aresetn_vdma
   create_bd_pin -dir I -type clk clk_in
-  create_bd_pin -dir I -type clk clk_out
   create_bd_pin -dir I -type clk clk_vdma
   create_bd_pin -dir O -from 7 -to 0 -type data frame_index_V
   create_bd_pin -dir I -from 0 -to 0 -type rst interconnect_aresetn
@@ -253,7 +250,7 @@ proc create_hier_cell_VDMA { parentCell nameHier } {
   connect_bd_net -net aresetn_in_1 [get_bd_pins aresetn_in] [get_bd_pins axis_data_fifo_pipeline_to_writer/s_axis_aresetn] [get_bd_pins axis_data_fifo_raw_CHROMA/s_axis_aresetn] [get_bd_pins axis_data_fifo_raw_LUMA/s_axis_aresetn]
   connect_bd_net -net axis_to_ddr_writer_0_frame_index_V [get_bd_pins frame_index_V] [get_bd_pins axis_to_ddr_writer_0/frame_index_V] [get_bd_pins ddr_to_axis_reader_0/frame_index_V]
   connect_bd_net -net rst_processing_system7_0_100M_interconnect_aresetn [get_bd_pins interconnect_aresetn] [get_bd_pins axi_mem_intercon_reader/ARESETN] [get_bd_pins axi_mem_intercon_writer/ARESETN]
-  connect_bd_net -net rst_processing_system7_0_100M_peripheral_aresetn [get_bd_pins aresetn_vdma] [get_bd_pins axi_mem_intercon_reader/M00_ARESETN] [get_bd_pins axi_mem_intercon_reader/S00_ARESETN] [get_bd_pins axi_mem_intercon_writer/M00_ARESETN] [get_bd_pins axi_mem_intercon_writer/S00_ARESETN] [get_bd_pins axi_mem_intercon_writer/S01_ARESETN] [get_bd_pins axi_mem_intercon_writer/S02_ARESETN] [get_bd_pins axis_to_ddr_writer_0/ap_rst_n] [get_bd_pins axis_to_ddr_writer_CHROMA/ap_rst_n] [get_bd_pins axis_to_ddr_writer_LUMA/ap_rst_n] [get_bd_pins ddr_to_axis_reader_0/ap_rst_n]
+  connect_bd_net -net rst_processing_system7_0_100M_peripheral_aresetn [get_bd_pins aresetn_vdma] [get_bd_pins axi_mem_intercon_reader/M00_ARESETN] [get_bd_pins axi_mem_intercon_reader/S00_ARESETN] [get_bd_pins axi_mem_intercon_writer/M00_ARESETN] [get_bd_pins axi_mem_intercon_writer/S00_ARESETN] [get_bd_pins axi_mem_intercon_writer/S01_ARESETN] [get_bd_pins axi_mem_intercon_writer/S02_ARESETN] [get_bd_pins axis_data_fifo_pipeline_to_writer/m_axis_aresetn] [get_bd_pins axis_data_fifo_raw_CHROMA/m_axis_aresetn] [get_bd_pins axis_data_fifo_raw_LUMA/m_axis_aresetn] [get_bd_pins axis_to_ddr_writer_0/ap_rst_n] [get_bd_pins axis_to_ddr_writer_CHROMA/ap_rst_n] [get_bd_pins axis_to_ddr_writer_LUMA/ap_rst_n] [get_bd_pins ddr_to_axis_reader_0/ap_rst_n]
 
   # Restore current instance
   current_bd_instance $oldCurInst
@@ -429,6 +426,7 @@ proc create_root_design { parentCell } {
 
   # Create ports
   set LED_FRAME_VALID [ create_bd_port -dir O -from 0 -to 0 -type data LED_FRAME_VALID ]
+  set Led_test_gpio [ create_bd_port -dir O -from 0 -to 0 -type data Led_test_gpio ]
   set OV7670_RESET [ create_bd_port -dir O -from 0 -to 0 -type rst OV7670_RESET ]
   set PCLK [ create_bd_port -dir I -type clk PCLK ]
   set_property -dict [ list \
@@ -472,41 +470,41 @@ proc create_root_design { parentCell } {
   # Create instance: axi_gpio_pl_reset, and set properties
   set axi_gpio_pl_reset [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_pl_reset ]
   set_property -dict [ list \
+   CONFIG.C_ALL_INPUTS {0} \
    CONFIG.C_ALL_OUTPUTS {1} \
    CONFIG.C_DOUT_DEFAULT {0x00000001} \
    CONFIG.C_GPIO_WIDTH {1} \
  ] $axi_gpio_pl_reset
 
-  # Create instance: clk_gen_25M_24M, and set properties
-  set clk_gen_25M_24M [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_gen_25M_24M ]
+  # Create instance: clk_wiz_0, and set properties
+  set clk_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0 ]
   set_property -dict [ list \
-   CONFIG.CLKOUT1_DRIVES {BUFG} \
-   CONFIG.CLKOUT1_JITTER {202.205} \
-   CONFIG.CLKOUT1_PHASE_ERROR {276.131} \
-   CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {25.175} \
-   CONFIG.CLKOUT2_DRIVES {BUFG} \
+   CONFIG.CLKOUT1_DRIVES {Buffer} \
+   CONFIG.CLKOUT1_JITTER {329.137} \
+   CONFIG.CLKOUT1_PHASE_ERROR {404.105} \
+   CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {24.001} \
+   CONFIG.CLKOUT1_USED {true} \
+   CONFIG.CLKOUT2_DRIVES {Buffer} \
    CONFIG.CLKOUT2_JITTER {204.875} \
    CONFIG.CLKOUT2_PHASE_ERROR {276.131} \
-   CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {24} \
-   CONFIG.CLKOUT2_USED {true} \
+   CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {24.001} \
+   CONFIG.CLKOUT2_USED {false} \
    CONFIG.CLKOUT3_DRIVES {Buffer} \
    CONFIG.CLKOUT4_DRIVES {Buffer} \
    CONFIG.CLKOUT5_DRIVES {Buffer} \
    CONFIG.CLKOUT6_DRIVES {Buffer} \
    CONFIG.CLKOUT7_DRIVES {Buffer} \
-   CONFIG.MMCM_CLKFBOUT_MULT_F {99.125} \
-   CONFIG.MMCM_CLKIN1_PERIOD {10.000} \
-   CONFIG.MMCM_CLKIN2_PERIOD {10.000} \
-   CONFIG.MMCM_CLKOUT0_DIVIDE_F {56.250} \
-   CONFIG.MMCM_CLKOUT1_DIVIDE {59} \
-   CONFIG.MMCM_COMPENSATION {AUTO} \
-   CONFIG.MMCM_DIVCLK_DIVIDE {7} \
-   CONFIG.NUM_OUT_CLKS {2} \
+   CONFIG.MMCM_CLKFBOUT_MULT_F {60.125} \
+   CONFIG.MMCM_CLKOUT0_DIVIDE_F {41.750} \
+   CONFIG.MMCM_CLKOUT1_DIVIDE {1} \
+   CONFIG.MMCM_DIVCLK_DIVIDE {6} \
+   CONFIG.NUM_OUT_CLKS {1} \
    CONFIG.PHASESHIFT_MODE {WAVEFORM} \
+   CONFIG.SECONDARY_SOURCE {Single_ended_clock_capable_pin} \
    CONFIG.USE_LOCKED {false} \
    CONFIG.USE_PHASE_ALIGNMENT {true} \
    CONFIG.USE_RESET {false} \
- ] $clk_gen_25M_24M
+ ] $clk_wiz_0
 
   # Create instance: const_1, and set properties
   set const_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 const_1 ]
@@ -527,9 +525,6 @@ proc create_root_design { parentCell } {
   # Create instance: reset_24M, and set properties
   set reset_24M [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 reset_24M ]
 
-  # Create instance: reset_25M, and set properties
-  set reset_25M [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 reset_25M ]
-
   # Create instance: xlconcat, and set properties
   set xlconcat [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat ]
 
@@ -545,34 +540,55 @@ proc create_root_design { parentCell } {
    CONFIG.PSU_DDR_RAM_LOWADDR_OFFSET {0x80000000} \
    CONFIG.PSU_MIO_0_DIRECTION {out} \
    CONFIG.PSU_MIO_0_INPUT_TYPE {schmitt} \
+   CONFIG.PSU_MIO_0_PULLUPDOWN {pullup} \
+   CONFIG.PSU_MIO_0_SLEW {fast} \
    CONFIG.PSU_MIO_10_DIRECTION {inout} \
    CONFIG.PSU_MIO_11_DIRECTION {inout} \
    CONFIG.PSU_MIO_12_DIRECTION {inout} \
+   CONFIG.PSU_MIO_12_PULLUPDOWN {pullup} \
    CONFIG.PSU_MIO_13_DIRECTION {inout} \
    CONFIG.PSU_MIO_13_DRIVE_STRENGTH {4} \
+   CONFIG.PSU_MIO_13_PULLUPDOWN {pullup} \
+   CONFIG.PSU_MIO_13_SLEW {slow} \
    CONFIG.PSU_MIO_14_DIRECTION {inout} \
    CONFIG.PSU_MIO_14_DRIVE_STRENGTH {4} \
+   CONFIG.PSU_MIO_14_PULLUPDOWN {pullup} \
+   CONFIG.PSU_MIO_14_SLEW {slow} \
    CONFIG.PSU_MIO_15_DIRECTION {inout} \
    CONFIG.PSU_MIO_15_DRIVE_STRENGTH {4} \
+   CONFIG.PSU_MIO_15_PULLUPDOWN {pullup} \
    CONFIG.PSU_MIO_16_DIRECTION {inout} \
    CONFIG.PSU_MIO_16_DRIVE_STRENGTH {4} \
+   CONFIG.PSU_MIO_16_PULLUPDOWN {pullup} \
    CONFIG.PSU_MIO_17_DIRECTION {inout} \
+   CONFIG.PSU_MIO_17_PULLUPDOWN {pullup} \
    CONFIG.PSU_MIO_18_DIRECTION {inout} \
+   CONFIG.PSU_MIO_18_PULLUPDOWN {pullup} \
    CONFIG.PSU_MIO_19_DIRECTION {inout} \
+   CONFIG.PSU_MIO_19_PULLUPDOWN {pullup} \
    CONFIG.PSU_MIO_1_DIRECTION {in} \
    CONFIG.PSU_MIO_1_DRIVE_STRENGTH {12} \
+   CONFIG.PSU_MIO_1_PULLUPDOWN {pullup} \
    CONFIG.PSU_MIO_1_SLEW {slow} \
    CONFIG.PSU_MIO_20_DIRECTION {inout} \
+   CONFIG.PSU_MIO_20_PULLUPDOWN {pullup} \
    CONFIG.PSU_MIO_21_DIRECTION {inout} \
    CONFIG.PSU_MIO_21_DRIVE_STRENGTH {4} \
+   CONFIG.PSU_MIO_21_PULLUPDOWN {pullup} \
    CONFIG.PSU_MIO_22_DIRECTION {out} \
    CONFIG.PSU_MIO_22_DRIVE_STRENGTH {4} \
    CONFIG.PSU_MIO_22_INPUT_TYPE {schmitt} \
+   CONFIG.PSU_MIO_22_PULLUPDOWN {pullup} \
    CONFIG.PSU_MIO_23_DIRECTION {inout} \
+   CONFIG.PSU_MIO_23_PULLUPDOWN {pullup} \
    CONFIG.PSU_MIO_24_DIRECTION {in} \
    CONFIG.PSU_MIO_24_DRIVE_STRENGTH {12} \
+   CONFIG.PSU_MIO_24_PULLUPDOWN {pullup} \
    CONFIG.PSU_MIO_24_SLEW {slow} \
-   CONFIG.PSU_MIO_25_DIRECTION {inout} \
+   CONFIG.PSU_MIO_25_DIRECTION {in} \
+   CONFIG.PSU_MIO_25_DRIVE_STRENGTH {12} \
+   CONFIG.PSU_MIO_25_PULLUPDOWN {pullup} \
+   CONFIG.PSU_MIO_25_SLEW {slow} \
    CONFIG.PSU_MIO_26_DIRECTION {in} \
    CONFIG.PSU_MIO_26_DRIVE_STRENGTH {12} \
    CONFIG.PSU_MIO_26_SLEW {slow} \
@@ -585,6 +601,7 @@ proc create_root_design { parentCell } {
    CONFIG.PSU_MIO_29_INPUT_TYPE {schmitt} \
    CONFIG.PSU_MIO_2_DIRECTION {in} \
    CONFIG.PSU_MIO_2_DRIVE_STRENGTH {12} \
+   CONFIG.PSU_MIO_2_PULLUPDOWN {pullup} \
    CONFIG.PSU_MIO_2_SLEW {slow} \
    CONFIG.PSU_MIO_30_DIRECTION {in} \
    CONFIG.PSU_MIO_30_DRIVE_STRENGTH {12} \
@@ -598,13 +615,17 @@ proc create_root_design { parentCell } {
    CONFIG.PSU_MIO_34_INPUT_TYPE {schmitt} \
    CONFIG.PSU_MIO_35_DIRECTION {inout} \
    CONFIG.PSU_MIO_36_DIRECTION {inout} \
+   CONFIG.PSU_MIO_36_PULLUPDOWN {pullup} \
    CONFIG.PSU_MIO_37_DIRECTION {inout} \
+   CONFIG.PSU_MIO_37_PULLUPDOWN {pullup} \
    CONFIG.PSU_MIO_38_DIRECTION {inout} \
    CONFIG.PSU_MIO_39_DIRECTION {inout} \
    CONFIG.PSU_MIO_39_DRIVE_STRENGTH {12} \
    CONFIG.PSU_MIO_39_SLEW {slow} \
    CONFIG.PSU_MIO_3_DIRECTION {out} \
    CONFIG.PSU_MIO_3_INPUT_TYPE {schmitt} \
+   CONFIG.PSU_MIO_3_PULLUPDOWN {pullup} \
+   CONFIG.PSU_MIO_3_SLEW {fast} \
    CONFIG.PSU_MIO_40_DIRECTION {inout} \
    CONFIG.PSU_MIO_41_DIRECTION {inout} \
    CONFIG.PSU_MIO_42_DIRECTION {inout} \
@@ -616,6 +637,8 @@ proc create_root_design { parentCell } {
    CONFIG.PSU_MIO_48_DIRECTION {inout} \
    CONFIG.PSU_MIO_49_DIRECTION {inout} \
    CONFIG.PSU_MIO_4_DIRECTION {inout} \
+   CONFIG.PSU_MIO_4_PULLUPDOWN {pullup} \
+   CONFIG.PSU_MIO_4_SLEW {slow} \
    CONFIG.PSU_MIO_50_DIRECTION {inout} \
    CONFIG.PSU_MIO_51_DIRECTION {out} \
    CONFIG.PSU_MIO_51_INPUT_TYPE {schmitt} \
@@ -635,6 +658,8 @@ proc create_root_design { parentCell } {
    CONFIG.PSU_MIO_58_INPUT_TYPE {schmitt} \
    CONFIG.PSU_MIO_59_DIRECTION {inout} \
    CONFIG.PSU_MIO_5_DIRECTION {inout} \
+   CONFIG.PSU_MIO_5_PULLUPDOWN {pullup} \
+   CONFIG.PSU_MIO_5_SLEW {slow} \
    CONFIG.PSU_MIO_60_DIRECTION {inout} \
    CONFIG.PSU_MIO_61_DIRECTION {inout} \
    CONFIG.PSU_MIO_62_DIRECTION {inout} \
@@ -662,10 +687,12 @@ proc create_root_design { parentCell } {
    CONFIG.PSU_MIO_76_DIRECTION {inout} \
    CONFIG.PSU_MIO_77_DIRECTION {inout} \
    CONFIG.PSU_MIO_7_DIRECTION {inout} \
+   CONFIG.PSU_MIO_7_PULLUPDOWN {pullup} \
    CONFIG.PSU_MIO_8_DIRECTION {inout} \
+   CONFIG.PSU_MIO_8_PULLUPDOWN {pullup} \
    CONFIG.PSU_MIO_9_DIRECTION {inout} \
-   CONFIG.PSU_MIO_TREE_PERIPHERALS {UART 1#UART 1#UART 0#UART 0#I2C 1#I2C 1#SPI 1#GPIO0 MIO#GPIO0 MIO#SPI 1#SPI 1#SPI 1#GPIO0 MIO#SD 0#SD 0#SD 0#SD 0#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#SD 0#SD 0#GPIO0 MIO#SD 0#GPIO0 MIO#PMU GPI 0#DPAUX#DPAUX#DPAUX#DPAUX#GPIO1 MIO#PMU GPO 0#PMU GPO 1#PMU GPO 2#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#SPI 0#GPIO1 MIO#GPIO1 MIO#SPI 0#SPI 0#SPI 0#GPIO1 MIO#GPIO1 MIO#SD 1#SD 1#SD 1#SD 1#SD 1#SD 1#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#GPIO2 MIO#GPIO2 MIO} \
-   CONFIG.PSU_MIO_TREE_SIGNALS {txd#rxd#rxd#txd#scl_out#sda_out#sclk_out#gpio0[7]#gpio0[8]#n_ss_out[0]#miso#mosi#gpio0[12]#sdio0_data_out[0]#sdio0_data_out[1]#sdio0_data_out[2]#sdio0_data_out[3]#gpio0[17]#gpio0[18]#gpio0[19]#gpio0[20]#sdio0_cmd_out#sdio0_clk_out#gpio0[23]#sdio0_cd_n#gpio0[25]#gpi[0]#dp_aux_data_out#dp_hot_plug_detect#dp_aux_data_oe#dp_aux_data_in#gpio1[31]#gpo[0]#gpo[1]#gpo[2]#gpio1[35]#gpio1[36]#gpio1[37]#sclk_out#gpio1[39]#gpio1[40]#n_ss_out[0]#miso#mosi#gpio1[44]#gpio1[45]#sdio1_data_out[0]#sdio1_data_out[1]#sdio1_data_out[2]#sdio1_data_out[3]#sdio1_cmd_out#sdio1_clk_out#ulpi_clk_in#ulpi_dir#ulpi_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#ulpi_tx_data[4]#ulpi_tx_data[5]#ulpi_tx_data[6]#ulpi_tx_data[7]#ulpi_clk_in#ulpi_dir#ulpi_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#ulpi_tx_data[4]#ulpi_tx_data[5]#ulpi_tx_data[6]#ulpi_tx_data[7]#gpio2[76]#gpio2[77]} \
+   CONFIG.PSU_MIO_TREE_PERIPHERALS {UART 1#UART 1#UART 0#UART 0#I2C 1#I2C 1#SPI 1#GPIO0 MIO#GPIO0 MIO#SPI 1#SPI 1#SPI 1#GPIO0 MIO#SD 0#SD 0#SD 0#SD 0#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#SD 0#SD 0#GPIO0 MIO#SD 0#SD 0#PMU GPI 0#DPAUX#DPAUX#DPAUX#DPAUX#GPIO1 MIO#PMU GPO 0#PMU GPO 1#PMU GPO 2#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#SPI 0#GPIO1 MIO#GPIO1 MIO#SPI 0#SPI 0#SPI 0#GPIO1 MIO#GPIO1 MIO#SD 1#SD 1#SD 1#SD 1#SD 1#SD 1#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#GPIO2 MIO#GPIO2 MIO} \
+   CONFIG.PSU_MIO_TREE_SIGNALS {txd#rxd#rxd#txd#scl_out#sda_out#sclk_out#gpio0[7]#gpio0[8]#n_ss_out[0]#miso#mosi#gpio0[12]#sdio0_data_out[0]#sdio0_data_out[1]#sdio0_data_out[2]#sdio0_data_out[3]#gpio0[17]#gpio0[18]#gpio0[19]#gpio0[20]#sdio0_cmd_out#sdio0_clk_out#gpio0[23]#sdio0_cd_n#sdio0_wp#gpi[0]#dp_aux_data_out#dp_hot_plug_detect#dp_aux_data_oe#dp_aux_data_in#gpio1[31]#gpo[0]#gpo[1]#gpo[2]#gpio1[35]#gpio1[36]#gpio1[37]#sclk_out#gpio1[39]#gpio1[40]#n_ss_out[0]#miso#mosi#gpio1[44]#gpio1[45]#sdio1_data_out[0]#sdio1_data_out[1]#sdio1_data_out[2]#sdio1_data_out[3]#sdio1_cmd_out#sdio1_clk_out#ulpi_clk_in#ulpi_dir#ulpi_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#ulpi_tx_data[4]#ulpi_tx_data[5]#ulpi_tx_data[6]#ulpi_tx_data[7]#ulpi_clk_in#ulpi_dir#ulpi_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#ulpi_tx_data[4]#ulpi_tx_data[5]#ulpi_tx_data[6]#ulpi_tx_data[7]#gpio2[76]#gpio2[77]} \
    CONFIG.PSU_SD0_INTERNAL_BUS_WIDTH {4} \
    CONFIG.PSU_SD1_INTERNAL_BUS_WIDTH {4} \
    CONFIG.PSU__ACT_DDR_FREQ_MHZ {533.333313} \
@@ -1025,7 +1052,7 @@ proc create_root_design { parentCell } {
    CONFIG.PSU__LPD_SLCR__CSUPMU__ACT_FREQMHZ {100.000000} \
    CONFIG.PSU__LPD_SLCR__CSUPMU__FREQMHZ {100.000000} \
    CONFIG.PSU__MAXIGP0__DATA_WIDTH {128} \
-   CONFIG.PSU__MAXIGP1__DATA_WIDTH {64} \
+   CONFIG.PSU__MAXIGP1__DATA_WIDTH {128} \
    CONFIG.PSU__MAXIGP2__DATA_WIDTH {32} \
    CONFIG.PSU__OVERRIDE__BASIC_CLOCK {1} \
    CONFIG.PSU__PL_CLK0_BUF {TRUE} \
@@ -1065,15 +1092,16 @@ proc create_root_design { parentCell } {
    CONFIG.PSU__SATA__LANE0__ENABLE {0} \
    CONFIG.PSU__SATA__LANE1__ENABLE {0} \
    CONFIG.PSU__SATA__PERIPHERAL__ENABLE {0} \
-   CONFIG.PSU__SAXIGP2__DATA_WIDTH {128} \
-   CONFIG.PSU__SAXIGP3__DATA_WIDTH {128} \
-   CONFIG.PSU__SAXIGP4__DATA_WIDTH {128} \
+   CONFIG.PSU__SAXIGP2__DATA_WIDTH {64} \
+   CONFIG.PSU__SAXIGP3__DATA_WIDTH {64} \
+   CONFIG.PSU__SAXIGP4__DATA_WIDTH {64} \
    CONFIG.PSU__SD0_COHERENCY {0} \
    CONFIG.PSU__SD0__DATA_TRANSFER_MODE {4Bit} \
    CONFIG.PSU__SD0__GRP_CD__ENABLE {1} \
    CONFIG.PSU__SD0__GRP_CD__IO {MIO 24} \
    CONFIG.PSU__SD0__GRP_POW__ENABLE {0} \
-   CONFIG.PSU__SD0__GRP_WP__ENABLE {0} \
+   CONFIG.PSU__SD0__GRP_WP__ENABLE {1} \
+   CONFIG.PSU__SD0__GRP_WP__IO {MIO 25} \
    CONFIG.PSU__SD0__PERIPHERAL__ENABLE {1} \
    CONFIG.PSU__SD0__PERIPHERAL__IO {MIO 13 .. 16 21 22} \
    CONFIG.PSU__SD0__RESET__ENABLE {0} \
@@ -1173,21 +1201,20 @@ proc create_root_design { parentCell } {
   connect_bd_net -net ENABLE_RAW_STREAM_dout [get_bd_pins ENABLE_RAW_STREAM/dout] [get_bd_pins OV7670_GRAYSCALE_TO_AXIS/enable_raw_stream]
   connect_bd_net -net OV7670_GRAYSCALE_TO_AXIS_Q [get_bd_ports LED_FRAME_VALID] [get_bd_pins OV7670_GRAYSCALE_TO_AXIS/LED_FRAME_VALID]
   connect_bd_net -net PCLK_1 [get_bd_ports PCLK] [get_bd_pins OV7670_GRAYSCALE_TO_AXIS/ap_clk] [get_bd_pins VDMA/clk_in] [get_bd_pins processing_system7_0_axi_periph/M06_ACLK] [get_bd_pins reset_24M/slowest_sync_clk] [get_bd_pins zynq_ultra_ps_e_0/maxihpm1_fpd_aclk] [get_bd_pins zynq_ultra_ps_e_0/saxihp2_fpd_aclk]
-  connect_bd_net -net ap_start_1 [get_bd_pins OV7670_GRAYSCALE_TO_AXIS/ap_start] [get_bd_pins VDMA/ap_start] [get_bd_pins const_true/dout]
+  connect_bd_net -net ap_start_1 [get_bd_pins OV7670_GRAYSCALE_TO_AXIS/ap_start] [get_bd_pins const_true/dout]
   connect_bd_net -net axi_gpio_frame_intr_ip2intc_irpt [get_bd_pins axi_gpio_frame_intr/ip2intc_irpt] [get_bd_pins xlconcat/In0]
   connect_bd_net -net axis_to_ddr_writer_0_frame_index_V [get_bd_pins VDMA/frame_index_V] [get_bd_pins axi_gpio_frame_intr/gpio_io_i]
   set_property -dict [ list \
 HDL_ATTRIBUTE.DEBUG_IN_BD {true} \
 HDL_ATTRIBUTE.MARK_DEBUG {true} \
  ] [get_bd_nets axis_to_ddr_writer_0_frame_index_V]
-  connect_bd_net -net clk_gen_25M_23M_clk_out2 [get_bd_ports XCLK] [get_bd_pins clk_gen_25M_24M/clk_out2]
-  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins VDMA/clk_out] [get_bd_pins clk_gen_25M_24M/clk_out1] [get_bd_pins reset_25M/slowest_sync_clk]
+  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_ports XCLK] [get_bd_pins clk_wiz_0/clk_out1]
   connect_bd_net -net data_in_V_1 [get_bd_ports data_in_V] [get_bd_pins OV7670_GRAYSCALE_TO_AXIS/data_in]
   set_property -dict [ list \
 HDL_ATTRIBUTE.DEBUG_IN_BD {true} \
 HDL_ATTRIBUTE.MARK_DEBUG {true} \
  ] [get_bd_nets data_in_V_1]
-  connect_bd_net -net ext_reset_in_1 [get_bd_ports OV7670_RESET] [get_bd_pins axi_gpio_pl_reset/gpio_io_o] [get_bd_pins reset_100M/ext_reset_in] [get_bd_pins reset_24M/ext_reset_in] [get_bd_pins reset_25M/ext_reset_in]
+  connect_bd_net -net ext_reset_in_1 [get_bd_ports Led_test_gpio] [get_bd_ports OV7670_RESET] [get_bd_pins axi_gpio_pl_reset/gpio_io_o] [get_bd_pins reset_100M/ext_reset_in] [get_bd_pins reset_24M/ext_reset_in]
   set_property -dict [ list \
 HDL_ATTRIBUTE.DEBUG_IN_BD {true} \
 HDL_ATTRIBUTE.MARK_DEBUG {true} \
@@ -1199,7 +1226,6 @@ HDL_ATTRIBUTE.MARK_DEBUG {true} \
  ] [get_bd_nets href_V_1]
   connect_bd_net -net proc_sys_reset_0_peripheral_aresetn [get_bd_pins OV7670_GRAYSCALE_TO_AXIS/ap_rst_n] [get_bd_pins VDMA/aresetn_in] [get_bd_pins reset_24M/peripheral_aresetn]
   connect_bd_net -net reset_24M_peripheral_reset [get_bd_pins OV7670_GRAYSCALE_TO_AXIS/ap_rst] [get_bd_pins reset_24M/peripheral_reset]
-  connect_bd_net -net reset_25M_peripheral_aresetn [get_bd_pins VDMA/aresetn_out] [get_bd_pins reset_25M/peripheral_aresetn]
   connect_bd_net -net reset_sw_1 [get_bd_ports reset_sw] [get_bd_pins xlconcat/In1]
   connect_bd_net -net rst_processing_system7_0_100M_interconnect_aresetn [get_bd_pins VDMA/interconnect_aresetn] [get_bd_pins reset_100M/interconnect_aresetn]
   connect_bd_net -net rst_processing_system7_0_100M_peripheral_aresetn [get_bd_pins VDMA/aresetn_vdma] [get_bd_pins axi_gpio_frame_intr/s_axi_aresetn] [get_bd_pins reset_100M/peripheral_aresetn]
@@ -1210,7 +1236,7 @@ HDL_ATTRIBUTE.MARK_DEBUG {true} \
  ] [get_bd_nets vsync_V_1]
   connect_bd_net -net xlconcat_dout [get_bd_pins xlconcat/dout] [get_bd_pins zynq_ultra_ps_e_0/pl_ps_irq0]
   connect_bd_net -net xlconstant_0_dout [get_bd_pins axi_gpio_pl_reset/s_axi_aresetn] [get_bd_pins const_1/dout] [get_bd_pins processing_system7_0_axi_periph/ARESETN] [get_bd_pins processing_system7_0_axi_periph/M00_ARESETN] [get_bd_pins processing_system7_0_axi_periph/M01_ARESETN] [get_bd_pins processing_system7_0_axi_periph/M02_ARESETN] [get_bd_pins processing_system7_0_axi_periph/M03_ARESETN] [get_bd_pins processing_system7_0_axi_periph/M04_ARESETN] [get_bd_pins processing_system7_0_axi_periph/M05_ARESETN] [get_bd_pins processing_system7_0_axi_periph/M06_ARESETN] [get_bd_pins processing_system7_0_axi_periph/S00_ARESETN]
-  connect_bd_net -net zynq_ultra_ps_e_0_pl_clk0 [get_bd_pins VDMA/clk_vdma] [get_bd_pins axi_gpio_frame_intr/s_axi_aclk] [get_bd_pins axi_gpio_pl_reset/s_axi_aclk] [get_bd_pins clk_gen_25M_24M/clk_in1] [get_bd_pins processing_system7_0_axi_periph/ACLK] [get_bd_pins processing_system7_0_axi_periph/M00_ACLK] [get_bd_pins processing_system7_0_axi_periph/M01_ACLK] [get_bd_pins processing_system7_0_axi_periph/M02_ACLK] [get_bd_pins processing_system7_0_axi_periph/M03_ACLK] [get_bd_pins processing_system7_0_axi_periph/M04_ACLK] [get_bd_pins processing_system7_0_axi_periph/M05_ACLK] [get_bd_pins processing_system7_0_axi_periph/S00_ACLK] [get_bd_pins reset_100M/slowest_sync_clk] [get_bd_pins zynq_ultra_ps_e_0/maxihpm0_fpd_aclk] [get_bd_pins zynq_ultra_ps_e_0/pl_clk0] [get_bd_pins zynq_ultra_ps_e_0/saxihp0_fpd_aclk] [get_bd_pins zynq_ultra_ps_e_0/saxihp1_fpd_aclk]
+  connect_bd_net -net zynq_ultra_ps_e_0_pl_clk0 [get_bd_pins VDMA/clk_vdma] [get_bd_pins axi_gpio_frame_intr/s_axi_aclk] [get_bd_pins axi_gpio_pl_reset/s_axi_aclk] [get_bd_pins clk_wiz_0/clk_in1] [get_bd_pins processing_system7_0_axi_periph/ACLK] [get_bd_pins processing_system7_0_axi_periph/M00_ACLK] [get_bd_pins processing_system7_0_axi_periph/M01_ACLK] [get_bd_pins processing_system7_0_axi_periph/M02_ACLK] [get_bd_pins processing_system7_0_axi_periph/M03_ACLK] [get_bd_pins processing_system7_0_axi_periph/M04_ACLK] [get_bd_pins processing_system7_0_axi_periph/M05_ACLK] [get_bd_pins processing_system7_0_axi_periph/S00_ACLK] [get_bd_pins reset_100M/slowest_sync_clk] [get_bd_pins zynq_ultra_ps_e_0/maxihpm0_fpd_aclk] [get_bd_pins zynq_ultra_ps_e_0/pl_clk0] [get_bd_pins zynq_ultra_ps_e_0/saxihp0_fpd_aclk] [get_bd_pins zynq_ultra_ps_e_0/saxihp1_fpd_aclk]
 
   # Create address segments
   create_bd_addr_seg -range 0x00001000 -offset 0xA0040000 [get_bd_addr_spaces zynq_ultra_ps_e_0/Data] [get_bd_addr_segs axi_gpio_frame_intr/S_AXI/Reg] SEG_axi_gpio_frame_intr_Reg
@@ -1222,27 +1248,15 @@ HDL_ATTRIBUTE.MARK_DEBUG {true} \
   create_bd_addr_seg -range 0x00010000 -offset 0xB0000000 [get_bd_addr_spaces zynq_ultra_ps_e_0/Data] [get_bd_addr_segs OV7670_GRAYSCALE_TO_AXIS/ddr_to_axis_reader_SD_0/s_axi_AXILiteS/Reg] SEG_ddr_to_axis_reader_SD_0_Reg
   create_bd_addr_seg -range 0x00010000 -offset 0xB0010000 [get_bd_addr_spaces zynq_ultra_ps_e_0/Data] [get_bd_addr_segs OV7670_GRAYSCALE_TO_AXIS/mux_sd_ov_1/s_axi_AXILiteS/Reg] SEG_mux_sd_ov_1_Reg
   create_bd_addr_seg -range 0x80000000 -offset 0x00000000 [get_bd_addr_spaces OV7670_GRAYSCALE_TO_AXIS/ddr_to_axis_reader_SD_0/Data_m_axi_base_ddr_addr] [get_bd_addr_segs zynq_ultra_ps_e_0/SAXIGP4/HP2_DDR_LOW] SEG_zynq_ultra_ps_e_0_HP2_DDR_LOW
-  create_bd_addr_seg -range 0x80000000 -offset 0x00000000 [get_bd_addr_spaces VDMA/axis_to_ddr_writer_0/Data_m_axi_base_ddr_addr] [get_bd_addr_segs zynq_ultra_ps_e_0/SAXIGP3/HP1_DDR_LOW] SEG_zynq_ultra_ps_e_0_HP1_DDR_LOW
-  create_bd_addr_seg -range 0x80000000 -offset 0x00000000 [get_bd_addr_spaces VDMA/axis_to_ddr_writer_CHROMA/Data_m_axi_base_ddr_addr] [get_bd_addr_segs zynq_ultra_ps_e_0/SAXIGP3/HP1_DDR_LOW] SEG_zynq_ultra_ps_e_0_HP1_DDR_LOW
-  create_bd_addr_seg -range 0x80000000 -offset 0x00000000 [get_bd_addr_spaces VDMA/axis_to_ddr_writer_LUMA/Data_m_axi_base_ddr_addr] [get_bd_addr_segs zynq_ultra_ps_e_0/SAXIGP3/HP1_DDR_LOW] SEG_zynq_ultra_ps_e_0_HP1_DDR_LOW
-  create_bd_addr_seg -range 0x80000000 -offset 0x00000000 [get_bd_addr_spaces VDMA/ddr_to_axis_reader_0/Data_m_axi_base_ddr_addr] [get_bd_addr_segs zynq_ultra_ps_e_0/SAXIGP2/HP0_DDR_LOW] SEG_zynq_ultra_ps_e_0_HP0_DDR_LOW
-
-  # Exclude Address Segments
   create_bd_addr_seg -range 0x01000000 -offset 0xFF000000 [get_bd_addr_spaces OV7670_GRAYSCALE_TO_AXIS/ddr_to_axis_reader_SD_0/Data_m_axi_base_ddr_addr] [get_bd_addr_segs zynq_ultra_ps_e_0/SAXIGP4/HP2_LPS_OCM] SEG_zynq_ultra_ps_e_0_HP2_LPS_OCM
-  exclude_bd_addr_seg [get_bd_addr_segs OV7670_GRAYSCALE_TO_AXIS/ddr_to_axis_reader_SD_0/Data_m_axi_base_ddr_addr/SEG_zynq_ultra_ps_e_0_HP2_LPS_OCM]
-
+  create_bd_addr_seg -range 0x80000000 -offset 0x00000000 [get_bd_addr_spaces VDMA/axis_to_ddr_writer_0/Data_m_axi_base_ddr_addr] [get_bd_addr_segs zynq_ultra_ps_e_0/SAXIGP3/HP1_DDR_LOW] SEG_zynq_ultra_ps_e_0_HP1_DDR_LOW
   create_bd_addr_seg -range 0x01000000 -offset 0xFF000000 [get_bd_addr_spaces VDMA/axis_to_ddr_writer_0/Data_m_axi_base_ddr_addr] [get_bd_addr_segs zynq_ultra_ps_e_0/SAXIGP3/HP1_LPS_OCM] SEG_zynq_ultra_ps_e_0_HP1_LPS_OCM
-  exclude_bd_addr_seg [get_bd_addr_segs VDMA/axis_to_ddr_writer_0/Data_m_axi_base_ddr_addr/SEG_zynq_ultra_ps_e_0_HP1_LPS_OCM]
-
+  create_bd_addr_seg -range 0x80000000 -offset 0x00000000 [get_bd_addr_spaces VDMA/axis_to_ddr_writer_CHROMA/Data_m_axi_base_ddr_addr] [get_bd_addr_segs zynq_ultra_ps_e_0/SAXIGP3/HP1_DDR_LOW] SEG_zynq_ultra_ps_e_0_HP1_DDR_LOW
   create_bd_addr_seg -range 0x01000000 -offset 0xFF000000 [get_bd_addr_spaces VDMA/axis_to_ddr_writer_CHROMA/Data_m_axi_base_ddr_addr] [get_bd_addr_segs zynq_ultra_ps_e_0/SAXIGP3/HP1_LPS_OCM] SEG_zynq_ultra_ps_e_0_HP1_LPS_OCM
-  exclude_bd_addr_seg [get_bd_addr_segs VDMA/axis_to_ddr_writer_CHROMA/Data_m_axi_base_ddr_addr/SEG_zynq_ultra_ps_e_0_HP1_LPS_OCM]
-
+  create_bd_addr_seg -range 0x80000000 -offset 0x00000000 [get_bd_addr_spaces VDMA/axis_to_ddr_writer_LUMA/Data_m_axi_base_ddr_addr] [get_bd_addr_segs zynq_ultra_ps_e_0/SAXIGP3/HP1_DDR_LOW] SEG_zynq_ultra_ps_e_0_HP1_DDR_LOW
   create_bd_addr_seg -range 0x01000000 -offset 0xFF000000 [get_bd_addr_spaces VDMA/axis_to_ddr_writer_LUMA/Data_m_axi_base_ddr_addr] [get_bd_addr_segs zynq_ultra_ps_e_0/SAXIGP3/HP1_LPS_OCM] SEG_zynq_ultra_ps_e_0_HP1_LPS_OCM
-  exclude_bd_addr_seg [get_bd_addr_segs VDMA/axis_to_ddr_writer_LUMA/Data_m_axi_base_ddr_addr/SEG_zynq_ultra_ps_e_0_HP1_LPS_OCM]
-
+  create_bd_addr_seg -range 0x80000000 -offset 0x00000000 [get_bd_addr_spaces VDMA/ddr_to_axis_reader_0/Data_m_axi_base_ddr_addr] [get_bd_addr_segs zynq_ultra_ps_e_0/SAXIGP2/HP0_DDR_LOW] SEG_zynq_ultra_ps_e_0_HP0_DDR_LOW
   create_bd_addr_seg -range 0x01000000 -offset 0xFF000000 [get_bd_addr_spaces VDMA/ddr_to_axis_reader_0/Data_m_axi_base_ddr_addr] [get_bd_addr_segs zynq_ultra_ps_e_0/SAXIGP2/HP0_LPS_OCM] SEG_zynq_ultra_ps_e_0_HP0_LPS_OCM
-  exclude_bd_addr_seg [get_bd_addr_segs VDMA/ddr_to_axis_reader_0/Data_m_axi_base_ddr_addr/SEG_zynq_ultra_ps_e_0_HP0_LPS_OCM]
-
 
 
   # Restore current instance

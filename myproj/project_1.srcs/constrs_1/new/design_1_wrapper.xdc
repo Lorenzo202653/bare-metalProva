@@ -1,4 +1,5 @@
 
+set_property IOSTANDARD LVCMOS33 [get_ports {Led_test_gpio[0]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {LED_FRAME_VALID[0]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {href_V[0]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {data_in_V[7]}]
@@ -18,8 +19,6 @@ set_property PACKAGE_PIN E6 [get_ports {OV7670_RESET[0]}]
 set_property PACKAGE_PIN D5 [get_ports {vsync_V[0]}]
 set_property PACKAGE_PIN B9 [get_ports {LED_FRAME_VALID[0]}]
 set_property PACKAGE_PIN G6 [get_ports {href_V[0]}]
-
-
 set_property PACKAGE_PIN D7 [get_ports {data_in_V[7]}]
 set_property PACKAGE_PIN F8 [get_ports {data_in_V[6]}]
 set_property PACKAGE_PIN F7 [get_ports {data_in_V[5]}]
@@ -30,5 +29,5 @@ set_property PACKAGE_PIN A6 [get_ports {data_in_V[1]}]
 set_property PACKAGE_PIN A7 [get_ports {data_in_V[0]}]
 set_property PACKAGE_PIN E5 [get_ports XCLK]
 set_property PACKAGE_PIN D6 [get_ports PCLK]
-
+set_property PACKAGE_PIN A9 [get_ports {Led_test_gpio[0]}]
 set_property PACKAGE_PIN A4 [get_ports reset_sw]

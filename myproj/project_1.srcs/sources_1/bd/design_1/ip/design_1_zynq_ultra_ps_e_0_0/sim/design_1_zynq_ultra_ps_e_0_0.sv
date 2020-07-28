@@ -54,8 +54,8 @@
       bit  maxigp1_awvalid;
       bit  [15 : 0] maxigp1_awuser;
       bit  maxigp1_awready;
-      bit  [63 : 0] maxigp1_wdata;
-      bit  [7 : 0] maxigp1_wstrb;
+      bit  [127 : 0] maxigp1_wdata;
+      bit  [15 : 0] maxigp1_wstrb;
       bit  maxigp1_wlast;
       bit  maxigp1_wvalid;
       bit  maxigp1_wready;
@@ -75,7 +75,7 @@
       bit  [15 : 0] maxigp1_aruser;
       bit  maxigp1_arready;
       bit  [15 : 0] maxigp1_rid;
-      bit  [63 : 0] maxigp1_rdata;
+      bit  [127 : 0] maxigp1_rdata;
       bit  [1 : 0] maxigp1_rresp;
       bit  maxigp1_rlast;
       bit  maxigp1_rvalid;
@@ -232,8 +232,8 @@
       bit  [2 : 0] saxigp2_awprot;
       bit  saxigp2_awvalid;
       bit  saxigp2_awready;
-      bit  [127 : 0] saxigp2_wdata;
-      bit  [15 : 0] saxigp2_wstrb;
+      bit  [63 : 0] saxigp2_wdata;
+      bit  [7 : 0] saxigp2_wstrb;
       bit  saxigp2_wlast;
       bit  saxigp2_wvalid;
       bit  saxigp2_wready;
@@ -252,7 +252,7 @@
       bit  saxigp2_arvalid;
       bit  saxigp2_arready;
       bit  [5 : 0] saxigp2_rid;
-      bit  [127 : 0] saxigp2_rdata;
+      bit  [63 : 0] saxigp2_rdata;
       bit  [1 : 0] saxigp2_rresp;
       bit  saxigp2_rlast;
       bit  saxigp2_rvalid;
@@ -278,8 +278,8 @@
       bit  [2 : 0] saxigp3_awprot;
       bit  saxigp3_awvalid;
       bit  saxigp3_awready;
-      bit  [127 : 0] saxigp3_wdata;
-      bit  [15 : 0] saxigp3_wstrb;
+      bit  [63 : 0] saxigp3_wdata;
+      bit  [7 : 0] saxigp3_wstrb;
       bit  saxigp3_wlast;
       bit  saxigp3_wvalid;
       bit  saxigp3_wready;
@@ -298,7 +298,7 @@
       bit  saxigp3_arvalid;
       bit  saxigp3_arready;
       bit  [5 : 0] saxigp3_rid;
-      bit  [127 : 0] saxigp3_rdata;
+      bit  [63 : 0] saxigp3_rdata;
       bit  [1 : 0] saxigp3_rresp;
       bit  saxigp3_rlast;
       bit  saxigp3_rvalid;
@@ -324,8 +324,8 @@
       bit  [2 : 0] saxigp4_awprot;
       bit  saxigp4_awvalid;
       bit  saxigp4_awready;
-      bit  [127 : 0] saxigp4_wdata;
-      bit  [15 : 0] saxigp4_wstrb;
+      bit  [63 : 0] saxigp4_wdata;
+      bit  [7 : 0] saxigp4_wstrb;
       bit  saxigp4_wlast;
       bit  saxigp4_wvalid;
       bit  saxigp4_wready;
@@ -344,7 +344,7 @@
       bit  saxigp4_arvalid;
       bit  saxigp4_arready;
       bit  [5 : 0] saxigp4_rid;
-      bit  [127 : 0] saxigp4_rdata;
+      bit  [63 : 0] saxigp4_rdata;
       bit  [1 : 0] saxigp4_rresp;
       bit  saxigp4_rlast;
       bit  saxigp4_rvalid;
@@ -1702,13 +1702,13 @@
       parameter C_DP_USE_AUDIO = 0;
       parameter C_DP_USE_VIDEO = 0;
       parameter C_MAXIGP0_DATA_WIDTH = 128;
-      parameter C_MAXIGP1_DATA_WIDTH = 64;
+      parameter C_MAXIGP1_DATA_WIDTH = 128;
       parameter C_MAXIGP2_DATA_WIDTH = 32;
       parameter C_SAXIGP0_DATA_WIDTH = 128;
       parameter C_SAXIGP1_DATA_WIDTH = 128;
-      parameter C_SAXIGP2_DATA_WIDTH = 128;
-      parameter C_SAXIGP3_DATA_WIDTH = 128;
-      parameter C_SAXIGP4_DATA_WIDTH = 128;
+      parameter C_SAXIGP2_DATA_WIDTH = 64;
+      parameter C_SAXIGP3_DATA_WIDTH = 64;
+      parameter C_SAXIGP4_DATA_WIDTH = 64;
       parameter C_SAXIGP5_DATA_WIDTH = 128;
       parameter C_SAXIGP6_DATA_WIDTH = 128;
       parameter C_USE_DIFF_RW_CLK_GP0 = 0;
@@ -1791,8 +1791,8 @@
       output  maxigp1_awvalid;
       output  [15 : 0] maxigp1_awuser;
       input  maxigp1_awready;
-      output  [63 : 0] maxigp1_wdata;
-      output  [7 : 0] maxigp1_wstrb;
+      output  [127 : 0] maxigp1_wdata;
+      output  [15 : 0] maxigp1_wstrb;
       output  maxigp1_wlast;
       output  maxigp1_wvalid;
       input  maxigp1_wready;
@@ -1812,7 +1812,7 @@
       output  [15 : 0] maxigp1_aruser;
       input  maxigp1_arready;
       input  [15 : 0] maxigp1_rid;
-      input  [63 : 0] maxigp1_rdata;
+      input  [127 : 0] maxigp1_rdata;
       input  [1 : 0] maxigp1_rresp;
       input  maxigp1_rlast;
       input  maxigp1_rvalid;
@@ -1832,8 +1832,8 @@
       input  [2 : 0] saxigp2_awprot;
       input  saxigp2_awvalid;
       output  saxigp2_awready;
-      input  [127 : 0] saxigp2_wdata;
-      input  [15 : 0] saxigp2_wstrb;
+      input  [63 : 0] saxigp2_wdata;
+      input  [7 : 0] saxigp2_wstrb;
       input  saxigp2_wlast;
       input  saxigp2_wvalid;
       output  saxigp2_wready;
@@ -1852,7 +1852,7 @@
       input  saxigp2_arvalid;
       output  saxigp2_arready;
       output  [5 : 0] saxigp2_rid;
-      output  [127 : 0] saxigp2_rdata;
+      output  [63 : 0] saxigp2_rdata;
       output  [1 : 0] saxigp2_rresp;
       output  saxigp2_rlast;
       output  saxigp2_rvalid;
@@ -1872,8 +1872,8 @@
       input  [2 : 0] saxigp3_awprot;
       input  saxigp3_awvalid;
       output  saxigp3_awready;
-      input  [127 : 0] saxigp3_wdata;
-      input  [15 : 0] saxigp3_wstrb;
+      input  [63 : 0] saxigp3_wdata;
+      input  [7 : 0] saxigp3_wstrb;
       input  saxigp3_wlast;
       input  saxigp3_wvalid;
       output  saxigp3_wready;
@@ -1892,7 +1892,7 @@
       input  saxigp3_arvalid;
       output  saxigp3_arready;
       output  [5 : 0] saxigp3_rid;
-      output  [127 : 0] saxigp3_rdata;
+      output  [63 : 0] saxigp3_rdata;
       output  [1 : 0] saxigp3_rresp;
       output  saxigp3_rlast;
       output  saxigp3_rvalid;
@@ -1912,8 +1912,8 @@
       input  [2 : 0] saxigp4_awprot;
       input  saxigp4_awvalid;
       output  saxigp4_awready;
-      input  [127 : 0] saxigp4_wdata;
-      input  [15 : 0] saxigp4_wstrb;
+      input  [63 : 0] saxigp4_wdata;
+      input  [7 : 0] saxigp4_wstrb;
       input  saxigp4_wlast;
       input  saxigp4_wvalid;
       output  saxigp4_wready;
@@ -1932,7 +1932,7 @@
       input  saxigp4_arvalid;
       output  saxigp4_arready;
       output  [5 : 0] saxigp4_rid;
-      output  [127 : 0] saxigp4_rdata;
+      output  [63 : 0] saxigp4_rdata;
       output  [1 : 0] saxigp4_rresp;
       output  saxigp4_rlast;
       output  saxigp4_rvalid;
@@ -1983,8 +1983,8 @@
       reg [2 : 0] maxigp1_awprot;
       reg maxigp1_awvalid;
       reg [15 : 0] maxigp1_awuser;
-      reg [63 : 0] maxigp1_wdata;
-      reg [7 : 0] maxigp1_wstrb;
+      reg [127 : 0] maxigp1_wdata;
+      reg [15 : 0] maxigp1_wstrb;
       reg maxigp1_wlast;
       reg maxigp1_wvalid;
       reg maxigp1_bready;
@@ -2008,7 +2008,7 @@
       reg saxigp2_bvalid;
       reg saxigp2_arready;
       reg [5 : 0] saxigp2_rid;
-      reg [127 : 0] saxigp2_rdata;
+      reg [63 : 0] saxigp2_rdata;
       reg [1 : 0] saxigp2_rresp;
       reg saxigp2_rlast;
       reg saxigp2_rvalid;
@@ -2019,7 +2019,7 @@
       reg saxigp3_bvalid;
       reg saxigp3_arready;
       reg [5 : 0] saxigp3_rid;
-      reg [127 : 0] saxigp3_rdata;
+      reg [63 : 0] saxigp3_rdata;
       reg [1 : 0] saxigp3_rresp;
       reg saxigp3_rlast;
       reg saxigp3_rvalid;
@@ -2030,7 +2030,7 @@
       reg saxigp4_bvalid;
       reg saxigp4_arready;
       reg [5 : 0] saxigp4_rid;
-      reg [127 : 0] saxigp4_rdata;
+      reg [63 : 0] saxigp4_rdata;
       reg [1 : 0] saxigp4_rresp;
       reg saxigp4_rlast;
       reg saxigp4_rvalid;
@@ -2445,7 +2445,7 @@ input bit [1 : 0] maxigp1_bresp,
 input bit maxigp1_bvalid,
 input bit maxigp1_arready,
 input bit [15 : 0] maxigp1_rid,
-input bit [63 : 0] maxigp1_rdata,
+input bit [127 : 0] maxigp1_rdata,
 input bit [1 : 0] maxigp1_rresp,
 input bit maxigp1_rlast,
 input bit maxigp1_rvalid
@@ -2462,8 +2462,8 @@ output bit [2 : 0] maxigp1_awprot,
 output bit [3 : 0] maxigp1_awqos,
 output bit [15 : 0] maxigp1_awuser,
 output bit maxigp1_awvalid,
-output bit [63 : 0] maxigp1_wdata,
-output bit [7 : 0] maxigp1_wstrb,
+output bit [127 : 0] maxigp1_wdata,
+output bit [15 : 0] maxigp1_wstrb,
 output bit maxigp1_wlast,
 output bit maxigp1_wvalid,
 output bit maxigp1_bready,
@@ -2494,8 +2494,8 @@ input bit [2 : 0] saxigp2_awprot,
 input bit [3 : 0] saxigp2_awqos,
 input bit saxigp2_awuser,
 input bit saxigp2_awvalid,
-input bit [127 : 0] saxigp2_wdata,
-input bit [15 : 0] saxigp2_wstrb,
+input bit [63 : 0] saxigp2_wdata,
+input bit [7 : 0] saxigp2_wstrb,
 input bit saxigp2_wlast,
 input bit saxigp2_wvalid,
 input bit saxigp2_bready,
@@ -2520,7 +2520,7 @@ output bit [1 : 0] saxigp2_bresp,
 output bit saxigp2_bvalid,
 output bit saxigp2_arready,
 output bit [5 : 0] saxigp2_rid,
-output bit [127 : 0] saxigp2_rdata,
+output bit [63 : 0] saxigp2_rdata,
 output bit [1 : 0] saxigp2_rresp,
 output bit saxigp2_rlast,
 output bit saxigp2_rvalid
@@ -2539,8 +2539,8 @@ input bit [2 : 0] saxigp3_awprot,
 input bit [3 : 0] saxigp3_awqos,
 input bit saxigp3_awuser,
 input bit saxigp3_awvalid,
-input bit [127 : 0] saxigp3_wdata,
-input bit [15 : 0] saxigp3_wstrb,
+input bit [63 : 0] saxigp3_wdata,
+input bit [7 : 0] saxigp3_wstrb,
 input bit saxigp3_wlast,
 input bit saxigp3_wvalid,
 input bit saxigp3_bready,
@@ -2565,7 +2565,7 @@ output bit [1 : 0] saxigp3_bresp,
 output bit saxigp3_bvalid,
 output bit saxigp3_arready,
 output bit [5 : 0] saxigp3_rid,
-output bit [127 : 0] saxigp3_rdata,
+output bit [63 : 0] saxigp3_rdata,
 output bit [1 : 0] saxigp3_rresp,
 output bit saxigp3_rlast,
 output bit saxigp3_rvalid
@@ -2584,8 +2584,8 @@ input bit [2 : 0] saxigp4_awprot,
 input bit [3 : 0] saxigp4_awqos,
 input bit saxigp4_awuser,
 input bit saxigp4_awvalid,
-input bit [127 : 0] saxigp4_wdata,
-input bit [15 : 0] saxigp4_wstrb,
+input bit [63 : 0] saxigp4_wdata,
+input bit [7 : 0] saxigp4_wstrb,
 input bit saxigp4_wlast,
 input bit saxigp4_wvalid,
 input bit saxigp4_bready,
@@ -2610,7 +2610,7 @@ output bit [1 : 0] saxigp4_bresp,
 output bit saxigp4_bvalid,
 output bit saxigp4_arready,
 output bit [5 : 0] saxigp4_rid,
-output bit [127 : 0] saxigp4_rdata,
+output bit [63 : 0] saxigp4_rdata,
 output bit [1 : 0] saxigp4_rresp,
 output bit saxigp4_rlast,
 output bit saxigp4_rvalid

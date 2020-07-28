@@ -60,13 +60,13 @@ design_1_zynq_ultra_ps_e_0_0::design_1_zynq_ultra_ps_e_0_0(const sc_module_name&
   model_param_props._long_property_map["C_DP_USE_AUDIO"] = 0;
   model_param_props._long_property_map["C_DP_USE_VIDEO"] = 0;
   model_param_props._long_property_map["C_MAXIGP0_DATA_WIDTH"] = 128;
-  model_param_props._long_property_map["C_MAXIGP1_DATA_WIDTH"] = 64;
+  model_param_props._long_property_map["C_MAXIGP1_DATA_WIDTH"] = 128;
   model_param_props._long_property_map["C_MAXIGP2_DATA_WIDTH"] = 32;
   model_param_props._long_property_map["C_SAXIGP0_DATA_WIDTH"] = 128;
   model_param_props._long_property_map["C_SAXIGP1_DATA_WIDTH"] = 128;
-  model_param_props._long_property_map["C_SAXIGP2_DATA_WIDTH"] = 128;
-  model_param_props._long_property_map["C_SAXIGP3_DATA_WIDTH"] = 128;
-  model_param_props._long_property_map["C_SAXIGP4_DATA_WIDTH"] = 128;
+  model_param_props._long_property_map["C_SAXIGP2_DATA_WIDTH"] = 64;
+  model_param_props._long_property_map["C_SAXIGP3_DATA_WIDTH"] = 64;
+  model_param_props._long_property_map["C_SAXIGP4_DATA_WIDTH"] = 64;
   model_param_props._long_property_map["C_SAXIGP5_DATA_WIDTH"] = 128;
   model_param_props._long_property_map["C_SAXIGP6_DATA_WIDTH"] = 128;
   model_param_props._long_property_map["C_USE_DIFF_RW_CLK_GP0"] = 0;
@@ -192,7 +192,7 @@ void design_1_zynq_ultra_ps_e_0_0::before_end_of_elaboration()
   mp_impl->M_AXI_HPM0_FPD_rd_socket->bind(*(mp_M_AXI_HPM0_FPD_transactor->rd_socket));
   // configure 'M_AXI_HPM1_FPD' RTL interface
   xsc::common::properties M_AXI_HPM1_FPD_transactor_param_props;
-  M_AXI_HPM1_FPD_transactor_param_props._long_property_map["DATA_WIDTH"] = 64;
+  M_AXI_HPM1_FPD_transactor_param_props._long_property_map["DATA_WIDTH"] = 128;
   M_AXI_HPM1_FPD_transactor_param_props._long_property_map["FREQ_HZ"] = 24000000;
   M_AXI_HPM1_FPD_transactor_param_props._long_property_map["ID_WIDTH"] = 16;
   M_AXI_HPM1_FPD_transactor_param_props._long_property_map["ADDR_WIDTH"] = 40;
@@ -222,7 +222,7 @@ void design_1_zynq_ultra_ps_e_0_0::before_end_of_elaboration()
   M_AXI_HPM1_FPD_transactor_param_props._string_property_map["PROTOCOL"] = "AXI4";
   M_AXI_HPM1_FPD_transactor_param_props._string_property_map["READ_WRITE_MODE"] = "READ_WRITE";
   M_AXI_HPM1_FPD_transactor_param_props._string_property_map["CLK_DOMAIN"] = "design_1_PCLK";
-  mp_M_AXI_HPM1_FPD_transactor = new xtlm::xaximm_xtlm2pin_t<64,40,16,16,1,1,16,1>("M_AXI_HPM1_FPD_transactor", M_AXI_HPM1_FPD_transactor_param_props);
+  mp_M_AXI_HPM1_FPD_transactor = new xtlm::xaximm_xtlm2pin_t<128,40,16,16,1,1,16,1>("M_AXI_HPM1_FPD_transactor", M_AXI_HPM1_FPD_transactor_param_props);
   mp_M_AXI_HPM1_FPD_transactor->ARADDR(maxigp1_araddr);
   mp_M_AXI_HPM1_FPD_transactor->ARBURST(maxigp1_arburst);
   mp_M_AXI_HPM1_FPD_transactor->ARCACHE(maxigp1_arcache);
@@ -270,7 +270,7 @@ void design_1_zynq_ultra_ps_e_0_0::before_end_of_elaboration()
   mp_impl->M_AXI_HPM1_FPD_rd_socket->bind(*(mp_M_AXI_HPM1_FPD_transactor->rd_socket));
   // configure 'S_AXI_HP0_FPD' RTL interface
   xsc::common::properties S_AXI_HP0_FPD_transactor_param_props;
-  S_AXI_HP0_FPD_transactor_param_props._long_property_map["DATA_WIDTH"] = 128;
+  S_AXI_HP0_FPD_transactor_param_props._long_property_map["DATA_WIDTH"] = 64;
   S_AXI_HP0_FPD_transactor_param_props._long_property_map["FREQ_HZ"] = 99999999;
   S_AXI_HP0_FPD_transactor_param_props._long_property_map["ID_WIDTH"] = 6;
   S_AXI_HP0_FPD_transactor_param_props._long_property_map["ADDR_WIDTH"] = 49;
@@ -289,7 +289,7 @@ void design_1_zynq_ultra_ps_e_0_0::before_end_of_elaboration()
   S_AXI_HP0_FPD_transactor_param_props._long_property_map["HAS_BRESP"] = 1;
   S_AXI_HP0_FPD_transactor_param_props._long_property_map["HAS_RRESP"] = 1;
   S_AXI_HP0_FPD_transactor_param_props._long_property_map["SUPPORTS_NARROW_BURST"] = 0;
-  S_AXI_HP0_FPD_transactor_param_props._long_property_map["MAX_BURST_LENGTH"] = 128;
+  S_AXI_HP0_FPD_transactor_param_props._long_property_map["MAX_BURST_LENGTH"] = 256;
   S_AXI_HP0_FPD_transactor_param_props._long_property_map["NUM_READ_THREADS"] = 1;
   S_AXI_HP0_FPD_transactor_param_props._long_property_map["NUM_WRITE_THREADS"] = 1;
   S_AXI_HP0_FPD_transactor_param_props._long_property_map["RUSER_BITS_PER_BYTE"] = 0;
@@ -300,7 +300,7 @@ void design_1_zynq_ultra_ps_e_0_0::before_end_of_elaboration()
   S_AXI_HP0_FPD_transactor_param_props._string_property_map["PROTOCOL"] = "AXI4";
   S_AXI_HP0_FPD_transactor_param_props._string_property_map["READ_WRITE_MODE"] = "READ_WRITE";
   S_AXI_HP0_FPD_transactor_param_props._string_property_map["CLK_DOMAIN"] = "design_1_zynq_ultra_ps_e_0_0_pl_clk0";
-  mp_S_AXI_HP0_FPD_transactor = new xtlm::xaximm_pin2xtlm_t<128,49,6,1,1,1,1,1>("S_AXI_HP0_FPD_transactor", S_AXI_HP0_FPD_transactor_param_props);
+  mp_S_AXI_HP0_FPD_transactor = new xtlm::xaximm_pin2xtlm_t<64,49,6,1,1,1,1,1>("S_AXI_HP0_FPD_transactor", S_AXI_HP0_FPD_transactor_param_props);
   mp_S_AXI_HP0_FPD_transactor->ARADDR(saxigp2_araddr);
   mp_S_AXI_HP0_FPD_transactor->ARBURST(saxigp2_arburst);
   mp_S_AXI_HP0_FPD_transactor->ARCACHE(saxigp2_arcache);
@@ -350,7 +350,7 @@ void design_1_zynq_ultra_ps_e_0_0::before_end_of_elaboration()
   mp_impl->S_AXI_HP0_FPD_rd_socket->bind(*(mp_S_AXI_HP0_FPD_transactor->rd_socket));
   // configure 'S_AXI_HP1_FPD' RTL interface
   xsc::common::properties S_AXI_HP1_FPD_transactor_param_props;
-  S_AXI_HP1_FPD_transactor_param_props._long_property_map["DATA_WIDTH"] = 128;
+  S_AXI_HP1_FPD_transactor_param_props._long_property_map["DATA_WIDTH"] = 64;
   S_AXI_HP1_FPD_transactor_param_props._long_property_map["FREQ_HZ"] = 99999999;
   S_AXI_HP1_FPD_transactor_param_props._long_property_map["ID_WIDTH"] = 6;
   S_AXI_HP1_FPD_transactor_param_props._long_property_map["ADDR_WIDTH"] = 49;
@@ -369,7 +369,7 @@ void design_1_zynq_ultra_ps_e_0_0::before_end_of_elaboration()
   S_AXI_HP1_FPD_transactor_param_props._long_property_map["HAS_BRESP"] = 1;
   S_AXI_HP1_FPD_transactor_param_props._long_property_map["HAS_RRESP"] = 1;
   S_AXI_HP1_FPD_transactor_param_props._long_property_map["SUPPORTS_NARROW_BURST"] = 0;
-  S_AXI_HP1_FPD_transactor_param_props._long_property_map["MAX_BURST_LENGTH"] = 128;
+  S_AXI_HP1_FPD_transactor_param_props._long_property_map["MAX_BURST_LENGTH"] = 256;
   S_AXI_HP1_FPD_transactor_param_props._long_property_map["NUM_READ_THREADS"] = 1;
   S_AXI_HP1_FPD_transactor_param_props._long_property_map["NUM_WRITE_THREADS"] = 1;
   S_AXI_HP1_FPD_transactor_param_props._long_property_map["RUSER_BITS_PER_BYTE"] = 0;
@@ -380,7 +380,7 @@ void design_1_zynq_ultra_ps_e_0_0::before_end_of_elaboration()
   S_AXI_HP1_FPD_transactor_param_props._string_property_map["PROTOCOL"] = "AXI4";
   S_AXI_HP1_FPD_transactor_param_props._string_property_map["READ_WRITE_MODE"] = "READ_WRITE";
   S_AXI_HP1_FPD_transactor_param_props._string_property_map["CLK_DOMAIN"] = "design_1_zynq_ultra_ps_e_0_0_pl_clk0";
-  mp_S_AXI_HP1_FPD_transactor = new xtlm::xaximm_pin2xtlm_t<128,49,6,1,1,1,1,1>("S_AXI_HP1_FPD_transactor", S_AXI_HP1_FPD_transactor_param_props);
+  mp_S_AXI_HP1_FPD_transactor = new xtlm::xaximm_pin2xtlm_t<64,49,6,1,1,1,1,1>("S_AXI_HP1_FPD_transactor", S_AXI_HP1_FPD_transactor_param_props);
   mp_S_AXI_HP1_FPD_transactor->ARADDR(saxigp3_araddr);
   mp_S_AXI_HP1_FPD_transactor->ARBURST(saxigp3_arburst);
   mp_S_AXI_HP1_FPD_transactor->ARCACHE(saxigp3_arcache);
@@ -430,7 +430,7 @@ void design_1_zynq_ultra_ps_e_0_0::before_end_of_elaboration()
   mp_impl->S_AXI_HP1_FPD_rd_socket->bind(*(mp_S_AXI_HP1_FPD_transactor->rd_socket));
   // configure 'S_AXI_HP2_FPD' RTL interface
   xsc::common::properties S_AXI_HP2_FPD_transactor_param_props;
-  S_AXI_HP2_FPD_transactor_param_props._long_property_map["DATA_WIDTH"] = 128;
+  S_AXI_HP2_FPD_transactor_param_props._long_property_map["DATA_WIDTH"] = 64;
   S_AXI_HP2_FPD_transactor_param_props._long_property_map["FREQ_HZ"] = 24000000;
   S_AXI_HP2_FPD_transactor_param_props._long_property_map["ID_WIDTH"] = 6;
   S_AXI_HP2_FPD_transactor_param_props._long_property_map["ADDR_WIDTH"] = 49;
@@ -449,7 +449,7 @@ void design_1_zynq_ultra_ps_e_0_0::before_end_of_elaboration()
   S_AXI_HP2_FPD_transactor_param_props._long_property_map["HAS_BRESP"] = 1;
   S_AXI_HP2_FPD_transactor_param_props._long_property_map["HAS_RRESP"] = 1;
   S_AXI_HP2_FPD_transactor_param_props._long_property_map["SUPPORTS_NARROW_BURST"] = 0;
-  S_AXI_HP2_FPD_transactor_param_props._long_property_map["MAX_BURST_LENGTH"] = 128;
+  S_AXI_HP2_FPD_transactor_param_props._long_property_map["MAX_BURST_LENGTH"] = 256;
   S_AXI_HP2_FPD_transactor_param_props._long_property_map["NUM_READ_THREADS"] = 1;
   S_AXI_HP2_FPD_transactor_param_props._long_property_map["NUM_WRITE_THREADS"] = 1;
   S_AXI_HP2_FPD_transactor_param_props._long_property_map["RUSER_BITS_PER_BYTE"] = 0;
@@ -460,7 +460,7 @@ void design_1_zynq_ultra_ps_e_0_0::before_end_of_elaboration()
   S_AXI_HP2_FPD_transactor_param_props._string_property_map["PROTOCOL"] = "AXI4";
   S_AXI_HP2_FPD_transactor_param_props._string_property_map["READ_WRITE_MODE"] = "READ_WRITE";
   S_AXI_HP2_FPD_transactor_param_props._string_property_map["CLK_DOMAIN"] = "design_1_PCLK";
-  mp_S_AXI_HP2_FPD_transactor = new xtlm::xaximm_pin2xtlm_t<128,49,6,1,1,1,1,1>("S_AXI_HP2_FPD_transactor", S_AXI_HP2_FPD_transactor_param_props);
+  mp_S_AXI_HP2_FPD_transactor = new xtlm::xaximm_pin2xtlm_t<64,49,6,1,1,1,1,1>("S_AXI_HP2_FPD_transactor", S_AXI_HP2_FPD_transactor_param_props);
   mp_S_AXI_HP2_FPD_transactor->ARADDR(saxigp4_araddr);
   mp_S_AXI_HP2_FPD_transactor->ARBURST(saxigp4_arburst);
   mp_S_AXI_HP2_FPD_transactor->ARCACHE(saxigp4_arcache);

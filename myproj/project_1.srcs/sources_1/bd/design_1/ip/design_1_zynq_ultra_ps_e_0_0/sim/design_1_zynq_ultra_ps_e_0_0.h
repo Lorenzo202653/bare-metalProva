@@ -120,8 +120,8 @@ public: // module pin-to-pin RTL interface
   sc_out< bool > maxigp1_awvalid;
   sc_out< sc_bv<16> > maxigp1_awuser;
   sc_in< bool > maxigp1_awready;
-  sc_out< sc_bv<64> > maxigp1_wdata;
-  sc_out< sc_bv<8> > maxigp1_wstrb;
+  sc_out< sc_bv<128> > maxigp1_wdata;
+  sc_out< sc_bv<16> > maxigp1_wstrb;
   sc_out< bool > maxigp1_wlast;
   sc_out< bool > maxigp1_wvalid;
   sc_in< bool > maxigp1_wready;
@@ -141,7 +141,7 @@ public: // module pin-to-pin RTL interface
   sc_out< sc_bv<16> > maxigp1_aruser;
   sc_in< bool > maxigp1_arready;
   sc_in< sc_bv<16> > maxigp1_rid;
-  sc_in< sc_bv<64> > maxigp1_rdata;
+  sc_in< sc_bv<128> > maxigp1_rdata;
   sc_in< sc_bv<2> > maxigp1_rresp;
   sc_in< bool > maxigp1_rlast;
   sc_in< bool > maxigp1_rvalid;
@@ -161,8 +161,8 @@ public: // module pin-to-pin RTL interface
   sc_in< sc_bv<3> > saxigp2_awprot;
   sc_in< bool > saxigp2_awvalid;
   sc_out< bool > saxigp2_awready;
-  sc_in< sc_bv<128> > saxigp2_wdata;
-  sc_in< sc_bv<16> > saxigp2_wstrb;
+  sc_in< sc_bv<64> > saxigp2_wdata;
+  sc_in< sc_bv<8> > saxigp2_wstrb;
   sc_in< bool > saxigp2_wlast;
   sc_in< bool > saxigp2_wvalid;
   sc_out< bool > saxigp2_wready;
@@ -181,7 +181,7 @@ public: // module pin-to-pin RTL interface
   sc_in< bool > saxigp2_arvalid;
   sc_out< bool > saxigp2_arready;
   sc_out< sc_bv<6> > saxigp2_rid;
-  sc_out< sc_bv<128> > saxigp2_rdata;
+  sc_out< sc_bv<64> > saxigp2_rdata;
   sc_out< sc_bv<2> > saxigp2_rresp;
   sc_out< bool > saxigp2_rlast;
   sc_out< bool > saxigp2_rvalid;
@@ -201,8 +201,8 @@ public: // module pin-to-pin RTL interface
   sc_in< sc_bv<3> > saxigp3_awprot;
   sc_in< bool > saxigp3_awvalid;
   sc_out< bool > saxigp3_awready;
-  sc_in< sc_bv<128> > saxigp3_wdata;
-  sc_in< sc_bv<16> > saxigp3_wstrb;
+  sc_in< sc_bv<64> > saxigp3_wdata;
+  sc_in< sc_bv<8> > saxigp3_wstrb;
   sc_in< bool > saxigp3_wlast;
   sc_in< bool > saxigp3_wvalid;
   sc_out< bool > saxigp3_wready;
@@ -221,7 +221,7 @@ public: // module pin-to-pin RTL interface
   sc_in< bool > saxigp3_arvalid;
   sc_out< bool > saxigp3_arready;
   sc_out< sc_bv<6> > saxigp3_rid;
-  sc_out< sc_bv<128> > saxigp3_rdata;
+  sc_out< sc_bv<64> > saxigp3_rdata;
   sc_out< sc_bv<2> > saxigp3_rresp;
   sc_out< bool > saxigp3_rlast;
   sc_out< bool > saxigp3_rvalid;
@@ -241,8 +241,8 @@ public: // module pin-to-pin RTL interface
   sc_in< sc_bv<3> > saxigp4_awprot;
   sc_in< bool > saxigp4_awvalid;
   sc_out< bool > saxigp4_awready;
-  sc_in< sc_bv<128> > saxigp4_wdata;
-  sc_in< sc_bv<16> > saxigp4_wstrb;
+  sc_in< sc_bv<64> > saxigp4_wdata;
+  sc_in< sc_bv<8> > saxigp4_wstrb;
   sc_in< bool > saxigp4_wlast;
   sc_in< bool > saxigp4_wvalid;
   sc_out< bool > saxigp4_wready;
@@ -261,7 +261,7 @@ public: // module pin-to-pin RTL interface
   sc_in< bool > saxigp4_arvalid;
   sc_out< bool > saxigp4_arready;
   sc_out< sc_bv<6> > saxigp4_rid;
-  sc_out< sc_bv<128> > saxigp4_rdata;
+  sc_out< sc_bv<64> > saxigp4_rdata;
   sc_out< sc_bv<2> > saxigp4_rresp;
   sc_out< bool > saxigp4_rlast;
   sc_out< bool > saxigp4_rvalid;
@@ -330,8 +330,8 @@ private:
   sc_signal< bool > maxigp1_awvalid_signal;
   sc_signal< sc_bv<16> > maxigp1_awuser_signal;
   sc_signal< bool > maxigp1_awready_signal;
-  sc_signal< sc_bv<64> > maxigp1_wdata_signal;
-  sc_signal< sc_bv<8> > maxigp1_wstrb_signal;
+  sc_signal< sc_bv<128> > maxigp1_wdata_signal;
+  sc_signal< sc_bv<16> > maxigp1_wstrb_signal;
   sc_signal< bool > maxigp1_wlast_signal;
   sc_signal< bool > maxigp1_wvalid_signal;
   sc_signal< bool > maxigp1_wready_signal;
@@ -351,7 +351,7 @@ private:
   sc_signal< sc_bv<16> > maxigp1_aruser_signal;
   sc_signal< bool > maxigp1_arready_signal;
   sc_signal< sc_bv<16> > maxigp1_rid_signal;
-  sc_signal< sc_bv<64> > maxigp1_rdata_signal;
+  sc_signal< sc_bv<128> > maxigp1_rdata_signal;
   sc_signal< sc_bv<2> > maxigp1_rresp_signal;
   sc_signal< bool > maxigp1_rlast_signal;
   sc_signal< bool > maxigp1_rvalid_signal;
@@ -508,8 +508,8 @@ private:
   sc_signal< sc_bv<3> > saxigp2_awprot_signal;
   sc_signal< bool > saxigp2_awvalid_signal;
   sc_signal< bool > saxigp2_awready_signal;
-  sc_signal< sc_bv<128> > saxigp2_wdata_signal;
-  sc_signal< sc_bv<16> > saxigp2_wstrb_signal;
+  sc_signal< sc_bv<64> > saxigp2_wdata_signal;
+  sc_signal< sc_bv<8> > saxigp2_wstrb_signal;
   sc_signal< bool > saxigp2_wlast_signal;
   sc_signal< bool > saxigp2_wvalid_signal;
   sc_signal< bool > saxigp2_wready_signal;
@@ -528,7 +528,7 @@ private:
   sc_signal< bool > saxigp2_arvalid_signal;
   sc_signal< bool > saxigp2_arready_signal;
   sc_signal< sc_bv<6> > saxigp2_rid_signal;
-  sc_signal< sc_bv<128> > saxigp2_rdata_signal;
+  sc_signal< sc_bv<64> > saxigp2_rdata_signal;
   sc_signal< sc_bv<2> > saxigp2_rresp_signal;
   sc_signal< bool > saxigp2_rlast_signal;
   sc_signal< bool > saxigp2_rvalid_signal;
@@ -554,8 +554,8 @@ private:
   sc_signal< sc_bv<3> > saxigp3_awprot_signal;
   sc_signal< bool > saxigp3_awvalid_signal;
   sc_signal< bool > saxigp3_awready_signal;
-  sc_signal< sc_bv<128> > saxigp3_wdata_signal;
-  sc_signal< sc_bv<16> > saxigp3_wstrb_signal;
+  sc_signal< sc_bv<64> > saxigp3_wdata_signal;
+  sc_signal< sc_bv<8> > saxigp3_wstrb_signal;
   sc_signal< bool > saxigp3_wlast_signal;
   sc_signal< bool > saxigp3_wvalid_signal;
   sc_signal< bool > saxigp3_wready_signal;
@@ -574,7 +574,7 @@ private:
   sc_signal< bool > saxigp3_arvalid_signal;
   sc_signal< bool > saxigp3_arready_signal;
   sc_signal< sc_bv<6> > saxigp3_rid_signal;
-  sc_signal< sc_bv<128> > saxigp3_rdata_signal;
+  sc_signal< sc_bv<64> > saxigp3_rdata_signal;
   sc_signal< sc_bv<2> > saxigp3_rresp_signal;
   sc_signal< bool > saxigp3_rlast_signal;
   sc_signal< bool > saxigp3_rvalid_signal;
@@ -600,8 +600,8 @@ private:
   sc_signal< sc_bv<3> > saxigp4_awprot_signal;
   sc_signal< bool > saxigp4_awvalid_signal;
   sc_signal< bool > saxigp4_awready_signal;
-  sc_signal< sc_bv<128> > saxigp4_wdata_signal;
-  sc_signal< sc_bv<16> > saxigp4_wstrb_signal;
+  sc_signal< sc_bv<64> > saxigp4_wdata_signal;
+  sc_signal< sc_bv<8> > saxigp4_wstrb_signal;
   sc_signal< bool > saxigp4_wlast_signal;
   sc_signal< bool > saxigp4_wvalid_signal;
   sc_signal< bool > saxigp4_wready_signal;
@@ -620,7 +620,7 @@ private:
   sc_signal< bool > saxigp4_arvalid_signal;
   sc_signal< bool > saxigp4_arready_signal;
   sc_signal< sc_bv<6> > saxigp4_rid_signal;
-  sc_signal< sc_bv<128> > saxigp4_rdata_signal;
+  sc_signal< sc_bv<64> > saxigp4_rdata_signal;
   sc_signal< sc_bv<2> > saxigp4_rresp_signal;
   sc_signal< bool > saxigp4_rlast_signal;
   sc_signal< bool > saxigp4_rvalid_signal;
@@ -1784,14 +1784,14 @@ private:
 
   zynq_ultra_ps_e_tlm* mp_impl;
   xtlm::xaximm_xtlm2pin_t<128,40,16,16,1,1,16,1>* mp_M_AXI_HPM0_FPD_transactor;
-  xtlm::xaximm_xtlm2pin_t<64,40,16,16,1,1,16,1>* mp_M_AXI_HPM1_FPD_transactor;
-  xtlm::xaximm_pin2xtlm_t<128,49,6,1,1,1,1,1>* mp_S_AXI_HP0_FPD_transactor;
+  xtlm::xaximm_xtlm2pin_t<128,40,16,16,1,1,16,1>* mp_M_AXI_HPM1_FPD_transactor;
+  xtlm::xaximm_pin2xtlm_t<64,49,6,1,1,1,1,1>* mp_S_AXI_HP0_FPD_transactor;
   xsc::common::scalar2vector_converter* mp_saxigp2_aruser_converter;
   xsc::common::scalar2vector_converter* mp_saxigp2_awuser_converter;
-  xtlm::xaximm_pin2xtlm_t<128,49,6,1,1,1,1,1>* mp_S_AXI_HP1_FPD_transactor;
+  xtlm::xaximm_pin2xtlm_t<64,49,6,1,1,1,1,1>* mp_S_AXI_HP1_FPD_transactor;
   xsc::common::scalar2vector_converter* mp_saxigp3_aruser_converter;
   xsc::common::scalar2vector_converter* mp_saxigp3_awuser_converter;
-  xtlm::xaximm_pin2xtlm_t<128,49,6,1,1,1,1,1>* mp_S_AXI_HP2_FPD_transactor;
+  xtlm::xaximm_pin2xtlm_t<64,49,6,1,1,1,1,1>* mp_S_AXI_HP2_FPD_transactor;
   xsc::common::scalar2vector_converter* mp_saxigp4_aruser_converter;
   xsc::common::scalar2vector_converter* mp_saxigp4_awuser_converter;
 

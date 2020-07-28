@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
 	<name>sw_reset_prova</name>
-	<comment>Created by SDK v2018.1. standalone_bsp_0 - psu_cortexa53_0</comment>
+	<comment></comment>
 	<projects>
-		<project>standalone_bsp_0</project>
+		<project>gpio_ISOL_bsp_1</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

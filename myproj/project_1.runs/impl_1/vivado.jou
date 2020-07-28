@@ -2,11 +2,11 @@
 # Vivado v2018.1 (64-bit)
 # SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
 # IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
-# Start of session at: Fri Jul 17 11:09:13 2020
-# Process ID: 7895
+# Start of session at: Tue Jul 28 18:14:34 2020
+# Process ID: 7072
 # Current directory: /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/impl_1
-# Command line: vivado -log design_1_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
-# Log file: /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/impl_1/design_1_wrapper.vdi
+# Command line: vivado -log reset_3_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source reset_3_wrapper.tcl -notrace
+# Log file: /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/impl_1/reset_3_wrapper.vdi
 # Journal file: /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/impl_1/vivado.jou
 #-----------------------------------------------------------
-source design_1_wrapper.tcl -notrace
+source reset_3_wrapper.tcl -notrace

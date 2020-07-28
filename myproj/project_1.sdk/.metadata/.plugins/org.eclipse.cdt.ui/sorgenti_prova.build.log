@@ -1,0 +1,25 @@
+15:24:02 **** Build of configuration Debug for project sorgenti_prova ****
+make all 
+Building file: ../src/interrupts.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/interrupts.o" -I../../sorgenti_bsp_1/psu_cortexa53_0/include -MMD -MP -MF"src/interrupts.d" -MT"src/interrupts.o" -o "src/interrupts.o" "../src/interrupts.c"
+../src/interrupts.c: In function 'configure_interrupts':
+../src/interrupts.c:57:47: warning: passing argument 2 of 'configure_i2c_interrupt' from incompatible pointer type [-Wincompatible-pointer-types]
+src/subdir.mk:60: set di istruzioni per l'obiettivo "src/interrupts.o" non riuscito
+  configure_i2c_interrupt(InterruptController, &Iic);
+                                               ^
+In file included from ../src/interrupts.h:14:0,
+                 from ../src/interrupts.c:9:
+../src/i2c_interrupt.h:15:5: note: expected 'XScuGic * {aka struct <anonymous> *}' but argument is of type 'XIicPs * {aka struct <anonymous> *}'
+ int configure_i2c_interrupt(XScuGic* gicInst, XScuGic* IicPsPtr);
+     ^~~~~~~~~~~~~~~~~~~~~~~
+../src/interrupts.c: In function 'configure_SW_reset_interrupt':
+../src/interrupts.c:64:31: error: 'XPAR_FABRIC_SYSTEM_RESET_SW_INTR' undeclared (first use in this function); did you mean 'XPAR_FABRIC_RESET_SW_INTR'?
+  if (XScuGic_Connect(gicInst, XPAR_FABRIC_SYSTEM_RESET_SW_INTR, SW_reset_handler, NULL) != XST_SUCCESS)
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                               XPAR_FABRIC_RESET_SW_INTR
+../src/interrupts.c:64:31: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/interrupts.o] Errore 1
+
+15:24:02 Build Finished (took 625ms)
+

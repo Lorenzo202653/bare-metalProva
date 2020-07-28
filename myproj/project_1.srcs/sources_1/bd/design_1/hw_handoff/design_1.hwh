@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Jul 17 10:41:05 2020" VIVADOVERSION="2018.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jul 28 15:38:55 2020" VIVADOVERSION="2018.1">
 
   <SYSTEMINFO ARCH="zynquplus" BOARD="em.avnet.com:ultra96:part0:1.0" DEVICE="xczu3eg" NAME="design_1" PACKAGE="sbva484" SPEEDGRADE="-1"/>
 
@@ -9,17 +9,17 @@
         <CONNECTION INSTANCE="OV7670_GRAYSCALE_TO_AXIS_c_counter_binary_0" PORT="THRESH0"/>
       </CONNECTIONS>
     </PORT>
-    <PORT CLKFREQUENCY="24001210" DIR="O" NAME="XCLK" SIGIS="clk" SIGNAME="clk_gen_25M_24M_clk_out2">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="clk_gen_25M_24M" PORT="clk_out2"/>
-      </CONNECTIONS>
-    </PORT>
     <PORT DIR="I" LEFT="7" NAME="data_in_V" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_data_in_V">
       <CONNECTIONS>
         <CONNECTION INSTANCE="OV7670_GRAYSCALE_TO_AXIS_ov7670_interface_0" PORT="data_in_V"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" LEFT="0" NAME="OV7670_RESET" RIGHT="0" SIGIS="rst" SIGNAME="axi_gpio_pl_reset_gpio_io_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axi_gpio_pl_reset" PORT="gpio_io_o"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="0" NAME="Led_test_gpio" RIGHT="0" SIGIS="data" SIGNAME="axi_gpio_pl_reset_gpio_io_o">
       <CONNECTIONS>
         <CONNECTION INSTANCE="axi_gpio_pl_reset" PORT="gpio_io_o"/>
       </CONNECTIONS>
@@ -60,6 +60,11 @@
         <CONNECTION INSTANCE="VDMA_axis_data_fifo_raw_CHROMA" PORT="s_axis_aclk"/>
         <CONNECTION INSTANCE="VDMA_axis_data_fifo_raw_LUMA" PORT="s_axis_aclk"/>
         <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M06_ACLK"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="24001996" DIR="O" NAME="XCLK" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -849,7 +854,7 @@
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp1_bvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="63" NAME="S00_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_0_S00_AXI_rdata">
+        <PORT DIR="O" LEFT="127" NAME="S00_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_0_S00_AXI_rdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp1_rdata"/>
           </CONNECTIONS>
@@ -879,7 +884,7 @@
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp1_rvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="63" NAME="S00_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_0_S00_AXI_wdata">
+        <PORT DIR="I" LEFT="127" NAME="S00_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_0_S00_AXI_wdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp1_wdata"/>
           </CONNECTIONS>
@@ -894,7 +899,7 @@
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp1_wready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="S00_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_0_S00_AXI_wstrb">
+        <PORT DIR="I" LEFT="15" NAME="S00_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_0_S00_AXI_wstrb">
           <CONNECTIONS>
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp1_wstrb"/>
           </CONNECTIONS>
@@ -906,7 +911,7 @@
         </PORT>
       </PORTS>
       <BUSINTERFACES>
-        <BUSINTERFACE BUSNAME="zynq_ultra_ps_e_0_M_AXI_HPM1_FPD" DATAWIDTH="64" NAME="S00_AXI" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
+        <BUSINTERFACE BUSNAME="zynq_ultra_ps_e_0_M_AXI_HPM1_FPD" DATAWIDTH="128" NAME="S00_AXI" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="ARADDR" PHYSICAL="S00_AXI_araddr"/>
             <PORTMAP LOGICAL="ARBURST" PHYSICAL="S00_AXI_arburst"/>
@@ -1366,12 +1371,12 @@
             <CONNECTION INSTANCE="OV7670_GRAYSCALE_TO_AXIS_ddr_to_axis_reader_SD_0" PORT="m_axi_base_ddr_addr_AWBURST"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="S00_AXI_awlock" RIGHT="0" SIGIS="undef" SIGNAME="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_1_S00_AXI_awlock">
+        <PORT DIR="I" NAME="S00_AXI_awlock" SIGIS="undef" SIGNAME="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_1_S00_AXI_awlock">
           <CONNECTIONS>
             <CONNECTION INSTANCE="OV7670_GRAYSCALE_TO_AXIS_ddr_to_axis_reader_SD_0" PORT="m_axi_base_ddr_addr_AWLOCK"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="S00_AXI_awregion" RIGHT="0" SIGIS="undef" SIGNAME="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_1_S00_AXI_awregion">
+        <PORT DIR="I" NAME="S00_AXI_awregion" SIGIS="undef" SIGNAME="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_1_S00_AXI_awregion">
           <CONNECTIONS>
             <CONNECTION INSTANCE="OV7670_GRAYSCALE_TO_AXIS_ddr_to_axis_reader_SD_0" PORT="m_axi_base_ddr_addr_AWREGION"/>
           </CONNECTIONS>
@@ -1461,12 +1466,12 @@
             <CONNECTION INSTANCE="OV7670_GRAYSCALE_TO_AXIS_ddr_to_axis_reader_SD_0" PORT="m_axi_base_ddr_addr_ARBURST"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="S00_AXI_arlock" RIGHT="0" SIGIS="undef" SIGNAME="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_1_S00_AXI_arlock">
+        <PORT DIR="I" NAME="S00_AXI_arlock" SIGIS="undef" SIGNAME="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_1_S00_AXI_arlock">
           <CONNECTIONS>
             <CONNECTION INSTANCE="OV7670_GRAYSCALE_TO_AXIS_ddr_to_axis_reader_SD_0" PORT="m_axi_base_ddr_addr_ARLOCK"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="S00_AXI_arregion" RIGHT="0" SIGIS="undef" SIGNAME="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_1_S00_AXI_arregion">
+        <PORT DIR="I" NAME="S00_AXI_arregion" SIGIS="undef" SIGNAME="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_1_S00_AXI_arregion">
           <CONNECTIONS>
             <CONNECTION INSTANCE="OV7670_GRAYSCALE_TO_AXIS_ddr_to_axis_reader_SD_0" PORT="m_axi_base_ddr_addr_ARREGION"/>
           </CONNECTIONS>
@@ -1661,7 +1666,7 @@
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp4_bvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="127" NAME="M00_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_1_M00_AXI_rdata">
+        <PORT DIR="I" LEFT="63" NAME="M00_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_1_M00_AXI_rdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp4_rdata"/>
           </CONNECTIONS>
@@ -1691,7 +1696,7 @@
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp4_rvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="127" NAME="M00_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_1_M00_AXI_wdata">
+        <PORT DIR="O" LEFT="63" NAME="M00_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_1_M00_AXI_wdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp4_wdata"/>
           </CONNECTIONS>
@@ -1706,7 +1711,7 @@
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp4_wready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="15" NAME="M00_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_1_M00_AXI_wstrb">
+        <PORT DIR="O" LEFT="7" NAME="M00_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_1_M00_AXI_wstrb">
           <CONNECTIONS>
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp4_wstrb"/>
           </CONNECTIONS>
@@ -1757,7 +1762,7 @@
             <PORTMAP LOGICAL="RREADY" PHYSICAL="S00_AXI_rready"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_1_M00_AXI" DATAWIDTH="128" NAME="M00_AXI" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
+        <BUSINTERFACE BUSNAME="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_1_M00_AXI" DATAWIDTH="64" NAME="M00_AXI" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="ARADDR" PHYSICAL="M00_AXI_araddr"/>
             <PORTMAP LOGICAL="ARBURST" PHYSICAL="M00_AXI_arburst"/>
@@ -3660,12 +3665,12 @@
             <CONNECTION INSTANCE="VDMA_ddr_to_axis_reader_0" PORT="m_axi_base_ddr_addr_AWBURST"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="S00_AXI_awlock" RIGHT="0" SIGIS="undef" SIGNAME="VDMA_axi_mem_intercon_reader_S00_AXI_awlock">
+        <PORT DIR="I" NAME="S00_AXI_awlock" SIGIS="undef" SIGNAME="VDMA_axi_mem_intercon_reader_S00_AXI_awlock">
           <CONNECTIONS>
             <CONNECTION INSTANCE="VDMA_ddr_to_axis_reader_0" PORT="m_axi_base_ddr_addr_AWLOCK"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="S00_AXI_awregion" RIGHT="0" SIGIS="undef" SIGNAME="VDMA_axi_mem_intercon_reader_S00_AXI_awregion">
+        <PORT DIR="I" NAME="S00_AXI_awregion" SIGIS="undef" SIGNAME="VDMA_axi_mem_intercon_reader_S00_AXI_awregion">
           <CONNECTIONS>
             <CONNECTION INSTANCE="VDMA_ddr_to_axis_reader_0" PORT="m_axi_base_ddr_addr_AWREGION"/>
           </CONNECTIONS>
@@ -3755,12 +3760,12 @@
             <CONNECTION INSTANCE="VDMA_ddr_to_axis_reader_0" PORT="m_axi_base_ddr_addr_ARBURST"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="S00_AXI_arlock" RIGHT="0" SIGIS="undef" SIGNAME="VDMA_axi_mem_intercon_reader_S00_AXI_arlock">
+        <PORT DIR="I" NAME="S00_AXI_arlock" SIGIS="undef" SIGNAME="VDMA_axi_mem_intercon_reader_S00_AXI_arlock">
           <CONNECTIONS>
             <CONNECTION INSTANCE="VDMA_ddr_to_axis_reader_0" PORT="m_axi_base_ddr_addr_ARLOCK"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="S00_AXI_arregion" RIGHT="0" SIGIS="undef" SIGNAME="VDMA_axi_mem_intercon_reader_S00_AXI_arregion">
+        <PORT DIR="I" NAME="S00_AXI_arregion" SIGIS="undef" SIGNAME="VDMA_axi_mem_intercon_reader_S00_AXI_arregion">
           <CONNECTIONS>
             <CONNECTION INSTANCE="VDMA_ddr_to_axis_reader_0" PORT="m_axi_base_ddr_addr_ARREGION"/>
           </CONNECTIONS>
@@ -3955,7 +3960,7 @@
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp2_bvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="127" NAME="M00_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="VDMA_axi_mem_intercon_reader_M00_AXI_rdata">
+        <PORT DIR="I" LEFT="63" NAME="M00_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="VDMA_axi_mem_intercon_reader_M00_AXI_rdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp2_rdata"/>
           </CONNECTIONS>
@@ -3985,7 +3990,7 @@
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp2_rvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="127" NAME="M00_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="VDMA_axi_mem_intercon_reader_M00_AXI_wdata">
+        <PORT DIR="O" LEFT="63" NAME="M00_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="VDMA_axi_mem_intercon_reader_M00_AXI_wdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp2_wdata"/>
           </CONNECTIONS>
@@ -4000,7 +4005,7 @@
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp2_wready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="15" NAME="M00_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="VDMA_axi_mem_intercon_reader_M00_AXI_wstrb">
+        <PORT DIR="O" LEFT="7" NAME="M00_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="VDMA_axi_mem_intercon_reader_M00_AXI_wstrb">
           <CONNECTIONS>
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp2_wstrb"/>
           </CONNECTIONS>
@@ -4051,7 +4056,7 @@
             <PORTMAP LOGICAL="RREADY" PHYSICAL="S00_AXI_rready"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="VDMA_axi_mem_intercon_reader_M00_AXI" DATAWIDTH="128" NAME="M00_AXI" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
+        <BUSINTERFACE BUSNAME="VDMA_axi_mem_intercon_reader_M00_AXI" DATAWIDTH="64" NAME="M00_AXI" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="ARADDR" PHYSICAL="M00_AXI_araddr"/>
             <PORTMAP LOGICAL="ARBURST" PHYSICAL="M00_AXI_arburst"/>
@@ -4494,7 +4499,7 @@
             <CONNECTION INSTANCE="VDMA_axis_to_ddr_writer_CHROMA" PORT="m_axi_base_ddr_addr_AWLOCK"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="S01_AXI_awregion" RIGHT="0" SIGIS="undef" SIGNAME="VDMA_axi_mem_intercon_writer_S01_AXI_awregion">
+        <PORT DIR="I" NAME="S01_AXI_awregion" SIGIS="undef" SIGNAME="VDMA_axi_mem_intercon_writer_S01_AXI_awregion">
           <CONNECTIONS>
             <CONNECTION INSTANCE="VDMA_axis_to_ddr_writer_CHROMA" PORT="m_axi_base_ddr_addr_AWREGION"/>
           </CONNECTIONS>
@@ -4589,7 +4594,7 @@
             <CONNECTION INSTANCE="VDMA_axis_to_ddr_writer_CHROMA" PORT="m_axi_base_ddr_addr_ARLOCK"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="S01_AXI_arregion" RIGHT="0" SIGIS="undef" SIGNAME="VDMA_axi_mem_intercon_writer_S01_AXI_arregion">
+        <PORT DIR="I" NAME="S01_AXI_arregion" SIGIS="undef" SIGNAME="VDMA_axi_mem_intercon_writer_S01_AXI_arregion">
           <CONNECTIONS>
             <CONNECTION INSTANCE="VDMA_axis_to_ddr_writer_CHROMA" PORT="m_axi_base_ddr_addr_ARREGION"/>
           </CONNECTIONS>
@@ -4669,7 +4674,7 @@
             <CONNECTION INSTANCE="VDMA_axis_to_ddr_writer_LUMA" PORT="m_axi_base_ddr_addr_AWLOCK"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="S02_AXI_awregion" RIGHT="0" SIGIS="undef" SIGNAME="VDMA_axi_mem_intercon_writer_S02_AXI_awregion">
+        <PORT DIR="I" NAME="S02_AXI_awregion" SIGIS="undef" SIGNAME="VDMA_axi_mem_intercon_writer_S02_AXI_awregion">
           <CONNECTIONS>
             <CONNECTION INSTANCE="VDMA_axis_to_ddr_writer_LUMA" PORT="m_axi_base_ddr_addr_AWREGION"/>
           </CONNECTIONS>
@@ -4764,7 +4769,7 @@
             <CONNECTION INSTANCE="VDMA_axis_to_ddr_writer_LUMA" PORT="m_axi_base_ddr_addr_ARLOCK"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="S02_AXI_arregion" RIGHT="0" SIGIS="undef" SIGNAME="VDMA_axi_mem_intercon_writer_S02_AXI_arregion">
+        <PORT DIR="I" NAME="S02_AXI_arregion" SIGIS="undef" SIGNAME="VDMA_axi_mem_intercon_writer_S02_AXI_arregion">
           <CONNECTIONS>
             <CONNECTION INSTANCE="VDMA_axis_to_ddr_writer_LUMA" PORT="m_axi_base_ddr_addr_ARREGION"/>
           </CONNECTIONS>
@@ -4844,7 +4849,7 @@
             <CONNECTION INSTANCE="VDMA_axis_to_ddr_writer_0" PORT="m_axi_base_ddr_addr_AWLOCK"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="S00_AXI_awregion" RIGHT="0" SIGIS="undef" SIGNAME="VDMA_axi_mem_intercon_writer_S00_AXI_awregion">
+        <PORT DIR="I" NAME="S00_AXI_awregion" SIGIS="undef" SIGNAME="VDMA_axi_mem_intercon_writer_S00_AXI_awregion">
           <CONNECTIONS>
             <CONNECTION INSTANCE="VDMA_axis_to_ddr_writer_0" PORT="m_axi_base_ddr_addr_AWREGION"/>
           </CONNECTIONS>
@@ -4939,7 +4944,7 @@
             <CONNECTION INSTANCE="VDMA_axis_to_ddr_writer_0" PORT="m_axi_base_ddr_addr_ARLOCK"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="S00_AXI_arregion" RIGHT="0" SIGIS="undef" SIGNAME="VDMA_axi_mem_intercon_writer_S00_AXI_arregion">
+        <PORT DIR="I" NAME="S00_AXI_arregion" SIGIS="undef" SIGNAME="VDMA_axi_mem_intercon_writer_S00_AXI_arregion">
           <CONNECTIONS>
             <CONNECTION INSTANCE="VDMA_axis_to_ddr_writer_0" PORT="m_axi_base_ddr_addr_ARREGION"/>
           </CONNECTIONS>
@@ -5134,7 +5139,7 @@
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp3_bvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="127" NAME="M00_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="VDMA_axi_mem_intercon_writer_M00_AXI_rdata">
+        <PORT DIR="I" LEFT="63" NAME="M00_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="VDMA_axi_mem_intercon_writer_M00_AXI_rdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp3_rdata"/>
           </CONNECTIONS>
@@ -5164,7 +5169,7 @@
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp3_rvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="127" NAME="M00_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="VDMA_axi_mem_intercon_writer_M00_AXI_wdata">
+        <PORT DIR="O" LEFT="63" NAME="M00_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="VDMA_axi_mem_intercon_writer_M00_AXI_wdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp3_wdata"/>
           </CONNECTIONS>
@@ -5179,7 +5184,7 @@
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp3_wready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="15" NAME="M00_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="VDMA_axi_mem_intercon_writer_M00_AXI_wstrb">
+        <PORT DIR="O" LEFT="7" NAME="M00_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="VDMA_axi_mem_intercon_writer_M00_AXI_wstrb">
           <CONNECTIONS>
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxigp3_wstrb"/>
           </CONNECTIONS>
@@ -5230,7 +5235,7 @@
             <PORTMAP LOGICAL="RREADY" PHYSICAL="S00_AXI_rready"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="VDMA_axi_mem_intercon_writer_M00_AXI" DATAWIDTH="128" NAME="M00_AXI" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
+        <BUSINTERFACE BUSNAME="VDMA_axi_mem_intercon_writer_M00_AXI" DATAWIDTH="64" NAME="M00_AXI" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="ARADDR" PHYSICAL="M00_AXI_araddr"/>
             <PORTMAP LOGICAL="ARBURST" PHYSICAL="M00_AXI_arburst"/>
@@ -5391,7 +5396,11 @@
             <CONNECTION INSTANCE="reset_24M" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="m_axis_aresetn" SIGIS="rst"/>
+        <PORT DIR="I" NAME="m_axis_aresetn" SIGIS="rst" SIGNAME="reset_100M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="reset_100M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT CLKFREQUENCY="24000000" DIR="I" NAME="s_axis_aclk" SIGIS="clk" SIGNAME="External_Ports_PCLK">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="PCLK"/>
@@ -5515,7 +5524,11 @@
             <CONNECTION INSTANCE="reset_24M" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="m_axis_aresetn" SIGIS="rst"/>
+        <PORT DIR="I" NAME="m_axis_aresetn" SIGIS="rst" SIGNAME="reset_100M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="reset_100M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT CLKFREQUENCY="24000000" DIR="I" NAME="s_axis_aclk" SIGIS="clk" SIGNAME="External_Ports_PCLK">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="PCLK"/>
@@ -5639,7 +5652,11 @@
             <CONNECTION INSTANCE="reset_24M" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="m_axis_aresetn" SIGIS="rst"/>
+        <PORT DIR="I" NAME="m_axis_aresetn" SIGIS="rst" SIGNAME="reset_100M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="reset_100M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT CLKFREQUENCY="24000000" DIR="I" NAME="s_axis_aclk" SIGIS="clk" SIGNAME="External_Ports_PCLK">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="PCLK"/>
@@ -9521,10 +9538,10 @@
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="gpio_io_o" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_pl_reset_gpio_io_o">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="Led_test_gpio"/>
             <CONNECTION INSTANCE="External_Ports" PORT="OV7670_RESET"/>
             <CONNECTION INSTANCE="reset_100M" PORT="ext_reset_in"/>
             <CONNECTION INSTANCE="reset_24M" PORT="ext_reset_in"/>
-            <CONNECTION INSTANCE="reset_25M" PORT="ext_reset_in"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -9587,12 +9604,12 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE FULLNAME="/clk_gen_25M_24M" HWVERSION="6.0" INSTANCE="clk_gen_25M_24M" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="clk_wiz" VLNV="xilinx.com:ip:clk_wiz:6.0">
+    <MODULE FULLNAME="/clk_wiz_0" HWVERSION="6.0" INSTANCE="clk_wiz_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="clk_wiz" VLNV="xilinx.com:ip:clk_wiz:6.0">
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=clk_wiz;v=v6_0;d=pg065-clk-wiz.pdf"/>
       </DOCUMENTS>
       <PARAMETERS>
-        <PARAMETER NAME="C_CLKOUT2_USED" VALUE="1"/>
+        <PARAMETER NAME="C_CLKOUT2_USED" VALUE="0"/>
         <PARAMETER NAME="C_USER_CLK_FREQ0" VALUE="100.0"/>
         <PARAMETER NAME="C_AUTO_PRIMITIVE" VALUE="MMCM"/>
         <PARAMETER NAME="C_USER_CLK_FREQ1" VALUE="100.0"/>
@@ -9616,7 +9633,7 @@
         <PARAMETER NAME="C_USE_CLKOUT2_BAR" VALUE="0"/>
         <PARAMETER NAME="C_USE_CLKOUT3_BAR" VALUE="0"/>
         <PARAMETER NAME="C_USE_CLKOUT4_BAR" VALUE="0"/>
-        <PARAMETER NAME="c_component_name" VALUE="design_1_clk_gen_25M_24M_0"/>
+        <PARAMETER NAME="c_component_name" VALUE="design_1_clk_wiz_0_1"/>
         <PARAMETER NAME="C_PLATFORM" VALUE="UNKNOWN"/>
         <PARAMETER NAME="C_USE_FREQ_SYNTH" VALUE="1"/>
         <PARAMETER NAME="C_USE_PHASE_ALIGNMENT" VALUE="1"/>
@@ -9651,7 +9668,7 @@
         <PARAMETER NAME="C_USE_POWER_DOWN" VALUE="0"/>
         <PARAMETER NAME="C_USE_STATUS" VALUE="0"/>
         <PARAMETER NAME="C_USE_FREEZE" VALUE="0"/>
-        <PARAMETER NAME="C_NUM_OUT_CLKS" VALUE="2"/>
+        <PARAMETER NAME="C_NUM_OUT_CLKS" VALUE="1"/>
         <PARAMETER NAME="C_CLKOUT1_DRIVES" VALUE="BUFG"/>
         <PARAMETER NAME="C_CLKOUT2_DRIVES" VALUE="BUFG"/>
         <PARAMETER NAME="C_CLKOUT3_DRIVES" VALUE="BUFG"/>
@@ -9664,15 +9681,15 @@
         <PARAMETER NAME="C_INCLK_SUM_ROW2" VALUE="no_secondary_input_clock"/>
         <PARAMETER NAME="C_OUTCLK_SUM_ROW0A" VALUE="Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase"/>
         <PARAMETER NAME="C_OUTCLK_SUM_ROW0B" VALUE="Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)"/>
-        <PARAMETER NAME="C_OUTCLK_SUM_ROW1" VALUE="clk_out1____25.175______0.000______50.0______202.205____276.131"/>
-        <PARAMETER NAME="C_OUTCLK_SUM_ROW2" VALUE="clk_out2____24.001______0.000______50.0______204.875____276.131"/>
+        <PARAMETER NAME="C_OUTCLK_SUM_ROW1" VALUE="clk_out1____24.002______0.000______50.0______329.137____404.105"/>
+        <PARAMETER NAME="C_OUTCLK_SUM_ROW2" VALUE="no_CLK_OUT2_output"/>
         <PARAMETER NAME="C_OUTCLK_SUM_ROW3" VALUE="no_CLK_OUT3_output"/>
         <PARAMETER NAME="C_OUTCLK_SUM_ROW4" VALUE="no_CLK_OUT4_output"/>
         <PARAMETER NAME="C_OUTCLK_SUM_ROW5" VALUE="no_CLK_OUT5_output"/>
         <PARAMETER NAME="C_OUTCLK_SUM_ROW6" VALUE="no_CLK_OUT6_output"/>
         <PARAMETER NAME="C_OUTCLK_SUM_ROW7" VALUE="no_CLK_OUT7_output"/>
-        <PARAMETER NAME="C_CLKOUT1_REQUESTED_OUT_FREQ" VALUE="25.175"/>
-        <PARAMETER NAME="C_CLKOUT2_REQUESTED_OUT_FREQ" VALUE="24"/>
+        <PARAMETER NAME="C_CLKOUT1_REQUESTED_OUT_FREQ" VALUE="24.001"/>
+        <PARAMETER NAME="C_CLKOUT2_REQUESTED_OUT_FREQ" VALUE="24.001"/>
         <PARAMETER NAME="C_CLKOUT3_REQUESTED_OUT_FREQ" VALUE="100.000"/>
         <PARAMETER NAME="C_CLKOUT4_REQUESTED_OUT_FREQ" VALUE="100.000"/>
         <PARAMETER NAME="C_CLKOUT5_REQUESTED_OUT_FREQ" VALUE="100.000"/>
@@ -9692,7 +9709,7 @@
         <PARAMETER NAME="C_CLKOUT5_REQUESTED_DUTY_CYCLE" VALUE="50.000"/>
         <PARAMETER NAME="C_CLKOUT6_REQUESTED_DUTY_CYCLE" VALUE="50.000"/>
         <PARAMETER NAME="C_CLKOUT7_REQUESTED_DUTY_CYCLE" VALUE="50.000"/>
-        <PARAMETER NAME="C_CLKOUT1_OUT_FREQ" VALUE="25.175"/>
+        <PARAMETER NAME="C_CLKOUT1_OUT_FREQ" VALUE="24.002"/>
         <PARAMETER NAME="C_CLKOUT2_OUT_FREQ" VALUE="24.001"/>
         <PARAMETER NAME="C_CLKOUT3_OUT_FREQ" VALUE="100.000"/>
         <PARAMETER NAME="C_CLKOUT4_OUT_FREQ" VALUE="100.000"/>
@@ -9724,18 +9741,18 @@
         <PARAMETER NAME="C_CLKOUT7_SEQUENCE_NUMBER" VALUE="1"/>
         <PARAMETER NAME="C_MMCM_NOTES" VALUE="None"/>
         <PARAMETER NAME="C_MMCM_BANDWIDTH" VALUE="OPTIMIZED"/>
-        <PARAMETER NAME="C_MMCM_CLKFBOUT_MULT_F" VALUE="99.125"/>
+        <PARAMETER NAME="C_MMCM_CLKFBOUT_MULT_F" VALUE="60.125"/>
         <PARAMETER NAME="C_MMCM_CLKIN1_PERIOD" VALUE="10.000"/>
         <PARAMETER NAME="C_MMCM_CLKIN2_PERIOD" VALUE="10.000"/>
         <PARAMETER NAME="C_MMCM_CLKOUT4_CASCADE" VALUE="FALSE"/>
         <PARAMETER NAME="C_MMCM_CLOCK_HOLD" VALUE="FALSE"/>
         <PARAMETER NAME="C_MMCM_COMPENSATION" VALUE="AUTO"/>
-        <PARAMETER NAME="C_MMCM_DIVCLK_DIVIDE" VALUE="7"/>
+        <PARAMETER NAME="C_MMCM_DIVCLK_DIVIDE" VALUE="6"/>
         <PARAMETER NAME="C_MMCM_REF_JITTER1" VALUE="0.010"/>
         <PARAMETER NAME="C_MMCM_REF_JITTER2" VALUE="0.010"/>
         <PARAMETER NAME="C_MMCM_STARTUP_WAIT" VALUE="FALSE"/>
-        <PARAMETER NAME="C_MMCM_CLKOUT0_DIVIDE_F" VALUE="56.250"/>
-        <PARAMETER NAME="C_MMCM_CLKOUT1_DIVIDE" VALUE="59"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT0_DIVIDE_F" VALUE="41.750"/>
+        <PARAMETER NAME="C_MMCM_CLKOUT1_DIVIDE" VALUE="1"/>
         <PARAMETER NAME="C_MMCM_CLKOUT2_DIVIDE" VALUE="1"/>
         <PARAMETER NAME="C_MMCM_CLKOUT3_DIVIDE" VALUE="1"/>
         <PARAMETER NAME="C_MMCM_CLKOUT4_DIVIDE" VALUE="1"/>
@@ -9866,12 +9883,12 @@
         <PARAMETER NAME="C_FILTER_1" VALUE="0000"/>
         <PARAMETER NAME="C_FILTER_2" VALUE="0000"/>
         <PARAMETER NAME="C_DIVIDE1_AUTO" VALUE="1"/>
-        <PARAMETER NAME="C_DIVIDE2_AUTO" VALUE="1.0489583333333334"/>
-        <PARAMETER NAME="C_DIVIDE3_AUTO" VALUE="0.25175000000000003"/>
-        <PARAMETER NAME="C_DIVIDE4_AUTO" VALUE="0.25175000000000003"/>
-        <PARAMETER NAME="C_DIVIDE5_AUTO" VALUE="0.25175000000000003"/>
-        <PARAMETER NAME="C_DIVIDE6_AUTO" VALUE="0.25175000000000003"/>
-        <PARAMETER NAME="C_DIVIDE7_AUTO" VALUE="0.25175000000000003"/>
+        <PARAMETER NAME="C_DIVIDE2_AUTO" VALUE="1.0"/>
+        <PARAMETER NAME="C_DIVIDE3_AUTO" VALUE="0.24001"/>
+        <PARAMETER NAME="C_DIVIDE4_AUTO" VALUE="0.24001"/>
+        <PARAMETER NAME="C_DIVIDE5_AUTO" VALUE="0.24001"/>
+        <PARAMETER NAME="C_DIVIDE6_AUTO" VALUE="0.24001"/>
+        <PARAMETER NAME="C_DIVIDE7_AUTO" VALUE="0.24001"/>
         <PARAMETER NAME="C_PLLBUFGCEDIV" VALUE="false"/>
         <PARAMETER NAME="C_MMCMBUFGCEDIV" VALUE="false"/>
         <PARAMETER NAME="C_PLLBUFGCEDIV1" VALUE="false"/>
@@ -9892,14 +9909,14 @@
         <PARAMETER NAME="C_CLKOUT5_MATCHED_ROUTING" VALUE="false"/>
         <PARAMETER NAME="C_CLKOUT6_MATCHED_ROUTING" VALUE="false"/>
         <PARAMETER NAME="C_CLKOUT7_MATCHED_ROUTING" VALUE="false"/>
-        <PARAMETER NAME="C_CLKOUT0_ACTUAL_FREQ" VALUE="25.175"/>
+        <PARAMETER NAME="C_CLKOUT0_ACTUAL_FREQ" VALUE="24.002"/>
         <PARAMETER NAME="C_CLKOUT1_ACTUAL_FREQ" VALUE="24.001"/>
         <PARAMETER NAME="C_CLKOUT2_ACTUAL_FREQ" VALUE="100.000"/>
         <PARAMETER NAME="C_CLKOUT3_ACTUAL_FREQ" VALUE="100.000"/>
         <PARAMETER NAME="C_CLKOUT4_ACTUAL_FREQ" VALUE="100.000"/>
         <PARAMETER NAME="C_CLKOUT5_ACTUAL_FREQ" VALUE="100.000"/>
         <PARAMETER NAME="C_CLKOUT6_ACTUAL_FREQ" VALUE="100.000"/>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_clk_gen_25M_24M_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_clk_wiz_0_1"/>
         <PARAMETER NAME="USER_CLK_FREQ0" VALUE="100.0"/>
         <PARAMETER NAME="USER_CLK_FREQ1" VALUE="100.0"/>
         <PARAMETER NAME="USER_CLK_FREQ2" VALUE="100.0"/>
@@ -9942,13 +9959,13 @@
         <PARAMETER NAME="CLKIN1_JITTER_PS" VALUE="100.0"/>
         <PARAMETER NAME="CLKIN2_JITTER_PS" VALUE="100.0"/>
         <PARAMETER NAME="CLKOUT1_USED" VALUE="true"/>
-        <PARAMETER NAME="CLKOUT2_USED" VALUE="true"/>
+        <PARAMETER NAME="CLKOUT2_USED" VALUE="false"/>
         <PARAMETER NAME="CLKOUT3_USED" VALUE="false"/>
         <PARAMETER NAME="CLKOUT4_USED" VALUE="false"/>
         <PARAMETER NAME="CLKOUT5_USED" VALUE="false"/>
         <PARAMETER NAME="CLKOUT6_USED" VALUE="false"/>
         <PARAMETER NAME="CLKOUT7_USED" VALUE="false"/>
-        <PARAMETER NAME="NUM_OUT_CLKS" VALUE="2"/>
+        <PARAMETER NAME="NUM_OUT_CLKS" VALUE="1"/>
         <PARAMETER NAME="CLK_OUT1_USE_FINE_PS_GUI" VALUE="false"/>
         <PARAMETER NAME="CLK_OUT2_USE_FINE_PS_GUI" VALUE="false"/>
         <PARAMETER NAME="CLK_OUT3_USE_FINE_PS_GUI" VALUE="false"/>
@@ -9975,10 +9992,10 @@
         <PARAMETER NAME="PSEN_PORT" VALUE="psen"/>
         <PARAMETER NAME="PSINCDEC_PORT" VALUE="psincdec"/>
         <PARAMETER NAME="PSDONE_PORT" VALUE="psdone"/>
-        <PARAMETER NAME="CLKOUT1_REQUESTED_OUT_FREQ" VALUE="25.175"/>
+        <PARAMETER NAME="CLKOUT1_REQUESTED_OUT_FREQ" VALUE="24.001"/>
         <PARAMETER NAME="CLKOUT1_REQUESTED_PHASE" VALUE="0.000"/>
         <PARAMETER NAME="CLKOUT1_REQUESTED_DUTY_CYCLE" VALUE="50.000"/>
-        <PARAMETER NAME="CLKOUT2_REQUESTED_OUT_FREQ" VALUE="24"/>
+        <PARAMETER NAME="CLKOUT2_REQUESTED_OUT_FREQ" VALUE="24.001"/>
         <PARAMETER NAME="CLKOUT2_REQUESTED_PHASE" VALUE="0.000"/>
         <PARAMETER NAME="CLKOUT2_REQUESTED_DUTY_CYCLE" VALUE="50.000"/>
         <PARAMETER NAME="CLKOUT3_REQUESTED_OUT_FREQ" VALUE="100.000"/>
@@ -10006,8 +10023,8 @@
         <PARAMETER NAME="CLKOUT6_MATCHED_ROUTING" VALUE="false"/>
         <PARAMETER NAME="CLKOUT7_MATCHED_ROUTING" VALUE="false"/>
         <PARAMETER NAME="PRIM_SOURCE" VALUE="Single_ended_clock_capable_pin"/>
-        <PARAMETER NAME="CLKOUT1_DRIVES" VALUE="BUFG"/>
-        <PARAMETER NAME="CLKOUT2_DRIVES" VALUE="BUFG"/>
+        <PARAMETER NAME="CLKOUT1_DRIVES" VALUE="Buffer"/>
+        <PARAMETER NAME="CLKOUT2_DRIVES" VALUE="Buffer"/>
         <PARAMETER NAME="CLKOUT3_DRIVES" VALUE="Buffer"/>
         <PARAMETER NAME="CLKOUT4_DRIVES" VALUE="Buffer"/>
         <PARAMETER NAME="CLKOUT5_DRIVES" VALUE="Buffer"/>
@@ -10045,9 +10062,9 @@
         <PARAMETER NAME="SS_MOD_TIME" VALUE="0.004"/>
         <PARAMETER NAME="OVERRIDE_MMCM" VALUE="false"/>
         <PARAMETER NAME="MMCM_NOTES" VALUE="None"/>
-        <PARAMETER NAME="MMCM_DIVCLK_DIVIDE" VALUE="7"/>
+        <PARAMETER NAME="MMCM_DIVCLK_DIVIDE" VALUE="6"/>
         <PARAMETER NAME="MMCM_BANDWIDTH" VALUE="OPTIMIZED"/>
-        <PARAMETER NAME="MMCM_CLKFBOUT_MULT_F" VALUE="99.125"/>
+        <PARAMETER NAME="MMCM_CLKFBOUT_MULT_F" VALUE="60.125"/>
         <PARAMETER NAME="MMCM_CLKFBOUT_PHASE" VALUE="0.000"/>
         <PARAMETER NAME="MMCM_CLKFBOUT_USE_FINE_PS" VALUE="false"/>
         <PARAMETER NAME="MMCM_CLKIN1_PERIOD" VALUE="10.000"/>
@@ -10058,11 +10075,11 @@
         <PARAMETER NAME="MMCM_REF_JITTER1" VALUE="0.010"/>
         <PARAMETER NAME="MMCM_REF_JITTER2" VALUE="0.010"/>
         <PARAMETER NAME="MMCM_STARTUP_WAIT" VALUE="false"/>
-        <PARAMETER NAME="MMCM_CLKOUT0_DIVIDE_F" VALUE="56.250"/>
+        <PARAMETER NAME="MMCM_CLKOUT0_DIVIDE_F" VALUE="41.750"/>
         <PARAMETER NAME="MMCM_CLKOUT0_DUTY_CYCLE" VALUE="0.500"/>
         <PARAMETER NAME="MMCM_CLKOUT0_PHASE" VALUE="0.000"/>
         <PARAMETER NAME="MMCM_CLKOUT0_USE_FINE_PS" VALUE="false"/>
-        <PARAMETER NAME="MMCM_CLKOUT1_DIVIDE" VALUE="59"/>
+        <PARAMETER NAME="MMCM_CLKOUT1_DIVIDE" VALUE="1"/>
         <PARAMETER NAME="MMCM_CLKOUT1_DUTY_CYCLE" VALUE="0.500"/>
         <PARAMETER NAME="MMCM_CLKOUT1_PHASE" VALUE="0.000"/>
         <PARAMETER NAME="MMCM_CLKOUT1_USE_FINE_PS" VALUE="false"/>
@@ -10136,8 +10153,8 @@
         <PARAMETER NAME="CDDCREQ_PORT" VALUE="cddcreq"/>
         <PARAMETER NAME="ENABLE_CLKOUTPHY" VALUE="false"/>
         <PARAMETER NAME="CLKOUTPHY_REQUESTED_FREQ" VALUE="600.000"/>
-        <PARAMETER NAME="CLKOUT1_JITTER" VALUE="202.205"/>
-        <PARAMETER NAME="CLKOUT1_PHASE_ERROR" VALUE="276.131"/>
+        <PARAMETER NAME="CLKOUT1_JITTER" VALUE="329.137"/>
+        <PARAMETER NAME="CLKOUT1_PHASE_ERROR" VALUE="404.105"/>
         <PARAMETER NAME="CLKOUT2_JITTER" VALUE="204.875"/>
         <PARAMETER NAME="CLKOUT2_PHASE_ERROR" VALUE="276.131"/>
         <PARAMETER NAME="CLKOUT3_JITTER" VALUE="0.0"/>
@@ -10162,12 +10179,7 @@
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="pl_clk0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="25174603" DIR="O" NAME="clk_out1" SIGIS="clk" SIGNAME="clk_gen_25M_24M_clk_out1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="reset_25M" PORT="slowest_sync_clk"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT CLKFREQUENCY="24001210" DIR="O" NAME="clk_out2" SIGIS="clk" SIGNAME="clk_gen_25M_24M_clk_out2">
+        <PORT CLKFREQUENCY="24001996" DIR="O" NAME="clk_out1" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="XCLK"/>
           </CONNECTIONS>
@@ -11663,6 +11675,9 @@
             <CONNECTION INSTANCE="VDMA_axis_to_ddr_writer_CHROMA" PORT="ap_rst_n"/>
             <CONNECTION INSTANCE="VDMA_axis_to_ddr_writer_LUMA" PORT="ap_rst_n"/>
             <CONNECTION INSTANCE="VDMA_ddr_to_axis_reader_0" PORT="ap_rst_n"/>
+            <CONNECTION INSTANCE="VDMA_axis_data_fifo_raw_LUMA" PORT="m_axis_aresetn"/>
+            <CONNECTION INSTANCE="VDMA_axis_data_fifo_pipeline_to_writer" PORT="m_axis_aresetn"/>
+            <CONNECTION INSTANCE="VDMA_axis_data_fifo_raw_CHROMA" PORT="m_axis_aresetn"/>
             <CONNECTION INSTANCE="VDMA_axi_mem_intercon_reader" PORT="M00_ARESETN"/>
             <CONNECTION INSTANCE="VDMA_axi_mem_intercon_reader" PORT="S00_ARESETN"/>
             <CONNECTION INSTANCE="VDMA_axi_mem_intercon_writer" PORT="M00_ARESETN"/>
@@ -11733,47 +11748,6 @@
             <CONNECTION INSTANCE="VDMA_axis_data_fifo_raw_LUMA" PORT="s_axis_aresetn"/>
           </CONNECTIONS>
         </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
-    <MODULE FULLNAME="/reset_25M" HWVERSION="5.0" INSTANCE="reset_25M" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="proc_sys_reset" VLNV="xilinx.com:ip:proc_sys_reset:5.0">
-      <DOCUMENTS>
-        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=proc_sys_reset;v=v5_0;d=pg164-proc-sys-reset.pdf"/>
-      </DOCUMENTS>
-      <PARAMETERS>
-        <PARAMETER NAME="C_FAMILY" VALUE="zynquplus"/>
-        <PARAMETER NAME="C_EXT_RST_WIDTH" VALUE="4"/>
-        <PARAMETER NAME="C_AUX_RST_WIDTH" VALUE="4"/>
-        <PARAMETER NAME="C_EXT_RESET_HIGH" VALUE="0"/>
-        <PARAMETER NAME="C_AUX_RESET_HIGH" VALUE="0"/>
-        <PARAMETER NAME="C_NUM_BUS_RST" VALUE="1"/>
-        <PARAMETER NAME="C_NUM_PERP_RST" VALUE="1"/>
-        <PARAMETER NAME="C_NUM_INTERCONNECT_ARESETN" VALUE="1"/>
-        <PARAMETER NAME="C_NUM_PERP_ARESETN" VALUE="1"/>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_reset_25M_0"/>
-        <PARAMETER NAME="USE_BOARD_FLOW" VALUE="false"/>
-        <PARAMETER NAME="RESET_BOARD_INTERFACE" VALUE="Custom"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT CLKFREQUENCY="25174603" DIR="I" NAME="slowest_sync_clk" SIGIS="clk" SIGNAME="clk_gen_25M_24M_clk_out1">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_gen_25M_24M" PORT="clk_out1"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="ext_reset_in" SIGIS="rst" SIGNAME="axi_gpio_pl_reset_gpio_io_o">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_gpio_pl_reset" PORT="gpio_io_o"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="aux_reset_in" SIGIS="rst"/>
-        <PORT DIR="I" NAME="mb_debug_sys_rst" SIGIS="rst"/>
-        <PORT DIR="I" NAME="dcm_locked" SIGIS="undef"/>
-        <PORT DIR="O" NAME="mb_reset" SIGIS="rst"/>
-        <PORT DIR="O" LEFT="0" NAME="bus_struct_reset" RIGHT="0" SIGIS="rst"/>
-        <PORT DIR="O" LEFT="0" NAME="peripheral_reset" RIGHT="0" SIGIS="rst"/>
-        <PORT DIR="O" LEFT="0" NAME="interconnect_aresetn" RIGHT="0" SIGIS="rst"/>
-        <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" RIGHT="0" SIGIS="rst"/>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
@@ -11874,13 +11848,13 @@
         <PARAMETER NAME="C_DP_USE_AUDIO" VALUE="0"/>
         <PARAMETER NAME="C_DP_USE_VIDEO" VALUE="0"/>
         <PARAMETER NAME="C_MAXIGP0_DATA_WIDTH" VALUE="128"/>
-        <PARAMETER NAME="C_MAXIGP1_DATA_WIDTH" VALUE="64"/>
+        <PARAMETER NAME="C_MAXIGP1_DATA_WIDTH" VALUE="128"/>
         <PARAMETER NAME="C_MAXIGP2_DATA_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_SAXIGP0_DATA_WIDTH" VALUE="128"/>
         <PARAMETER NAME="C_SAXIGP1_DATA_WIDTH" VALUE="128"/>
-        <PARAMETER NAME="C_SAXIGP2_DATA_WIDTH" VALUE="128"/>
-        <PARAMETER NAME="C_SAXIGP3_DATA_WIDTH" VALUE="128"/>
-        <PARAMETER NAME="C_SAXIGP4_DATA_WIDTH" VALUE="128"/>
+        <PARAMETER NAME="C_SAXIGP2_DATA_WIDTH" VALUE="64"/>
+        <PARAMETER NAME="C_SAXIGP3_DATA_WIDTH" VALUE="64"/>
+        <PARAMETER NAME="C_SAXIGP4_DATA_WIDTH" VALUE="64"/>
         <PARAMETER NAME="C_SAXIGP5_DATA_WIDTH" VALUE="128"/>
         <PARAMETER NAME="C_SAXIGP6_DATA_WIDTH" VALUE="128"/>
         <PARAMETER NAME="C_USE_DIFF_RW_CLK_GP0" VALUE="0"/>
@@ -12134,8 +12108,8 @@
         <PARAMETER NAME="SUBPRESET1" VALUE="Custom"/>
         <PARAMETER NAME="SUBPRESET2" VALUE="Custom"/>
         <PARAMETER NAME="PSU_UIPARAM_GENERATE_SUMMARY" VALUE="&lt;Select>"/>
-        <PARAMETER NAME="PSU_MIO_TREE_PERIPHERALS" VALUE="UART 1#UART 1#UART 0#UART 0#I2C 1#I2C 1#SPI 1#GPIO0 MIO#GPIO0 MIO#SPI 1#SPI 1#SPI 1#GPIO0 MIO#SD 0#SD 0#SD 0#SD 0#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#SD 0#SD 0#GPIO0 MIO#SD 0#GPIO0 MIO#PMU GPI 0#DPAUX#DPAUX#DPAUX#DPAUX#GPIO1 MIO#PMU GPO 0#PMU GPO 1#PMU GPO 2#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#SPI 0#GPIO1 MIO#GPIO1 MIO#SPI 0#SPI 0#SPI 0#GPIO1 MIO#GPIO1 MIO#SD 1#SD 1#SD 1#SD 1#SD 1#SD 1#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#GPIO2 MIO#GPIO2 MIO"/>
-        <PARAMETER NAME="PSU_MIO_TREE_SIGNALS" VALUE="txd#rxd#rxd#txd#scl_out#sda_out#sclk_out#gpio0[7]#gpio0[8]#n_ss_out[0]#miso#mosi#gpio0[12]#sdio0_data_out[0]#sdio0_data_out[1]#sdio0_data_out[2]#sdio0_data_out[3]#gpio0[17]#gpio0[18]#gpio0[19]#gpio0[20]#sdio0_cmd_out#sdio0_clk_out#gpio0[23]#sdio0_cd_n#gpio0[25]#gpi[0]#dp_aux_data_out#dp_hot_plug_detect#dp_aux_data_oe#dp_aux_data_in#gpio1[31]#gpo[0]#gpo[1]#gpo[2]#gpio1[35]#gpio1[36]#gpio1[37]#sclk_out#gpio1[39]#gpio1[40]#n_ss_out[0]#miso#mosi#gpio1[44]#gpio1[45]#sdio1_data_out[0]#sdio1_data_out[1]#sdio1_data_out[2]#sdio1_data_out[3]#sdio1_cmd_out#sdio1_clk_out#ulpi_clk_in#ulpi_dir#ulpi_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#ulpi_tx_data[4]#ulpi_tx_data[5]#ulpi_tx_data[6]#ulpi_tx_data[7]#ulpi_clk_in#ulpi_dir#ulpi_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#ulpi_tx_data[4]#ulpi_tx_data[5]#ulpi_tx_data[6]#ulpi_tx_data[7]#gpio2[76]#gpio2[77]"/>
+        <PARAMETER NAME="PSU_MIO_TREE_PERIPHERALS" VALUE="UART 1#UART 1#UART 0#UART 0#I2C 1#I2C 1#SPI 1#GPIO0 MIO#GPIO0 MIO#SPI 1#SPI 1#SPI 1#GPIO0 MIO#SD 0#SD 0#SD 0#SD 0#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#SD 0#SD 0#GPIO0 MIO#SD 0#SD 0#PMU GPI 0#DPAUX#DPAUX#DPAUX#DPAUX#GPIO1 MIO#PMU GPO 0#PMU GPO 1#PMU GPO 2#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#SPI 0#GPIO1 MIO#GPIO1 MIO#SPI 0#SPI 0#SPI 0#GPIO1 MIO#GPIO1 MIO#SD 1#SD 1#SD 1#SD 1#SD 1#SD 1#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#GPIO2 MIO#GPIO2 MIO"/>
+        <PARAMETER NAME="PSU_MIO_TREE_SIGNALS" VALUE="txd#rxd#rxd#txd#scl_out#sda_out#sclk_out#gpio0[7]#gpio0[8]#n_ss_out[0]#miso#mosi#gpio0[12]#sdio0_data_out[0]#sdio0_data_out[1]#sdio0_data_out[2]#sdio0_data_out[3]#gpio0[17]#gpio0[18]#gpio0[19]#gpio0[20]#sdio0_cmd_out#sdio0_clk_out#gpio0[23]#sdio0_cd_n#sdio0_wp#gpi[0]#dp_aux_data_out#dp_hot_plug_detect#dp_aux_data_oe#dp_aux_data_in#gpio1[31]#gpo[0]#gpo[1]#gpo[2]#gpio1[35]#gpio1[36]#gpio1[37]#sclk_out#gpio1[39]#gpio1[40]#n_ss_out[0]#miso#mosi#gpio1[44]#gpio1[45]#sdio1_data_out[0]#sdio1_data_out[1]#sdio1_data_out[2]#sdio1_data_out[3]#sdio1_cmd_out#sdio1_clk_out#ulpi_clk_in#ulpi_dir#ulpi_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#ulpi_tx_data[4]#ulpi_tx_data[5]#ulpi_tx_data[6]#ulpi_tx_data[7]#ulpi_clk_in#ulpi_dir#ulpi_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#ulpi_tx_data[4]#ulpi_tx_data[5]#ulpi_tx_data[6]#ulpi_tx_data[7]#gpio2[76]#gpio2[77]"/>
         <PARAMETER NAME="PSU_PERIPHERAL_BOARD_PRESET"/>
         <PARAMETER NAME="PSU__NAND__PERIPHERAL__IO" VALUE="&lt;Select>"/>
         <PARAMETER NAME="PSU__NAND__PERIPHERAL__ENABLE" VALUE="0"/>
@@ -12199,8 +12173,8 @@
         <PARAMETER NAME="PSU__SD0__GRP_CD__IO" VALUE="MIO 24"/>
         <PARAMETER NAME="PSU__SD0__GRP_POW__ENABLE" VALUE="0"/>
         <PARAMETER NAME="PSU__SD0__GRP_POW__IO" VALUE="&lt;Select>"/>
-        <PARAMETER NAME="PSU__SD0__GRP_WP__ENABLE" VALUE="0"/>
-        <PARAMETER NAME="PSU__SD0__GRP_WP__IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PSU__SD0__GRP_WP__ENABLE" VALUE="1"/>
+        <PARAMETER NAME="PSU__SD0__GRP_WP__IO" VALUE="MIO 25"/>
         <PARAMETER NAME="PSU__SD0__SLOT_TYPE" VALUE="SD 2.0"/>
         <PARAMETER NAME="PSU__SD0__RESET__ENABLE" VALUE="0"/>
         <PARAMETER NAME="PSU__SD0__DATA_TRANSFER_MODE" VALUE="4Bit"/>
@@ -12432,7 +12406,7 @@
         <PARAMETER NAME="PSU__MAXIGP0__DATA_WIDTH" VALUE="128"/>
         <PARAMETER NAME="PSU__USE__M_AXI_GP1" VALUE="1"/>
         <PARAMETER NAME="PSU__M_AXI_GP1_SUPPORTS_NARROW_BURST" VALUE="1"/>
-        <PARAMETER NAME="PSU__MAXIGP1__DATA_WIDTH" VALUE="64"/>
+        <PARAMETER NAME="PSU__MAXIGP1__DATA_WIDTH" VALUE="128"/>
         <PARAMETER NAME="PSU__USE__M_AXI_GP2" VALUE="0"/>
         <PARAMETER NAME="PSU__M_AXI_GP2_SUPPORTS_NARROW_BURST" VALUE="1"/>
         <PARAMETER NAME="PSU__MAXIGP2__DATA_WIDTH" VALUE="32"/>
@@ -12445,13 +12419,13 @@
         <PARAMETER NAME="PSU__SAXIGP1__DATA_WIDTH" VALUE="128"/>
         <PARAMETER NAME="PSU__USE__S_AXI_GP2" VALUE="1"/>
         <PARAMETER NAME="PSU__USE_DIFF_RW_CLK_GP2" VALUE="0"/>
-        <PARAMETER NAME="PSU__SAXIGP2__DATA_WIDTH" VALUE="128"/>
+        <PARAMETER NAME="PSU__SAXIGP2__DATA_WIDTH" VALUE="64"/>
         <PARAMETER NAME="PSU__USE__S_AXI_GP3" VALUE="1"/>
         <PARAMETER NAME="PSU__USE_DIFF_RW_CLK_GP3" VALUE="0"/>
-        <PARAMETER NAME="PSU__SAXIGP3__DATA_WIDTH" VALUE="128"/>
+        <PARAMETER NAME="PSU__SAXIGP3__DATA_WIDTH" VALUE="64"/>
         <PARAMETER NAME="PSU__USE__S_AXI_GP4" VALUE="1"/>
         <PARAMETER NAME="PSU__USE_DIFF_RW_CLK_GP4" VALUE="0"/>
-        <PARAMETER NAME="PSU__SAXIGP4__DATA_WIDTH" VALUE="128"/>
+        <PARAMETER NAME="PSU__SAXIGP4__DATA_WIDTH" VALUE="64"/>
         <PARAMETER NAME="PSU__USE__S_AXI_GP5" VALUE="0"/>
         <PARAMETER NAME="PSU__USE_DIFF_RW_CLK_GP5" VALUE="0"/>
         <PARAMETER NAME="PSU__SAXIGP5__DATA_WIDTH" VALUE="128"/>
@@ -12506,7 +12480,7 @@
         <PARAMETER NAME="PSU_MIO_0_PULLUPDOWN" VALUE="pullup"/>
         <PARAMETER NAME="PSU_MIO_0_DRIVE_STRENGTH" VALUE="12"/>
         <PARAMETER NAME="PSU_MIO_0_INPUT_TYPE" VALUE="schmitt"/>
-        <PARAMETER NAME="PSU_MIO_0_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_0_SLEW" VALUE="fast"/>
         <PARAMETER NAME="PSU_MIO_0_DIRECTION" VALUE="out"/>
         <PARAMETER NAME="PSU_MIO_1_PULLUPDOWN" VALUE="pullup"/>
         <PARAMETER NAME="PSU_MIO_1_DRIVE_STRENGTH" VALUE="12"/>
@@ -12521,7 +12495,7 @@
         <PARAMETER NAME="PSU_MIO_3_PULLUPDOWN" VALUE="pullup"/>
         <PARAMETER NAME="PSU_MIO_3_DRIVE_STRENGTH" VALUE="12"/>
         <PARAMETER NAME="PSU_MIO_3_INPUT_TYPE" VALUE="schmitt"/>
-        <PARAMETER NAME="PSU_MIO_3_SLEW" VALUE="slow"/>
+        <PARAMETER NAME="PSU_MIO_3_SLEW" VALUE="fast"/>
         <PARAMETER NAME="PSU_MIO_3_DIRECTION" VALUE="out"/>
         <PARAMETER NAME="PSU_MIO_4_PULLUPDOWN" VALUE="pullup"/>
         <PARAMETER NAME="PSU_MIO_4_DRIVE_STRENGTH" VALUE="12"/>
@@ -12632,7 +12606,7 @@
         <PARAMETER NAME="PSU_MIO_25_DRIVE_STRENGTH" VALUE="12"/>
         <PARAMETER NAME="PSU_MIO_25_INPUT_TYPE" VALUE="schmitt"/>
         <PARAMETER NAME="PSU_MIO_25_SLEW" VALUE="slow"/>
-        <PARAMETER NAME="PSU_MIO_25_DIRECTION" VALUE="inout"/>
+        <PARAMETER NAME="PSU_MIO_25_DIRECTION" VALUE="in"/>
         <PARAMETER NAME="PSU_MIO_26_PULLUPDOWN" VALUE="pullup"/>
         <PARAMETER NAME="PSU_MIO_26_DRIVE_STRENGTH" VALUE="12"/>
         <PARAMETER NAME="PSU_MIO_26_INPUT_TYPE" VALUE="schmitt"/>
@@ -13742,12 +13716,12 @@
             <CONNECTION INSTANCE="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_0" PORT="S00_AXI_awready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="63" NAME="maxigp1_wdata" RIGHT="0" SIGIS="undef" SIGNAME="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_0_S00_AXI_wdata">
+        <PORT DIR="O" LEFT="127" NAME="maxigp1_wdata" RIGHT="0" SIGIS="undef" SIGNAME="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_0_S00_AXI_wdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_0" PORT="S00_AXI_wdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="7" NAME="maxigp1_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_0_S00_AXI_wstrb">
+        <PORT DIR="O" LEFT="15" NAME="maxigp1_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_0_S00_AXI_wstrb">
           <CONNECTIONS>
             <CONNECTION INSTANCE="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_0" PORT="S00_AXI_wstrb"/>
           </CONNECTIONS>
@@ -13847,7 +13821,7 @@
             <CONNECTION INSTANCE="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_0" PORT="S00_AXI_rid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="63" NAME="maxigp1_rdata" RIGHT="0" SIGIS="undef" SIGNAME="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_0_S00_AXI_rdata">
+        <PORT DIR="I" LEFT="127" NAME="maxigp1_rdata" RIGHT="0" SIGIS="undef" SIGNAME="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_0_S00_AXI_rdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_0" PORT="S00_AXI_rdata"/>
           </CONNECTIONS>
@@ -13947,12 +13921,12 @@
             <CONNECTION INSTANCE="VDMA_axi_mem_intercon_reader" PORT="M00_AXI_awready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="127" NAME="saxigp2_wdata" RIGHT="0" SIGIS="undef" SIGNAME="VDMA_axi_mem_intercon_reader_M00_AXI_wdata">
+        <PORT DIR="I" LEFT="63" NAME="saxigp2_wdata" RIGHT="0" SIGIS="undef" SIGNAME="VDMA_axi_mem_intercon_reader_M00_AXI_wdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="VDMA_axi_mem_intercon_reader" PORT="M00_AXI_wdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="15" NAME="saxigp2_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="VDMA_axi_mem_intercon_reader_M00_AXI_wstrb">
+        <PORT DIR="I" LEFT="7" NAME="saxigp2_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="VDMA_axi_mem_intercon_reader_M00_AXI_wstrb">
           <CONNECTIONS>
             <CONNECTION INSTANCE="VDMA_axi_mem_intercon_reader" PORT="M00_AXI_wstrb"/>
           </CONNECTIONS>
@@ -14047,7 +14021,7 @@
             <CONNECTION INSTANCE="VDMA_axi_mem_intercon_reader" PORT="M00_AXI_rid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="127" NAME="saxigp2_rdata" RIGHT="0" SIGIS="undef" SIGNAME="VDMA_axi_mem_intercon_reader_M00_AXI_rdata">
+        <PORT DIR="O" LEFT="63" NAME="saxigp2_rdata" RIGHT="0" SIGIS="undef" SIGNAME="VDMA_axi_mem_intercon_reader_M00_AXI_rdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="VDMA_axi_mem_intercon_reader" PORT="M00_AXI_rdata"/>
           </CONNECTIONS>
@@ -14147,12 +14121,12 @@
             <CONNECTION INSTANCE="VDMA_axi_mem_intercon_writer" PORT="M00_AXI_awready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="127" NAME="saxigp3_wdata" RIGHT="0" SIGIS="undef" SIGNAME="VDMA_axi_mem_intercon_writer_M00_AXI_wdata">
+        <PORT DIR="I" LEFT="63" NAME="saxigp3_wdata" RIGHT="0" SIGIS="undef" SIGNAME="VDMA_axi_mem_intercon_writer_M00_AXI_wdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="VDMA_axi_mem_intercon_writer" PORT="M00_AXI_wdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="15" NAME="saxigp3_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="VDMA_axi_mem_intercon_writer_M00_AXI_wstrb">
+        <PORT DIR="I" LEFT="7" NAME="saxigp3_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="VDMA_axi_mem_intercon_writer_M00_AXI_wstrb">
           <CONNECTIONS>
             <CONNECTION INSTANCE="VDMA_axi_mem_intercon_writer" PORT="M00_AXI_wstrb"/>
           </CONNECTIONS>
@@ -14247,7 +14221,7 @@
             <CONNECTION INSTANCE="VDMA_axi_mem_intercon_writer" PORT="M00_AXI_rid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="127" NAME="saxigp3_rdata" RIGHT="0" SIGIS="undef" SIGNAME="VDMA_axi_mem_intercon_writer_M00_AXI_rdata">
+        <PORT DIR="O" LEFT="63" NAME="saxigp3_rdata" RIGHT="0" SIGIS="undef" SIGNAME="VDMA_axi_mem_intercon_writer_M00_AXI_rdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="VDMA_axi_mem_intercon_writer" PORT="M00_AXI_rdata"/>
           </CONNECTIONS>
@@ -14347,12 +14321,12 @@
             <CONNECTION INSTANCE="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_1" PORT="M00_AXI_awready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="127" NAME="saxigp4_wdata" RIGHT="0" SIGIS="undef" SIGNAME="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_1_M00_AXI_wdata">
+        <PORT DIR="I" LEFT="63" NAME="saxigp4_wdata" RIGHT="0" SIGIS="undef" SIGNAME="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_1_M00_AXI_wdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_1" PORT="M00_AXI_wdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="15" NAME="saxigp4_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_1_M00_AXI_wstrb">
+        <PORT DIR="I" LEFT="7" NAME="saxigp4_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_1_M00_AXI_wstrb">
           <CONNECTIONS>
             <CONNECTION INSTANCE="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_1" PORT="M00_AXI_wstrb"/>
           </CONNECTIONS>
@@ -14447,7 +14421,7 @@
             <CONNECTION INSTANCE="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_1" PORT="M00_AXI_rid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="127" NAME="saxigp4_rdata" RIGHT="0" SIGIS="undef" SIGNAME="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_1_M00_AXI_rdata">
+        <PORT DIR="O" LEFT="63" NAME="saxigp4_rdata" RIGHT="0" SIGIS="undef" SIGNAME="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_1_M00_AXI_rdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_1" PORT="M00_AXI_rdata"/>
           </CONNECTIONS>
@@ -14493,10 +14467,10 @@
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxihp1_fpd_aclk"/>
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxihp0_fpd_aclk"/>
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxihpm0_fpd_aclk"/>
-            <CONNECTION INSTANCE="clk_gen_25M_24M" PORT="clk_in1"/>
             <CONNECTION INSTANCE="axi_gpio_frame_intr" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="reset_100M" PORT="slowest_sync_clk"/>
             <CONNECTION INSTANCE="axi_gpio_pl_reset" PORT="s_axi_aclk"/>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_in1"/>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="ACLK"/>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="S00_ACLK"/>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M00_ACLK"/>
@@ -14597,10 +14571,10 @@
             <PORTMAP LOGICAL="WVALID" PHYSICAL="maxigp0_wvalid"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="zynq_ultra_ps_e_0_M_AXI_HPM1_FPD" DATAWIDTH="64" NAME="M_AXI_HPM1_FPD" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
+        <BUSINTERFACE BUSNAME="zynq_ultra_ps_e_0_M_AXI_HPM1_FPD" DATAWIDTH="128" NAME="M_AXI_HPM1_FPD" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
           <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="8"/>
           <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="8"/>
-          <PARAMETER NAME="DATA_WIDTH" VALUE="64"/>
+          <PARAMETER NAME="DATA_WIDTH" VALUE="128"/>
           <PARAMETER NAME="PROTOCOL" VALUE="AXI4"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="24000000"/>
           <PARAMETER NAME="ID_WIDTH" VALUE="16"/>
@@ -14670,10 +14644,10 @@
             <PORTMAP LOGICAL="WVALID" PHYSICAL="maxigp1_wvalid"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="VDMA_axi_mem_intercon_reader_M00_AXI" DATAWIDTH="128" NAME="S_AXI_HP0_FPD" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
+        <BUSINTERFACE BUSNAME="VDMA_axi_mem_intercon_reader_M00_AXI" DATAWIDTH="64" NAME="S_AXI_HP0_FPD" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
           <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="16"/>
           <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="16"/>
-          <PARAMETER NAME="DATA_WIDTH" VALUE="128"/>
+          <PARAMETER NAME="DATA_WIDTH" VALUE="64"/>
           <PARAMETER NAME="PROTOCOL" VALUE="AXI4"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="99999999"/>
           <PARAMETER NAME="ID_WIDTH" VALUE="6"/>
@@ -14694,7 +14668,7 @@
           <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
           <PARAMETER NAME="HAS_RRESP" VALUE="1"/>
           <PARAMETER NAME="SUPPORTS_NARROW_BURST" VALUE="0"/>
-          <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="128"/>
+          <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="256"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_zynq_ultra_ps_e_0_0_pl_clk0"/>
           <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
@@ -14743,10 +14717,10 @@
             <PORTMAP LOGICAL="WVALID" PHYSICAL="saxigp2_wvalid"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="VDMA_axi_mem_intercon_writer_M00_AXI" DATAWIDTH="128" NAME="S_AXI_HP1_FPD" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
+        <BUSINTERFACE BUSNAME="VDMA_axi_mem_intercon_writer_M00_AXI" DATAWIDTH="64" NAME="S_AXI_HP1_FPD" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
           <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="16"/>
           <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="16"/>
-          <PARAMETER NAME="DATA_WIDTH" VALUE="128"/>
+          <PARAMETER NAME="DATA_WIDTH" VALUE="64"/>
           <PARAMETER NAME="PROTOCOL" VALUE="AXI4"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="99999999"/>
           <PARAMETER NAME="ID_WIDTH" VALUE="6"/>
@@ -14767,7 +14741,7 @@
           <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
           <PARAMETER NAME="HAS_RRESP" VALUE="1"/>
           <PARAMETER NAME="SUPPORTS_NARROW_BURST" VALUE="0"/>
-          <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="128"/>
+          <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="256"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_zynq_ultra_ps_e_0_0_pl_clk0"/>
           <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
@@ -14816,10 +14790,10 @@
             <PORTMAP LOGICAL="WVALID" PHYSICAL="saxigp3_wvalid"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_1_M00_AXI" DATAWIDTH="128" NAME="S_AXI_HP2_FPD" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
+        <BUSINTERFACE BUSNAME="OV7670_GRAYSCALE_TO_AXIS_axi_interconnect_1_M00_AXI" DATAWIDTH="64" NAME="S_AXI_HP2_FPD" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
           <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="16"/>
           <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="16"/>
-          <PARAMETER NAME="DATA_WIDTH" VALUE="128"/>
+          <PARAMETER NAME="DATA_WIDTH" VALUE="64"/>
           <PARAMETER NAME="PROTOCOL" VALUE="AXI4"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="24000000"/>
           <PARAMETER NAME="ID_WIDTH" VALUE="6"/>
@@ -14840,7 +14814,7 @@
           <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
           <PARAMETER NAME="HAS_RRESP" VALUE="1"/>
           <PARAMETER NAME="SUPPORTS_NARROW_BURST" VALUE="0"/>
-          <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="128"/>
+          <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="256"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_PCLK"/>
           <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>

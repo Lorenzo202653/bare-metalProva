@@ -1,0 +1,25 @@
+11:36:49 **** Auto Build of configuration Debug for project design3 ****
+make all 
+Building file: ../src/axi_gpio_pl_reset.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/axi_gpio_pl_reset.o" -I../../design3_bsp_1/psu_cortexa53_0/include -MMD -MP -MF"src/axi_gpio_pl_reset.d" -MT"src/axi_gpio_pl_reset.o" -o "src/axi_gpio_pl_reset.o" "../src/axi_gpio_pl_reset.c"
+../src/axi_gpio_pl_reset.c: In function 'init_axi_gpio_pl_reset':
+../src/axi_gpio_pl_reset.c:16:6: warning: unused variable 'prova' [-Wunused-variable]
+  u32 prova;
+      ^~~~~
+Finished building: ../src/axi_gpio_pl_reset.c
+ 
+Building target: design3.elf
+Invoking: ARM v8 gcc linker
+aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -L../../design3_bsp_1/psu_cortexa53_0/lib -o "design3.elf"  ./src/application.o ./src/axi_gpio_frame_intr.o ./src/axi_gpio_pl_reset.o ./src/axis_to_ddr_writer.o ./src/ddr_to_axis_reader.o ./src/ddr_to_axis_reader_SD.o ./src/frame_buffer_interrupt.o ./src/i2c_interrupt.o ./src/interrupts.o ./src/main.o ./src/ov7670_config_i2c.o ./src/platform.o ./src/read_sd_card.o ./src/test.o ./src/test_SD_main.o ./src/zynq_gic.o ./src/zynq_i2c.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+Finished building target: design3.elf
+ 
+Invoking: ARM v8 Print Size
+aarch64-none-elf-size design3.elf  |tee "design3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 150220	   7992	 331136	 489348	  77784	design3.elf
+Finished building: design3.elf.size
+ 
+
+11:36:50 Build Finished (took 773ms)
+

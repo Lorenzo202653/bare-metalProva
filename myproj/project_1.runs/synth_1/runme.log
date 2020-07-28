@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log design_1_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
+    with args -log reset_3_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source reset_3_wrapper.tcl
 
 
 ****** Vivado v2018.1 (64-bit)
@@ -8,7 +8,7 @@
   **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 
-source design_1_wrapper.tcl -notrace
+source reset_3_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/media/kidre/Dati/GIT_TEST/bare-metalProva/SmartCamera'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2018.1/data/ip'.
@@ -17,304 +17,280 @@ CRITICAL WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:axis_
 WARNING: [IP_Flow 19-4830] Duplicate Interface found for 'xilinx.com:display_processing_system7:fixedio:1.0'. The one found in location '/media/kidre/Dati/GIT_TEST/bare-metalProva/SmartCamera/HLS_COMMON/VIVADO/PATTERN_GENERATOR_TEST/PATTERN_GENERATOR_TEST.srcs/sources_1/bd/design_1/ipshared/xilinx.com/processing_system7_v5_5/fixedio.xml' will take precedence over the same Interface in location '/opt/Xilinx/Vivado/2018.1/data/ip/xilinx/processing_system7_v5_5/fixedio.xml'
 WARNING: [IP_Flow 19-4830] Duplicate Interface found for 'xilinx.com:display_processing_system7:hpstatusctrl:1.0'. The one found in location '/media/kidre/Dati/GIT_TEST/bare-metalProva/SmartCamera/HLS_COMMON/VIVADO/PATTERN_GENERATOR_TEST/PATTERN_GENERATOR_TEST.srcs/sources_1/bd/design_1/ipshared/xilinx.com/processing_system7_v5_5/hpstatusctrl.xml' will take precedence over the same Interface in location '/opt/Xilinx/Vivado/2018.1/data/ip/xilinx/processing_system7_v5_5/hpstatusctrl.xml'
 WARNING: [IP_Flow 19-4830] Duplicate Interface found for 'xilinx.com:display_processing_system7:usbctrl:1.0'. The one found in location '/media/kidre/Dati/GIT_TEST/bare-metalProva/SmartCamera/HLS_COMMON/VIVADO/PATTERN_GENERATOR_TEST/PATTERN_GENERATOR_TEST.srcs/sources_1/bd/design_1/ipshared/xilinx.com/processing_system7_v5_5/usbctrl.xml' will take precedence over the same Interface in location '/opt/Xilinx/Vivado/2018.1/data/ip/xilinx/processing_system7_v5_5/usbctrl.xml'
-add_files: Time (s): cpu = 00:00:22 ; elapsed = 00:00:35 . Memory (MB): peak = 1558.691 ; gain = 358.961 ; free physical = 1176 ; free virtual = 18894
-Command: synth_design -top design_1_wrapper -part xczu3eg-sbva484-1-e
+add_files: Time (s): cpu = 00:00:21 ; elapsed = 00:00:34 . Memory (MB): peak = 1558.688 ; gain = 358.961 ; free physical = 316 ; free virtual = 15577
+Command: synth_design -top reset_3_wrapper -part xczu3eg-sbva484-1-e
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xczu3eg'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu3eg'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 7988 
+INFO: Helper process launched with PID 6871 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2014.914 ; gain = 0.000 ; free physical = 1041 ; free virtual = 18773
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1966.887 ; gain = 0.000 ; free physical = 189 ; free virtual = 15458
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
-INFO: [Synth 8-6157] synthesizing module 'design_1' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:2000]
-INFO: [Synth 8-6157] synthesizing module 'design_1_ENABLE_RAW_STREAM_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_ENABLE_RAW_STREAM_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ENABLE_RAW_STREAM_0' (1#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_ENABLE_RAW_STREAM_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'OV7670_GRAYSCALE_TO_AXIS_imp_1400ZLF' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:12]
-INFO: [Synth 8-6157] synthesizing module 'design_1_LF_valid_to_AXIS_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_LF_valid_to_AXIS_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_LF_valid_to_AXIS_0' (2#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_LF_valid_to_AXIS_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'LF_valid_to_AXIS' of module 'design_1_LF_valid_to_AXIS_0' requires 12 connections, but only 9 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:448]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_interconnect_0_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:3034]
-INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_AQR2Z5' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:7448]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_AQR2Z5' (3#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:7448]
-INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1K0W4KW' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:8396]
-INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1K0W4KW' (4#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:8396]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1Q0QYKZ' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:11106]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_ds_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_auto_ds_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_ds_0' (5#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_auto_ds_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (6#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1Q0QYKZ' (7#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:11106]
-INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_0' (8#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_xbar_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'xbar' of module 'design_1_xbar_0' requires 40 connections, but only 38 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:3533]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_interconnect_0_0' (9#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:3034]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_interconnect_1_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:3574]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1JOJZ9V' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:10746]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_us_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_auto_us_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_us_0' (10#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_auto_us_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'auto_us' of module 'design_1_auto_us_0' requires 72 connections, but only 70 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:11033]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1JOJZ9V' (11#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:10746]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_interconnect_1_0' (12#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:3574]
-INFO: [Synth 8-6157] synthesizing module 'design_1_c_counter_binary_0_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_c_counter_binary_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_c_counter_binary_0_0' (13#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_c_counter_binary_0_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'c_counter_binary_0' of module 'design_1_c_counter_binary_0_0' requires 3 connections, but only 2 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:613]
-INFO: [Synth 8-6157] synthesizing module 'design_1_ddr_to_axis_reader_SD_0_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_ddr_to_axis_reader_SD_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ddr_to_axis_reader_SD_0_0' (14#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_ddr_to_axis_reader_SD_0_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'ddr_to_axis_reader_SD_0' of module 'design_1_ddr_to_axis_reader_SD_0_0' requires 61 connections, but only 58 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:616]
-INFO: [Synth 8-6157] synthesizing module 'design_1_mux_sd_ov_1_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_mux_sd_ov_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_mux_sd_ov_1_0' (15#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_mux_sd_ov_1_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'mux_sd_ov_1' of module 'design_1_mux_sd_ov_1_0' requires 32 connections, but only 29 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:675]
-INFO: [Synth 8-6157] synthesizing module 'design_1_ov7670_LUMA_CHROMA_0_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_ov7670_LUMA_CHROMA_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ov7670_LUMA_CHROMA_0_0' (16#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_ov7670_LUMA_CHROMA_0_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'ov7670_LUMA_CHROMA_0' of module 'design_1_ov7670_LUMA_CHROMA_0_0' requires 19 connections, but only 16 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:705]
-INFO: [Synth 8-6157] synthesizing module 'design_1_ov7670_interface_0_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_ov7670_interface_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ov7670_interface_0_0' (17#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_ov7670_interface_0_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'ov7670_interface_0' of module 'design_1_ov7670_interface_0_0' requires 12 connections, but only 9 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:722]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ov7670_interface_0'. This will prevent further optimization [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:722]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'LF_valid_to_AXIS'. This will prevent further optimization [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:448]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'c_counter_binary_0'. This will prevent further optimization [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:613]
-INFO: [Synth 8-6155] done synthesizing module 'OV7670_GRAYSCALE_TO_AXIS_imp_1400ZLF' (18#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:12]
-INFO: [Synth 8-6157] synthesizing module 'VDMA_imp_148AGHI' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:734]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_mem_intercon_reader_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:3944]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_XWSS1N' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:11876]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_us_1' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_auto_us_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_us_1' (19#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_auto_us_1_stub.v:6]
-WARNING: [Synth 8-350] instance 'auto_us' of module 'design_1_auto_us_1' requires 72 connections, but only 70 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:12163]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_XWSS1N' (20#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:11876]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_mem_intercon_reader_0' (21#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:3944]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_mem_intercon_writer_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:4314]
-INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1C2527D' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:7176]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1C2527D' (22#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:7176]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_NBI0X7' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:11516]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_us_2' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_auto_us_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_us_2' (23#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_auto_us_2_stub.v:6]
-WARNING: [Synth 8-350] instance 'auto_us' of module 'design_1_auto_us_2' requires 72 connections, but only 70 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:11803]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_NBI0X7' (24#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:11516]
-INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_1FZE762' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:12236]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_us_3' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_auto_us_3_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_us_3' (25#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_auto_us_3_stub.v:6]
-WARNING: [Synth 8-350] instance 'auto_us' of module 'design_1_auto_us_3' requires 72 connections, but only 70 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:12523]
-INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_1FZE762' (26#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:12236]
-INFO: [Synth 8-6157] synthesizing module 's02_couplers_imp_MPSHBC' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:12596]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_us_4' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_auto_us_4_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_us_4' (27#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_auto_us_4_stub.v:6]
-WARNING: [Synth 8-350] instance 'auto_us' of module 'design_1_auto_us_4' requires 72 connections, but only 70 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:12883]
-INFO: [Synth 8-6155] done synthesizing module 's02_couplers_imp_MPSHBC' (28#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:12596]
-INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_1' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_xbar_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_1' (29#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_xbar_1_stub.v:6]
-WARNING: [Synth 8-350] instance 'xbar' of module 'design_1_xbar_1' requires 78 connections, but only 74 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:5359]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_mem_intercon_writer_0' (30#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:4314]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axis_data_fifo_pipeline_to_writer_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_axis_data_fifo_pipeline_to_writer_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_data_fifo_pipeline_to_writer_0' (31#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_axis_data_fifo_pipeline_to_writer_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'axis_data_fifo_pipeline_to_writer' of module 'design_1_axis_data_fifo_pipeline_to_writer_0' requires 13 connections, but only 10 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:1732]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axis_data_fifo_raw_CHROMA_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_axis_data_fifo_raw_CHROMA_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_data_fifo_raw_CHROMA_0' (32#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_axis_data_fifo_raw_CHROMA_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'axis_data_fifo_raw_CHROMA' of module 'design_1_axis_data_fifo_raw_CHROMA_0' requires 13 connections, but only 10 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:1743]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axis_data_fifo_raw_LUMA_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_axis_data_fifo_raw_LUMA_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_data_fifo_raw_LUMA_0' (33#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_axis_data_fifo_raw_LUMA_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'axis_data_fifo_raw_LUMA' of module 'design_1_axis_data_fifo_raw_LUMA_0' requires 13 connections, but only 10 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:1754]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axis_to_ddr_writer_0_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_axis_to_ddr_writer_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_to_ddr_writer_0_0' (34#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_axis_to_ddr_writer_0_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'axis_to_ddr_writer_0' of module 'design_1_axis_to_ddr_writer_0_0' requires 60 connections, but only 58 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:1765]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axis_to_ddr_writer_CHROMA_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_axis_to_ddr_writer_CHROMA_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_to_ddr_writer_CHROMA_0' (35#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_axis_to_ddr_writer_CHROMA_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'axis_to_ddr_writer_CHROMA' of module 'design_1_axis_to_ddr_writer_CHROMA_0' requires 60 connections, but only 57 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:1824]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axis_to_ddr_writer_LUMA_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_axis_to_ddr_writer_LUMA_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axis_to_ddr_writer_LUMA_0' (36#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_axis_to_ddr_writer_LUMA_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'axis_to_ddr_writer_LUMA' of module 'design_1_axis_to_ddr_writer_LUMA_0' requires 60 connections, but only 57 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:1882]
-INFO: [Synth 8-6157] synthesizing module 'design_1_ddr_to_axis_reader_0_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_ddr_to_axis_reader_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ddr_to_axis_reader_0_0' (37#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_ddr_to_axis_reader_0_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'ddr_to_axis_reader_0' of module 'design_1_ddr_to_axis_reader_0_0' requires 59 connections, but only 56 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:1940]
-INFO: [Synth 8-6155] done synthesizing module 'VDMA_imp_148AGHI' (38#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:734]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_frame_intr_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_axi_gpio_frame_intr_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_frame_intr_0' (39#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_axi_gpio_frame_intr_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_pl_reset_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_axi_gpio_pl_reset_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_pl_reset_0' (40#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_axi_gpio_pl_reset_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_clk_gen_25M_24M_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_clk_gen_25M_24M_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_gen_25M_24M_0' (41#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_clk_gen_25M_24M_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'design_1_const_1_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_const_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_const_1_0' (42#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_const_1_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_const_true_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_const_true_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_const_true_0' (43#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_const_true_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_axi_periph_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:5436]
-INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_OBU1DD' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:7580]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_ds_1' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_auto_ds_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_ds_1' (44#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_auto_ds_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_1' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_auto_pc_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_1' (45#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_auto_pc_1_stub.v:6]
-WARNING: [Synth 8-350] instance 'auto_pc' of module 'design_1_auto_pc_1' requires 56 connections, but only 54 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:7931]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_OBU1DD' (46#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:7580]
-INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1FBREZ4' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:7988]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_ds_2' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_auto_ds_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_ds_2' (47#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_auto_ds_2_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_2' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_auto_pc_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_2' (48#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_auto_pc_2_stub.v:6]
-WARNING: [Synth 8-350] instance 'auto_pc' of module 'design_1_auto_pc_2' requires 56 connections, but only 54 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:8339]
-INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1FBREZ4' (49#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:7988]
-INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_MVV5YQ' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:8528]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_ds_3' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_auto_ds_3_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_ds_3' (50#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_auto_ds_3_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_3' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_auto_pc_3_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_3' (51#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_auto_pc_3_stub.v:6]
-WARNING: [Synth 8-350] instance 'auto_pc' of module 'design_1_auto_pc_3' requires 56 connections, but only 54 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:8879]
-INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_MVV5YQ' (52#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:8528]
-INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_1GHG26R' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:8936]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_ds_4' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_auto_ds_4_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_ds_4' (53#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_auto_ds_4_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_4' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_auto_pc_4_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_4' (54#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_auto_pc_4_stub.v:6]
-WARNING: [Synth 8-350] instance 'auto_pc' of module 'design_1_auto_pc_4' requires 56 connections, but only 54 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:9287]
-INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_1GHG26R' (55#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:8936]
-INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_PJ7QT3' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:9344]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_ds_5' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_auto_ds_5_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_ds_5' (56#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_auto_ds_5_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_5' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_auto_pc_5_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_5' (57#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_auto_pc_5_stub.v:6]
-WARNING: [Synth 8-350] instance 'auto_pc' of module 'design_1_auto_pc_5' requires 56 connections, but only 54 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:9695]
-INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_PJ7QT3' (58#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:9344]
-INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_1DRAFME' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:9752]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_ds_6' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_auto_ds_6_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_ds_6' (59#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_auto_ds_6_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_6' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_auto_pc_6_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_6' (60#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_auto_pc_6_stub.v:6]
-WARNING: [Synth 8-350] instance 'auto_pc' of module 'design_1_auto_pc_6' requires 56 connections, but only 54 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:10103]
-INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_1DRAFME' (61#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:9752]
-INFO: [Synth 8-6157] synthesizing module 'm06_couplers_imp_OX6XV8' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:10160]
-INFO: [Synth 8-6155] done synthesizing module 'm06_couplers_imp_OX6XV8' (62#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:10160]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1CFO1MB' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:10460]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1CFO1MB' (63#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:10460]
-INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_2' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_xbar_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_2' (64#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_xbar_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_axi_periph_0' (65#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:5436]
-WARNING: [Synth 8-350] instance 'processing_system7_0_axi_periph' of module 'design_1_processing_system7_0_axi_periph_0' requires 200 connections, but only 170 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:2637]
-INFO: [Synth 8-6157] synthesizing module 'design_1_reset_100M_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_reset_100M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_reset_100M_0' (66#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_reset_100M_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'reset_100M' of module 'design_1_reset_100M_0' requires 10 connections, but only 7 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:2808]
-INFO: [Synth 8-6157] synthesizing module 'design_1_reset_24M_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_reset_24M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_reset_24M_0' (67#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_reset_24M_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'reset_24M' of module 'design_1_reset_24M_0' requires 10 connections, but only 7 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:2816]
-INFO: [Synth 8-6157] synthesizing module 'design_1_reset_25M_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_reset_25M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_reset_25M_0' (68#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_reset_25M_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'reset_25M' of module 'design_1_reset_25M_0' requires 10 connections, but only 6 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:2824]
-INFO: [Synth 8-6157] synthesizing module 'design_1_xlconcat_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_xlconcat_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconcat_0' (69#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_xlconcat_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_zynq_ultra_ps_e_0_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_zynq_ultra_ps_e_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_zynq_ultra_ps_e_0_0' (70#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-7904-kidre-N551JX/realtime/design_1_zynq_ultra_ps_e_0_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'zynq_ultra_ps_e_0' of module 'design_1_zynq_ultra_ps_e_0_0' requires 203 connections, but only 196 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:2835]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'VDMA'. This will prevent further optimization [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:2429]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axi_gpio_frame_intr'. This will prevent further optimization [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:2586]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'OV7670_GRAYSCALE_TO_AXIS'. This will prevent further optimization [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:2340]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axi_gpio_pl_reset'. This will prevent further optimization [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:2608]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'reset_25M'. This will prevent further optimization [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:2824]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'reset_24M'. This will prevent further optimization [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:2816]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'reset_100M'. This will prevent further optimization [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:2808]
-INFO: [Synth 8-6155] done synthesizing module 'design_1' (71#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:2000]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (72#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
-WARNING: [Synth 8-3331] design s00_couplers_imp_1CFO1MB has unconnected port M_ACLK
-WARNING: [Synth 8-3331] design s00_couplers_imp_1CFO1MB has unconnected port M_ARESETN
-WARNING: [Synth 8-3331] design s00_couplers_imp_1CFO1MB has unconnected port S_ACLK
-WARNING: [Synth 8-3331] design s00_couplers_imp_1CFO1MB has unconnected port S_ARESETN
-WARNING: [Synth 8-3331] design m06_couplers_imp_OX6XV8 has unconnected port M_ACLK
-WARNING: [Synth 8-3331] design m06_couplers_imp_OX6XV8 has unconnected port M_ARESETN
-WARNING: [Synth 8-3331] design m06_couplers_imp_OX6XV8 has unconnected port S_ACLK
-WARNING: [Synth 8-3331] design m06_couplers_imp_OX6XV8 has unconnected port S_ARESETN
-WARNING: [Synth 8-3331] design m05_couplers_imp_1DRAFME has unconnected port M_ACLK
-WARNING: [Synth 8-3331] design m05_couplers_imp_1DRAFME has unconnected port M_ARESETN
-WARNING: [Synth 8-3331] design m04_couplers_imp_PJ7QT3 has unconnected port M_ACLK
-WARNING: [Synth 8-3331] design m04_couplers_imp_PJ7QT3 has unconnected port M_ARESETN
-WARNING: [Synth 8-3331] design m03_couplers_imp_1GHG26R has unconnected port M_ACLK
-WARNING: [Synth 8-3331] design m03_couplers_imp_1GHG26R has unconnected port M_ARESETN
-WARNING: [Synth 8-3331] design m02_couplers_imp_MVV5YQ has unconnected port M_ACLK
-WARNING: [Synth 8-3331] design m02_couplers_imp_MVV5YQ has unconnected port M_ARESETN
-WARNING: [Synth 8-3331] design m01_couplers_imp_1FBREZ4 has unconnected port M_ACLK
-WARNING: [Synth 8-3331] design m01_couplers_imp_1FBREZ4 has unconnected port M_ARESETN
-WARNING: [Synth 8-3331] design m00_couplers_imp_OBU1DD has unconnected port M_ACLK
-WARNING: [Synth 8-3331] design m00_couplers_imp_OBU1DD has unconnected port M_ARESETN
-WARNING: [Synth 8-3331] design s02_couplers_imp_MPSHBC has unconnected port M_ACLK
-WARNING: [Synth 8-3331] design s02_couplers_imp_MPSHBC has unconnected port M_ARESETN
-WARNING: [Synth 8-3331] design s02_couplers_imp_MPSHBC has unconnected port S_AXI_arlock[1]
-WARNING: [Synth 8-3331] design s02_couplers_imp_MPSHBC has unconnected port S_AXI_awlock[1]
-WARNING: [Synth 8-3331] design s01_couplers_imp_1FZE762 has unconnected port M_ACLK
-WARNING: [Synth 8-3331] design s01_couplers_imp_1FZE762 has unconnected port M_ARESETN
-WARNING: [Synth 8-3331] design s01_couplers_imp_1FZE762 has unconnected port S_AXI_arlock[1]
-WARNING: [Synth 8-3331] design s01_couplers_imp_1FZE762 has unconnected port S_AXI_awlock[1]
-WARNING: [Synth 8-3331] design s00_couplers_imp_NBI0X7 has unconnected port M_ACLK
-WARNING: [Synth 8-3331] design s00_couplers_imp_NBI0X7 has unconnected port M_ARESETN
-WARNING: [Synth 8-3331] design s00_couplers_imp_NBI0X7 has unconnected port S_AXI_arlock[1]
-WARNING: [Synth 8-3331] design s00_couplers_imp_NBI0X7 has unconnected port S_AXI_awlock[1]
-WARNING: [Synth 8-3331] design m00_couplers_imp_1C2527D has unconnected port M_ACLK
-WARNING: [Synth 8-3331] design m00_couplers_imp_1C2527D has unconnected port M_ARESETN
-WARNING: [Synth 8-3331] design m00_couplers_imp_1C2527D has unconnected port S_ACLK
-WARNING: [Synth 8-3331] design m00_couplers_imp_1C2527D has unconnected port S_ARESETN
-WARNING: [Synth 8-3331] design s00_couplers_imp_XWSS1N has unconnected port M_ACLK
-WARNING: [Synth 8-3331] design s00_couplers_imp_XWSS1N has unconnected port M_ARESETN
-WARNING: [Synth 8-3331] design s00_couplers_imp_XWSS1N has unconnected port S_AXI_arlock[1]
-WARNING: [Synth 8-3331] design s00_couplers_imp_XWSS1N has unconnected port S_AXI_awlock[1]
-WARNING: [Synth 8-3331] design design_1_axi_mem_intercon_reader_0 has unconnected port ACLK
-WARNING: [Synth 8-3331] design design_1_axi_mem_intercon_reader_0 has unconnected port ARESETN
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port ap_start[0]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port aresetn_out[0]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port clk_out
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_araddr[39]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_araddr[38]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_araddr[37]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_araddr[36]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_araddr[35]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_araddr[34]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_araddr[33]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_araddr[32]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_araddr[31]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_araddr[30]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_araddr[29]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_araddr[28]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_araddr[27]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_araddr[26]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_araddr[25]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_araddr[24]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_araddr[23]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_araddr[22]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_araddr[21]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_araddr[20]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_araddr[19]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_araddr[18]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_araddr[17]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_araddr[16]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_araddr[15]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_araddr[14]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_araddr[13]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_araddr[12]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_araddr[11]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_araddr[10]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_araddr[9]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_araddr[8]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_araddr[7]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_araddr[6]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_awaddr[39]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_awaddr[38]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_awaddr[37]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_awaddr[36]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_awaddr[35]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_awaddr[34]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_awaddr[33]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_awaddr[32]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_awaddr[31]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_awaddr[30]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_awaddr[29]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_awaddr[28]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_awaddr[27]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_awaddr[26]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_awaddr[25]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_awaddr[24]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_awaddr[23]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_awaddr[22]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_awaddr[21]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_awaddr[20]
-WARNING: [Synth 8-3331] design VDMA_imp_148AGHI has unconnected port s_axi_AXILiteS1_awaddr[19]
+INFO: [Synth 8-6157] synthesizing module 'reset_3_wrapper' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/hdl/reset_3_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'reset_3' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:5206]
+INFO: [Synth 8-6157] synthesizing module 'reset_3_ENABLE_RAW_STREAM_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_ENABLE_RAW_STREAM_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'reset_3_ENABLE_RAW_STREAM_0' (1#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_ENABLE_RAW_STREAM_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'OV7670_GRAYSCALE_TO_AXIS_imp_K6SLVG' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:12]
+INFO: [Synth 8-6157] synthesizing module 'reset_3_LF_valid_to_AXIS_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_LF_valid_to_AXIS_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'reset_3_LF_valid_to_AXIS_0' (2#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_LF_valid_to_AXIS_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'LF_valid_to_AXIS' of module 'reset_3_LF_valid_to_AXIS_0' requires 12 connections, but only 9 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:446]
+INFO: [Synth 8-6157] synthesizing module 'reset_3_axi_interconnect_0_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:6237]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1GCTXTV' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:2235]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1GCTXTV' (3#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:2235]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_GE5EPS' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:3183]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_GE5EPS' (4#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:3183]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_GIU3VJ' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:11057]
+INFO: [Synth 8-6157] synthesizing module 'reset_3_auto_ds_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_auto_ds_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'reset_3_auto_ds_0' (5#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_auto_ds_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'reset_3_auto_pc_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'reset_3_auto_pc_0' (6#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_GIU3VJ' (7#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:11057]
+INFO: [Synth 8-6157] synthesizing module 'reset_3_xbar_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'reset_3_xbar_0' (8#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_xbar_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'xbar' of module 'reset_3_xbar_0' requires 40 connections, but only 38 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:6736]
+INFO: [Synth 8-6155] done synthesizing module 'reset_3_axi_interconnect_0_0' (9#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:6237]
+INFO: [Synth 8-6157] synthesizing module 'reset_3_axi_interconnect_1_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:6777]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_19LKBY9' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:10569]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_19LKBY9' (10#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:10569]
+INFO: [Synth 8-6155] done synthesizing module 'reset_3_axi_interconnect_1_0' (11#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:6777]
+INFO: [Synth 8-6157] synthesizing module 'reset_3_c_counter_binary_0_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_c_counter_binary_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'reset_3_c_counter_binary_0_0' (12#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_c_counter_binary_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'c_counter_binary_0' of module 'reset_3_c_counter_binary_0_0' requires 3 connections, but only 2 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:609]
+INFO: [Synth 8-6157] synthesizing module 'reset_3_ddr_to_axis_reader_SD_0_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_ddr_to_axis_reader_SD_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'reset_3_ddr_to_axis_reader_SD_0_0' (13#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_ddr_to_axis_reader_SD_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'ddr_to_axis_reader_SD_0' of module 'reset_3_ddr_to_axis_reader_SD_0_0' requires 61 connections, but only 56 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:612]
+INFO: [Synth 8-6157] synthesizing module 'reset_3_mux_sd_ov_1_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_mux_sd_ov_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'reset_3_mux_sd_ov_1_0' (14#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_mux_sd_ov_1_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'mux_sd_ov_1' of module 'reset_3_mux_sd_ov_1_0' requires 32 connections, but only 29 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:669]
+INFO: [Synth 8-6157] synthesizing module 'reset_3_ov7670_LUMA_CHROMA_0_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_ov7670_LUMA_CHROMA_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'reset_3_ov7670_LUMA_CHROMA_0_0' (15#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_ov7670_LUMA_CHROMA_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'ov7670_LUMA_CHROMA_0' of module 'reset_3_ov7670_LUMA_CHROMA_0_0' requires 19 connections, but only 16 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:699]
+INFO: [Synth 8-6157] synthesizing module 'reset_3_ov7670_interface_0_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_ov7670_interface_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'reset_3_ov7670_interface_0_0' (16#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_ov7670_interface_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'ov7670_interface_0' of module 'reset_3_ov7670_interface_0_0' requires 12 connections, but only 9 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:716]
+INFO: [Synth 8-6155] done synthesizing module 'OV7670_GRAYSCALE_TO_AXIS_imp_K6SLVG' (17#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:12]
+INFO: [Synth 8-6157] synthesizing module 'VDMA_imp_17FTTQ4' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:728]
+INFO: [Synth 8-6157] synthesizing module 'reset_3_axi_mem_intercon_reader_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:7137]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_ZJ7X2W' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:11467]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_ZJ7X2W' (18#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:11467]
+INFO: [Synth 8-6155] done synthesizing module 'reset_3_axi_mem_intercon_reader_0' (19#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:7137]
+INFO: [Synth 8-6157] synthesizing module 'reset_3_axi_mem_intercon_writer_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:7497]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_13ULZ2X' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:1963]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_13ULZ2X' (20#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:1963]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_2E5YDH' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:10813]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_2E5YDH' (21#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:10813]
+INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_13ON75Y' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:11711]
+INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_13ON75Y' (22#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:11711]
+INFO: [Synth 8-6157] synthesizing module 's02_couplers_imp_1P7MVEQ' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:11955]
+INFO: [Synth 8-6155] done synthesizing module 's02_couplers_imp_1P7MVEQ' (23#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:11955]
+INFO: [Synth 8-6157] synthesizing module 'reset_3_xbar_1' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_xbar_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'reset_3_xbar_1' (24#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_xbar_1_stub.v:6]
+WARNING: [Synth 8-350] instance 'xbar' of module 'reset_3_xbar_1' requires 78 connections, but only 74 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:8512]
+INFO: [Synth 8-6155] done synthesizing module 'reset_3_axi_mem_intercon_writer_0' (25#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:7497]
+INFO: [Synth 8-6157] synthesizing module 'reset_3_axis_data_fifo_pipeline_to_writer_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_axis_data_fifo_pipeline_to_writer_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'reset_3_axis_data_fifo_pipeline_to_writer_0' (26#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_axis_data_fifo_pipeline_to_writer_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'axis_data_fifo_pipeline_to_writer' of module 'reset_3_axis_data_fifo_pipeline_to_writer_0' requires 13 connections, but only 10 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:1704]
+INFO: [Synth 8-6157] synthesizing module 'reset_3_axis_data_fifo_raw_CHROMA_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_axis_data_fifo_raw_CHROMA_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'reset_3_axis_data_fifo_raw_CHROMA_0' (27#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_axis_data_fifo_raw_CHROMA_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'axis_data_fifo_raw_CHROMA' of module 'reset_3_axis_data_fifo_raw_CHROMA_0' requires 13 connections, but only 10 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:1715]
+INFO: [Synth 8-6157] synthesizing module 'reset_3_axis_data_fifo_raw_LUMA_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_axis_data_fifo_raw_LUMA_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'reset_3_axis_data_fifo_raw_LUMA_0' (28#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_axis_data_fifo_raw_LUMA_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'axis_data_fifo_raw_LUMA' of module 'reset_3_axis_data_fifo_raw_LUMA_0' requires 13 connections, but only 10 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:1726]
+INFO: [Synth 8-6157] synthesizing module 'reset_3_axis_to_ddr_writer_0_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_axis_to_ddr_writer_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'reset_3_axis_to_ddr_writer_0_0' (29#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_axis_to_ddr_writer_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'axis_to_ddr_writer_0' of module 'reset_3_axis_to_ddr_writer_0_0' requires 60 connections, but only 56 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:1737]
+INFO: [Synth 8-6157] synthesizing module 'reset_3_axis_to_ddr_writer_CHROMA_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_axis_to_ddr_writer_CHROMA_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'reset_3_axis_to_ddr_writer_CHROMA_0' (30#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_axis_to_ddr_writer_CHROMA_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'axis_to_ddr_writer_CHROMA' of module 'reset_3_axis_to_ddr_writer_CHROMA_0' requires 60 connections, but only 55 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:1794]
+INFO: [Synth 8-6157] synthesizing module 'reset_3_axis_to_ddr_writer_LUMA_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_axis_to_ddr_writer_LUMA_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'reset_3_axis_to_ddr_writer_LUMA_0' (31#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_axis_to_ddr_writer_LUMA_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'axis_to_ddr_writer_LUMA' of module 'reset_3_axis_to_ddr_writer_LUMA_0' requires 60 connections, but only 55 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:1850]
+INFO: [Synth 8-6157] synthesizing module 'reset_3_ddr_to_axis_reader_0_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_ddr_to_axis_reader_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'reset_3_ddr_to_axis_reader_0_0' (32#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_ddr_to_axis_reader_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'ddr_to_axis_reader_0' of module 'reset_3_ddr_to_axis_reader_0_0' requires 59 connections, but only 54 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:1906]
+INFO: [Synth 8-6155] done synthesizing module 'VDMA_imp_17FTTQ4' (33#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:728]
+INFO: [Synth 8-6157] synthesizing module 'reset_3_axi_gpio_frame_intr_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_axi_gpio_frame_intr_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'reset_3_axi_gpio_frame_intr_0' (34#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_axi_gpio_frame_intr_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'reset_3_axi_gpio_pl_reset_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_axi_gpio_pl_reset_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'reset_3_axi_gpio_pl_reset_0' (35#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_axi_gpio_pl_reset_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'reset_3_clk_wiz_0_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'reset_3_clk_wiz_0_0' (36#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'reset_3_const_true_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_const_true_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'reset_3_const_true_0' (37#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_const_true_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'reset_3_proc_sys_reset_0_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_proc_sys_reset_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'reset_3_proc_sys_reset_0_0' (38#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_proc_sys_reset_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'proc_sys_reset_0' of module 'reset_3_proc_sys_reset_0_0' requires 10 connections, but only 7 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:5840]
+INFO: [Synth 8-6157] synthesizing module 'reset_3_processing_system7_0_axi_periph_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:8589]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_7NFJYF' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:2367]
+INFO: [Synth 8-6157] synthesizing module 'reset_3_auto_ds_1' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_auto_ds_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'reset_3_auto_ds_1' (39#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_auto_ds_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'reset_3_auto_pc_1' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'reset_3_auto_pc_1' (40#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_auto_pc_1_stub.v:6]
+WARNING: [Synth 8-350] instance 'auto_pc' of module 'reset_3_auto_pc_1' requires 56 connections, but only 54 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:2718]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_7NFJYF' (41#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:2367]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_17CC8LG' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:2775]
+INFO: [Synth 8-6157] synthesizing module 'reset_3_auto_ds_2' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_auto_ds_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'reset_3_auto_ds_2' (42#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_auto_ds_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'reset_3_auto_pc_2' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_auto_pc_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'reset_3_auto_pc_2' (43#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_auto_pc_2_stub.v:6]
+WARNING: [Synth 8-350] instance 'auto_pc' of module 'reset_3_auto_pc_2' requires 56 connections, but only 54 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:3126]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_17CC8LG' (44#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:2775]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_1LMIL1C' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:3315]
+INFO: [Synth 8-6157] synthesizing module 'reset_3_auto_ds_3' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_auto_ds_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'reset_3_auto_ds_3' (45#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_auto_ds_3_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'reset_3_auto_pc_3' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_auto_pc_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'reset_3_auto_pc_3' (46#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_auto_pc_3_stub.v:6]
+WARNING: [Synth 8-350] instance 'auto_pc' of module 'reset_3_auto_pc_3' requires 56 connections, but only 54 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:3666]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_1LMIL1C' (47#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:3315]
+INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_JZJXAB' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:3723]
+INFO: [Synth 8-6157] synthesizing module 'reset_3_auto_ds_4' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_auto_ds_4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'reset_3_auto_ds_4' (48#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_auto_ds_4_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'reset_3_auto_pc_4' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_auto_pc_4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'reset_3_auto_pc_4' (49#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_auto_pc_4_stub.v:6]
+WARNING: [Synth 8-350] instance 'auto_pc' of module 'reset_3_auto_pc_4' requires 56 connections, but only 54 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:4074]
+INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_JZJXAB' (50#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:3723]
+INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_T0VOJS' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:4131]
+INFO: [Synth 8-6157] synthesizing module 'reset_3_auto_ds_5' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_auto_ds_5_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'reset_3_auto_ds_5' (51#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_auto_ds_5_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'reset_3_auto_pc_5' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_auto_pc_5_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'reset_3_auto_pc_5' (52#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_auto_pc_5_stub.v:6]
+WARNING: [Synth 8-350] instance 'auto_pc' of module 'reset_3_auto_pc_5' requires 56 connections, but only 54 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:4482]
+INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_T0VOJS' (53#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:4131]
+INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_1UDPX6Z' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:4539]
+INFO: [Synth 8-6157] synthesizing module 'reset_3_auto_ds_6' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_auto_ds_6_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'reset_3_auto_ds_6' (54#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_auto_ds_6_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'reset_3_auto_pc_6' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_auto_pc_6_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'reset_3_auto_pc_6' (55#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_auto_pc_6_stub.v:6]
+WARNING: [Synth 8-350] instance 'auto_pc' of module 'reset_3_auto_pc_6' requires 56 connections, but only 54 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:4890]
+INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_1UDPX6Z' (56#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:4539]
+INFO: [Synth 8-6157] synthesizing module 'm06_couplers_imp_1GCF83Z' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:4947]
+INFO: [Synth 8-6155] done synthesizing module 'm06_couplers_imp_1GCF83Z' (57#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:4947]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_17GYHCR' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:10283]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_17GYHCR' (58#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:10283]
+INFO: [Synth 8-6157] synthesizing module 'reset_3_xbar_2' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_xbar_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'reset_3_xbar_2' (59#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_xbar_2_stub.v:6]
+WARNING: [Synth 8-689] width (96) of port connection 'm_axi_arid' does not match port width (112) of module 'reset_3_xbar_2' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:10206]
+WARNING: [Synth 8-689] width (96) of port connection 'm_axi_awid' does not match port width (112) of module 'reset_3_xbar_2' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:10218]
+WARNING: [Synth 8-350] instance 'xbar' of module 'reset_3_xbar_2' requires 82 connections, but only 80 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:10200]
+INFO: [Synth 8-6155] done synthesizing module 'reset_3_processing_system7_0_axi_periph_0' (60#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:8589]
+WARNING: [Synth 8-350] instance 'processing_system7_0_axi_periph' of module 'reset_3_processing_system7_0_axi_periph_0' requires 194 connections, but only 168 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:5848]
+INFO: [Synth 8-6157] synthesizing module 'reset_3_reset_100M_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_reset_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'reset_3_reset_100M_0' (61#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_reset_100M_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'reset_100M' of module 'reset_3_reset_100M_0' requires 10 connections, but only 7 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:6017]
+INFO: [Synth 8-6157] synthesizing module 'reset_3_reset_24M_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_reset_24M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'reset_3_reset_24M_0' (62#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_reset_24M_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'reset_24M' of module 'reset_3_reset_24M_0' requires 10 connections, but only 7 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:6025]
+INFO: [Synth 8-6157] synthesizing module 'reset_3_xlconcat_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_xlconcat_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'reset_3_xlconcat_0' (63#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_xlconcat_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'reset_3_zynq_ultra_ps_e_0_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_zynq_ultra_ps_e_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'reset_3_zynq_ultra_ps_e_0_0' (64#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/.Xil/Vivado-6797-kidre-N551JX/realtime/reset_3_zynq_ultra_ps_e_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'zynq_ultra_ps_e_0' of module 'reset_3_zynq_ultra_ps_e_0_0' requires 203 connections, but only 197 given [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:6037]
+INFO: [Synth 8-6155] done synthesizing module 'reset_3' (65#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/synth/reset_3.v:5206]
+INFO: [Synth 8-6155] done synthesizing module 'reset_3_wrapper' (66#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/hdl/reset_3_wrapper.v:12]
+WARNING: [Synth 8-3331] design s00_couplers_imp_17GYHCR has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design s00_couplers_imp_17GYHCR has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design s00_couplers_imp_17GYHCR has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design s00_couplers_imp_17GYHCR has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m06_couplers_imp_1GCF83Z has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m06_couplers_imp_1GCF83Z has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m06_couplers_imp_1GCF83Z has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m06_couplers_imp_1GCF83Z has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m05_couplers_imp_1UDPX6Z has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m05_couplers_imp_1UDPX6Z has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m04_couplers_imp_T0VOJS has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m04_couplers_imp_T0VOJS has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m03_couplers_imp_JZJXAB has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m03_couplers_imp_JZJXAB has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m02_couplers_imp_1LMIL1C has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m02_couplers_imp_1LMIL1C has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m01_couplers_imp_17CC8LG has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m01_couplers_imp_17CC8LG has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m00_couplers_imp_7NFJYF has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m00_couplers_imp_7NFJYF has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design s02_couplers_imp_1P7MVEQ has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design s02_couplers_imp_1P7MVEQ has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design s02_couplers_imp_1P7MVEQ has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design s02_couplers_imp_1P7MVEQ has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design s01_couplers_imp_13ON75Y has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design s01_couplers_imp_13ON75Y has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design s01_couplers_imp_13ON75Y has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design s01_couplers_imp_13ON75Y has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design s00_couplers_imp_2E5YDH has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design s00_couplers_imp_2E5YDH has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design s00_couplers_imp_2E5YDH has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design s00_couplers_imp_2E5YDH has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m00_couplers_imp_13ULZ2X has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m00_couplers_imp_13ULZ2X has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m00_couplers_imp_13ULZ2X has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m00_couplers_imp_13ULZ2X has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design s00_couplers_imp_ZJ7X2W has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design s00_couplers_imp_ZJ7X2W has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design s00_couplers_imp_ZJ7X2W has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design s00_couplers_imp_ZJ7X2W has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design reset_3_axi_mem_intercon_reader_0 has unconnected port ACLK
+WARNING: [Synth 8-3331] design reset_3_axi_mem_intercon_reader_0 has unconnected port ARESETN
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_araddr[39]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_araddr[38]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_araddr[37]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_araddr[36]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_araddr[35]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_araddr[34]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_araddr[33]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_araddr[32]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_araddr[31]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_araddr[30]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_araddr[29]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_araddr[28]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_araddr[27]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_araddr[26]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_araddr[25]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_araddr[24]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_araddr[23]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_araddr[22]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_araddr[21]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_araddr[20]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_araddr[19]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_araddr[18]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_araddr[17]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_araddr[16]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_araddr[15]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_araddr[14]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_araddr[13]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_araddr[12]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_araddr[11]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_araddr[10]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_araddr[9]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_araddr[8]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_araddr[7]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_araddr[6]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_awaddr[39]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_awaddr[38]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_awaddr[37]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_awaddr[36]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_awaddr[35]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_awaddr[34]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_awaddr[33]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_awaddr[32]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_awaddr[31]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_awaddr[30]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_awaddr[29]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_awaddr[28]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_awaddr[27]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_awaddr[26]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_awaddr[25]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_awaddr[24]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_awaddr[23]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_awaddr[22]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_awaddr[21]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_awaddr[20]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_awaddr[19]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_awaddr[18]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_awaddr[17]
+WARNING: [Synth 8-3331] design VDMA_imp_17FTTQ4 has unconnected port s_axi_AXILiteS1_awaddr[16]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2014.914 ; gain = 0.000 ; free physical = 1037 ; free virtual = 18772
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1966.887 ; gain = 0.000 ; free physical = 185 ; free virtual = 15458
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -327,112 +303,100 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2014.914 ; gain = 0.000 ; free physical = 1045 ; free virtual = 18780
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1966.887 ; gain = 0.000 ; free physical = 190 ; free virtual = 15463
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2014.914 ; gain = 0.000 ; free physical = 1045 ; free virtual = 18780
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1966.887 ; gain = 0.000 ; free physical = 190 ; free virtual = 15463
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xczu3eg-sbva484-1-e
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_ENABLE_RAW_STREAM_0/design_1_ENABLE_RAW_STREAM_0/design_1_ENABLE_RAW_STREAM_0_in_context.xdc] for cell 'design_1_i/ENABLE_RAW_STREAM'
-Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_ENABLE_RAW_STREAM_0/design_1_ENABLE_RAW_STREAM_0/design_1_ENABLE_RAW_STREAM_0_in_context.xdc] for cell 'design_1_i/ENABLE_RAW_STREAM'
-Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_frame_intr_0/design_1_axi_gpio_frame_intr_0/design_1_axi_gpio_frame_intr_0_in_context.xdc] for cell 'design_1_i/axi_gpio_frame_intr'
-Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_frame_intr_0/design_1_axi_gpio_frame_intr_0/design_1_axi_gpio_frame_intr_0_in_context.xdc] for cell 'design_1_i/axi_gpio_frame_intr'
-Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_pl_reset_0/design_1_axi_gpio_pl_reset_0/design_1_axi_gpio_pl_reset_0_in_context.xdc] for cell 'design_1_i/axi_gpio_pl_reset'
-Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_pl_reset_0/design_1_axi_gpio_pl_reset_0/design_1_axi_gpio_pl_reset_0_in_context.xdc] for cell 'design_1_i/axi_gpio_pl_reset'
-Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_clk_gen_25M_24M_0/design_1_clk_gen_25M_24M_0/design_1_clk_gen_25M_24M_0_in_context.xdc] for cell 'design_1_i/clk_gen_25M_24M'
-Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_clk_gen_25M_24M_0/design_1_clk_gen_25M_24M_0/design_1_clk_gen_25M_24M_0_in_context.xdc] for cell 'design_1_i/clk_gen_25M_24M'
-Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_const_1_0/design_1_const_1_0/design_1_ENABLE_RAW_STREAM_0_in_context.xdc] for cell 'design_1_i/const_1'
-Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_const_1_0/design_1_const_1_0/design_1_ENABLE_RAW_STREAM_0_in_context.xdc] for cell 'design_1_i/const_1'
-Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_const_true_0/design_1_const_true_0/design_1_ENABLE_RAW_STREAM_0_in_context.xdc] for cell 'design_1_i/const_true'
-Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_const_true_0/design_1_const_true_0/design_1_ENABLE_RAW_STREAM_0_in_context.xdc] for cell 'design_1_i/const_true'
-Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_reset_100M_0/design_1_reset_100M_0/design_1_reset_100M_0_in_context.xdc] for cell 'design_1_i/reset_100M'
-Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_reset_100M_0/design_1_reset_100M_0/design_1_reset_100M_0_in_context.xdc] for cell 'design_1_i/reset_100M'
-Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_reset_24M_0/design_1_reset_24M_0/design_1_reset_24M_0_in_context.xdc] for cell 'design_1_i/reset_24M'
-Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_reset_24M_0/design_1_reset_24M_0/design_1_reset_24M_0_in_context.xdc] for cell 'design_1_i/reset_24M'
-Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_reset_25M_0/design_1_reset_25M_0/design_1_reset_25M_0_in_context.xdc] for cell 'design_1_i/reset_25M'
-Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_reset_25M_0/design_1_reset_25M_0/design_1_reset_25M_0_in_context.xdc] for cell 'design_1_i/reset_25M'
-Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlconcat_0/design_1_xlconcat_0/design_1_xlconcat_0_in_context.xdc] for cell 'design_1_i/xlconcat'
-Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlconcat_0/design_1_xlconcat_0/design_1_xlconcat_0_in_context.xdc] for cell 'design_1_i/xlconcat'
-Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'design_1_i/zynq_ultra_ps_e_0'
-Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'design_1_i/zynq_ultra_ps_e_0'
-Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_xbar_2/design_1_xbar_2/design_1_xbar_2_in_context.xdc] for cell 'design_1_i/processing_system7_0_axi_periph/xbar'
-Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_xbar_2/design_1_xbar_2/design_1_xbar_2_in_context.xdc] for cell 'design_1_i/processing_system7_0_axi_periph/xbar'
-Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_axis_data_fifo_pipeline_to_writer_0/design_1_axis_data_fifo_pipeline_to_writer_0/design_1_axis_data_fifo_raw_LUMA_0_in_context.xdc] for cell 'design_1_i/VDMA/axis_data_fifo_pipeline_to_writer'
-Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_axis_data_fifo_pipeline_to_writer_0/design_1_axis_data_fifo_pipeline_to_writer_0/design_1_axis_data_fifo_raw_LUMA_0_in_context.xdc] for cell 'design_1_i/VDMA/axis_data_fifo_pipeline_to_writer'
-Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_axis_data_fifo_raw_CHROMA_0/design_1_axis_data_fifo_raw_CHROMA_0/design_1_axis_data_fifo_raw_LUMA_0_in_context.xdc] for cell 'design_1_i/VDMA/axis_data_fifo_raw_CHROMA'
-Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_axis_data_fifo_raw_CHROMA_0/design_1_axis_data_fifo_raw_CHROMA_0/design_1_axis_data_fifo_raw_LUMA_0_in_context.xdc] for cell 'design_1_i/VDMA/axis_data_fifo_raw_CHROMA'
-Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_axis_data_fifo_raw_LUMA_0/design_1_axis_data_fifo_raw_LUMA_0/design_1_axis_data_fifo_raw_LUMA_0_in_context.xdc] for cell 'design_1_i/VDMA/axis_data_fifo_raw_LUMA'
-Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_axis_data_fifo_raw_LUMA_0/design_1_axis_data_fifo_raw_LUMA_0/design_1_axis_data_fifo_raw_LUMA_0_in_context.xdc] for cell 'design_1_i/VDMA/axis_data_fifo_raw_LUMA'
-Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_axis_to_ddr_writer_0_0/design_1_axis_to_ddr_writer_0_0/design_1_axis_to_ddr_writer_0_0_in_context.xdc] for cell 'design_1_i/VDMA/axis_to_ddr_writer_0'
-Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_axis_to_ddr_writer_0_0/design_1_axis_to_ddr_writer_0_0/design_1_axis_to_ddr_writer_0_0_in_context.xdc] for cell 'design_1_i/VDMA/axis_to_ddr_writer_0'
-Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_axis_to_ddr_writer_CHROMA_0/design_1_axis_to_ddr_writer_CHROMA_0/design_1_axis_to_ddr_writer_0_0_in_context.xdc] for cell 'design_1_i/VDMA/axis_to_ddr_writer_CHROMA'
-Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_axis_to_ddr_writer_CHROMA_0/design_1_axis_to_ddr_writer_CHROMA_0/design_1_axis_to_ddr_writer_0_0_in_context.xdc] for cell 'design_1_i/VDMA/axis_to_ddr_writer_CHROMA'
-Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_axis_to_ddr_writer_LUMA_0/design_1_axis_to_ddr_writer_LUMA_0/design_1_axis_to_ddr_writer_0_0_in_context.xdc] for cell 'design_1_i/VDMA/axis_to_ddr_writer_LUMA'
-Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_axis_to_ddr_writer_LUMA_0/design_1_axis_to_ddr_writer_LUMA_0/design_1_axis_to_ddr_writer_0_0_in_context.xdc] for cell 'design_1_i/VDMA/axis_to_ddr_writer_LUMA'
-Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_ddr_to_axis_reader_0_0/design_1_ddr_to_axis_reader_0_0/design_1_ddr_to_axis_reader_0_0_in_context.xdc] for cell 'design_1_i/VDMA/ddr_to_axis_reader_0'
-Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_ddr_to_axis_reader_0_0/design_1_ddr_to_axis_reader_0_0/design_1_ddr_to_axis_reader_0_0_in_context.xdc] for cell 'design_1_i/VDMA/ddr_to_axis_reader_0'
-Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_xbar_1/design_1_xbar_1/design_1_xbar_1_in_context.xdc] for cell 'design_1_i/VDMA/axi_mem_intercon_writer/xbar'
-Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_xbar_1/design_1_xbar_1/design_1_xbar_1_in_context.xdc] for cell 'design_1_i/VDMA/axi_mem_intercon_writer/xbar'
-Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_LF_valid_to_AXIS_0/design_1_LF_valid_to_AXIS_0/design_1_LF_valid_to_AXIS_0_in_context.xdc] for cell 'design_1_i/OV7670_GRAYSCALE_TO_AXIS/LF_valid_to_AXIS'
-Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_LF_valid_to_AXIS_0/design_1_LF_valid_to_AXIS_0/design_1_LF_valid_to_AXIS_0_in_context.xdc] for cell 'design_1_i/OV7670_GRAYSCALE_TO_AXIS/LF_valid_to_AXIS'
-Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_c_counter_binary_0_0/design_1_c_counter_binary_0_0/design_1_c_counter_binary_0_0_in_context.xdc] for cell 'design_1_i/OV7670_GRAYSCALE_TO_AXIS/c_counter_binary_0'
-Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_c_counter_binary_0_0/design_1_c_counter_binary_0_0/design_1_c_counter_binary_0_0_in_context.xdc] for cell 'design_1_i/OV7670_GRAYSCALE_TO_AXIS/c_counter_binary_0'
-Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_ddr_to_axis_reader_SD_0_0/design_1_ddr_to_axis_reader_SD_0_0/design_1_ddr_to_axis_reader_SD_0_0_in_context.xdc] for cell 'design_1_i/OV7670_GRAYSCALE_TO_AXIS/ddr_to_axis_reader_SD_0'
-Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_ddr_to_axis_reader_SD_0_0/design_1_ddr_to_axis_reader_SD_0_0/design_1_ddr_to_axis_reader_SD_0_0_in_context.xdc] for cell 'design_1_i/OV7670_GRAYSCALE_TO_AXIS/ddr_to_axis_reader_SD_0'
-Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_mux_sd_ov_1_0/design_1_mux_sd_ov_1_0/design_1_mux_sd_ov_1_0_in_context.xdc] for cell 'design_1_i/OV7670_GRAYSCALE_TO_AXIS/mux_sd_ov_1'
-Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_mux_sd_ov_1_0/design_1_mux_sd_ov_1_0/design_1_mux_sd_ov_1_0_in_context.xdc] for cell 'design_1_i/OV7670_GRAYSCALE_TO_AXIS/mux_sd_ov_1'
-Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_ov7670_LUMA_CHROMA_0_0/design_1_ov7670_LUMA_CHROMA_0_0/design_1_ov7670_LUMA_CHROMA_0_0_in_context.xdc] for cell 'design_1_i/OV7670_GRAYSCALE_TO_AXIS/ov7670_LUMA_CHROMA_0'
-Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_ov7670_LUMA_CHROMA_0_0/design_1_ov7670_LUMA_CHROMA_0_0/design_1_ov7670_LUMA_CHROMA_0_0_in_context.xdc] for cell 'design_1_i/OV7670_GRAYSCALE_TO_AXIS/ov7670_LUMA_CHROMA_0'
-Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_ov7670_interface_0_0/design_1_ov7670_interface_0_0/design_1_ov7670_interface_0_0_in_context.xdc] for cell 'design_1_i/OV7670_GRAYSCALE_TO_AXIS/ov7670_interface_0'
-Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_ov7670_interface_0_0/design_1_ov7670_interface_0_0/design_1_ov7670_interface_0_0_in_context.xdc] for cell 'design_1_i/OV7670_GRAYSCALE_TO_AXIS/ov7670_interface_0'
-Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0/design_1_xbar_0_in_context.xdc] for cell 'design_1_i/OV7670_GRAYSCALE_TO_AXIS/axi_interconnect_0/xbar'
-Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0/design_1_xbar_0_in_context.xdc] for cell 'design_1_i/OV7670_GRAYSCALE_TO_AXIS/axi_interconnect_0/xbar'
-Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_6/design_1_auto_ds_6/design_1_auto_ds_6_in_context.xdc] for cell 'design_1_i/processing_system7_0_axi_periph/m05_couplers/auto_ds'
-Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_6/design_1_auto_ds_6/design_1_auto_ds_6_in_context.xdc] for cell 'design_1_i/processing_system7_0_axi_periph/m05_couplers/auto_ds'
-Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_6/design_1_auto_pc_6/design_1_auto_pc_5_in_context.xdc] for cell 'design_1_i/processing_system7_0_axi_periph/m05_couplers/auto_pc'
-Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_6/design_1_auto_pc_6/design_1_auto_pc_5_in_context.xdc] for cell 'design_1_i/processing_system7_0_axi_periph/m05_couplers/auto_pc'
-Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_5/design_1_auto_ds_5/design_1_auto_ds_6_in_context.xdc] for cell 'design_1_i/processing_system7_0_axi_periph/m04_couplers/auto_ds'
-Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_5/design_1_auto_ds_5/design_1_auto_ds_6_in_context.xdc] for cell 'design_1_i/processing_system7_0_axi_periph/m04_couplers/auto_ds'
-Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_5/design_1_auto_pc_5/design_1_auto_pc_5_in_context.xdc] for cell 'design_1_i/processing_system7_0_axi_periph/m04_couplers/auto_pc'
-Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_5/design_1_auto_pc_5/design_1_auto_pc_5_in_context.xdc] for cell 'design_1_i/processing_system7_0_axi_periph/m04_couplers/auto_pc'
-Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_4/design_1_auto_ds_4/design_1_auto_ds_6_in_context.xdc] for cell 'design_1_i/processing_system7_0_axi_periph/m03_couplers/auto_ds'
-Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_4/design_1_auto_ds_4/design_1_auto_ds_6_in_context.xdc] for cell 'design_1_i/processing_system7_0_axi_periph/m03_couplers/auto_ds'
-Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_4/design_1_auto_pc_4/design_1_auto_pc_5_in_context.xdc] for cell 'design_1_i/processing_system7_0_axi_periph/m03_couplers/auto_pc'
-Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_4/design_1_auto_pc_4/design_1_auto_pc_5_in_context.xdc] for cell 'design_1_i/processing_system7_0_axi_periph/m03_couplers/auto_pc'
-Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_3/design_1_auto_ds_3/design_1_auto_ds_6_in_context.xdc] for cell 'design_1_i/processing_system7_0_axi_periph/m02_couplers/auto_ds'
-Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_3/design_1_auto_ds_3/design_1_auto_ds_6_in_context.xdc] for cell 'design_1_i/processing_system7_0_axi_periph/m02_couplers/auto_ds'
-Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_3/design_1_auto_pc_3/design_1_auto_pc_5_in_context.xdc] for cell 'design_1_i/processing_system7_0_axi_periph/m02_couplers/auto_pc'
-Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_3/design_1_auto_pc_3/design_1_auto_pc_5_in_context.xdc] for cell 'design_1_i/processing_system7_0_axi_periph/m02_couplers/auto_pc'
-Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_2/design_1_auto_ds_2/design_1_auto_ds_6_in_context.xdc] for cell 'design_1_i/processing_system7_0_axi_periph/m01_couplers/auto_ds'
-Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_2/design_1_auto_ds_2/design_1_auto_ds_6_in_context.xdc] for cell 'design_1_i/processing_system7_0_axi_periph/m01_couplers/auto_ds'
-Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_2/design_1_auto_pc_2/design_1_auto_pc_5_in_context.xdc] for cell 'design_1_i/processing_system7_0_axi_periph/m01_couplers/auto_pc'
-Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_2/design_1_auto_pc_2/design_1_auto_pc_5_in_context.xdc] for cell 'design_1_i/processing_system7_0_axi_periph/m01_couplers/auto_pc'
-Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_1/design_1_auto_ds_1/design_1_auto_ds_6_in_context.xdc] for cell 'design_1_i/processing_system7_0_axi_periph/m00_couplers/auto_ds'
-Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_1/design_1_auto_ds_1/design_1_auto_ds_6_in_context.xdc] for cell 'design_1_i/processing_system7_0_axi_periph/m00_couplers/auto_ds'
-Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1/design_1_auto_pc_5_in_context.xdc] for cell 'design_1_i/processing_system7_0_axi_periph/m00_couplers/auto_pc'
-Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1/design_1_auto_pc_5_in_context.xdc] for cell 'design_1_i/processing_system7_0_axi_periph/m00_couplers/auto_pc'
-Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_us_4/design_1_auto_us_4/design_1_auto_us_4_in_context.xdc] for cell 'design_1_i/VDMA/axi_mem_intercon_writer/s02_couplers/auto_us'
-Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_us_4/design_1_auto_us_4/design_1_auto_us_4_in_context.xdc] for cell 'design_1_i/VDMA/axi_mem_intercon_writer/s02_couplers/auto_us'
-Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_us_3/design_1_auto_us_3/design_1_auto_us_4_in_context.xdc] for cell 'design_1_i/VDMA/axi_mem_intercon_writer/s01_couplers/auto_us'
-Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_us_3/design_1_auto_us_3/design_1_auto_us_4_in_context.xdc] for cell 'design_1_i/VDMA/axi_mem_intercon_writer/s01_couplers/auto_us'
-Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_us_2/design_1_auto_us_2/design_1_auto_us_4_in_context.xdc] for cell 'design_1_i/VDMA/axi_mem_intercon_writer/s00_couplers/auto_us'
-Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_us_2/design_1_auto_us_2/design_1_auto_us_4_in_context.xdc] for cell 'design_1_i/VDMA/axi_mem_intercon_writer/s00_couplers/auto_us'
-Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_us_1/design_1_auto_us_1/design_1_auto_us_4_in_context.xdc] for cell 'design_1_i/VDMA/axi_mem_intercon_reader/s00_couplers/auto_us'
-Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_us_1/design_1_auto_us_1/design_1_auto_us_4_in_context.xdc] for cell 'design_1_i/VDMA/axi_mem_intercon_reader/s00_couplers/auto_us'
-Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0/design_1_auto_ds_0_in_context.xdc] for cell 'design_1_i/OV7670_GRAYSCALE_TO_AXIS/axi_interconnect_0/s00_couplers/auto_ds'
-Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0/design_1_auto_ds_0_in_context.xdc] for cell 'design_1_i/OV7670_GRAYSCALE_TO_AXIS/axi_interconnect_0/s00_couplers/auto_ds'
-Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/OV7670_GRAYSCALE_TO_AXIS/axi_interconnect_0/s00_couplers/auto_pc'
-Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/OV7670_GRAYSCALE_TO_AXIS/axi_interconnect_0/s00_couplers/auto_pc'
-Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0/design_1_auto_us_0_in_context.xdc] for cell 'design_1_i/OV7670_GRAYSCALE_TO_AXIS/axi_interconnect_1/s00_couplers/auto_us'
-Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0/design_1_auto_us_0_in_context.xdc] for cell 'design_1_i/OV7670_GRAYSCALE_TO_AXIS/axi_interconnect_1/s00_couplers/auto_us'
+Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_ENABLE_RAW_STREAM_0/reset_3_ENABLE_RAW_STREAM_0/design_1_ENABLE_RAW_STREAM_0_in_context.xdc] for cell 'reset_3_i/ENABLE_RAW_STREAM'
+Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_ENABLE_RAW_STREAM_0/reset_3_ENABLE_RAW_STREAM_0/design_1_ENABLE_RAW_STREAM_0_in_context.xdc] for cell 'reset_3_i/ENABLE_RAW_STREAM'
+Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_axi_gpio_frame_intr_0/reset_3_axi_gpio_frame_intr_0/design_1_axi_gpio_frame_intr_0_in_context.xdc] for cell 'reset_3_i/axi_gpio_frame_intr'
+Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_axi_gpio_frame_intr_0/reset_3_axi_gpio_frame_intr_0/design_1_axi_gpio_frame_intr_0_in_context.xdc] for cell 'reset_3_i/axi_gpio_frame_intr'
+Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_axi_gpio_pl_reset_0/reset_3_axi_gpio_pl_reset_0/design_1_axi_gpio_pl_reset_0_in_context.xdc] for cell 'reset_3_i/axi_gpio_pl_reset'
+Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_axi_gpio_pl_reset_0/reset_3_axi_gpio_pl_reset_0/design_1_axi_gpio_pl_reset_0_in_context.xdc] for cell 'reset_3_i/axi_gpio_pl_reset'
+Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_clk_wiz_0_0/reset_3_clk_wiz_0_0/prova_gpio_clk_wiz_0_0_in_context.xdc] for cell 'reset_3_i/clk_wiz_0'
+Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_clk_wiz_0_0/reset_3_clk_wiz_0_0/prova_gpio_clk_wiz_0_0_in_context.xdc] for cell 'reset_3_i/clk_wiz_0'
+Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_const_true_0/reset_3_const_true_0/design_1_ENABLE_RAW_STREAM_0_in_context.xdc] for cell 'reset_3_i/const_true'
+Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_const_true_0/reset_3_const_true_0/design_1_ENABLE_RAW_STREAM_0_in_context.xdc] for cell 'reset_3_i/const_true'
+Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_proc_sys_reset_0_0/reset_3_proc_sys_reset_0_0/design_1_reset_100M_0_in_context.xdc] for cell 'reset_3_i/proc_sys_reset_0'
+Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_proc_sys_reset_0_0/reset_3_proc_sys_reset_0_0/design_1_reset_100M_0_in_context.xdc] for cell 'reset_3_i/proc_sys_reset_0'
+Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_reset_100M_0/reset_3_reset_100M_0/design_1_reset_100M_0_in_context.xdc] for cell 'reset_3_i/reset_100M'
+Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_reset_100M_0/reset_3_reset_100M_0/design_1_reset_100M_0_in_context.xdc] for cell 'reset_3_i/reset_100M'
+Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_reset_24M_0/reset_3_reset_24M_0/design_1_reset_24M_0_in_context.xdc] for cell 'reset_3_i/reset_24M'
+Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_reset_24M_0/reset_3_reset_24M_0/design_1_reset_24M_0_in_context.xdc] for cell 'reset_3_i/reset_24M'
+Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_xlconcat_0/reset_3_xlconcat_0/design_1_xlconcat_0_in_context.xdc] for cell 'reset_3_i/xlconcat'
+Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_xlconcat_0/reset_3_xlconcat_0/design_1_xlconcat_0_in_context.xdc] for cell 'reset_3_i/xlconcat'
+Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_zynq_ultra_ps_e_0_0/reset_3_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'reset_3_i/zynq_ultra_ps_e_0'
+Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_zynq_ultra_ps_e_0_0/reset_3_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'reset_3_i/zynq_ultra_ps_e_0'
+Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_xbar_2/reset_3_xbar_2/design_1_xbar_2_in_context.xdc] for cell 'reset_3_i/processing_system7_0_axi_periph/xbar'
+Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_xbar_2/reset_3_xbar_2/design_1_xbar_2_in_context.xdc] for cell 'reset_3_i/processing_system7_0_axi_periph/xbar'
+Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_auto_ds_6/reset_3_auto_ds_6/design_1_auto_ds_6_in_context.xdc] for cell 'reset_3_i/processing_system7_0_axi_periph/m05_couplers/auto_ds'
+Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_auto_ds_6/reset_3_auto_ds_6/design_1_auto_ds_6_in_context.xdc] for cell 'reset_3_i/processing_system7_0_axi_periph/m05_couplers/auto_ds'
+Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_auto_pc_6/reset_3_auto_pc_6/design_1_auto_pc_5_in_context.xdc] for cell 'reset_3_i/processing_system7_0_axi_periph/m05_couplers/auto_pc'
+Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_auto_pc_6/reset_3_auto_pc_6/design_1_auto_pc_5_in_context.xdc] for cell 'reset_3_i/processing_system7_0_axi_periph/m05_couplers/auto_pc'
+Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_auto_ds_5/reset_3_auto_ds_5/design_1_auto_ds_6_in_context.xdc] for cell 'reset_3_i/processing_system7_0_axi_periph/m04_couplers/auto_ds'
+Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_auto_ds_5/reset_3_auto_ds_5/design_1_auto_ds_6_in_context.xdc] for cell 'reset_3_i/processing_system7_0_axi_periph/m04_couplers/auto_ds'
+Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_auto_pc_5/reset_3_auto_pc_5/design_1_auto_pc_5_in_context.xdc] for cell 'reset_3_i/processing_system7_0_axi_periph/m04_couplers/auto_pc'
+Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_auto_pc_5/reset_3_auto_pc_5/design_1_auto_pc_5_in_context.xdc] for cell 'reset_3_i/processing_system7_0_axi_periph/m04_couplers/auto_pc'
+Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_auto_ds_4/reset_3_auto_ds_4/design_1_auto_ds_6_in_context.xdc] for cell 'reset_3_i/processing_system7_0_axi_periph/m03_couplers/auto_ds'
+Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_auto_ds_4/reset_3_auto_ds_4/design_1_auto_ds_6_in_context.xdc] for cell 'reset_3_i/processing_system7_0_axi_periph/m03_couplers/auto_ds'
+Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_auto_pc_4/reset_3_auto_pc_4/design_1_auto_pc_5_in_context.xdc] for cell 'reset_3_i/processing_system7_0_axi_periph/m03_couplers/auto_pc'
+Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_auto_pc_4/reset_3_auto_pc_4/design_1_auto_pc_5_in_context.xdc] for cell 'reset_3_i/processing_system7_0_axi_periph/m03_couplers/auto_pc'
+Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_auto_ds_3/reset_3_auto_ds_3/design_1_auto_ds_6_in_context.xdc] for cell 'reset_3_i/processing_system7_0_axi_periph/m02_couplers/auto_ds'
+Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_auto_ds_3/reset_3_auto_ds_3/design_1_auto_ds_6_in_context.xdc] for cell 'reset_3_i/processing_system7_0_axi_periph/m02_couplers/auto_ds'
+Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_auto_pc_3/reset_3_auto_pc_3/design_1_auto_pc_5_in_context.xdc] for cell 'reset_3_i/processing_system7_0_axi_periph/m02_couplers/auto_pc'
+Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_auto_pc_3/reset_3_auto_pc_3/design_1_auto_pc_5_in_context.xdc] for cell 'reset_3_i/processing_system7_0_axi_periph/m02_couplers/auto_pc'
+Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_auto_ds_2/reset_3_auto_ds_2/design_1_auto_ds_6_in_context.xdc] for cell 'reset_3_i/processing_system7_0_axi_periph/m01_couplers/auto_ds'
+Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_auto_ds_2/reset_3_auto_ds_2/design_1_auto_ds_6_in_context.xdc] for cell 'reset_3_i/processing_system7_0_axi_periph/m01_couplers/auto_ds'
+Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_auto_pc_2/reset_3_auto_pc_2/design_1_auto_pc_5_in_context.xdc] for cell 'reset_3_i/processing_system7_0_axi_periph/m01_couplers/auto_pc'
+Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_auto_pc_2/reset_3_auto_pc_2/design_1_auto_pc_5_in_context.xdc] for cell 'reset_3_i/processing_system7_0_axi_periph/m01_couplers/auto_pc'
+Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_auto_ds_1/reset_3_auto_ds_1/design_1_auto_ds_6_in_context.xdc] for cell 'reset_3_i/processing_system7_0_axi_periph/m00_couplers/auto_ds'
+Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_auto_ds_1/reset_3_auto_ds_1/design_1_auto_ds_6_in_context.xdc] for cell 'reset_3_i/processing_system7_0_axi_periph/m00_couplers/auto_ds'
+Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_auto_pc_1/reset_3_auto_pc_1/design_1_auto_pc_5_in_context.xdc] for cell 'reset_3_i/processing_system7_0_axi_periph/m00_couplers/auto_pc'
+Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_auto_pc_1/reset_3_auto_pc_1/design_1_auto_pc_5_in_context.xdc] for cell 'reset_3_i/processing_system7_0_axi_periph/m00_couplers/auto_pc'
+Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_axis_data_fifo_pipeline_to_writer_0/reset_3_axis_data_fifo_pipeline_to_writer_0/design_1_axis_data_fifo_raw_LUMA_0_in_context.xdc] for cell 'reset_3_i/VDMA/axis_data_fifo_pipeline_to_writer'
+Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_axis_data_fifo_pipeline_to_writer_0/reset_3_axis_data_fifo_pipeline_to_writer_0/design_1_axis_data_fifo_raw_LUMA_0_in_context.xdc] for cell 'reset_3_i/VDMA/axis_data_fifo_pipeline_to_writer'
+Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_axis_data_fifo_raw_CHROMA_0/reset_3_axis_data_fifo_raw_CHROMA_0/design_1_axis_data_fifo_raw_LUMA_0_in_context.xdc] for cell 'reset_3_i/VDMA/axis_data_fifo_raw_CHROMA'
+Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_axis_data_fifo_raw_CHROMA_0/reset_3_axis_data_fifo_raw_CHROMA_0/design_1_axis_data_fifo_raw_LUMA_0_in_context.xdc] for cell 'reset_3_i/VDMA/axis_data_fifo_raw_CHROMA'
+Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_axis_data_fifo_raw_LUMA_0/reset_3_axis_data_fifo_raw_LUMA_0/design_1_axis_data_fifo_raw_LUMA_0_in_context.xdc] for cell 'reset_3_i/VDMA/axis_data_fifo_raw_LUMA'
+Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_axis_data_fifo_raw_LUMA_0/reset_3_axis_data_fifo_raw_LUMA_0/design_1_axis_data_fifo_raw_LUMA_0_in_context.xdc] for cell 'reset_3_i/VDMA/axis_data_fifo_raw_LUMA'
+Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_axis_to_ddr_writer_0_0/reset_3_axis_to_ddr_writer_0_0/design_1_axis_to_ddr_writer_0_0_in_context.xdc] for cell 'reset_3_i/VDMA/axis_to_ddr_writer_0'
+Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_axis_to_ddr_writer_0_0/reset_3_axis_to_ddr_writer_0_0/design_1_axis_to_ddr_writer_0_0_in_context.xdc] for cell 'reset_3_i/VDMA/axis_to_ddr_writer_0'
+Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_axis_to_ddr_writer_CHROMA_0/reset_3_axis_to_ddr_writer_CHROMA_0/design_1_axis_to_ddr_writer_0_0_in_context.xdc] for cell 'reset_3_i/VDMA/axis_to_ddr_writer_CHROMA'
+Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_axis_to_ddr_writer_CHROMA_0/reset_3_axis_to_ddr_writer_CHROMA_0/design_1_axis_to_ddr_writer_0_0_in_context.xdc] for cell 'reset_3_i/VDMA/axis_to_ddr_writer_CHROMA'
+Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_axis_to_ddr_writer_LUMA_0/reset_3_axis_to_ddr_writer_LUMA_0/design_1_axis_to_ddr_writer_0_0_in_context.xdc] for cell 'reset_3_i/VDMA/axis_to_ddr_writer_LUMA'
+Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_axis_to_ddr_writer_LUMA_0/reset_3_axis_to_ddr_writer_LUMA_0/design_1_axis_to_ddr_writer_0_0_in_context.xdc] for cell 'reset_3_i/VDMA/axis_to_ddr_writer_LUMA'
+Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_ddr_to_axis_reader_0_0/reset_3_ddr_to_axis_reader_0_0/design_1_ddr_to_axis_reader_0_0_in_context.xdc] for cell 'reset_3_i/VDMA/ddr_to_axis_reader_0'
+Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_ddr_to_axis_reader_0_0/reset_3_ddr_to_axis_reader_0_0/design_1_ddr_to_axis_reader_0_0_in_context.xdc] for cell 'reset_3_i/VDMA/ddr_to_axis_reader_0'
+Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_xbar_1/reset_3_xbar_1/design_1_xbar_1_in_context.xdc] for cell 'reset_3_i/VDMA/axi_mem_intercon_writer/xbar'
+Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_xbar_1/reset_3_xbar_1/design_1_xbar_1_in_context.xdc] for cell 'reset_3_i/VDMA/axi_mem_intercon_writer/xbar'
+Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_LF_valid_to_AXIS_0/reset_3_LF_valid_to_AXIS_0/design_1_LF_valid_to_AXIS_0_in_context.xdc] for cell 'reset_3_i/OV7670_GRAYSCALE_TO_AXIS/LF_valid_to_AXIS'
+Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_LF_valid_to_AXIS_0/reset_3_LF_valid_to_AXIS_0/design_1_LF_valid_to_AXIS_0_in_context.xdc] for cell 'reset_3_i/OV7670_GRAYSCALE_TO_AXIS/LF_valid_to_AXIS'
+Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_c_counter_binary_0_0/reset_3_c_counter_binary_0_0/design_1_c_counter_binary_0_0_in_context.xdc] for cell 'reset_3_i/OV7670_GRAYSCALE_TO_AXIS/c_counter_binary_0'
+Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_c_counter_binary_0_0/reset_3_c_counter_binary_0_0/design_1_c_counter_binary_0_0_in_context.xdc] for cell 'reset_3_i/OV7670_GRAYSCALE_TO_AXIS/c_counter_binary_0'
+Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_ddr_to_axis_reader_SD_0_0/reset_3_ddr_to_axis_reader_SD_0_0/design_1_ddr_to_axis_reader_SD_0_0_in_context.xdc] for cell 'reset_3_i/OV7670_GRAYSCALE_TO_AXIS/ddr_to_axis_reader_SD_0'
+Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_ddr_to_axis_reader_SD_0_0/reset_3_ddr_to_axis_reader_SD_0_0/design_1_ddr_to_axis_reader_SD_0_0_in_context.xdc] for cell 'reset_3_i/OV7670_GRAYSCALE_TO_AXIS/ddr_to_axis_reader_SD_0'
+Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_mux_sd_ov_1_0/reset_3_mux_sd_ov_1_0/design_1_mux_sd_ov_1_0_in_context.xdc] for cell 'reset_3_i/OV7670_GRAYSCALE_TO_AXIS/mux_sd_ov_1'
+Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_mux_sd_ov_1_0/reset_3_mux_sd_ov_1_0/design_1_mux_sd_ov_1_0_in_context.xdc] for cell 'reset_3_i/OV7670_GRAYSCALE_TO_AXIS/mux_sd_ov_1'
+Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_ov7670_LUMA_CHROMA_0_0/reset_3_ov7670_LUMA_CHROMA_0_0/design_1_ov7670_LUMA_CHROMA_0_0_in_context.xdc] for cell 'reset_3_i/OV7670_GRAYSCALE_TO_AXIS/ov7670_LUMA_CHROMA_0'
+Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_ov7670_LUMA_CHROMA_0_0/reset_3_ov7670_LUMA_CHROMA_0_0/design_1_ov7670_LUMA_CHROMA_0_0_in_context.xdc] for cell 'reset_3_i/OV7670_GRAYSCALE_TO_AXIS/ov7670_LUMA_CHROMA_0'
+Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_ov7670_interface_0_0/reset_3_ov7670_interface_0_0/design_1_ov7670_interface_0_0_in_context.xdc] for cell 'reset_3_i/OV7670_GRAYSCALE_TO_AXIS/ov7670_interface_0'
+Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_ov7670_interface_0_0/reset_3_ov7670_interface_0_0/design_1_ov7670_interface_0_0_in_context.xdc] for cell 'reset_3_i/OV7670_GRAYSCALE_TO_AXIS/ov7670_interface_0'
+Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_xbar_0/reset_3_xbar_0/prova_gpio_xbar_0_in_context.xdc] for cell 'reset_3_i/OV7670_GRAYSCALE_TO_AXIS/axi_interconnect_0/xbar'
+Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_xbar_0/reset_3_xbar_0/prova_gpio_xbar_0_in_context.xdc] for cell 'reset_3_i/OV7670_GRAYSCALE_TO_AXIS/axi_interconnect_0/xbar'
+Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_auto_ds_0/reset_3_auto_ds_0/design_1_auto_ds_0_in_context.xdc] for cell 'reset_3_i/OV7670_GRAYSCALE_TO_AXIS/axi_interconnect_0/s00_couplers/auto_ds'
+Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_auto_ds_0/reset_3_auto_ds_0/design_1_auto_ds_0_in_context.xdc] for cell 'reset_3_i/OV7670_GRAYSCALE_TO_AXIS/axi_interconnect_0/s00_couplers/auto_ds'
+Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_auto_pc_0/reset_3_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'reset_3_i/OV7670_GRAYSCALE_TO_AXIS/axi_interconnect_0/s00_couplers/auto_pc'
+Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_auto_pc_0/reset_3_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'reset_3_i/OV7670_GRAYSCALE_TO_AXIS/axi_interconnect_0/s00_couplers/auto_pc'
 Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/constrs_1/new/design_1_wrapper.xdc]
 Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/constrs_1/new/design_1_wrapper.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/constrs_1/new/design_1_wrapper.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/constrs_1/new/design_1_wrapper.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/reset_3_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/reset_3_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
@@ -440,80 +404,74 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2365.066 ; gain = 0.000 ; free physical = 356 ; free virtual = 18142
-WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'design_1_i/VDMA/axis_data_fifo_pipeline_to_writer' at clock pin 'm_axis_aclk' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'design_1_i/VDMA/axis_data_fifo_raw_CHROMA' at clock pin 'm_axis_aclk' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'design_1_i/VDMA/axis_data_fifo_raw_LUMA' at clock pin 'm_axis_aclk' is different from the actual clock period '10.000', this can lead to different synthesis results.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2362.062 ; gain = 0.000 ; free physical = 296 ; free virtual = 14831
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'reset_3_i/VDMA/axis_data_fifo_pipeline_to_writer' at clock pin 'm_axis_aclk' is different from the actual clock period '10.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'reset_3_i/VDMA/axis_data_fifo_raw_CHROMA' at clock pin 'm_axis_aclk' is different from the actual clock period '10.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'reset_3_i/VDMA/axis_data_fifo_raw_LUMA' at clock pin 'm_axis_aclk' is different from the actual clock period '10.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:32 ; elapsed = 00:00:42 . Memory (MB): peak = 2365.066 ; gain = 350.152 ; free physical = 429 ; free virtual = 18216
+Finished Constraint Validation : Time (s): cpu = 00:00:32 ; elapsed = 00:00:42 . Memory (MB): peak = 2362.062 ; gain = 395.176 ; free physical = 364 ; free virtual = 14910
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xczu3eg-sbva484-1-e
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:32 ; elapsed = 00:00:42 . Memory (MB): peak = 2365.066 ; gain = 350.152 ; free physical = 429 ; free virtual = 18216
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:32 ; elapsed = 00:00:42 . Memory (MB): peak = 2362.062 ; gain = 395.176 ; free physical = 364 ; free virtual = 14910
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for design_1_i. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/ENABLE_RAW_STREAM. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/axi_gpio_frame_intr. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/axi_gpio_pl_reset. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/clk_gen_25M_24M. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/const_1. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/const_true. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/processing_system7_0_axi_periph. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/reset_100M. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/reset_24M. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/reset_25M. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/xlconcat. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/zynq_ultra_ps_e_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/processing_system7_0_axi_periph/xbar. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/VDMA/axi_mem_intercon_reader. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/VDMA/axi_mem_intercon_writer. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/VDMA/axis_data_fifo_pipeline_to_writer. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/VDMA/axis_data_fifo_raw_CHROMA. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/VDMA/axis_data_fifo_raw_LUMA. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/VDMA/axis_to_ddr_writer_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/VDMA/axis_to_ddr_writer_CHROMA. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/VDMA/axis_to_ddr_writer_LUMA. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/VDMA/ddr_to_axis_reader_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/VDMA/axi_mem_intercon_writer/xbar. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/OV7670_GRAYSCALE_TO_AXIS/LF_valid_to_AXIS. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/OV7670_GRAYSCALE_TO_AXIS/axi_interconnect_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/OV7670_GRAYSCALE_TO_AXIS/axi_interconnect_1. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/OV7670_GRAYSCALE_TO_AXIS/c_counter_binary_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/OV7670_GRAYSCALE_TO_AXIS/ddr_to_axis_reader_SD_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/OV7670_GRAYSCALE_TO_AXIS/mux_sd_ov_1. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/OV7670_GRAYSCALE_TO_AXIS/ov7670_LUMA_CHROMA_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/OV7670_GRAYSCALE_TO_AXIS/ov7670_interface_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/OV7670_GRAYSCALE_TO_AXIS/axi_interconnect_0/xbar. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/processing_system7_0_axi_periph/m05_couplers/auto_ds. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/processing_system7_0_axi_periph/m05_couplers/auto_pc. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/processing_system7_0_axi_periph/m04_couplers/auto_ds. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/processing_system7_0_axi_periph/m04_couplers/auto_pc. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/processing_system7_0_axi_periph/m03_couplers/auto_ds. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/processing_system7_0_axi_periph/m03_couplers/auto_pc. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/processing_system7_0_axi_periph/m02_couplers/auto_ds. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/processing_system7_0_axi_periph/m02_couplers/auto_pc. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/processing_system7_0_axi_periph/m01_couplers/auto_ds. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/processing_system7_0_axi_periph/m01_couplers/auto_pc. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/processing_system7_0_axi_periph/m00_couplers/auto_ds. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/processing_system7_0_axi_periph/m00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/VDMA/axi_mem_intercon_writer/s02_couplers/auto_us. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/VDMA/axi_mem_intercon_writer/s01_couplers/auto_us. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/VDMA/axi_mem_intercon_writer/s00_couplers/auto_us. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/VDMA/axi_mem_intercon_reader/s00_couplers/auto_us. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/OV7670_GRAYSCALE_TO_AXIS/axi_interconnect_0/s00_couplers/auto_ds. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/OV7670_GRAYSCALE_TO_AXIS/axi_interconnect_0/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/OV7670_GRAYSCALE_TO_AXIS/axi_interconnect_1/s00_couplers/auto_us. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for reset_3_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for reset_3_i/ENABLE_RAW_STREAM. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for reset_3_i/axi_gpio_frame_intr. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for reset_3_i/axi_gpio_pl_reset. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for reset_3_i/clk_wiz_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for reset_3_i/const_true. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for reset_3_i/proc_sys_reset_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for reset_3_i/processing_system7_0_axi_periph. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for reset_3_i/reset_100M. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for reset_3_i/reset_24M. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for reset_3_i/xlconcat. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for reset_3_i/zynq_ultra_ps_e_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for reset_3_i/processing_system7_0_axi_periph/xbar. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for reset_3_i/processing_system7_0_axi_periph/m05_couplers/auto_ds. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for reset_3_i/processing_system7_0_axi_periph/m05_couplers/auto_pc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for reset_3_i/processing_system7_0_axi_periph/m04_couplers/auto_ds. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for reset_3_i/processing_system7_0_axi_periph/m04_couplers/auto_pc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for reset_3_i/processing_system7_0_axi_periph/m03_couplers/auto_ds. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for reset_3_i/processing_system7_0_axi_periph/m03_couplers/auto_pc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for reset_3_i/processing_system7_0_axi_periph/m02_couplers/auto_ds. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for reset_3_i/processing_system7_0_axi_periph/m02_couplers/auto_pc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for reset_3_i/processing_system7_0_axi_periph/m01_couplers/auto_ds. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for reset_3_i/processing_system7_0_axi_periph/m01_couplers/auto_pc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for reset_3_i/processing_system7_0_axi_periph/m00_couplers/auto_ds. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for reset_3_i/processing_system7_0_axi_periph/m00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for reset_3_i/VDMA/axi_mem_intercon_reader. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for reset_3_i/VDMA/axi_mem_intercon_writer. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for reset_3_i/VDMA/axis_data_fifo_pipeline_to_writer. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for reset_3_i/VDMA/axis_data_fifo_raw_CHROMA. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for reset_3_i/VDMA/axis_data_fifo_raw_LUMA. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for reset_3_i/VDMA/axis_to_ddr_writer_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for reset_3_i/VDMA/axis_to_ddr_writer_CHROMA. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for reset_3_i/VDMA/axis_to_ddr_writer_LUMA. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for reset_3_i/VDMA/ddr_to_axis_reader_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for reset_3_i/VDMA/axi_mem_intercon_writer/xbar. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for reset_3_i/OV7670_GRAYSCALE_TO_AXIS/LF_valid_to_AXIS. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for reset_3_i/OV7670_GRAYSCALE_TO_AXIS/axi_interconnect_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for reset_3_i/OV7670_GRAYSCALE_TO_AXIS/c_counter_binary_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for reset_3_i/OV7670_GRAYSCALE_TO_AXIS/ddr_to_axis_reader_SD_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for reset_3_i/OV7670_GRAYSCALE_TO_AXIS/mux_sd_ov_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for reset_3_i/OV7670_GRAYSCALE_TO_AXIS/ov7670_LUMA_CHROMA_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for reset_3_i/OV7670_GRAYSCALE_TO_AXIS/ov7670_interface_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for reset_3_i/OV7670_GRAYSCALE_TO_AXIS/axi_interconnect_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for reset_3_i/OV7670_GRAYSCALE_TO_AXIS/axi_interconnect_0/xbar. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for reset_3_i/OV7670_GRAYSCALE_TO_AXIS/axi_interconnect_0/s00_couplers/auto_ds. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for reset_3_i/OV7670_GRAYSCALE_TO_AXIS/axi_interconnect_0/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:42 . Memory (MB): peak = 2365.066 ; gain = 350.152 ; free physical = 428 ; free virtual = 18216
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:42 . Memory (MB): peak = 2362.062 ; gain = 395.176 ; free physical = 363 ; free virtual = 14910
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:33 ; elapsed = 00:00:43 . Memory (MB): peak = 2365.066 ; gain = 350.152 ; free physical = 429 ; free virtual = 18218
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:33 ; elapsed = 00:00:43 . Memory (MB): peak = 2362.062 ; gain = 395.176 ; free physical = 365 ; free virtual = 14913
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -549,7 +507,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:43 . Memory (MB): peak = 2365.066 ; gain = 350.152 ; free physical = 413 ; free virtual = 18208
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:43 . Memory (MB): peak = 2362.062 ; gain = 395.176 ; free physical = 323 ; free virtual = 14906
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -560,21 +518,19 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/clk_gen_25M_24M/clk_in1' to pin 'design_1_i/zynq_ultra_ps_e_0/bbstub_pl_clk0/O'
-INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/clk_gen_25M_24M/clk_out1' to pin 'design_1_i/clk_gen_25M_24M/bbstub_clk_out1/O'
-INFO: [Synth 8-5783] Moving clock source from hierarchical pin 'design_1_i/clk_gen_25M_24M/clk_in1' to 'design_1_i/zynq_ultra_ps_e_0/bbstub_pl_clk0/O'
-INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/clk_gen_25M_24M/clk_out2' to pin 'design_1_i/clk_gen_25M_24M/bbstub_clk_out2/O'
-INFO: [Synth 8-5783] Moving clock source from hierarchical pin 'design_1_i/clk_gen_25M_24M/clk_in1' to 'design_1_i/zynq_ultra_ps_e_0/bbstub_pl_clk0/O'
-INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/zynq_ultra_ps_e_0/pl_clk0' to pin 'design_1_i/zynq_ultra_ps_e_0/bbstub_pl_clk0/O'
-INFO: [Synth 8-5819] Moved 4 constraints on hierarchical pins to their respective driving/loading pins
+INFO: [Synth 8-5578] Moved timing constraint from pin 'reset_3_i/clk_wiz_0/clk_in1' to pin 'reset_3_i/zynq_ultra_ps_e_0/bbstub_pl_clk0/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'reset_3_i/clk_wiz_0/clk_out1' to pin 'reset_3_i/clk_wiz_0/bbstub_clk_out1/O'
+INFO: [Synth 8-5783] Moving clock source from hierarchical pin 'reset_3_i/clk_wiz_0/clk_in1' to 'reset_3_i/zynq_ultra_ps_e_0/bbstub_pl_clk0/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'reset_3_i/zynq_ultra_ps_e_0/pl_clk0' to pin 'reset_3_i/zynq_ultra_ps_e_0/bbstub_pl_clk0/O'
+INFO: [Synth 8-5819] Moved 3 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:01 ; elapsed = 00:01:29 . Memory (MB): peak = 2751.043 ; gain = 736.129 ; free physical = 131 ; free virtual = 17453
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:02 ; elapsed = 00:01:32 . Memory (MB): peak = 2747.039 ; gain = 780.152 ; free physical = 133 ; free virtual = 14231
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:01 ; elapsed = 00:01:29 . Memory (MB): peak = 2752.043 ; gain = 737.129 ; free physical = 132 ; free virtual = 17452
+Finished Timing Optimization : Time (s): cpu = 00:01:02 ; elapsed = 00:01:32 . Memory (MB): peak = 2748.039 ; gain = 781.152 ; free physical = 128 ; free virtual = 14230
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -586,7 +542,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:01 ; elapsed = 00:01:29 . Memory (MB): peak = 2758.949 ; gain = 744.035 ; free physical = 131 ; free virtual = 17449
+Finished Technology Mapping : Time (s): cpu = 00:01:03 ; elapsed = 00:01:32 . Memory (MB): peak = 2754.930 ; gain = 788.043 ; free physical = 129 ; free virtual = 14241
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -610,7 +566,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:02 ; elapsed = 00:01:30 . Memory (MB): peak = 2758.949 ; gain = 744.035 ; free physical = 130 ; free virtual = 17449
+Finished IO Insertion : Time (s): cpu = 00:01:03 ; elapsed = 00:01:33 . Memory (MB): peak = 2754.930 ; gain = 788.043 ; free physical = 136 ; free virtual = 14210
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -623,7 +579,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:02 ; elapsed = 00:01:30 . Memory (MB): peak = 2758.949 ; gain = 744.035 ; free physical = 130 ; free virtual = 17448
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:03 ; elapsed = 00:01:33 . Memory (MB): peak = 2754.930 ; gain = 788.043 ; free physical = 140 ; free virtual = 14197
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -635,168 +591,151 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:02 ; elapsed = 00:01:30 . Memory (MB): peak = 2758.949 ; gain = 744.035 ; free physical = 129 ; free virtual = 17447
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:04 ; elapsed = 00:01:33 . Memory (MB): peak = 2754.930 ; gain = 788.043 ; free physical = 147 ; free virtual = 14208
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:02 ; elapsed = 00:01:30 . Memory (MB): peak = 2758.949 ; gain = 744.035 ; free physical = 129 ; free virtual = 17447
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:04 ; elapsed = 00:01:33 . Memory (MB): peak = 2754.930 ; gain = 788.043 ; free physical = 145 ; free virtual = 14208
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:02 ; elapsed = 00:01:30 . Memory (MB): peak = 2758.949 ; gain = 744.035 ; free physical = 129 ; free virtual = 17447
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:04 ; elapsed = 00:01:33 . Memory (MB): peak = 2754.930 ; gain = 788.043 ; free physical = 146 ; free virtual = 14210
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:02 ; elapsed = 00:01:30 . Memory (MB): peak = 2758.949 ; gain = 744.035 ; free physical = 129 ; free virtual = 17447
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:04 ; elapsed = 00:01:34 . Memory (MB): peak = 2754.930 ; gain = 788.043 ; free physical = 144 ; free virtual = 14208
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 Report BlackBoxes: 
-+------+---------------------------------------------+----------+
-|      |BlackBox name                                |Instances |
-+------+---------------------------------------------+----------+
-|1     |design_1_xbar_0                              |         1|
-|2     |design_1_auto_ds_0                           |         1|
-|3     |design_1_auto_pc_0                           |         1|
-|4     |design_1_auto_us_0                           |         1|
-|5     |design_1_LF_valid_to_AXIS_0                  |         1|
-|6     |design_1_c_counter_binary_0_0                |         1|
-|7     |design_1_ddr_to_axis_reader_SD_0_0           |         1|
-|8     |design_1_mux_sd_ov_1_0                       |         1|
-|9     |design_1_ov7670_LUMA_CHROMA_0_0              |         1|
-|10    |design_1_ov7670_interface_0_0                |         1|
-|11    |design_1_auto_us_1                           |         1|
-|12    |design_1_xbar_1                              |         1|
-|13    |design_1_auto_us_2                           |         1|
-|14    |design_1_auto_us_3                           |         1|
-|15    |design_1_auto_us_4                           |         1|
-|16    |design_1_axis_data_fifo_pipeline_to_writer_0 |         1|
-|17    |design_1_axis_data_fifo_raw_CHROMA_0         |         1|
-|18    |design_1_axis_data_fifo_raw_LUMA_0           |         1|
-|19    |design_1_axis_to_ddr_writer_0_0              |         1|
-|20    |design_1_axis_to_ddr_writer_CHROMA_0         |         1|
-|21    |design_1_axis_to_ddr_writer_LUMA_0           |         1|
-|22    |design_1_ddr_to_axis_reader_0_0              |         1|
-|23    |design_1_xbar_2                              |         1|
-|24    |design_1_auto_ds_1                           |         1|
-|25    |design_1_auto_pc_1                           |         1|
-|26    |design_1_auto_ds_2                           |         1|
-|27    |design_1_auto_pc_2                           |         1|
-|28    |design_1_auto_ds_3                           |         1|
-|29    |design_1_auto_pc_3                           |         1|
-|30    |design_1_auto_ds_4                           |         1|
-|31    |design_1_auto_pc_4                           |         1|
-|32    |design_1_auto_ds_5                           |         1|
-|33    |design_1_auto_pc_5                           |         1|
-|34    |design_1_auto_ds_6                           |         1|
-|35    |design_1_auto_pc_6                           |         1|
-|36    |design_1_ENABLE_RAW_STREAM_0                 |         1|
-|37    |design_1_axi_gpio_frame_intr_0               |         1|
-|38    |design_1_axi_gpio_pl_reset_0                 |         1|
-|39    |design_1_clk_gen_25M_24M_0                   |         1|
-|40    |design_1_const_1_0                           |         1|
-|41    |design_1_const_true_0                        |         1|
-|42    |design_1_reset_100M_0                        |         1|
-|43    |design_1_reset_24M_0                         |         1|
-|44    |design_1_reset_25M_0                         |         1|
-|45    |design_1_xlconcat_0                          |         1|
-|46    |design_1_zynq_ultra_ps_e_0_0                 |         1|
-+------+---------------------------------------------+----------+
++------+--------------------------------------------+----------+
+|      |BlackBox name                               |Instances |
++------+--------------------------------------------+----------+
+|1     |reset_3_xbar_2                              |         1|
+|2     |reset_3_auto_ds_1                           |         1|
+|3     |reset_3_auto_pc_1                           |         1|
+|4     |reset_3_auto_ds_2                           |         1|
+|5     |reset_3_auto_pc_2                           |         1|
+|6     |reset_3_auto_ds_3                           |         1|
+|7     |reset_3_auto_pc_3                           |         1|
+|8     |reset_3_auto_ds_4                           |         1|
+|9     |reset_3_auto_pc_4                           |         1|
+|10    |reset_3_auto_ds_5                           |         1|
+|11    |reset_3_auto_pc_5                           |         1|
+|12    |reset_3_auto_ds_6                           |         1|
+|13    |reset_3_auto_pc_6                           |         1|
+|14    |reset_3_ENABLE_RAW_STREAM_0                 |         1|
+|15    |reset_3_axi_gpio_frame_intr_0               |         1|
+|16    |reset_3_axi_gpio_pl_reset_0                 |         1|
+|17    |reset_3_clk_wiz_0_0                         |         1|
+|18    |reset_3_const_true_0                        |         1|
+|19    |reset_3_proc_sys_reset_0_0                  |         1|
+|20    |reset_3_reset_100M_0                        |         1|
+|21    |reset_3_reset_24M_0                         |         1|
+|22    |reset_3_xlconcat_0                          |         1|
+|23    |reset_3_zynq_ultra_ps_e_0_0                 |         1|
+|24    |reset_3_xbar_0                              |         1|
+|25    |reset_3_auto_ds_0                           |         1|
+|26    |reset_3_auto_pc_0                           |         1|
+|27    |reset_3_LF_valid_to_AXIS_0                  |         1|
+|28    |reset_3_c_counter_binary_0_0                |         1|
+|29    |reset_3_ddr_to_axis_reader_SD_0_0           |         1|
+|30    |reset_3_mux_sd_ov_1_0                       |         1|
+|31    |reset_3_ov7670_LUMA_CHROMA_0_0              |         1|
+|32    |reset_3_ov7670_interface_0_0                |         1|
+|33    |reset_3_xbar_1                              |         1|
+|34    |reset_3_axis_data_fifo_pipeline_to_writer_0 |         1|
+|35    |reset_3_axis_data_fifo_raw_CHROMA_0         |         1|
+|36    |reset_3_axis_data_fifo_raw_LUMA_0           |         1|
+|37    |reset_3_axis_to_ddr_writer_0_0              |         1|
+|38    |reset_3_axis_to_ddr_writer_CHROMA_0         |         1|
+|39    |reset_3_axis_to_ddr_writer_LUMA_0           |         1|
+|40    |reset_3_ddr_to_axis_reader_0_0              |         1|
++------+--------------------------------------------+----------+
 
 Report Cell Usage: 
-+------+---------------------------------------------+------+
-|      |Cell                                         |Count |
-+------+---------------------------------------------+------+
-|1     |design_1_ENABLE_RAW_STREAM_0                 |     1|
-|2     |design_1_LF_valid_to_AXIS_0                  |     1|
-|3     |design_1_auto_ds_0                           |     1|
-|4     |design_1_auto_ds_1                           |     1|
-|5     |design_1_auto_ds_2                           |     1|
-|6     |design_1_auto_ds_3                           |     1|
-|7     |design_1_auto_ds_4                           |     1|
-|8     |design_1_auto_ds_5                           |     1|
-|9     |design_1_auto_ds_6                           |     1|
-|10    |design_1_auto_pc_0                           |     1|
-|11    |design_1_auto_pc_1                           |     1|
-|12    |design_1_auto_pc_2                           |     1|
-|13    |design_1_auto_pc_3                           |     1|
-|14    |design_1_auto_pc_4                           |     1|
-|15    |design_1_auto_pc_5                           |     1|
-|16    |design_1_auto_pc_6                           |     1|
-|17    |design_1_auto_us_0                           |     1|
-|18    |design_1_auto_us_1                           |     1|
-|19    |design_1_auto_us_2                           |     1|
-|20    |design_1_auto_us_3                           |     1|
-|21    |design_1_auto_us_4                           |     1|
-|22    |design_1_axi_gpio_frame_intr_0               |     1|
-|23    |design_1_axi_gpio_pl_reset_0                 |     1|
-|24    |design_1_axis_data_fifo_pipeline_to_writer_0 |     1|
-|25    |design_1_axis_data_fifo_raw_CHROMA_0         |     1|
-|26    |design_1_axis_data_fifo_raw_LUMA_0           |     1|
-|27    |design_1_axis_to_ddr_writer_0_0              |     1|
-|28    |design_1_axis_to_ddr_writer_CHROMA_0         |     1|
-|29    |design_1_axis_to_ddr_writer_LUMA_0           |     1|
-|30    |design_1_c_counter_binary_0_0                |     1|
-|31    |design_1_clk_gen_25M_24M_0                   |     1|
-|32    |design_1_const_1_0                           |     1|
-|33    |design_1_const_true_0                        |     1|
-|34    |design_1_ddr_to_axis_reader_0_0              |     1|
-|35    |design_1_ddr_to_axis_reader_SD_0_0           |     1|
-|36    |design_1_mux_sd_ov_1_0                       |     1|
-|37    |design_1_ov7670_LUMA_CHROMA_0_0              |     1|
-|38    |design_1_ov7670_interface_0_0                |     1|
-|39    |design_1_reset_100M_0                        |     1|
-|40    |design_1_reset_24M_0                         |     1|
-|41    |design_1_reset_25M_0                         |     1|
-|42    |design_1_xbar_0                              |     1|
-|43    |design_1_xbar_1                              |     1|
-|44    |design_1_xbar_2                              |     1|
-|45    |design_1_xlconcat_0                          |     1|
-|46    |design_1_zynq_ultra_ps_e_0_0                 |     1|
-|47    |IBUF                                         |    12|
-|48    |OBUF                                         |     3|
-+------+---------------------------------------------+------+
++------+--------------------------------------------+------+
+|      |Cell                                        |Count |
++------+--------------------------------------------+------+
+|1     |reset_3_ENABLE_RAW_STREAM_0                 |     1|
+|2     |reset_3_LF_valid_to_AXIS_0                  |     1|
+|3     |reset_3_auto_ds_0                           |     1|
+|4     |reset_3_auto_ds_1                           |     1|
+|5     |reset_3_auto_ds_2                           |     1|
+|6     |reset_3_auto_ds_3                           |     1|
+|7     |reset_3_auto_ds_4                           |     1|
+|8     |reset_3_auto_ds_5                           |     1|
+|9     |reset_3_auto_ds_6                           |     1|
+|10    |reset_3_auto_pc_0                           |     1|
+|11    |reset_3_auto_pc_1                           |     1|
+|12    |reset_3_auto_pc_2                           |     1|
+|13    |reset_3_auto_pc_3                           |     1|
+|14    |reset_3_auto_pc_4                           |     1|
+|15    |reset_3_auto_pc_5                           |     1|
+|16    |reset_3_auto_pc_6                           |     1|
+|17    |reset_3_axi_gpio_frame_intr_0               |     1|
+|18    |reset_3_axi_gpio_pl_reset_0                 |     1|
+|19    |reset_3_axis_data_fifo_pipeline_to_writer_0 |     1|
+|20    |reset_3_axis_data_fifo_raw_CHROMA_0         |     1|
+|21    |reset_3_axis_data_fifo_raw_LUMA_0           |     1|
+|22    |reset_3_axis_to_ddr_writer_0_0              |     1|
+|23    |reset_3_axis_to_ddr_writer_CHROMA_0         |     1|
+|24    |reset_3_axis_to_ddr_writer_LUMA_0           |     1|
+|25    |reset_3_c_counter_binary_0_0                |     1|
+|26    |reset_3_clk_wiz_0_0                         |     1|
+|27    |reset_3_const_true_0                        |     1|
+|28    |reset_3_ddr_to_axis_reader_0_0              |     1|
+|29    |reset_3_ddr_to_axis_reader_SD_0_0           |     1|
+|30    |reset_3_mux_sd_ov_1_0                       |     1|
+|31    |reset_3_ov7670_LUMA_CHROMA_0_0              |     1|
+|32    |reset_3_ov7670_interface_0_0                |     1|
+|33    |reset_3_proc_sys_reset_0_0                  |     1|
+|34    |reset_3_reset_100M_0                        |     1|
+|35    |reset_3_reset_24M_0                         |     1|
+|36    |reset_3_xbar_0                              |     1|
+|37    |reset_3_xbar_1                              |     1|
+|38    |reset_3_xbar_2                              |     1|
+|39    |reset_3_xlconcat_0                          |     1|
+|40    |reset_3_zynq_ultra_ps_e_0_0                 |     1|
+|41    |IBUF                                        |    12|
+|42    |OBUF                                        |     4|
++------+--------------------------------------------+------+
 
 Report Instance Areas: 
-+------+------------------------------------+-------------------------------------------+------+
-|      |Instance                            |Module                                     |Cells |
-+------+------------------------------------+-------------------------------------------+------+
-|1     |top                                 |                                           | 11923|
-|2     |  design_1_i                        |design_1                                   | 11908|
-|3     |    OV7670_GRAYSCALE_TO_AXIS        |OV7670_GRAYSCALE_TO_AXIS_imp_1400ZLF       |  1474|
-|4     |      axi_interconnect_0            |design_1_axi_interconnect_0_0              |   750|
-|5     |        s00_couplers                |s00_couplers_imp_1Q0QYKZ                   |   455|
-|6     |      axi_interconnect_1            |design_1_axi_interconnect_1_0              |   346|
-|7     |        s00_couplers                |s00_couplers_imp_1JOJZ9V                   |   346|
-|8     |    VDMA                            |VDMA_imp_148AGHI                           |  3512|
-|9     |      axi_mem_intercon_reader       |design_1_axi_mem_intercon_reader_0         |   346|
-|10    |        s00_couplers                |s00_couplers_imp_XWSS1N                    |   346|
-|11    |      axi_mem_intercon_writer       |design_1_axi_mem_intercon_writer_0         |  1740|
-|12    |        s00_couplers                |s00_couplers_imp_NBI0X7                    |   346|
-|13    |        s01_couplers                |s01_couplers_imp_1FZE762                   |   346|
-|14    |        s02_couplers                |s02_couplers_imp_MPSHBC                    |   346|
-|15    |    processing_system7_0_axi_periph |design_1_processing_system7_0_axi_periph_0 |  5748|
-|16    |      m00_couplers                  |m00_couplers_imp_OBU1DD                    |   519|
-|17    |      m01_couplers                  |m01_couplers_imp_1FBREZ4                   |   519|
-|18    |      m02_couplers                  |m02_couplers_imp_MVV5YQ                    |   519|
-|19    |      m03_couplers                  |m03_couplers_imp_1GHG26R                   |   519|
-|20    |      m04_couplers                  |m04_couplers_imp_PJ7QT3                    |   519|
-|21    |      m05_couplers                  |m05_couplers_imp_1DRAFME                   |   519|
-+------+------------------------------------+-------------------------------------------+------+
++------+------------------------------------+------------------------------------------+------+
+|      |Instance                            |Module                                    |Cells |
++------+------------------------------------+------------------------------------------+------+
+|1     |top                                 |                                          |  9872|
+|2     |  reset_3_i                         |reset_3                                   |  9856|
+|3     |    processing_system7_0_axi_periph |reset_3_processing_system7_0_axi_periph_0 |  5748|
+|4     |      m00_couplers                  |m00_couplers_imp_7NFJYF                   |   519|
+|5     |      m01_couplers                  |m01_couplers_imp_17CC8LG                  |   519|
+|6     |      m02_couplers                  |m02_couplers_imp_1LMIL1C                  |   519|
+|7     |      m03_couplers                  |m03_couplers_imp_JZJXAB                   |   519|
+|8     |      m04_couplers                  |m04_couplers_imp_T0VOJS                   |   519|
+|9     |      m05_couplers                  |m05_couplers_imp_1UDPX6Z                  |   519|
+|10    |    OV7670_GRAYSCALE_TO_AXIS        |OV7670_GRAYSCALE_TO_AXIS_imp_K6SLVG       |  1192|
+|11    |      axi_interconnect_0            |reset_3_axi_interconnect_0_0              |   814|
+|12    |        s00_couplers                |s00_couplers_imp_GIU3VJ                   |   519|
+|13    |      axi_interconnect_1            |reset_3_axi_interconnect_1_0              |     0|
+|14    |    VDMA                            |VDMA_imp_17FTTQ4                          |  1864|
+|15    |      axi_mem_intercon_reader       |reset_3_axi_mem_intercon_reader_0         |     0|
+|16    |      axi_mem_intercon_writer       |reset_3_axi_mem_intercon_writer_0         |   438|
++------+------------------------------------+------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:02 ; elapsed = 00:01:30 . Memory (MB): peak = 2758.949 ; gain = 744.035 ; free physical = 129 ; free virtual = 17447
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:04 ; elapsed = 00:01:34 . Memory (MB): peak = 2754.930 ; gain = 788.043 ; free physical = 144 ; free virtual = 14208
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 325 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:48 ; elapsed = 00:01:07 . Memory (MB): peak = 2758.949 ; gain = 393.883 ; free physical = 169 ; free virtual = 17487
-Synthesis Optimization Complete : Time (s): cpu = 00:01:02 ; elapsed = 00:01:30 . Memory (MB): peak = 2758.957 ; gain = 744.035 ; free physical = 175 ; free virtual = 17493
+Synthesis finished with 0 errors, 0 critical warnings and 56 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:49 ; elapsed = 00:01:11 . Memory (MB): peak = 2754.930 ; gain = 392.867 ; free physical = 179 ; free virtual = 14249
+Synthesis Optimization Complete : Time (s): cpu = 00:01:04 ; elapsed = 00:01:34 . Memory (MB): peak = 2754.938 ; gain = 788.043 ; free physical = 177 ; free virtual = 14250
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 12 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -807,10 +746,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   IBUF => IBUF (IBUFCTRL, INBUF): 12 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-177 Infos, 137 Warnings, 2 Critical Warnings and 0 Errors encountered.
+153 Infos, 135 Warnings, 2 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:06 ; elapsed = 00:01:33 . Memory (MB): peak = 2794.590 ; gain = 1235.898 ; free physical = 181 ; free virtual = 17467
-INFO: [Common 17-1381] The checkpoint '/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/design_1_wrapper.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.28 . Memory (MB): peak = 2794.590 ; gain = 0.000 ; free physical = 170 ; free virtual = 17466
-INFO: [Common 17-206] Exiting Vivado at Fri Jul 17 10:57:40 2020...
+synth_design: Time (s): cpu = 00:01:07 ; elapsed = 00:01:38 . Memory (MB): peak = 2788.570 ; gain = 1229.883 ; free physical = 175 ; free virtual = 14265
+INFO: [Common 17-1381] The checkpoint '/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/synth_1/reset_3_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file reset_3_wrapper_utilization_synth.rpt -pb reset_3_wrapper_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.36 . Memory (MB): peak = 2788.570 ; gain = 0.000 ; free physical = 140 ; free virtual = 14253
+INFO: [Common 17-206] Exiting Vivado at Tue Jul 28 18:14:32 2020...

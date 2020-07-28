@@ -1,0 +1,55 @@
+#include "read_sd_card.h"
+#include "main.h"
+#include "xgpio.h"
+
+//PER PROVA GPIO
+#include <stdint.h>
+#include "axi_gpio_pl_reset.h"
+
+int main()
+{
+/*
+	mount_sd_card();
+
+	read_all_from_directory();
+
+	int result;
+
+	//Platform Initialization
+	result = init_platform();
+	if(result != XST_SUCCESS)
+	{
+		xil_printf("There is an error about init_platform\n");
+	}
+	xil_printf("init_platform done \n\r");
+
+
+	if(1 )//condizione switch acceso in una certa posizione
+	{
+		init_platform_SD_funcs();
+		start_application_SD_funcs();
+	}
+
+	//Application Starting
+	result = start_application();
+	if(result != XST_SUCCESS)
+	{
+		xil_printf("There is an error about start_application\n");
+	}
+	xil_printf("Application started\n");
+
+	xil_printf("Mastica");
+
+*/
+ xil_printf("INIZIALIZZO GPIO\n");
+ init_axi_gpio_pl_reset();
+ xil_printf("SCRIVO SU GPIO all'indirizzo %p \n",resetGPIO.BaseAddress);
+ XGpio_WriteReg(resetGPIO.BaseAddress,
+ 			((1 - 1) * XGPIO_CHAN_OFFSET) + XGPIO_DATA_OFFSET,
+ 			1);
+ xil_printf("FINE\n");
+
+
+	return 0;
+}
+

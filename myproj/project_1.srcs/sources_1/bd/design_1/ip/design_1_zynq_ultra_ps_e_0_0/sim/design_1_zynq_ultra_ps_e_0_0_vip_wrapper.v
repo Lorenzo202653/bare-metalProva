@@ -314,8 +314,8 @@ output [2 : 0] maxigp1_awprot;
 output maxigp1_awvalid;
 output [15 : 0] maxigp1_awuser;
 input maxigp1_awready;
-output [63 : 0] maxigp1_wdata;
-output [7 : 0] maxigp1_wstrb;
+output [127 : 0] maxigp1_wdata;
+output [15 : 0] maxigp1_wstrb;
 output maxigp1_wlast;
 output maxigp1_wvalid;
 input maxigp1_wready;
@@ -335,7 +335,7 @@ output maxigp1_arvalid;
 output [15 : 0] maxigp1_aruser;
 input maxigp1_arready;
 input [15 : 0] maxigp1_rid;
-input [63 : 0] maxigp1_rdata;
+input [127 : 0] maxigp1_rdata;
 input [1 : 0] maxigp1_rresp;
 input maxigp1_rlast;
 input maxigp1_rvalid;
@@ -355,8 +355,8 @@ input [3 : 0] saxigp2_awcache;
 input [2 : 0] saxigp2_awprot;
 input saxigp2_awvalid;
 output saxigp2_awready;
-input [127 : 0] saxigp2_wdata;
-input [15 : 0] saxigp2_wstrb;
+input [63 : 0] saxigp2_wdata;
+input [7 : 0] saxigp2_wstrb;
 input saxigp2_wlast;
 input saxigp2_wvalid;
 output saxigp2_wready;
@@ -375,7 +375,7 @@ input [2 : 0] saxigp2_arprot;
 input saxigp2_arvalid;
 output saxigp2_arready;
 output [5 : 0] saxigp2_rid;
-output [127 : 0] saxigp2_rdata;
+output [63 : 0] saxigp2_rdata;
 output [1 : 0] saxigp2_rresp;
 output saxigp2_rlast;
 output saxigp2_rvalid;
@@ -395,8 +395,8 @@ input [3 : 0] saxigp3_awcache;
 input [2 : 0] saxigp3_awprot;
 input saxigp3_awvalid;
 output saxigp3_awready;
-input [127 : 0] saxigp3_wdata;
-input [15 : 0] saxigp3_wstrb;
+input [63 : 0] saxigp3_wdata;
+input [7 : 0] saxigp3_wstrb;
 input saxigp3_wlast;
 input saxigp3_wvalid;
 output saxigp3_wready;
@@ -415,7 +415,7 @@ input [2 : 0] saxigp3_arprot;
 input saxigp3_arvalid;
 output saxigp3_arready;
 output [5 : 0] saxigp3_rid;
-output [127 : 0] saxigp3_rdata;
+output [63 : 0] saxigp3_rdata;
 output [1 : 0] saxigp3_rresp;
 output saxigp3_rlast;
 output saxigp3_rvalid;
@@ -435,8 +435,8 @@ input [3 : 0] saxigp4_awcache;
 input [2 : 0] saxigp4_awprot;
 input saxigp4_awvalid;
 output saxigp4_awready;
-input [127 : 0] saxigp4_wdata;
-input [15 : 0] saxigp4_wstrb;
+input [63 : 0] saxigp4_wdata;
+input [7 : 0] saxigp4_wstrb;
 input saxigp4_wlast;
 input saxigp4_wvalid;
 output saxigp4_wready;
@@ -455,7 +455,7 @@ input [2 : 0] saxigp4_arprot;
 input saxigp4_arvalid;
 output saxigp4_arready;
 output [5 : 0] saxigp4_rid;
-output [127 : 0] saxigp4_rdata;
+output [63 : 0] saxigp4_rdata;
 output [1 : 0] saxigp4_rresp;
 output saxigp4_rlast;
 output saxigp4_rvalid;
@@ -522,13 +522,13 @@ assign pl_clk0 = pl_clk_t[0] ;
     .C_USE_S_AXI_ACP(0),
     .C_USE_S_AXI_ACE(0),
     .C_M_AXI_GP0_DATA_WIDTH(128),
-    .C_M_AXI_GP1_DATA_WIDTH(64),
+    .C_M_AXI_GP1_DATA_WIDTH(128),
     .C_M_AXI_GP2_DATA_WIDTH(32),
     .C_S_AXI_GP0_DATA_WIDTH(128),
     .C_S_AXI_GP1_DATA_WIDTH(128),
-    .C_S_AXI_GP2_DATA_WIDTH(128),
-    .C_S_AXI_GP3_DATA_WIDTH(128),
-    .C_S_AXI_GP4_DATA_WIDTH(128),
+    .C_S_AXI_GP2_DATA_WIDTH(64),
+    .C_S_AXI_GP3_DATA_WIDTH(64),
+    .C_S_AXI_GP4_DATA_WIDTH(64),
     .C_S_AXI_GP5_DATA_WIDTH(128),
     .C_S_AXI_GP6_DATA_WIDTH(128),
     .C_FCLK_CLK0_FREQ(99.999999),

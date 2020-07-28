@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
-//Date        : Fri Jul 17 10:41:02 2020
+//Date        : Tue Jul 28 15:38:52 2020
 //Host        : kidre-N551JX running 64-bit Ubuntu 16.04.6 LTS
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -11,6 +11,7 @@
 
 module design_1_wrapper
    (LED_FRAME_VALID,
+    Led_test_gpio,
     OV7670_RESET,
     PCLK,
     XCLK,
@@ -19,6 +20,7 @@ module design_1_wrapper
     reset_sw,
     vsync_V);
   output [0:0]LED_FRAME_VALID;
+  output [0:0]Led_test_gpio;
   output [0:0]OV7670_RESET;
   input PCLK;
   output XCLK;
@@ -28,6 +30,7 @@ module design_1_wrapper
   input [0:0]vsync_V;
 
   wire [0:0]LED_FRAME_VALID;
+  wire [0:0]Led_test_gpio;
   wire [0:0]OV7670_RESET;
   wire PCLK;
   wire XCLK;
@@ -38,6 +41,7 @@ module design_1_wrapper
 
   design_1 design_1_i
        (.LED_FRAME_VALID(LED_FRAME_VALID),
+        .Led_test_gpio(Led_test_gpio),
         .OV7670_RESET(OV7670_RESET),
         .PCLK(PCLK),
         .XCLK(XCLK),

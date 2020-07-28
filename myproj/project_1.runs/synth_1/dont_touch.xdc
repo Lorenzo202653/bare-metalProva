@@ -3,160 +3,142 @@
 
 # XDC: new/design_1_wrapper.xdc
 
-# Block Designs: bd/design_1/design_1.bd
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1 || ORIG_REF_NAME==design_1} -quiet] -quiet
+# Block Designs: bd/reset_3/reset_3.bd
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3 || ORIG_REF_NAME==reset_3} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_ENABLE_RAW_STREAM_0/design_1_ENABLE_RAW_STREAM_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_ENABLE_RAW_STREAM_0 || ORIG_REF_NAME==design_1_ENABLE_RAW_STREAM_0} -quiet] -quiet
+# IP: bd/reset_3/ip/reset_3_ENABLE_RAW_STREAM_0/reset_3_ENABLE_RAW_STREAM_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_ENABLE_RAW_STREAM_0 || ORIG_REF_NAME==reset_3_ENABLE_RAW_STREAM_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_axi_gpio_frame_intr_0/design_1_axi_gpio_frame_intr_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_axi_gpio_frame_intr_0 || ORIG_REF_NAME==design_1_axi_gpio_frame_intr_0} -quiet] -quiet
+# IP: bd/reset_3/ip/reset_3_axi_gpio_frame_intr_0/reset_3_axi_gpio_frame_intr_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_axi_gpio_frame_intr_0 || ORIG_REF_NAME==reset_3_axi_gpio_frame_intr_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_axi_gpio_pl_reset_0/design_1_axi_gpio_pl_reset_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_axi_gpio_pl_reset_0 || ORIG_REF_NAME==design_1_axi_gpio_pl_reset_0} -quiet] -quiet
+# IP: bd/reset_3/ip/reset_3_axi_gpio_pl_reset_0/reset_3_axi_gpio_pl_reset_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_axi_gpio_pl_reset_0 || ORIG_REF_NAME==reset_3_axi_gpio_pl_reset_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_clk_gen_25M_24M_0/design_1_clk_gen_25M_24M_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_clk_gen_25M_24M_0 || ORIG_REF_NAME==design_1_clk_gen_25M_24M_0} -quiet] -quiet
+# IP: bd/reset_3/ip/reset_3_clk_wiz_0_0/reset_3_clk_wiz_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_clk_wiz_0_0 || ORIG_REF_NAME==reset_3_clk_wiz_0_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_const_1_0/design_1_const_1_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_const_1_0 || ORIG_REF_NAME==design_1_const_1_0} -quiet] -quiet
+# IP: bd/reset_3/ip/reset_3_const_true_0/reset_3_const_true_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_const_true_0 || ORIG_REF_NAME==reset_3_const_true_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_const_true_0/design_1_const_true_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_const_true_0 || ORIG_REF_NAME==design_1_const_true_0} -quiet] -quiet
+# IP: bd/reset_3/ip/reset_3_proc_sys_reset_0_0/reset_3_proc_sys_reset_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_proc_sys_reset_0_0 || ORIG_REF_NAME==reset_3_proc_sys_reset_0_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_processing_system7_0_axi_periph_0/design_1_processing_system7_0_axi_periph_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_processing_system7_0_axi_periph_0 || ORIG_REF_NAME==design_1_processing_system7_0_axi_periph_0} -quiet] -quiet
+# IP: bd/reset_3/ip/reset_3_processing_system7_0_axi_periph_0/reset_3_processing_system7_0_axi_periph_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_processing_system7_0_axi_periph_0 || ORIG_REF_NAME==reset_3_processing_system7_0_axi_periph_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_reset_100M_0/design_1_reset_100M_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_reset_100M_0 || ORIG_REF_NAME==design_1_reset_100M_0} -quiet] -quiet
+# IP: bd/reset_3/ip/reset_3_reset_100M_0/reset_3_reset_100M_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_reset_100M_0 || ORIG_REF_NAME==reset_3_reset_100M_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_reset_24M_0/design_1_reset_24M_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_reset_24M_0 || ORIG_REF_NAME==design_1_reset_24M_0} -quiet] -quiet
+# IP: bd/reset_3/ip/reset_3_reset_24M_0/reset_3_reset_24M_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_reset_24M_0 || ORIG_REF_NAME==reset_3_reset_24M_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_reset_25M_0/design_1_reset_25M_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_reset_25M_0 || ORIG_REF_NAME==design_1_reset_25M_0} -quiet] -quiet
+# IP: bd/reset_3/ip/reset_3_xlconcat_0/reset_3_xlconcat_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_xlconcat_0 || ORIG_REF_NAME==reset_3_xlconcat_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_xlconcat_0/design_1_xlconcat_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_xlconcat_0 || ORIG_REF_NAME==design_1_xlconcat_0} -quiet] -quiet
+# IP: bd/reset_3/ip/reset_3_zynq_ultra_ps_e_0_0/reset_3_zynq_ultra_ps_e_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_zynq_ultra_ps_e_0_0 || ORIG_REF_NAME==reset_3_zynq_ultra_ps_e_0_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_zynq_ultra_ps_e_0_0 || ORIG_REF_NAME==design_1_zynq_ultra_ps_e_0_0} -quiet] -quiet
+# IP: bd/reset_3/ip/reset_3_xbar_2/reset_3_xbar_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_xbar_2 || ORIG_REF_NAME==reset_3_xbar_2} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_xbar_2/design_1_xbar_2.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_xbar_2 || ORIG_REF_NAME==design_1_xbar_2} -quiet] -quiet
+# IP: bd/reset_3/ip/reset_3_auto_ds_6/reset_3_auto_ds_6.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_auto_ds_6 || ORIG_REF_NAME==reset_3_auto_ds_6} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_axi_mem_intercon_reader_0/design_1_axi_mem_intercon_reader_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_axi_mem_intercon_reader_0 || ORIG_REF_NAME==design_1_axi_mem_intercon_reader_0} -quiet] -quiet
+# IP: bd/reset_3/ip/reset_3_auto_pc_6/reset_3_auto_pc_6.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_auto_pc_6 || ORIG_REF_NAME==reset_3_auto_pc_6} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_axi_mem_intercon_writer_0/design_1_axi_mem_intercon_writer_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_axi_mem_intercon_writer_0 || ORIG_REF_NAME==design_1_axi_mem_intercon_writer_0} -quiet] -quiet
+# IP: bd/reset_3/ip/reset_3_auto_ds_5/reset_3_auto_ds_5.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_auto_ds_5 || ORIG_REF_NAME==reset_3_auto_ds_5} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_axis_data_fifo_pipeline_to_writer_0/design_1_axis_data_fifo_pipeline_to_writer_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_axis_data_fifo_pipeline_to_writer_0 || ORIG_REF_NAME==design_1_axis_data_fifo_pipeline_to_writer_0} -quiet] -quiet
+# IP: bd/reset_3/ip/reset_3_auto_pc_5/reset_3_auto_pc_5.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_auto_pc_5 || ORIG_REF_NAME==reset_3_auto_pc_5} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_axis_data_fifo_raw_CHROMA_0/design_1_axis_data_fifo_raw_CHROMA_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_axis_data_fifo_raw_CHROMA_0 || ORIG_REF_NAME==design_1_axis_data_fifo_raw_CHROMA_0} -quiet] -quiet
+# IP: bd/reset_3/ip/reset_3_auto_ds_4/reset_3_auto_ds_4.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_auto_ds_4 || ORIG_REF_NAME==reset_3_auto_ds_4} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_axis_data_fifo_raw_LUMA_0/design_1_axis_data_fifo_raw_LUMA_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_axis_data_fifo_raw_LUMA_0 || ORIG_REF_NAME==design_1_axis_data_fifo_raw_LUMA_0} -quiet] -quiet
+# IP: bd/reset_3/ip/reset_3_auto_pc_4/reset_3_auto_pc_4.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_auto_pc_4 || ORIG_REF_NAME==reset_3_auto_pc_4} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_axis_to_ddr_writer_0_0/design_1_axis_to_ddr_writer_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_axis_to_ddr_writer_0_0 || ORIG_REF_NAME==design_1_axis_to_ddr_writer_0_0} -quiet] -quiet
+# IP: bd/reset_3/ip/reset_3_auto_ds_3/reset_3_auto_ds_3.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_auto_ds_3 || ORIG_REF_NAME==reset_3_auto_ds_3} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_axis_to_ddr_writer_CHROMA_0/design_1_axis_to_ddr_writer_CHROMA_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_axis_to_ddr_writer_CHROMA_0 || ORIG_REF_NAME==design_1_axis_to_ddr_writer_CHROMA_0} -quiet] -quiet
+# IP: bd/reset_3/ip/reset_3_auto_pc_3/reset_3_auto_pc_3.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_auto_pc_3 || ORIG_REF_NAME==reset_3_auto_pc_3} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_axis_to_ddr_writer_LUMA_0/design_1_axis_to_ddr_writer_LUMA_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_axis_to_ddr_writer_LUMA_0 || ORIG_REF_NAME==design_1_axis_to_ddr_writer_LUMA_0} -quiet] -quiet
+# IP: bd/reset_3/ip/reset_3_auto_ds_2/reset_3_auto_ds_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_auto_ds_2 || ORIG_REF_NAME==reset_3_auto_ds_2} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_ddr_to_axis_reader_0_0/design_1_ddr_to_axis_reader_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_ddr_to_axis_reader_0_0 || ORIG_REF_NAME==design_1_ddr_to_axis_reader_0_0} -quiet] -quiet
+# IP: bd/reset_3/ip/reset_3_auto_pc_2/reset_3_auto_pc_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_auto_pc_2 || ORIG_REF_NAME==reset_3_auto_pc_2} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_xbar_1/design_1_xbar_1.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_xbar_1 || ORIG_REF_NAME==design_1_xbar_1} -quiet] -quiet
+# IP: bd/reset_3/ip/reset_3_auto_ds_1/reset_3_auto_ds_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_auto_ds_1 || ORIG_REF_NAME==reset_3_auto_ds_1} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_LF_valid_to_AXIS_0/design_1_LF_valid_to_AXIS_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_LF_valid_to_AXIS_0 || ORIG_REF_NAME==design_1_LF_valid_to_AXIS_0} -quiet] -quiet
+# IP: bd/reset_3/ip/reset_3_auto_pc_1/reset_3_auto_pc_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_auto_pc_1 || ORIG_REF_NAME==reset_3_auto_pc_1} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_axi_interconnect_0_0/design_1_axi_interconnect_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_axi_interconnect_0_0 || ORIG_REF_NAME==design_1_axi_interconnect_0_0} -quiet] -quiet
+# IP: bd/reset_3/ip/reset_3_axi_mem_intercon_reader_0/reset_3_axi_mem_intercon_reader_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_axi_mem_intercon_reader_0 || ORIG_REF_NAME==reset_3_axi_mem_intercon_reader_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_axi_interconnect_1_0/design_1_axi_interconnect_1_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_axi_interconnect_1_0 || ORIG_REF_NAME==design_1_axi_interconnect_1_0} -quiet] -quiet
+# IP: bd/reset_3/ip/reset_3_axi_mem_intercon_writer_0/reset_3_axi_mem_intercon_writer_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_axi_mem_intercon_writer_0 || ORIG_REF_NAME==reset_3_axi_mem_intercon_writer_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_c_counter_binary_0_0/design_1_c_counter_binary_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_c_counter_binary_0_0 || ORIG_REF_NAME==design_1_c_counter_binary_0_0} -quiet] -quiet
+# IP: bd/reset_3/ip/reset_3_axis_data_fifo_pipeline_to_writer_0/reset_3_axis_data_fifo_pipeline_to_writer_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_axis_data_fifo_pipeline_to_writer_0 || ORIG_REF_NAME==reset_3_axis_data_fifo_pipeline_to_writer_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_ddr_to_axis_reader_SD_0_0/design_1_ddr_to_axis_reader_SD_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_ddr_to_axis_reader_SD_0_0 || ORIG_REF_NAME==design_1_ddr_to_axis_reader_SD_0_0} -quiet] -quiet
+# IP: bd/reset_3/ip/reset_3_axis_data_fifo_raw_CHROMA_0/reset_3_axis_data_fifo_raw_CHROMA_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_axis_data_fifo_raw_CHROMA_0 || ORIG_REF_NAME==reset_3_axis_data_fifo_raw_CHROMA_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_mux_sd_ov_1_0/design_1_mux_sd_ov_1_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_mux_sd_ov_1_0 || ORIG_REF_NAME==design_1_mux_sd_ov_1_0} -quiet] -quiet
+# IP: bd/reset_3/ip/reset_3_axis_data_fifo_raw_LUMA_0/reset_3_axis_data_fifo_raw_LUMA_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_axis_data_fifo_raw_LUMA_0 || ORIG_REF_NAME==reset_3_axis_data_fifo_raw_LUMA_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_ov7670_LUMA_CHROMA_0_0/design_1_ov7670_LUMA_CHROMA_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_ov7670_LUMA_CHROMA_0_0 || ORIG_REF_NAME==design_1_ov7670_LUMA_CHROMA_0_0} -quiet] -quiet
+# IP: bd/reset_3/ip/reset_3_axis_to_ddr_writer_0_0/reset_3_axis_to_ddr_writer_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_axis_to_ddr_writer_0_0 || ORIG_REF_NAME==reset_3_axis_to_ddr_writer_0_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_ov7670_interface_0_0/design_1_ov7670_interface_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_ov7670_interface_0_0 || ORIG_REF_NAME==design_1_ov7670_interface_0_0} -quiet] -quiet
+# IP: bd/reset_3/ip/reset_3_axis_to_ddr_writer_CHROMA_0/reset_3_axis_to_ddr_writer_CHROMA_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_axis_to_ddr_writer_CHROMA_0 || ORIG_REF_NAME==reset_3_axis_to_ddr_writer_CHROMA_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_xbar_0/design_1_xbar_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_xbar_0 || ORIG_REF_NAME==design_1_xbar_0} -quiet] -quiet
+# IP: bd/reset_3/ip/reset_3_axis_to_ddr_writer_LUMA_0/reset_3_axis_to_ddr_writer_LUMA_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_axis_to_ddr_writer_LUMA_0 || ORIG_REF_NAME==reset_3_axis_to_ddr_writer_LUMA_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_auto_ds_6/design_1_auto_ds_6.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_auto_ds_6 || ORIG_REF_NAME==design_1_auto_ds_6} -quiet] -quiet
+# IP: bd/reset_3/ip/reset_3_ddr_to_axis_reader_0_0/reset_3_ddr_to_axis_reader_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_ddr_to_axis_reader_0_0 || ORIG_REF_NAME==reset_3_ddr_to_axis_reader_0_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_auto_pc_6/design_1_auto_pc_6.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_auto_pc_6 || ORIG_REF_NAME==design_1_auto_pc_6} -quiet] -quiet
+# IP: bd/reset_3/ip/reset_3_xbar_1/reset_3_xbar_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_xbar_1 || ORIG_REF_NAME==reset_3_xbar_1} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_auto_ds_5/design_1_auto_ds_5.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_auto_ds_5 || ORIG_REF_NAME==design_1_auto_ds_5} -quiet] -quiet
+# IP: bd/reset_3/ip/reset_3_LF_valid_to_AXIS_0/reset_3_LF_valid_to_AXIS_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_LF_valid_to_AXIS_0 || ORIG_REF_NAME==reset_3_LF_valid_to_AXIS_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_auto_pc_5/design_1_auto_pc_5.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_auto_pc_5 || ORIG_REF_NAME==design_1_auto_pc_5} -quiet] -quiet
+# IP: bd/reset_3/ip/reset_3_axi_interconnect_1_0/reset_3_axi_interconnect_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_axi_interconnect_1_0 || ORIG_REF_NAME==reset_3_axi_interconnect_1_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_auto_ds_4/design_1_auto_ds_4.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_auto_ds_4 || ORIG_REF_NAME==design_1_auto_ds_4} -quiet] -quiet
+# IP: bd/reset_3/ip/reset_3_c_counter_binary_0_0/reset_3_c_counter_binary_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_c_counter_binary_0_0 || ORIG_REF_NAME==reset_3_c_counter_binary_0_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_auto_pc_4/design_1_auto_pc_4.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_auto_pc_4 || ORIG_REF_NAME==design_1_auto_pc_4} -quiet] -quiet
+# IP: bd/reset_3/ip/reset_3_ddr_to_axis_reader_SD_0_0/reset_3_ddr_to_axis_reader_SD_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_ddr_to_axis_reader_SD_0_0 || ORIG_REF_NAME==reset_3_ddr_to_axis_reader_SD_0_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_auto_ds_3/design_1_auto_ds_3.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_auto_ds_3 || ORIG_REF_NAME==design_1_auto_ds_3} -quiet] -quiet
+# IP: bd/reset_3/ip/reset_3_mux_sd_ov_1_0/reset_3_mux_sd_ov_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_mux_sd_ov_1_0 || ORIG_REF_NAME==reset_3_mux_sd_ov_1_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_auto_pc_3/design_1_auto_pc_3.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_auto_pc_3 || ORIG_REF_NAME==design_1_auto_pc_3} -quiet] -quiet
+# IP: bd/reset_3/ip/reset_3_ov7670_LUMA_CHROMA_0_0/reset_3_ov7670_LUMA_CHROMA_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_ov7670_LUMA_CHROMA_0_0 || ORIG_REF_NAME==reset_3_ov7670_LUMA_CHROMA_0_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_auto_ds_2/design_1_auto_ds_2.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_auto_ds_2 || ORIG_REF_NAME==design_1_auto_ds_2} -quiet] -quiet
+# IP: bd/reset_3/ip/reset_3_ov7670_interface_0_0/reset_3_ov7670_interface_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_ov7670_interface_0_0 || ORIG_REF_NAME==reset_3_ov7670_interface_0_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_auto_pc_2/design_1_auto_pc_2.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_auto_pc_2 || ORIG_REF_NAME==design_1_auto_pc_2} -quiet] -quiet
+# IP: bd/reset_3/ip/reset_3_axi_interconnect_0_0/reset_3_axi_interconnect_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_axi_interconnect_0_0 || ORIG_REF_NAME==reset_3_axi_interconnect_0_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_auto_ds_1/design_1_auto_ds_1.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_auto_ds_1 || ORIG_REF_NAME==design_1_auto_ds_1} -quiet] -quiet
+# IP: bd/reset_3/ip/reset_3_xbar_0/reset_3_xbar_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_xbar_0 || ORIG_REF_NAME==reset_3_xbar_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_auto_pc_1 || ORIG_REF_NAME==design_1_auto_pc_1} -quiet] -quiet
+# IP: bd/reset_3/ip/reset_3_auto_ds_0/reset_3_auto_ds_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_auto_ds_0 || ORIG_REF_NAME==reset_3_auto_ds_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_auto_us_4/design_1_auto_us_4.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_auto_us_4 || ORIG_REF_NAME==design_1_auto_us_4} -quiet] -quiet
+# IP: bd/reset_3/ip/reset_3_auto_pc_0/reset_3_auto_pc_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_auto_pc_0 || ORIG_REF_NAME==reset_3_auto_pc_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_auto_us_3/design_1_auto_us_3.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_auto_us_3 || ORIG_REF_NAME==design_1_auto_us_3} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_auto_us_2/design_1_auto_us_2.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_auto_us_2 || ORIG_REF_NAME==design_1_auto_us_2} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_auto_us_1/design_1_auto_us_1.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_auto_us_1 || ORIG_REF_NAME==design_1_auto_us_1} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_auto_ds_0 || ORIG_REF_NAME==design_1_auto_ds_0} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_auto_pc_0 || ORIG_REF_NAME==design_1_auto_pc_0} -quiet] -quiet
-
-# IP: bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_auto_us_0 || ORIG_REF_NAME==design_1_auto_us_0} -quiet] -quiet
-
-# XDC: bd/design_1/design_1_ooc.xdc
+# XDC: bd/reset_3/reset_3_ooc.xdc

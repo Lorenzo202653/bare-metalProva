@@ -35,7 +35,7 @@ all: sw_reset_prova.elf secondary-outputs
 sw_reset_prova.elf: $(OBJS) ../src/lscript.ld $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: ARM v8 gcc linker'
-	aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/psu_cortexa53_0/lib -o "sw_reset_prova.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -L../../gpio_ISOL_bsp_1/psu_cortexa53_0/lib -o "sw_reset_prova.elf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
