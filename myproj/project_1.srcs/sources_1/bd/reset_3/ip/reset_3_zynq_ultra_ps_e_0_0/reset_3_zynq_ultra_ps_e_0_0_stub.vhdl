@@ -1,11 +1,11 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
--- Date        : Wed Jul 22 11:52:04 2020
+-- Date        : Fri Jul 31 15:12:38 2020
 -- Host        : kidre-N551JX running 64-bit Ubuntu 16.04.6 LTS
--- Command     : write_vhdl -force -mode synth_stub -rename_top reset_3_zynq_ultra_ps_e_0_0 -prefix
---               reset_3_zynq_ultra_ps_e_0_0_ design_1_zynq_ultra_ps_e_0_0_stub.vhdl
--- Design      : design_1_zynq_ultra_ps_e_0_0
+-- Command     : write_vhdl -force -mode synth_stub
+--               /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_zynq_ultra_ps_e_0_0/reset_3_zynq_ultra_ps_e_0_0_stub.vhdl
+-- Design      : reset_3_zynq_ultra_ps_e_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xczu3eg-sbva484-1-e
 -- --------------------------------------------------------------------------------

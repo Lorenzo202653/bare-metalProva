@@ -16,10 +16,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param power.enableLutRouteBelPower 1
-set_param power.enableCarry8RouteBelPower 1
-set_param power.enableUnconnectedCarry8PinPower 1
-set_param power.BramSDPPropagationFix 1
 create_project -in_memory -part xczu3eg-sbva484-1-e
 
 set_param project.singleFileAddWarning.threshold 0
@@ -58,6 +54,27 @@ set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_
 set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_zynq_ultra_ps_e_0_0/reset_3_zynq_ultra_ps_e_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_zynq_ultra_ps_e_0_0/reset_3_zynq_ultra_ps_e_0_0.xdc]
 set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_xbar_2/reset_3_xbar_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_axis_data_fifo_pipeline_to_writer_0/reset_3_axis_data_fifo_pipeline_to_writer_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_axis_data_fifo_pipeline_to_writer_0/reset_3_axis_data_fifo_pipeline_to_writer_0/reset_3_axis_data_fifo_pipeline_to_writer_0.xdc]
+set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_axis_data_fifo_pipeline_to_writer_0/reset_3_axis_data_fifo_pipeline_to_writer_0/reset_3_axis_data_fifo_pipeline_to_writer_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_axis_data_fifo_raw_CHROMA_0/reset_3_axis_data_fifo_raw_CHROMA_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_axis_data_fifo_raw_CHROMA_0/reset_3_axis_data_fifo_raw_CHROMA_0/reset_3_axis_data_fifo_raw_CHROMA_0.xdc]
+set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_axis_data_fifo_raw_CHROMA_0/reset_3_axis_data_fifo_raw_CHROMA_0/reset_3_axis_data_fifo_raw_CHROMA_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_axis_data_fifo_raw_LUMA_0/reset_3_axis_data_fifo_raw_LUMA_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_axis_data_fifo_raw_LUMA_0/reset_3_axis_data_fifo_raw_LUMA_0/reset_3_axis_data_fifo_raw_LUMA_0.xdc]
+set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_axis_data_fifo_raw_LUMA_0/reset_3_axis_data_fifo_raw_LUMA_0/reset_3_axis_data_fifo_raw_LUMA_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_axis_to_ddr_writer_0_0/constraints/axis_to_ddr_writer_ooc.xdc]
+set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_axis_to_ddr_writer_CHROMA_0/constraints/axis_to_ddr_writer_ooc.xdc]
+set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_axis_to_ddr_writer_LUMA_0/constraints/axis_to_ddr_writer_ooc.xdc]
+set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_ddr_to_axis_reader_0_0/constraints/ddr_to_axis_reader_ooc.xdc]
+set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_xbar_1/reset_3_xbar_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_LF_valid_to_AXIS_0/constraints/LF_valid_to_AXIS_ooc.xdc]
+set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_c_counter_binary_0_0/reset_3_c_counter_binary_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_ddr_to_axis_reader_SD_0_0/constraints/ddr_to_axis_reader_SD_ooc.xdc]
+set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_mux_sd_ov_1_0/constraints/mux_sd_ov_ooc.xdc]
+set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_ov7670_LUMA_CHROMA_0_0/constraints/ov7670_LUMA_CHROMA_ooc.xdc]
+set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_ov7670_interface_0_0/constraints/ov7670_interface_ooc.xdc]
+set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_xbar_0/reset_3_xbar_0_ooc.xdc]
 set_property used_in_synthesis false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_auto_ds_6/reset_3_auto_ds_6_clocks.xdc]
 set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_auto_ds_6/reset_3_auto_ds_6_clocks.xdc]
 set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_auto_ds_6/reset_3_auto_ds_6_ooc.xdc]
@@ -82,27 +99,6 @@ set_property used_in_synthesis false [get_files -all /media/kidre/Dati/GIT_TEST/
 set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_auto_ds_1/reset_3_auto_ds_1_clocks.xdc]
 set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_auto_ds_1/reset_3_auto_ds_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_auto_pc_1/reset_3_auto_pc_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_axis_data_fifo_pipeline_to_writer_0/reset_3_axis_data_fifo_pipeline_to_writer_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_axis_data_fifo_pipeline_to_writer_0/reset_3_axis_data_fifo_pipeline_to_writer_0/reset_3_axis_data_fifo_pipeline_to_writer_0.xdc]
-set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_axis_data_fifo_pipeline_to_writer_0/reset_3_axis_data_fifo_pipeline_to_writer_0/reset_3_axis_data_fifo_pipeline_to_writer_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_axis_data_fifo_raw_CHROMA_0/reset_3_axis_data_fifo_raw_CHROMA_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_axis_data_fifo_raw_CHROMA_0/reset_3_axis_data_fifo_raw_CHROMA_0/reset_3_axis_data_fifo_raw_CHROMA_0.xdc]
-set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_axis_data_fifo_raw_CHROMA_0/reset_3_axis_data_fifo_raw_CHROMA_0/reset_3_axis_data_fifo_raw_CHROMA_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_axis_data_fifo_raw_LUMA_0/reset_3_axis_data_fifo_raw_LUMA_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_axis_data_fifo_raw_LUMA_0/reset_3_axis_data_fifo_raw_LUMA_0/reset_3_axis_data_fifo_raw_LUMA_0.xdc]
-set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_axis_data_fifo_raw_LUMA_0/reset_3_axis_data_fifo_raw_LUMA_0/reset_3_axis_data_fifo_raw_LUMA_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_axis_to_ddr_writer_0_0/constraints/axis_to_ddr_writer_ooc.xdc]
-set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_axis_to_ddr_writer_CHROMA_0/constraints/axis_to_ddr_writer_ooc.xdc]
-set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_axis_to_ddr_writer_LUMA_0/constraints/axis_to_ddr_writer_ooc.xdc]
-set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_ddr_to_axis_reader_0_0/constraints/ddr_to_axis_reader_ooc.xdc]
-set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_xbar_1/reset_3_xbar_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_LF_valid_to_AXIS_0/constraints/LF_valid_to_AXIS_ooc.xdc]
-set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_c_counter_binary_0_0/reset_3_c_counter_binary_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_ddr_to_axis_reader_SD_0_0/constraints/ddr_to_axis_reader_SD_ooc.xdc]
-set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_mux_sd_ov_1_0/constraints/mux_sd_ov_ooc.xdc]
-set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_ov7670_LUMA_CHROMA_0_0/constraints/ov7670_LUMA_CHROMA_ooc.xdc]
-set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_ov7670_interface_0_0/constraints/ov7670_interface_ooc.xdc]
-set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_xbar_0/reset_3_xbar_0_ooc.xdc]
 set_property used_in_synthesis false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_auto_ds_0/reset_3_auto_ds_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_auto_ds_0/reset_3_auto_ds_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_auto_ds_0/reset_3_auto_ds_0_ooc.xdc]

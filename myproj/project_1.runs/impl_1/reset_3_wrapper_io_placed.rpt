@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
-| Date                      : Tue Jul 28 18:20:00 2020
+| Date                      : Fri Jul 31 15:20:10 2020
 | Host                      : kidre-N551JX running 64-bit Ubuntu 16.04.6 LTS
 | Command                   : report_io -file reset_3_wrapper_io_placed.rpt
 | Design                    : reset_3_wrapper
@@ -502,7 +502,7 @@ Table of Contents
 | Y3         | SD0_SDIO0_DATA_OUT[3]    |                  | PS_MIO16_500                       | PSS IO      | LVCMOS33    |         |          4 |                         | SLOW |               Ohm |                      |           |            | PULLUP    |          |      |                  |              |                   |              |
 | Y4         | SD0_SDIO0_DATA_OUT[2]    |                  | PS_MIO15_500                       | PSS IO      | LVCMOS33    |         |          4 |                         | SLOW |               Ohm |                      |           |            | PULLUP    |          |      |                  |              |                   |              |
 | Y5         | GPIO0_GPIO0[18]          |                  | PS_MIO18_500                       | PSS IO      | LVCMOS33    |         |         12 |                         | SLOW |               Ohm |                      |           |            | PULLUP    |          |      |                  |              |                   |              |
-| Y6         | SD0_SDIO0_WP             |                  | PS_MIO25_500                       | PSS IO      | LVCMOS33    |         |         12 |                         | SLOW |               Ohm |                      |           |            | PULLUP    |          |      |                  |              |                   |              |
+| Y6         | GPIO0_GPIO0[25]          |                  | PS_MIO25_500                       | PSS IO      | LVCMOS33    |         |         12 |                         | SLOW |               Ohm |                      |           |            | PULLUP    |          |      |                  |              |                   |              |
 | Y7         |                          |                  | GND                                | GND         |             |         |            |                         |      |                   |                      |       0.0 |            |           |          |      |                  |              |                   |              |
 | Y8         | LPDDR4_DQ5               |                  | PS_DDR_DQ5_504                     | PSS IO      | LPDDR4      |         |            |                      40 |      |            40 Ohm |                      |           |            |           |          |      |                  |              |                   |              |
 | Y9         | LPDDR4_DQS_P0            |                  | PS_DDR_DQS_P0_504                  | PSS IO      | LPDDR4      |         |            |                      40 |      |            40 Ohm |                      |           |            |           |          |      |                  |              |                   |              |

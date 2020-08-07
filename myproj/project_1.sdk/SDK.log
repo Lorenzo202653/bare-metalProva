@@ -11584,3 +11584,44 @@ con
 15:51:26 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
 15:51:27 WARN  : Linker script will not be updated automatically. Users need to update it manually.
 15:52:16 INFO  : Disconnected from the channel tcfchan#1.
+10:38:44 INFO  : Registering command handlers for SDK TCF services
+10:38:45 INFO  : Launching XSCT server: xsct -n -interactive /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.sdk/temp_xsdb_launch_script.tcl
+10:38:47 INFO  : XSCT server has started successfully.
+10:38:47 INFO  : Successfully done setting XSCT server connection channel  
+10:38:47 INFO  : Successfully done setting SDK workspace  
+10:38:47 INFO  : Processing command line option -hwspec /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.sdk/reset_3_wrapper.hdf.
+07:43:43 INFO  : Launching XSCT server: xsct -n -interactive /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.sdk/temp_xsdb_launch_script.tcl
+07:43:45 INFO  : XSCT server has started successfully.
+07:43:53 INFO  : Successfully done setting XSCT server connection channel  
+07:43:53 INFO  : Successfully done setting SDK workspace  
+07:43:58 INFO  : Registering command handlers for SDK TCF services
+07:43:59 INFO  : Processing command line option -hwspec /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.sdk/reset_3_wrapper.hdf.
+07:44:00 INFO  : Checking for hwspec changes in the project reset_3_wrapper_hw_platform_0.
+07:44:00 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1596201796000,  Project:1595953444000
+07:44:00 INFO  : The hardware specification for project 'reset_3_wrapper_hw_platform_0' is different from /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.sdk/reset_3_wrapper.hdf.
+07:44:13 INFO  : Copied contents of /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.sdk/reset_3_wrapper.hdf into /reset_3_wrapper_hw_platform_0/system.hdf.
+07:44:27 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+07:44:28 INFO  : Clearing existing target manager status.
+07:44:28 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+07:44:28 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+07:45:57 INFO  : Registering command handlers for SDK TCF services
+07:45:57 INFO  : Launching XSCT server: xsct -n -interactive /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.sdk/temp_xsdb_launch_script.tcl
+07:45:59 INFO  : XSCT server has started successfully.
+07:45:59 INFO  : Successfully done setting XSCT server connection channel  
+07:46:00 INFO  : Successfully done setting SDK workspace  
+07:46:00 INFO  : Processing command line option -hwspec /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.sdk/reset_3_wrapper.hdf.
+07:46:00 INFO  : Checking for hwspec changes in the project reset_3_wrapper_hw_platform_0.
+11:54:01 INFO  : Registering command handlers for SDK TCF services
+11:54:02 INFO  : Launching XSCT server: xsct -n -interactive /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.sdk/temp_xsdb_launch_script.tcl
+11:54:04 INFO  : XSCT server has started successfully.
+11:54:04 INFO  : Successfully done setting XSCT server connection channel  
+11:54:05 INFO  : Successfully done setting SDK workspace  
+11:54:05 INFO  : Processing command line option -hwspec /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.sdk/reset_3_wrapper.hdf.
+11:54:05 INFO  : Checking for hwspec changes in the project reset_3_wrapper_hw_platform_0.
+11:55:41 INFO  : Registering command handlers for SDK TCF services
+11:55:41 INFO  : Launching XSCT server: xsct -n -interactive /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.sdk/temp_xsdb_launch_script.tcl
+11:55:43 INFO  : XSCT server has started successfully.
+11:55:43 INFO  : Successfully done setting XSCT server connection channel  
+11:55:43 INFO  : Successfully done setting SDK workspace  
+11:55:43 INFO  : Processing command line option -hwspec /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.sdk/reset_3_wrapper.hdf.
+11:55:43 INFO  : Checking for hwspec changes in the project reset_3_wrapper_hw_platform_0.

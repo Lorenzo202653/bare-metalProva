@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
-| Date         : Tue Jul 28 18:18:20 2020
+| Date         : Fri Jul 31 15:18:52 2020
 | Host         : kidre-N551JX running 64-bit Ubuntu 16.04.6 LTS
 | Command      : report_drc -file reset_3_wrapper_drc_opted.rpt -pb reset_3_wrapper_drc_opted.pb -rpx reset_3_wrapper_drc_opted.rpx
 | Design       : reset_3_wrapper
