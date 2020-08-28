@@ -462,7 +462,7 @@ output saxigp4_rvalid;
 input saxigp4_rready;
 input [3 : 0] saxigp4_awqos;
 input [3 : 0] saxigp4_arqos;
-input [1 : 0] pl_ps_irq0;
+input [0 : 0] pl_ps_irq0;
 output pl_resetn0;
 output pl_clk0;
 wire pl_clk_t[3:0] ;

@@ -259,7 +259,7 @@ module reset_3_zynq_ultra_ps_e_0_0 (
   input bit_as_bool saxigp4_rready,
   input bit [3 : 0] saxigp4_awqos,
   input bit [3 : 0] saxigp4_arqos,
-  input bit [1 : 0] pl_ps_irq0,
+  input bit [0 : 0] pl_ps_irq0,
   output bit_as_bool pl_resetn0,
   output bit_as_bool pl_clk0
 );

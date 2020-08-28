@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
-| Date         : Fri Jul 31 15:15:06 2020
-| Host         : kidre-N551JX running 64-bit Ubuntu 16.04.6 LTS
+| Date         : Thu Aug 27 14:49:24 2020
+| Host         : kidre-N551JX running 64-bit Ubuntu 16.04.7 LTS
 | Command      : report_utilization -file reset_3_wrapper_utilization_synth.rpt -pb reset_3_wrapper_utilization_synth.pb
 | Design       : reset_3_wrapper
 | Device       : xczu3egsbva484-1
@@ -93,7 +93,7 @@ Table of Contents
 +------------+------+-------+-----------+-------+
 |  Site Type | Used | Fixed | Available | Util% |
 +------------+------+-------+-----------+-------+
-| Bonded IOB |   16 |     0 |        82 | 19.51 |
+| Bonded IOB |   14 |     0 |        82 | 17.07 |
 +------------+------+-------+-----------+-------+
 
 
@@ -147,9 +147,9 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| INBUF    |   12 |                 I/O |
-| IBUFCTRL |   12 |              Others |
-| OBUF     |    4 |                 I/O |
+| INBUF    |   11 |                 I/O |
+| IBUFCTRL |   11 |              Others |
+| OBUF     |    3 |                 I/O |
 +----------+------+---------------------+
 
 
@@ -160,7 +160,6 @@ Table of Contents
 |                   Ref Name                  | Used |
 +---------------------------------------------+------+
 | reset_3_zynq_ultra_ps_e_0_0                 |    1 |
-| reset_3_xlconcat_0                          |    1 |
 | reset_3_xbar_2                              |    1 |
 | reset_3_xbar_1                              |    1 |
 | reset_3_xbar_0                              |    1 |
@@ -183,18 +182,8 @@ Table of Contents
 | reset_3_axis_data_fifo_pipeline_to_writer_0 |    1 |
 | reset_3_axi_gpio_pl_reset_0                 |    1 |
 | reset_3_axi_gpio_frame_intr_0               |    1 |
-| reset_3_auto_pc_6                           |    1 |
-| reset_3_auto_pc_5                           |    1 |
-| reset_3_auto_pc_4                           |    1 |
-| reset_3_auto_pc_3                           |    1 |
-| reset_3_auto_pc_2                           |    1 |
 | reset_3_auto_pc_1                           |    1 |
 | reset_3_auto_pc_0                           |    1 |
-| reset_3_auto_ds_6                           |    1 |
-| reset_3_auto_ds_5                           |    1 |
-| reset_3_auto_ds_4                           |    1 |
-| reset_3_auto_ds_3                           |    1 |
-| reset_3_auto_ds_2                           |    1 |
 | reset_3_auto_ds_1                           |    1 |
 | reset_3_auto_ds_0                           |    1 |
 | reset_3_LF_valid_to_AXIS_0                  |    1 |

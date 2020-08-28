@@ -33,9 +33,6 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_reset_1
 # IP: bd/reset_3/ip/reset_3_reset_24M_0/reset_3_reset_24M_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_reset_24M_0 || ORIG_REF_NAME==reset_3_reset_24M_0} -quiet] -quiet
 
-# IP: bd/reset_3/ip/reset_3_xlconcat_0/reset_3_xlconcat_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_xlconcat_0 || ORIG_REF_NAME==reset_3_xlconcat_0} -quiet] -quiet
-
 # IP: bd/reset_3/ip/reset_3_zynq_ultra_ps_e_0_0/reset_3_zynq_ultra_ps_e_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_zynq_ultra_ps_e_0_0 || ORIG_REF_NAME==reset_3_zynq_ultra_ps_e_0_0} -quiet] -quiet
 
@@ -98,36 +95,6 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_axi_int
 
 # IP: bd/reset_3/ip/reset_3_xbar_0/reset_3_xbar_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_xbar_0 || ORIG_REF_NAME==reset_3_xbar_0} -quiet] -quiet
-
-# IP: bd/reset_3/ip/reset_3_auto_ds_6/reset_3_auto_ds_6.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_auto_ds_6 || ORIG_REF_NAME==reset_3_auto_ds_6} -quiet] -quiet
-
-# IP: bd/reset_3/ip/reset_3_auto_pc_6/reset_3_auto_pc_6.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_auto_pc_6 || ORIG_REF_NAME==reset_3_auto_pc_6} -quiet] -quiet
-
-# IP: bd/reset_3/ip/reset_3_auto_ds_5/reset_3_auto_ds_5.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_auto_ds_5 || ORIG_REF_NAME==reset_3_auto_ds_5} -quiet] -quiet
-
-# IP: bd/reset_3/ip/reset_3_auto_pc_5/reset_3_auto_pc_5.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_auto_pc_5 || ORIG_REF_NAME==reset_3_auto_pc_5} -quiet] -quiet
-
-# IP: bd/reset_3/ip/reset_3_auto_ds_4/reset_3_auto_ds_4.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_auto_ds_4 || ORIG_REF_NAME==reset_3_auto_ds_4} -quiet] -quiet
-
-# IP: bd/reset_3/ip/reset_3_auto_pc_4/reset_3_auto_pc_4.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_auto_pc_4 || ORIG_REF_NAME==reset_3_auto_pc_4} -quiet] -quiet
-
-# IP: bd/reset_3/ip/reset_3_auto_ds_3/reset_3_auto_ds_3.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_auto_ds_3 || ORIG_REF_NAME==reset_3_auto_ds_3} -quiet] -quiet
-
-# IP: bd/reset_3/ip/reset_3_auto_pc_3/reset_3_auto_pc_3.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_auto_pc_3 || ORIG_REF_NAME==reset_3_auto_pc_3} -quiet] -quiet
-
-# IP: bd/reset_3/ip/reset_3_auto_ds_2/reset_3_auto_ds_2.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_auto_ds_2 || ORIG_REF_NAME==reset_3_auto_ds_2} -quiet] -quiet
-
-# IP: bd/reset_3/ip/reset_3_auto_pc_2/reset_3_auto_pc_2.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_auto_pc_2 || ORIG_REF_NAME==reset_3_auto_pc_2} -quiet] -quiet
 
 # IP: bd/reset_3/ip/reset_3_auto_ds_1/reset_3_auto_ds_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==reset_3_auto_ds_1 || ORIG_REF_NAME==reset_3_auto_ds_1} -quiet] -quiet

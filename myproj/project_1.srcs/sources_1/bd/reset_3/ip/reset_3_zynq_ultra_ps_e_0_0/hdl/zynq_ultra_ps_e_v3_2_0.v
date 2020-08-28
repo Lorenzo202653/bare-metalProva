@@ -75,7 +75,7 @@
 <LPD><PROCESSSORS><PROCESSOR name={Cortex R-5} usage={Enable} TCM={Enable} OCM={Enable} clockFreq={499.999995} load={0.5}/></PROCESSSORS>\
 <PLLS><PLL domain={IO} vco={1499.985} /><PLL domain={RPLL} vco={2333.310} /></PLLS>\
 <CSUPMU><Unit name={CSU} usageRate={0.5} clockFreq={500} /><Unit name={PMU} usageRate={0.5} clockFreq={180} /></CSUPMU>\
-<GPIO><Bank ioBank={VCC_PSIO0} number={9} io_standard={LVCMOS 3.3V} /><Bank ioBank={VCC_PSIO1} number={8} io_standard={LVCMOS 1.8V} /><Bank ioBank={VCC_PSIO2} number={2} io_standard={LVCMOS 1.8V} /><Bank ioBank={VCC_PSIO3} number={16} io_standard={LVCMOS 1.8V} /></GPIO>\
+<GPIO><Bank ioBank={VCC_PSIO0} number={9} io_standard={LVCMOS 1.8V} /><Bank ioBank={VCC_PSIO1} number={8} io_standard={LVCMOS 1.8V} /><Bank ioBank={VCC_PSIO2} number={2} io_standard={LVCMOS 1.8V} /><Bank ioBank={VCC_PSIO3} number={16} io_standard={LVCMOS 1.8V} /></GPIO>\
 <IOINTERFACES> <IO name={QSPI} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={NAND 3.1} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={USB0} io_standard={} ioBank={VCC_PSIO2} clockFreq={249.999998} inputs={3} outputs={1} inouts={8} usageRate={0.5}/><IO name={USB1} io_standard={} ioBank={VCC_PSIO2} clockFreq={249.999998} inputs={3} outputs={1} inouts={8} usageRate={0.5}/><IO name={GigabitEth0} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={GigabitEth1} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={GigabitEth2} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={GigabitEth3} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={GPIO 0} io_standard={} ioBank={VCC_PSIO0} clockFreq={1} inputs={0} outputs={0} inouts={9} usageRate={0.5}/><IO name={GPIO 1} io_standard={} ioBank={VCC_PSIO1} clockFreq={1} inputs={0} outputs={0} inouts={8} usageRate={0.5}/><IO name={GPIO 2} io_standard={} ioBank={VCC_PSIO2} clockFreq={1} inputs={0} outputs={0} inouts={2} usageRate={0.5}/><IO name={GPIO 3} io_standard={} ioBank={VCC_PSIO3} clockFreq={1} inputs={} outputs={} inouts={16} usageRate={0.5}/><IO name={UART0} io_standard={} ioBank={VCC_PSIO0} clockFreq={99.999999} inputs={1} outputs={1} inouts={0} usageRate={0.5}/><IO name={UART1} io_standard={} ioBank={VCC_PSIO0} clockFreq={99.999999} inputs={1} outputs={1} inouts={0} usageRate={0.5}/><IO name={I2C0} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={I2C1} io_standard={} ioBank={VCC_PSIO0} clockFreq={99.999999} inputs={0} outputs={0} inouts={2} usageRate={0.5}/><IO name={SPI0} io_standard={} ioBank={VCC_PSIO1} clockFreq={187.499998} inputs={0} outputs={0} inouts={4} usageRate={0.5}/><IO name={SPI1} io_standard={} ioBank={VCC_PSIO0} clockFreq={187.499998} inputs={0} outputs={0} inouts={4} usageRate={0.5}/><IO name={CAN0} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={CAN1} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={SD0} io_standard={} ioBank={VCC_PSIO0} clockFreq={187.499998} inputs={1} outputs={1} inouts={5} usageRate={0.5}/><IO name={SD1} io_standard={} ioBank={VCC_PSIO1} clockFreq={187.499998} inputs={0} outputs={1} inouts={5} usageRate={0.5}/><IO name={Trace} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={TTC0} io_standard={} ioBank={} clockFreq={100} inputs={0} outputs={0} inouts={0} usageRate={0.5}/><IO name={TTC1} io_standard={} ioBank={} clockFreq={100} inputs={0} outputs={0} inouts={0} usageRate={0.5}/><IO name={TTC2} io_standard={} ioBank={} clockFreq={100} inputs={0} outputs={0} inouts={0} usageRate={0.5}/><IO name={TTC3} io_standard={} ioBank={} clockFreq={100} inputs={0} outputs={0} inouts={0} usageRate={0.5}/><IO name={PJTAG} io_standard={} ioBank={} clockFreq={} inputs={} outputs={} inouts={} usageRate={0.5}/><IO name={DPAUX} io_standard={} ioBank={VCC_PSIO1} clockFreq={} inputs={2} outputs={2} inouts={0} usageRate={0.5}/><IO name={WDT0} io_standard={} ioBank={} clockFreq={100} inputs={0} outputs={0} inouts={0} usageRate={0.5}/><IO name={WDT1} io_standard={} ioBank={} clockFreq={100} inputs={0} outputs={0} inouts={0} usageRate={0.5}/></IOINTERFACES>\
 <AFI master={0} slave={0} clockFreq={333.333} usageRate={0.5} />\
 <LPINTERCONNECT clockFreq={667} Bandwidth={High} />\
@@ -83,32 +83,32 @@
 </PS8>\
 </BLOCKTYPE>/>" *)
 (*PSS_IO= "Signal Name, DiffPair Type, DiffPair Signal,Direction, Site Type, IO Standard, Drive (mA), Slew Rate, Pull Type, IBIS Model, ODT, OUTPUT_IMPEDANCE \n\
-UART1_TXD, , , OUT, PS_MIO0_500, LVCMOS33, 12, FAST, PULLUP, PS_MIO_LVCMOS33_F_12,,  \n\
-UART1_RXD, , , IN, PS_MIO1_500, LVCMOS33, 12, SLOW, PULLUP, PS_MIO_LVCMOS33_S_12,,  \n\
-UART0_RXD, , , IN, PS_MIO2_500, LVCMOS33, 12, SLOW, PULLUP, PS_MIO_LVCMOS33_S_12,,  \n\
-UART0_TXD, , , OUT, PS_MIO3_500, LVCMOS33, 12, FAST, PULLUP, PS_MIO_LVCMOS33_F_12,,  \n\
-I2C1_SCL_OUT, , , INOUT, PS_MIO4_500, LVCMOS33, 12, SLOW, PULLUP, PS_MIO_LVCMOS33_S_12,,  \n\
-I2C1_SDA_OUT, , , INOUT, PS_MIO5_500, LVCMOS33, 12, SLOW, PULLUP, PS_MIO_LVCMOS33_S_12,,  \n\
-SPI1_SCLK_OUT, , , INOUT, PS_MIO6_500, LVCMOS33, 12, SLOW, PULLUP, PS_MIO_LVCMOS33_S_12,,  \n\
-GPIO0_GPIO0[7], , , INOUT, PS_MIO7_500, LVCMOS33, 12, SLOW, PULLUP, PS_MIO_LVCMOS33_S_12,,  \n\
-GPIO0_GPIO0[8], , , INOUT, PS_MIO8_500, LVCMOS33, 12, SLOW, PULLUP, PS_MIO_LVCMOS33_S_12,,  \n\
-SPI1_N_SS_OUT[0], , , INOUT, PS_MIO9_500, LVCMOS33, 12, SLOW, PULLUP, PS_MIO_LVCMOS33_S_12,,  \n\
-SPI1_MISO, , , INOUT, PS_MIO10_500, LVCMOS33, 12, SLOW, PULLUP, PS_MIO_LVCMOS33_S_12,,  \n\
-SPI1_MOSI, , , INOUT, PS_MIO11_500, LVCMOS33, 12, SLOW, PULLUP, PS_MIO_LVCMOS33_S_12,,  \n\
-GPIO0_GPIO0[12], , , INOUT, PS_MIO12_500, LVCMOS33, 12, SLOW, PULLUP, PS_MIO_LVCMOS33_S_12,,  \n\
-SD0_SDIO0_DATA_OUT[0], , , INOUT, PS_MIO13_500, LVCMOS33, 4, SLOW, PULLUP, PS_MIO_LVCMOS33_S_4,,  \n\
-SD0_SDIO0_DATA_OUT[1], , , INOUT, PS_MIO14_500, LVCMOS33, 4, SLOW, PULLUP, PS_MIO_LVCMOS33_S_4,,  \n\
-SD0_SDIO0_DATA_OUT[2], , , INOUT, PS_MIO15_500, LVCMOS33, 4, SLOW, PULLUP, PS_MIO_LVCMOS33_S_4,,  \n\
-SD0_SDIO0_DATA_OUT[3], , , INOUT, PS_MIO16_500, LVCMOS33, 4, SLOW, PULLUP, PS_MIO_LVCMOS33_S_4,,  \n\
-GPIO0_GPIO0[17], , , INOUT, PS_MIO17_500, LVCMOS33, 12, SLOW, PULLUP, PS_MIO_LVCMOS33_S_12,,  \n\
-GPIO0_GPIO0[18], , , INOUT, PS_MIO18_500, LVCMOS33, 12, SLOW, PULLUP, PS_MIO_LVCMOS33_S_12,,  \n\
-GPIO0_GPIO0[19], , , INOUT, PS_MIO19_500, LVCMOS33, 12, SLOW, PULLUP, PS_MIO_LVCMOS33_S_12,,  \n\
-GPIO0_GPIO0[20], , , INOUT, PS_MIO20_500, LVCMOS33, 12, SLOW, PULLUP, PS_MIO_LVCMOS33_S_12,,  \n\
-SD0_SDIO0_CMD_OUT, , , INOUT, PS_MIO21_500, LVCMOS33, 4, SLOW, PULLUP, PS_MIO_LVCMOS33_S_4,,  \n\
-SD0_SDIO0_CLK_OUT, , , OUT, PS_MIO22_500, LVCMOS33, 4, SLOW, PULLUP, PS_MIO_LVCMOS33_S_4,,  \n\
-GPIO0_GPIO0[23], , , INOUT, PS_MIO23_500, LVCMOS33, 12, SLOW, PULLUP, PS_MIO_LVCMOS33_S_12,,  \n\
-SD0_SDIO0_CD_N, , , IN, PS_MIO24_500, LVCMOS33, 12, SLOW, PULLUP, PS_MIO_LVCMOS33_S_12,,  \n\
-GPIO0_GPIO0[25], , , INOUT, PS_MIO25_500, LVCMOS33, 12, SLOW, PULLUP, PS_MIO_LVCMOS33_S_12,,  \n\
+UART1_TXD, , , OUT, PS_MIO0_500, LVCMOS18, 12, FAST, PULLUP, PS_MIO_LVCMOS18_F_12,,  \n\
+UART1_RXD, , , IN, PS_MIO1_500, LVCMOS18, 12, SLOW, PULLUP, PS_MIO_LVCMOS18_S_12,,  \n\
+UART0_RXD, , , IN, PS_MIO2_500, LVCMOS18, 12, SLOW, PULLUP, PS_MIO_LVCMOS18_S_12,,  \n\
+UART0_TXD, , , OUT, PS_MIO3_500, LVCMOS18, 12, FAST, PULLUP, PS_MIO_LVCMOS18_F_12,,  \n\
+I2C1_SCL_OUT, , , INOUT, PS_MIO4_500, LVCMOS18, 12, SLOW, PULLUP, PS_MIO_LVCMOS18_S_12,,  \n\
+I2C1_SDA_OUT, , , INOUT, PS_MIO5_500, LVCMOS18, 12, SLOW, PULLUP, PS_MIO_LVCMOS18_S_12,,  \n\
+SPI1_SCLK_OUT, , , INOUT, PS_MIO6_500, LVCMOS18, 12, SLOW, PULLUP, PS_MIO_LVCMOS18_S_12,,  \n\
+GPIO0_GPIO0[7], , , INOUT, PS_MIO7_500, LVCMOS18, 12, SLOW, PULLUP, PS_MIO_LVCMOS18_S_12,,  \n\
+GPIO0_GPIO0[8], , , INOUT, PS_MIO8_500, LVCMOS18, 12, SLOW, PULLUP, PS_MIO_LVCMOS18_S_12,,  \n\
+SPI1_N_SS_OUT[0], , , INOUT, PS_MIO9_500, LVCMOS18, 12, SLOW, PULLUP, PS_MIO_LVCMOS18_S_12,,  \n\
+SPI1_MISO, , , INOUT, PS_MIO10_500, LVCMOS18, 12, SLOW, PULLUP, PS_MIO_LVCMOS18_S_12,,  \n\
+SPI1_MOSI, , , INOUT, PS_MIO11_500, LVCMOS18, 12, SLOW, PULLUP, PS_MIO_LVCMOS18_S_12,,  \n\
+GPIO0_GPIO0[12], , , INOUT, PS_MIO12_500, LVCMOS18, 12, SLOW, PULLUP, PS_MIO_LVCMOS18_S_12,,  \n\
+SD0_SDIO0_DATA_OUT[0], , , INOUT, PS_MIO13_500, LVCMOS18, 4, SLOW, PULLUP, PS_MIO_LVCMOS18_S_4,,  \n\
+SD0_SDIO0_DATA_OUT[1], , , INOUT, PS_MIO14_500, LVCMOS18, 4, SLOW, PULLUP, PS_MIO_LVCMOS18_S_4,,  \n\
+SD0_SDIO0_DATA_OUT[2], , , INOUT, PS_MIO15_500, LVCMOS18, 4, SLOW, PULLUP, PS_MIO_LVCMOS18_S_4,,  \n\
+SD0_SDIO0_DATA_OUT[3], , , INOUT, PS_MIO16_500, LVCMOS18, 4, SLOW, PULLUP, PS_MIO_LVCMOS18_S_4,,  \n\
+GPIO0_GPIO0[17], , , INOUT, PS_MIO17_500, LVCMOS18, 12, SLOW, PULLUP, PS_MIO_LVCMOS18_S_12,,  \n\
+GPIO0_GPIO0[18], , , INOUT, PS_MIO18_500, LVCMOS18, 12, SLOW, PULLUP, PS_MIO_LVCMOS18_S_12,,  \n\
+GPIO0_GPIO0[19], , , INOUT, PS_MIO19_500, LVCMOS18, 12, SLOW, PULLUP, PS_MIO_LVCMOS18_S_12,,  \n\
+GPIO0_GPIO0[20], , , INOUT, PS_MIO20_500, LVCMOS18, 12, SLOW, PULLUP, PS_MIO_LVCMOS18_S_12,,  \n\
+SD0_SDIO0_CMD_OUT, , , INOUT, PS_MIO21_500, LVCMOS18, 4, SLOW, PULLUP, PS_MIO_LVCMOS18_S_4,,  \n\
+SD0_SDIO0_CLK_OUT, , , OUT, PS_MIO22_500, LVCMOS18, 4, SLOW, PULLUP, PS_MIO_LVCMOS18_S_4,,  \n\
+GPIO0_GPIO0[23], , , INOUT, PS_MIO23_500, LVCMOS18, 12, SLOW, PULLUP, PS_MIO_LVCMOS18_S_12,,  \n\
+SD0_SDIO0_CD_N, , , IN, PS_MIO24_500, LVCMOS18, 12, SLOW, PULLUP, PS_MIO_LVCMOS18_S_12,,  \n\
+GPIO0_GPIO0[25], , , INOUT, PS_MIO25_500, LVCMOS18, 12, SLOW, PULLUP, PS_MIO_LVCMOS18_S_12,,  \n\
 PMU_GPI[0], , , IN, PS_MIO26_501, LVCMOS18, 12, SLOW, PULLUP, PS_MIO_LVCMOS18_S_12,,  \n\
 DPAUX_DP_AUX_DATA_OUT, , , OUT, PS_MIO27_501, LVCMOS18, 12, SLOW, PULLUP, PS_MIO_LVCMOS18_S_12,,  \n\
 DPAUX_DP_HOT_PLUG_DETECT, , , IN, PS_MIO28_501, LVCMOS18, 12, SLOW, PULLUP, PS_MIO_LVCMOS18_S_12,,  \n\

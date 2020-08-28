@@ -268,7 +268,7 @@ public: // module pin-to-pin RTL interface
   sc_in< bool > saxigp4_rready;
   sc_in< sc_bv<4> > saxigp4_awqos;
   sc_in< sc_bv<4> > saxigp4_arqos;
-  sc_in< sc_bv<2> > pl_ps_irq0;
+  sc_in< sc_bv<1> > pl_ps_irq0;
   sc_out< bool > pl_resetn0;
   sc_out< bool > pl_clk0;
 
@@ -1236,7 +1236,7 @@ private:
   sc_signal< bool > pl_ps_trigack_3_signal;
   sc_signal< sc_bv<32> > ftm_gpo_signal;
   sc_signal< sc_bv<32> > ftm_gpi_signal;
-  sc_signal< sc_bv<2> > pl_ps_irq0_signal;
+  sc_signal< sc_bv<1> > pl_ps_irq0_signal;
   sc_signal< sc_bv<1> > pl_ps_irq1_signal;
   sc_signal< bool > pl_resetn0_signal;
   sc_signal< bool > pl_resetn1_signal;

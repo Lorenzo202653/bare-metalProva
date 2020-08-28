@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xczu3eg-sbva484-1-e" LaunchTime="1596200999">
+<GenRun Id="impl_1" LaunchPart="xczu3eg-sbva484-1-e" LaunchTime="1598532434">
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="BG-DRC" Name="reset_3_wrapper.drc"/>
   <File Type="BG-BGN" Name="reset_3_wrapper.bgn"/>
@@ -79,6 +79,22 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/bd/pulsante/pulsante.bd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/pulsante/hdl/pulsante_wrapper.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/bd/design_2/design_2.bd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
@@ -149,13 +165,17 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="pulsante_xbar_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="pulsante_zynq_ultra_ps_e_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="reset_3_zynq_ultra_ps_e_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_ov7670_interface_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_ov7670_LUMA_CHROMA_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_mux_sd_ov_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_c_counter_binary_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="pulsante_axi_gpio_frame_intr_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_xbar_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_LF_valid_to_AXIS_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="reset_3_xbar_2"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_xbar_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_xlconcat_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_reset_24M_0"/>

@@ -82,7 +82,7 @@ reset_3_zynq_ultra_ps_e_0_0::reset_3_zynq_ultra_ps_e_0_0(const sc_module_name& n
   model_param_props._long_property_map["C_USE_DEBUG_TEST"] = 0;
   model_param_props._long_property_map["C_SD0_INTERNAL_BUS_WIDTH"] = 4;
   model_param_props._long_property_map["C_SD1_INTERNAL_BUS_WIDTH"] = 4;
-  model_param_props._long_property_map["C_NUM_F2P_0_INTR_INPUTS"] = 2;
+  model_param_props._long_property_map["C_NUM_F2P_0_INTR_INPUTS"] = 1;
   model_param_props._long_property_map["C_NUM_F2P_1_INTR_INPUTS"] = 1;
   model_param_props._long_property_map["C_EMIO_GPIO_WIDTH"] = 1;
   model_param_props._long_property_map["C_NUM_FABRIC_RESETS"] = 1;
