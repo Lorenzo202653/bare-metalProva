@@ -1,4 +1,4 @@
-15:51:28 **** Build of project hw_completo_bsp_0 ****
+15:21:55 **** Build of project hw_completo_bsp_0 ****
 make -k all 
 Running Make include in psu_cortexa53_0/libsrc/csudma_v1_2/src
 make -C psu_cortexa53_0/libsrc/csudma_v1_2/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
@@ -61,7 +61,6 @@ make -C psu_cortexa53_0/libsrc/usbpsu_v1_4/src -s include  "SHELL=/bin/sh" "COMP
 Running Make libs in psu_cortexa53_0/libsrc/csudma_v1_2/src
 make -C psu_cortexa53_0/libsrc/csudma_v1_2/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
 Compiling csudma
-aarch64-none-elf-ar: creazione di ../../../lib/libxil.a
 Running Make libs in psu_cortexa53_0/libsrc/dpdma_v1_0/src
 make -C psu_cortexa53_0/libsrc/dpdma_v1_0/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
 Compiling dpdma
@@ -109,22 +108,6 @@ Compiling sysmonpsu
 Running Make libs in psu_cortexa53_0/libsrc/xilffs_v3_8/src
 make -C psu_cortexa53_0/libsrc/xilffs_v3_8/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
 Compiling XilFFs Library
-ff.c: In function 'f_mount':
-ff.c:2698:10: warning: comparison between pointer and zero character constant [-Wpointer-compare]
-  if (cfs != 0U) {
-          ^~
-ff.c:2698:6: note: did you mean to dereference the pointer?
-  if (cfs != 0U) {
-      ^
-ff.c:2710:9: warning: comparison between pointer and zero character constant [-Wpointer-compare]
-  if (fs != 0U) {
-         ^~
-ff.c:2710:6: note: did you mean to dereference the pointer?
-  if (fs != 0U) {
-      ^
-diskio.c:146:11: warning: 'ExtCsd' defined but not used [-Wunused-variable]
- static u8 ExtCsd[512] __attribute__ ((aligned(32)));
-           ^~~~~~
 Running Make libs in psu_cortexa53_0/libsrc/video_common_v4_3/src
 make -C psu_cortexa53_0/libsrc/video_common_v4_3/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
 Compiling video_common
@@ -205,5 +188,5 @@ xusbpsu_hibernation.c:662:2: note: here
   ^~~~
 Finished building libraries
 
-15:51:43 Build Finished (took 15s.913ms)
+15:22:08 Build Finished (took 12s.818ms)
 

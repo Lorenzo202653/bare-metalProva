@@ -1,0 +1,97 @@
+{
+   ExpandedHierarchyInLayout: "/VDMA",
+   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 TLS
+#  -string -flagsOSRD
+preplace port XCLK -pg 1 -y 600 -defaultsOSRD
+preplace port PCLK -pg 1 -y 1070 -defaultsOSRD
+preplace portBus OV7670_RESET -pg 1 -y 250 -defaultsOSRD
+preplace portBus LED_FRAME_VALID -pg 1 -y 20 -defaultsOSRD
+preplace portBus href_V -pg 1 -y 980 -defaultsOSRD
+preplace portBus data_in_V -pg 1 -y 860 -defaultsOSRD
+preplace portBus vsync_V -pg 1 -y 1000 -defaultsOSRD
+preplace inst VDMA -pg 1 -lvl 3 -y 780 -defaultsOSRD
+preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 4 -y 390 -defaultsOSRD
+preplace inst VDMA|axis_to_ddr_writer_LUMA -pg 1 -lvl 2 -y 740 -defaultsOSRD
+preplace inst VDMA|axis_to_ddr_writer_CHROMA -pg 1 -lvl 2 -y 900 -defaultsOSRD
+preplace inst VDMA|axis_data_fifo_raw_CHROMA -pg 1 -lvl 1 -y 920 -defaultsOSRD
+preplace inst VDMA|axi_mem_intercon_reader -pg 1 -lvl 3 -y 1280 -defaultsOSRD
+preplace inst const_true -pg 1 -lvl 1 -y 800 -defaultsOSRD
+preplace inst ENABLE_RAW_STREAM -pg 1 -lvl 1 -y 920 -defaultsOSRD
+preplace inst VDMA|axi_mem_intercon_writer -pg 1 -lvl 3 -y 970 -defaultsOSRD
+preplace inst VDMA|ddr_to_axis_reader_0 -pg 1 -lvl 2 -y 1300 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 2 -y 1110 -defaultsOSRD
+preplace inst axi_gpio_frame_intr -pg 1 -lvl 6 -y 400 -defaultsOSRD
+preplace inst VDMA|axi_write_prova_0 -pg 1 -lvl 2 -y 1100 -defaultsOSRD
+preplace inst VDMA|axis_data_fifo_pipeline_to_writer -pg 1 -lvl 1 -y 1190 -defaultsOSRD
+preplace inst reset_24M -pg 1 -lvl 1 -y 1110 -defaultsOSRD
+preplace inst reset_100M -pg 1 -lvl 2 -y 1310 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 6 -y 600 -defaultsOSRD
+preplace inst axi_gpio_pl_reset -pg 1 -lvl 6 -y 240 -defaultsOSRD
+preplace inst OV7670_GRAYSCALE_TO_AXIS -pg 1 -lvl 2 -y 890 -defaultsOSRD
+preplace inst VDMA|axis_data_fifo_raw_LUMA -pg 1 -lvl 1 -y 720 -defaultsOSRD
+preplace inst processing_system7_0_axi_periph -pg 1 -lvl 5 -y 260 -defaultsOSRD
+preplace netloc VDMA|S01_AXI_1 1 2 1 N
+preplace netloc VDMA|axis_data_fifo_pipeline_to_writer_M_AXIS 1 1 1 1580
+preplace netloc VDMA|axi_write_prova_0_m_axi_base_ddr_addr 1 2 1 2030
+preplace netloc VDMA|axi_mem_intercon_M00_AXI 1 3 1 N
+preplace netloc processing_system7_0_axi_periph_M03_AXI 1 2 4 940 550 NJ 550 NJ 550 3530
+preplace netloc processing_system7_0_axi_periph_M00_AXI 1 5 1 3580
+preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 1 5 450 1210 910 500 2560 500 3210 500 3590
+preplace netloc href_V_1 1 0 2 NJ 980 420J
+preplace netloc VDMA|Conn1 1 0 1 N
+preplace netloc VDMA|ddr_to_axis_reader_0_m_axi_base_ddr_addr 1 2 1 2060
+preplace netloc OV7670_GRAYSCALE_TO_AXIS_outStream_raw_CHROMA1 1 2 1 N
+preplace netloc PCLK_2 1 0 3 20 1210 400 1420 970J
+preplace netloc VDMA|s_axi_AXILite_raw_CHROMA_1 1 0 2 1180J 820 1560
+preplace netloc VDMA|axi_mem_intercon_reader_M00_AXI 1 3 1 2370
+preplace netloc processing_system7_0_axi_periph_M05_AXI 1 2 4 950 560 NJ 560 NJ 560 3520
+preplace netloc ap_start_1 1 1 1 430J
+preplace netloc OV7670_GRAYSCALE_TO_AXIS_outStream_V_V1 1 2 1 N
+preplace netloc reset_24M_peripheral_reset 1 1 1 410
+preplace netloc data_in_V_1 1 0 2 NJ 860 390J
+preplace netloc processing_system7_0_axi_periph_M02_AXI 1 2 4 930 570 NJ 570 NJ 570 3560
+preplace netloc OV7670_GRAYSCALE_TO_AXIS_outStream_raw_LUMA1 1 2 1 N
+preplace netloc vsync_V_1 1 0 2 NJ 1000 430J
+preplace netloc rst_processing_system7_0_100M_peripheral_aresetn 1 2 4 920 530 NJ 530 NJ 530 3610J
+preplace netloc axi_gpio_frame_intr_ip2intc_irpt 1 3 4 2570 520 NJ 520 3600J 320 3900
+preplace netloc VDMA|axi_write_prova_0_m_axi_frame_index 1 2 1 2030
+preplace netloc VDMA|AXIS_IN_RAW_LUMA_1 1 0 1 1150
+preplace netloc VDMA|AXIS_IN_RAW_CHROMA_1 1 0 1 N
+preplace netloc VDMA|CLOCK_100M_1 1 0 3 1170 1090 1570 990 2040
+preplace netloc VDMA|axis_to_ddr_writer_0_frame_index_V 1 1 3 1570 1390 2020 1430 NJ
+preplace netloc processing_system7_0_axi_periph_M06_AXI 1 2 4 970 590 NJ 590 NJ 590 3540
+preplace netloc axis_to_ddr_writer_0_frame_index_V 1 3 4 2560 540 NJ 540 NJ 540 3890
+preplace netloc xlconstant_0_dout 1 2 3 900J 280 NJ 280 3220
+preplace netloc VDMA|s_axi_AXILiteS1_1 1 0 2 1150J 1020 1560
+preplace netloc VDMA|Filter_Convolution_0_out_img_V 1 0 1 1190
+preplace netloc VDMA|axis_data_fifo_1_M_AXIS 1 1 1 N
+preplace netloc VDMA|rst_processing_system7_0_100M_peripheral_aresetn 1 0 3 1200 1080 1590 1210 2070
+preplace netloc VDMA_AXIM_READER 1 3 1 2540
+preplace netloc ext_reset_in_1 1 6 1 NJ
+preplace netloc clk_wiz_0_clk_out1 1 6 1 NJ
+preplace netloc VDMA|aresetn_in_1 1 0 1 1160
+preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 0 5 30 1010 430 1010 890J 270 NJ 270 3190
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 1 2 440 1410 940J
+preplace netloc ENABLE_RAW_STREAM_dout1 1 1 1 NJ
+preplace netloc VDMA|s_axi_AXILiteS_1 1 0 2 NJ 1070 NJ
+preplace netloc VDMA|S01_ARESETN_1 1 0 3 NJ 1310 1580J 1200 2010J
+preplace netloc VDMA|PCLK_1 1 0 1 1210
+preplace netloc VDMA_AXIM_WRITER 1 3 1 2550
+preplace netloc rst_processing_system7_0_100M_interconnect_aresetn 1 2 1 960
+preplace netloc VDMA|s_axi_AXILite_raw_LUMA_1 1 0 2 NJ 1030 1550
+preplace netloc VDMA|axis_data_fifo_0_M_AXIS 1 1 1 1590
+preplace netloc VDMA|S02_AXI_1 1 2 1 2070
+preplace netloc S00_AXI_4 1 4 1 3200
+preplace netloc proc_sys_reset_0_peripheral_aresetn1 1 2 4 880 510 NJ 510 3220 510 3570J
+preplace netloc VDMA|rst_processing_system7_0_100M_interconnect_aresetn 1 0 3 NJ 1290 1550J 1190 2050
+preplace netloc processing_system7_0_axi_periph_M04_AXI 1 2 4 960 580 NJ 580 NJ 580 3550
+preplace netloc processing_system7_0_axi_periph_M01_AXI 1 5 1 N
+preplace netloc OV7670_GRAYSCALE_TO_AXIS_Q1 1 2 5 870J 20 NJ 20 NJ 20 NJ 20 NJ
+levelinfo -pg 1 0 210 660 1290 2880 3370 3750 3920 -top 0 -bot 1460
+levelinfo -hier VDMA * 1380 1800 2220 *
+",
+}
+{
+   da_axi4_cnt: "6",
+   da_clkrst_cnt: "5",
+}

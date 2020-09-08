@@ -1,4 +1,4 @@
-15:51:43 **** Build of configuration Debug for project hw_completo ****
+15:22:09 **** Build of configuration Debug for project hw_completo ****
 make all 
 Building file: ../src/application.c
 Invoking: ARM v8 gcc compiler
@@ -54,11 +54,6 @@ In file included from ../src/interrupts.h:14:0,
      ^~~~~~~~~~~~~~~~~~~~~~~
 Finished building: ../src/interrupts.c
  
-Building file: ../src/main.c
-Invoking: ARM v8 gcc compiler
-aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../hw_completo_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-Finished building: ../src/main.c
- 
 Building file: ../src/ov7670_config_i2c.c
 Invoking: ARM v8 gcc compiler
 aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ov7670_config_i2c.o" -I../../hw_completo_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/ov7670_config_i2c.d" -MT"src/ov7670_config_i2c.o" -o "src/ov7670_config_i2c.o" "../src/ov7670_config_i2c.c"
@@ -106,5 +101,5 @@ aarch64-none-elf-size hw_completo.elf  |tee "hw_completo.elf.size"
 Finished building: hw_completo.elf.size
  
 
-15:51:45 Build Finished (took 2s.10ms)
+15:22:10 Build Finished (took 1s.464ms)
 

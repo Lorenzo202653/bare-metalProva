@@ -1,4 +1,4 @@
-14:34:18 **** Auto Build of project solo_led2_bsp_0 ****
+10:36:37 **** Build of project solo_led2_bsp_0 ****
 make -k all 
 Running Make include in psu_cortexa53_0/libsrc/csudma_v1_2/src
 make -C psu_cortexa53_0/libsrc/csudma_v1_2/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
@@ -152,10 +152,10 @@ asm_vectors.S:212: Error: unknown mnemonic `p' -- `p'
 translation_table.S:149:2: warning: #warning "There's no DDR_1 in the HW design. MMU translation table marks 32 GB DDR address space as undefined" [-Wcpp]
  #warning "There's no DDR_1 in the HW design. MMU translation table marks 32 GB DDR address space as undefined"
   ^~~~~~~
-Makefile:61: set di istruzioni per l'obiettivo "standalone_libs" non riuscito
 make[1]: *** [standalone_libs] Errore 1
-Makefile:29: set di istruzioni per l'obiettivo "psu_cortexa53_0/libsrc/standalone_v6_6/src/make.libs" non riuscito
+Makefile:61: set di istruzioni per l'obiettivo "standalone_libs" non riuscito
 make[1]: L'obiettivo "libs" non è stato rigenerato a causa di errori.
+Makefile:29: set di istruzioni per l'obiettivo "psu_cortexa53_0/libsrc/standalone_v6_6/src/make.libs" non riuscito
 Running Make libs in psu_cortexa53_0/libsrc/axis_to_ddr_writer_v1_0/src
 make: *** [psu_cortexa53_0/libsrc/standalone_v6_6/src/make.libs] Errore 2
 make -C psu_cortexa53_0/libsrc/axis_to_ddr_writer_v1_0/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
@@ -207,5 +207,5 @@ xusbpsu_hibernation.c:662:2: note: here
   ^~~~
 make: L'obiettivo "all" non è stato rigenerato a causa di errori.
 
-14:34:33 Build Finished (took 14s.815ms)
+10:36:51 Build Finished (took 13s.533ms)
 

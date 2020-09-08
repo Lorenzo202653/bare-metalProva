@@ -1,0 +1,341 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
+| Date         : Fri Sep  4 12:12:08 2020
+| Host         : kidre-N551JX running 64-bit Ubuntu 16.04.7 LTS
+| Command      : upgrade_ip
+| Device       : xczu3eg-sbva484-1-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'prova2_axi_write_prova_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of prova2_axi_write_prova_0_0 (xilinx.com:hls:axi_write_prova:1.0) from (Rev. 2009041058) to (Rev. 2009041211)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'prova2_axi_write_prova_0_0'. These changes may impact your design.
+
+
+-Upgraded port order differs after port 'm_axi_frame_index_AWADDR'
+
+
+3. Customization warnings
+-------------------------
+
+Parameter 'C_M_AXI_FRAME_INDEX_TARGET_ADDR' is no longer present on the upgraded IP 'prova2_axi_write_prova_0_0', and cannot be set to '0x00000000'
+
+
+4. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  You may consult any warnings from within this upgrade, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv xilinx.com:hls:axi_write_prova:1.0 -user_name prova2_axi_write_prova_0_0
+set_property -dict "\
+  CONFIG.C_M_AXI_BASE_DDR_ADDR_ARUSER_WIDTH {1} \
+  CONFIG.C_M_AXI_BASE_DDR_ADDR_AWUSER_WIDTH {1} \
+  CONFIG.C_M_AXI_BASE_DDR_ADDR_BUSER_WIDTH {1} \
+  CONFIG.C_M_AXI_BASE_DDR_ADDR_CACHE_VALUE {"0011"} \
+  CONFIG.C_M_AXI_BASE_DDR_ADDR_DATA_WIDTH {64} \
+  CONFIG.C_M_AXI_BASE_DDR_ADDR_ENABLE_ID_PORTS {false} \
+  CONFIG.C_M_AXI_BASE_DDR_ADDR_ENABLE_USER_PORTS {false} \
+  CONFIG.C_M_AXI_BASE_DDR_ADDR_ID_WIDTH {1} \
+  CONFIG.C_M_AXI_BASE_DDR_ADDR_PROT_VALUE {"000"} \
+  CONFIG.C_M_AXI_BASE_DDR_ADDR_RUSER_WIDTH {1} \
+  CONFIG.C_M_AXI_BASE_DDR_ADDR_TARGET_ADDR {0x00000000} \
+  CONFIG.C_M_AXI_BASE_DDR_ADDR_USER_VALUE {0x00000000} \
+  CONFIG.C_M_AXI_BASE_DDR_ADDR_WUSER_WIDTH {1} \
+  CONFIG.C_M_AXI_FRAME_INDEX_ARUSER_WIDTH {1} \
+  CONFIG.C_M_AXI_FRAME_INDEX_AWUSER_WIDTH {1} \
+  CONFIG.C_M_AXI_FRAME_INDEX_BUSER_WIDTH {1} \
+  CONFIG.C_M_AXI_FRAME_INDEX_CACHE_VALUE {"0011"} \
+  CONFIG.C_M_AXI_FRAME_INDEX_DATA_WIDTH {32} \
+  CONFIG.C_M_AXI_FRAME_INDEX_ENABLE_ID_PORTS {false} \
+  CONFIG.C_M_AXI_FRAME_INDEX_ENABLE_USER_PORTS {false} \
+  CONFIG.C_M_AXI_FRAME_INDEX_ID_WIDTH {1} \
+  CONFIG.C_M_AXI_FRAME_INDEX_PROT_VALUE {"000"} \
+  CONFIG.C_M_AXI_FRAME_INDEX_RUSER_WIDTH {1} \
+  CONFIG.C_M_AXI_FRAME_INDEX_USER_VALUE {0x00000000} \
+  CONFIG.C_M_AXI_FRAME_INDEX_WUSER_WIDTH {1} \
+  CONFIG.Component_Name {prova2_axi_write_prova_0_0} \
+  CONFIG.II {x} \
+  CONFIG.ap_clk.ASSOCIATED_BUSIF {s_axi_AXILiteS:inputStream_V:m_axi_base_ddr_addr:m_axi_frame_index} \
+  CONFIG.ap_clk.ASSOCIATED_RESET {ap_rst_n} \
+  CONFIG.ap_clk.CLK_DOMAIN {prova2_zynq_ultra_ps_e_0_0_pl_clk0} \
+  CONFIG.ap_clk.FREQ_HZ {99999999} \
+  CONFIG.ap_clk.LAYERED_METADATA {xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}} \
+  CONFIG.ap_clk.PHASE {0.000} \
+  CONFIG.ap_rst_n.LAYERED_METADATA {xilinx.com:interface:datatypes:1.0 {RST {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}} \
+  CONFIG.ap_rst_n.POLARITY {ACTIVE_LOW} \
+  CONFIG.clk_period {10} \
+  CONFIG.combinational {0} \
+  CONFIG.frame_count.LAYERED_METADATA {xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}} \
+  CONFIG.inputStream_V.CLK_DOMAIN {prova2_zynq_ultra_ps_e_0_0_pl_clk0} \
+  CONFIG.inputStream_V.FREQ_HZ {99999999} \
+  CONFIG.inputStream_V.HAS_TKEEP {0} \
+  CONFIG.inputStream_V.HAS_TLAST {0} \
+  CONFIG.inputStream_V.HAS_TREADY {1} \
+  CONFIG.inputStream_V.HAS_TSTRB {0} \
+  CONFIG.inputStream_V.LAYERED_METADATA {xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} TDATA_WIDTH 8}} \
+  CONFIG.inputStream_V.PHASE {0.000} \
+  CONFIG.inputStream_V.TDATA_NUM_BYTES {1} \
+  CONFIG.inputStream_V.TDEST_WIDTH {0} \
+  CONFIG.inputStream_V.TID_WIDTH {0} \
+  CONFIG.inputStream_V.TUSER_WIDTH {0} \
+  CONFIG.interrupt.LAYERED_METADATA {xilinx.com:interface:datatypes:1.0 {INTERRUPT {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}} \
+  CONFIG.interrupt.PortWidth {1} \
+  CONFIG.interrupt.SENSITIVITY {LEVEL_HIGH} \
+  CONFIG.latency {undef} \
+  CONFIG.m_axi_base_ddr_addr.ADDR_WIDTH {32} \
+  CONFIG.m_axi_base_ddr_addr.ARUSER_WIDTH {0} \
+  CONFIG.m_axi_base_ddr_addr.AWUSER_WIDTH {0} \
+  CONFIG.m_axi_base_ddr_addr.BUSER_WIDTH {0} \
+  CONFIG.m_axi_base_ddr_addr.CLK_DOMAIN {prova2_zynq_ultra_ps_e_0_0_pl_clk0} \
+  CONFIG.m_axi_base_ddr_addr.DATA_WIDTH {64} \
+  CONFIG.m_axi_base_ddr_addr.FREQ_HZ {99999999} \
+  CONFIG.m_axi_base_ddr_addr.HAS_BRESP {1} \
+  CONFIG.m_axi_base_ddr_addr.HAS_BURST {0} \
+  CONFIG.m_axi_base_ddr_addr.HAS_CACHE {1} \
+  CONFIG.m_axi_base_ddr_addr.HAS_LOCK {1} \
+  CONFIG.m_axi_base_ddr_addr.HAS_PROT {1} \
+  CONFIG.m_axi_base_ddr_addr.HAS_QOS {1} \
+  CONFIG.m_axi_base_ddr_addr.HAS_REGION {1} \
+  CONFIG.m_axi_base_ddr_addr.HAS_RRESP {1} \
+  CONFIG.m_axi_base_ddr_addr.HAS_WSTRB {1} \
+  CONFIG.m_axi_base_ddr_addr.ID_WIDTH {0} \
+  CONFIG.m_axi_base_ddr_addr.MAX_BURST_LENGTH {256} \
+  CONFIG.m_axi_base_ddr_addr.MAX_READ_BURST_LENGTH {16} \
+  CONFIG.m_axi_base_ddr_addr.MAX_WRITE_BURST_LENGTH {16} \
+  CONFIG.m_axi_base_ddr_addr.NUM_READ_OUTSTANDING {16} \
+  CONFIG.m_axi_base_ddr_addr.NUM_READ_THREADS {1} \
+  CONFIG.m_axi_base_ddr_addr.NUM_WRITE_OUTSTANDING {16} \
+  CONFIG.m_axi_base_ddr_addr.NUM_WRITE_THREADS {1} \
+  CONFIG.m_axi_base_ddr_addr.PHASE {0.000} \
+  CONFIG.m_axi_base_ddr_addr.PROTOCOL {AXI4} \
+  CONFIG.m_axi_base_ddr_addr.READ_WRITE_MODE {READ_WRITE} \
+  CONFIG.m_axi_base_ddr_addr.RUSER_BITS_PER_BYTE {0} \
+  CONFIG.m_axi_base_ddr_addr.RUSER_WIDTH {0} \
+  CONFIG.m_axi_base_ddr_addr.SUPPORTS_NARROW_BURST {0} \
+  CONFIG.m_axi_base_ddr_addr.WUSER_BITS_PER_BYTE {0} \
+  CONFIG.m_axi_base_ddr_addr.WUSER_WIDTH {0} \
+  CONFIG.m_axi_frame_index.ADDR_WIDTH {32} \
+  CONFIG.m_axi_frame_index.ARUSER_WIDTH {0} \
+  CONFIG.m_axi_frame_index.AWUSER_WIDTH {0} \
+  CONFIG.m_axi_frame_index.BUSER_WIDTH {0} \
+  CONFIG.m_axi_frame_index.CLK_DOMAIN {prova2_zynq_ultra_ps_e_0_0_pl_clk0} \
+  CONFIG.m_axi_frame_index.DATA_WIDTH {32} \
+  CONFIG.m_axi_frame_index.FREQ_HZ {99999999} \
+  CONFIG.m_axi_frame_index.HAS_BRESP {1} \
+  CONFIG.m_axi_frame_index.HAS_BURST {0} \
+  CONFIG.m_axi_frame_index.HAS_CACHE {1} \
+  CONFIG.m_axi_frame_index.HAS_LOCK {1} \
+  CONFIG.m_axi_frame_index.HAS_PROT {1} \
+  CONFIG.m_axi_frame_index.HAS_QOS {1} \
+  CONFIG.m_axi_frame_index.HAS_REGION {1} \
+  CONFIG.m_axi_frame_index.HAS_RRESP {1} \
+  CONFIG.m_axi_frame_index.HAS_WSTRB {1} \
+  CONFIG.m_axi_frame_index.ID_WIDTH {0} \
+  CONFIG.m_axi_frame_index.MAX_BURST_LENGTH {256} \
+  CONFIG.m_axi_frame_index.MAX_READ_BURST_LENGTH {16} \
+  CONFIG.m_axi_frame_index.MAX_WRITE_BURST_LENGTH {16} \
+  CONFIG.m_axi_frame_index.NUM_READ_OUTSTANDING {16} \
+  CONFIG.m_axi_frame_index.NUM_READ_THREADS {1} \
+  CONFIG.m_axi_frame_index.NUM_WRITE_OUTSTANDING {16} \
+  CONFIG.m_axi_frame_index.NUM_WRITE_THREADS {1} \
+  CONFIG.m_axi_frame_index.PHASE {0.000} \
+  CONFIG.m_axi_frame_index.PROTOCOL {AXI4} \
+  CONFIG.m_axi_frame_index.READ_WRITE_MODE {READ_WRITE} \
+  CONFIG.m_axi_frame_index.RUSER_BITS_PER_BYTE {0} \
+  CONFIG.m_axi_frame_index.RUSER_WIDTH {0} \
+  CONFIG.m_axi_frame_index.SUPPORTS_NARROW_BURST {0} \
+  CONFIG.m_axi_frame_index.WUSER_BITS_PER_BYTE {0} \
+  CONFIG.m_axi_frame_index.WUSER_WIDTH {0} \
+  CONFIG.machine {64} \
+  CONFIG.s_axi_AXILiteS.ADDR_WIDTH {6} \
+  CONFIG.s_axi_AXILiteS.ARUSER_WIDTH {0} \
+  CONFIG.s_axi_AXILiteS.AWUSER_WIDTH {0} \
+  CONFIG.s_axi_AXILiteS.BUSER_WIDTH {0} \
+  CONFIG.s_axi_AXILiteS.CLK_DOMAIN {prova2_zynq_ultra_ps_e_0_0_pl_clk0} \
+  CONFIG.s_axi_AXILiteS.DATA_WIDTH {32} \
+  CONFIG.s_axi_AXILiteS.FREQ_HZ {99999999} \
+  CONFIG.s_axi_AXILiteS.HAS_BRESP {1} \
+  CONFIG.s_axi_AXILiteS.HAS_BURST {0} \
+  CONFIG.s_axi_AXILiteS.HAS_CACHE {0} \
+  CONFIG.s_axi_AXILiteS.HAS_LOCK {0} \
+  CONFIG.s_axi_AXILiteS.HAS_PROT {0} \
+  CONFIG.s_axi_AXILiteS.HAS_QOS {0} \
+  CONFIG.s_axi_AXILiteS.HAS_REGION {0} \
+  CONFIG.s_axi_AXILiteS.HAS_RRESP {1} \
+  CONFIG.s_axi_AXILiteS.HAS_WSTRB {1} \
+  CONFIG.s_axi_AXILiteS.ID_WIDTH {0} \
+  CONFIG.s_axi_AXILiteS.LAYERED_METADATA {xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}} \
+  CONFIG.s_axi_AXILiteS.MAX_BURST_LENGTH {1} \
+  CONFIG.s_axi_AXILiteS.NUM_READ_OUTSTANDING {2} \
+  CONFIG.s_axi_AXILiteS.NUM_READ_THREADS {1} \
+  CONFIG.s_axi_AXILiteS.NUM_WRITE_OUTSTANDING {2} \
+  CONFIG.s_axi_AXILiteS.NUM_WRITE_THREADS {1} \
+  CONFIG.s_axi_AXILiteS.PHASE {0.000} \
+  CONFIG.s_axi_AXILiteS.PROTOCOL {AXI4LITE} \
+  CONFIG.s_axi_AXILiteS.READ_WRITE_MODE {READ_WRITE} \
+  CONFIG.s_axi_AXILiteS.RUSER_BITS_PER_BYTE {0} \
+  CONFIG.s_axi_AXILiteS.RUSER_WIDTH {0} \
+  CONFIG.s_axi_AXILiteS.SUPPORTS_NARROW_BURST {0} \
+  CONFIG.s_axi_AXILiteS.WUSER_BITS_PER_BYTE {0} \
+  CONFIG.s_axi_AXILiteS.WUSER_WIDTH {0} " [get_ips prova2_axi_write_prova_0_0]
+
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
+| Date         : Fri Sep  4 11:00:15 2020
+| Host         : kidre-N551JX running 64-bit Ubuntu 16.04.7 LTS
+| Command      : upgrade_ip
+| Device       : xczu3eg-sbva484-1-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'prova2_axi_write_prova_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of prova2_axi_write_prova_0_0 (xilinx.com:hls:axi_write_prova:1.0) from (Rev. 2009021039) to (Rev. 2009041058)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'prova2_axi_write_prova_0_0'.
+
+
+-Upgrade has removed interface 's_axi_frame_index'
+
+-Upgrade has added interface 'm_axi_frame_index' (xilinx.com:interface:aximm:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'prova2_axi_write_prova_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 's_axi_frame_index_ARADDR'
+
+-Upgrade has removed port 's_axi_frame_index_ARREADY'
+
+-Upgrade has removed port 's_axi_frame_index_ARVALID'
+
+-Upgrade has removed port 's_axi_frame_index_AWADDR'
+
+-Upgrade has removed port 's_axi_frame_index_AWREADY'
+
+-Upgrade has removed port 's_axi_frame_index_AWVALID'
+
+-Upgrade has removed port 's_axi_frame_index_BREADY'
+
+-Upgrade has removed port 's_axi_frame_index_BRESP'
+
+-Upgrade has removed port 's_axi_frame_index_BVALID'
+
+-Upgrade has removed port 's_axi_frame_index_RDATA'
+
+-Upgrade has removed port 's_axi_frame_index_RREADY'
+
+-Upgrade has removed port 's_axi_frame_index_RRESP'
+
+-Upgrade has removed port 's_axi_frame_index_RVALID'
+
+-Upgrade has removed port 's_axi_frame_index_WDATA'
+
+-Upgrade has removed port 's_axi_frame_index_WREADY'
+
+-Upgrade has removed port 's_axi_frame_index_WSTRB'
+
+-Upgrade has removed port 's_axi_frame_index_WVALID'
+
+-Upgrade has added port 'm_axi_frame_index_ARADDR'
+
+-Upgrade has added port 'm_axi_frame_index_ARBURST'
+
+-Upgrade has added port 'm_axi_frame_index_ARCACHE'
+
+-Upgrade has added port 'm_axi_frame_index_ARLEN'
+
+-Upgrade has added port 'm_axi_frame_index_ARLOCK'
+
+-Upgrade has added port 'm_axi_frame_index_ARPROT'
+
+-Upgrade has added port 'm_axi_frame_index_ARQOS'
+
+-Upgrade has added port 'm_axi_frame_index_ARREADY'
+
+-Upgrade has added port 'm_axi_frame_index_ARREGION'
+
+-Upgrade has added port 'm_axi_frame_index_ARSIZE'
+
+-Upgrade has added port 'm_axi_frame_index_ARVALID'
+
+-Upgrade has added port 'm_axi_frame_index_AWADDR'
+
+-Upgrade has added port 'm_axi_frame_index_AWBURST'
+
+-Upgrade has added port 'm_axi_frame_index_AWCACHE'
+
+-Upgrade has added port 'm_axi_frame_index_AWLEN'
+
+-Upgrade has added port 'm_axi_frame_index_AWLOCK'
+
+-Upgrade has added port 'm_axi_frame_index_AWPROT'
+
+-Upgrade has added port 'm_axi_frame_index_AWQOS'
+
+-Upgrade has added port 'm_axi_frame_index_AWREADY'
+
+-Upgrade has added port 'm_axi_frame_index_AWREGION'
+
+-Upgrade has added port 'm_axi_frame_index_AWSIZE'
+
+-Upgrade has added port 'm_axi_frame_index_AWVALID'
+
+-Upgrade has added port 'm_axi_frame_index_BREADY'
+
+-Upgrade has added port 'm_axi_frame_index_BRESP'
+
+-Upgrade has added port 'm_axi_frame_index_BVALID'
+
+-Upgrade has added port 'm_axi_frame_index_RDATA'
+
+-Upgrade has added port 'm_axi_frame_index_RLAST'
+
+-Upgrade has added port 'm_axi_frame_index_RREADY'
+
+-Upgrade has added port 'm_axi_frame_index_RRESP'
+
+-Upgrade has added port 'm_axi_frame_index_RVALID'
+
+-Upgrade has added port 'm_axi_frame_index_WDATA'
+
+-Upgrade has added port 'm_axi_frame_index_WLAST'
+
+-Upgrade has added port 'm_axi_frame_index_WREADY'
+
+-Upgrade has added port 'm_axi_frame_index_WSTRB'
+
+-Upgrade has added port 'm_axi_frame_index_WVALID'
+
+

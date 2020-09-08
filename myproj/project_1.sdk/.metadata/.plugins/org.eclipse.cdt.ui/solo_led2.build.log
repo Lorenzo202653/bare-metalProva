@@ -1,4 +1,4 @@
-14:34:33 **** Auto Build of configuration Debug for project solo_led2 ****
+10:36:51 **** Build of configuration Debug for project solo_led2 ****
 make all 
 Building file: ../src/application.c
 Invoking: ARM v8 gcc compiler
@@ -141,5 +141,5 @@ aarch64-none-elf-size solo_led2.elf  |tee "solo_led2.elf.size"
 Finished building: solo_led2.elf.size
  
 
-14:34:35 Build Finished (took 1s.715ms)
+10:36:52 Build Finished (took 1s.512ms)
 

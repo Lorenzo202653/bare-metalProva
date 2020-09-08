@@ -1,72 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xczu3eg-sbva484-1-e" LaunchTime="1598532434">
+<GenRun Id="impl_1" LaunchPart="xczu3eg-sbva484-1-e" LaunchTime="1599217266">
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="BG-DRC" Name="reset_3_wrapper.drc"/>
-  <File Type="BG-BGN" Name="reset_3_wrapper.bgn"/>
-  <File Type="BITSTR-SYSDEF" Name="reset_3_wrapper.sysdef"/>
+  <File Type="BG-DRC" Name="hls_prova3_wrapper.drc"/>
+  <File Type="BG-BGN" Name="hls_prova3_wrapper.bgn"/>
+  <File Type="BITSTR-SYSDEF" Name="hls_prova3_wrapper.sysdef"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="reset_3_wrapper.ltx"/>
-  <File Type="BITSTR-MMI" Name="reset_3_wrapper.mmi"/>
-  <File Type="BITSTR-BMM" Name="reset_3_wrapper_bd.bmm"/>
-  <File Type="BITSTR-NKY" Name="reset_3_wrapper.nky"/>
-  <File Type="BITSTR-RBT" Name="reset_3_wrapper.rbt"/>
-  <File Type="BITSTR-MSK" Name="reset_3_wrapper.msk"/>
-  <File Type="BG-BIN" Name="reset_3_wrapper.bin"/>
-  <File Type="BG-BIT" Name="reset_3_wrapper.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="reset_3_wrapper_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="reset_3_wrapper_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="reset_3_wrapper_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="reset_3_wrapper_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="reset_3_wrapper_postroute_physopt.dcp"/>
-  <File Type="ROUTE-CLK" Name="reset_3_wrapper_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-SIMILARITY" Name="reset_3_wrapper_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-TIMING-RPX" Name="reset_3_wrapper_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-TIMING-PB" Name="reset_3_wrapper_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="reset_3_wrapper_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="reset_3_wrapper_route_status.pb"/>
-  <File Type="ROUTE-STATUS" Name="reset_3_wrapper_route_status.rpt"/>
-  <File Type="ROUTE-PWR-RPX" Name="reset_3_wrapper_power_routed.rpx"/>
-  <File Type="ROUTE-PWR-SUM" Name="reset_3_wrapper_power_summary_routed.pb"/>
-  <File Type="ROUTE-PWR" Name="reset_3_wrapper_power_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="reset_3_wrapper_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="reset_3_wrapper_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="reset_3_wrapper_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-RPX" Name="reset_3_wrapper_drc_routed.rpx"/>
-  <File Type="ROUTE-DRC-PB" Name="reset_3_wrapper_drc_routed.pb"/>
-  <File Type="ROUTE-DRC" Name="reset_3_wrapper_drc_routed.rpt"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="reset_3_wrapper_routed_bb.dcp"/>
-  <File Type="ROUTE-DCP" Name="reset_3_wrapper_routed.dcp"/>
-  <File Type="ROUTE-ERROR-DCP" Name="reset_3_wrapper_routed_error.dcp"/>
-  <File Type="PHYSOPT-TIMING" Name="reset_3_wrapper_timing_summary_physopted.rpt"/>
-  <File Type="PHYSOPT-DRC" Name="reset_3_wrapper_drc_physopted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="reset_3_wrapper_physopt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="reset_3_wrapper_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="reset_3_wrapper_postplace_pwropt.dcp"/>
-  <File Type="PLACE-TIMING" Name="reset_3_wrapper_timing_summary_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="reset_3_wrapper_incremental_reuse_pre_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="reset_3_wrapper_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-CTRL" Name="reset_3_wrapper_control_sets_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="reset_3_wrapper_utilization_placed.pb"/>
-  <File Type="PLACE-UTIL" Name="reset_3_wrapper_utilization_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="reset_3_wrapper_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-IO" Name="reset_3_wrapper_io_placed.rpt"/>
-  <File Type="RDI-RDI" Name="reset_3_wrapper.vdi"/>
-  <File Type="PWROPT-TIMING" Name="reset_3_wrapper_timing_summary_pwropted.rpt"/>
-  <File Type="PWROPT-DRC" Name="reset_3_wrapper_drc_pwropted.rpt"/>
-  <File Type="OPT-TIMING" Name="reset_3_wrapper_timing_summary_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="reset_3_wrapper.hwdef"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="reset_3_wrapper_methodology_drc_opted.rpt"/>
-  <File Type="OPT-DRC" Name="reset_3_wrapper_drc_opted.rpt"/>
-  <File Type="OPT-DCP" Name="reset_3_wrapper_opt.dcp"/>
-  <File Type="INIT-TIMING" Name="reset_3_wrapper_timing_summary_init.rpt"/>
-  <File Type="PWROPT-DCP" Name="reset_3_wrapper_pwropt.dcp"/>
-  <File Type="REPORTS-TCL" Name="reset_3_wrapper_reports.tcl"/>
-  <File Type="PLACE-DCP" Name="reset_3_wrapper_placed.dcp"/>
-  <File Type="PA-TCL" Name="reset_3_wrapper.tcl"/>
+  <File Type="BITSTR-LTX" Name="hls_prova3_wrapper.ltx"/>
+  <File Type="BITSTR-MMI" Name="hls_prova3_wrapper.mmi"/>
+  <File Type="BITSTR-BMM" Name="hls_prova3_wrapper_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="hls_prova3_wrapper.nky"/>
+  <File Type="BITSTR-RBT" Name="hls_prova3_wrapper.rbt"/>
+  <File Type="BITSTR-MSK" Name="hls_prova3_wrapper.msk"/>
+  <File Type="BG-BIN" Name="hls_prova3_wrapper.bin"/>
+  <File Type="BG-BIT" Name="hls_prova3_wrapper.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="hls_prova3_wrapper_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="hls_prova3_wrapper_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="hls_prova3_wrapper_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="hls_prova3_wrapper_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="hls_prova3_wrapper_postroute_physopt.dcp"/>
+  <File Type="ROUTE-CLK" Name="hls_prova3_wrapper_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="hls_prova3_wrapper_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="hls_prova3_wrapper_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-TIMING-PB" Name="hls_prova3_wrapper_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="hls_prova3_wrapper_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="hls_prova3_wrapper_route_status.pb"/>
+  <File Type="ROUTE-STATUS" Name="hls_prova3_wrapper_route_status.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="hls_prova3_wrapper_power_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="hls_prova3_wrapper_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="hls_prova3_wrapper_power_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="hls_prova3_wrapper_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="hls_prova3_wrapper_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="hls_prova3_wrapper_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="hls_prova3_wrapper_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-PB" Name="hls_prova3_wrapper_drc_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="hls_prova3_wrapper_drc_routed.rpt"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="hls_prova3_wrapper_routed_bb.dcp"/>
+  <File Type="ROUTE-DCP" Name="hls_prova3_wrapper_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="hls_prova3_wrapper_routed_error.dcp"/>
+  <File Type="PHYSOPT-TIMING" Name="hls_prova3_wrapper_timing_summary_physopted.rpt"/>
+  <File Type="PHYSOPT-DRC" Name="hls_prova3_wrapper_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="hls_prova3_wrapper_physopt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="hls_prova3_wrapper_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="hls_prova3_wrapper_postplace_pwropt.dcp"/>
+  <File Type="PLACE-TIMING" Name="hls_prova3_wrapper_timing_summary_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="hls_prova3_wrapper_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="hls_prova3_wrapper_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="hls_prova3_wrapper_control_sets_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="hls_prova3_wrapper_utilization_placed.pb"/>
+  <File Type="PLACE-UTIL" Name="hls_prova3_wrapper_utilization_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="hls_prova3_wrapper_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-IO" Name="hls_prova3_wrapper_io_placed.rpt"/>
+  <File Type="RDI-RDI" Name="hls_prova3_wrapper.vdi"/>
+  <File Type="PWROPT-TIMING" Name="hls_prova3_wrapper_timing_summary_pwropted.rpt"/>
+  <File Type="PWROPT-DRC" Name="hls_prova3_wrapper_drc_pwropted.rpt"/>
+  <File Type="OPT-TIMING" Name="hls_prova3_wrapper_timing_summary_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="hls_prova3_wrapper.hwdef"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="hls_prova3_wrapper_methodology_drc_opted.rpt"/>
+  <File Type="OPT-DRC" Name="hls_prova3_wrapper_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="hls_prova3_wrapper_opt.dcp"/>
+  <File Type="INIT-TIMING" Name="hls_prova3_wrapper_timing_summary_init.rpt"/>
+  <File Type="PWROPT-DCP" Name="hls_prova3_wrapper_pwropt.dcp"/>
+  <File Type="REPORTS-TCL" Name="hls_prova3_wrapper_reports.tcl"/>
+  <File Type="PLACE-DCP" Name="hls_prova3_wrapper_placed.dcp"/>
+  <File Type="PA-TCL" Name="hls_prova3_wrapper.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/bd/hls_prova3/hls_prova3.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/hls_prova3/hdl/hls_prova3_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/prova2/prova2.bd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/bd/reset_3/reset_3.bd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -74,6 +97,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/bd/reset_3/hdl/reset_3_wrapper.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -111,22 +135,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/bd/design_1/design_1.bd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/bd/design_1/hdl/design_1_wrapper.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/bd/interrupt/interrupt.bd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
@@ -137,7 +145,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="reset_3_wrapper"/>
+      <Option Name="TopModule" Val="hls_prova3_wrapper"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -165,31 +173,16 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="hls_prova3_axi_write_prova_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hls_prova3_zynq_ultra_ps_e_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hls_prova3_xbar_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="prova2_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="prova2_xbar_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="prova2_zynq_ultra_ps_e_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="pulsante_xbar_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="pulsante_zynq_ultra_ps_e_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="reset_3_zynq_ultra_ps_e_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_ov7670_interface_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_ov7670_LUMA_CHROMA_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_mux_sd_ov_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_c_counter_binary_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="pulsante_axi_gpio_frame_intr_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_xbar_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_LF_valid_to_AXIS_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="prova2_axi_write_prova_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="pulsante_zynq_ultra_ps_e_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="reset_3_xbar_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_xbar_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_xlconcat_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_reset_24M_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_ddr_to_axis_reader_SD_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_reset_100M_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_frame_intr_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_xbar_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_zynq_ultra_ps_e_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_const_true_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_ENABLE_RAW_STREAM_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_axis_data_fifo_pipeline_to_writer_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_ddr_to_axis_reader_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_const_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_axis_data_fifo_raw_CHROMA_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_clk_wiz_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_axis_data_fifo_raw_LUMA_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="reset_3_zynq_ultra_ps_e_0_0"/>
 </GenRun>

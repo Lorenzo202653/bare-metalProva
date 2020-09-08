@@ -1,6 +1,6 @@
-15:25:06 **** Build of configuration Debug for project sw_reset_prova ****
+15:22:10 **** Build of configuration Debug for project sw_reset_prova ****
 make all 
 make: Nessuna operazione da eseguire per "all".
 
-15:25:06 Build Finished (took 515ms)
+15:22:11 Build Finished (took 512ms)
 
