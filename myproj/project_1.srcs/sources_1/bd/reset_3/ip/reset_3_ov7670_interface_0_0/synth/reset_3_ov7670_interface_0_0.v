@@ -47,34 +47,34 @@
 // DO NOT MODIFY THIS FILE.
 
 
-// IP VLNV: xilinx.com:hls:LF_valid_to_AXIS:1.0
-// IP Revision: 2003101119
+// IP VLNV: xilinx.com:hls:ov7670_interface:1.0
+// IP Revision: 2003101103
 
-`timescale 1ns/1ps
-
+(* X_CORE_INFO = "ov7670_interface,Vivado 2018.1" *)
+(* CHECK_LICENSE_TYPE = "reset_3_ov7670_interface_0_0,ov7670_interface,{}" *)
+(* CORE_GENERATION_INFO = "reset_3_ov7670_interface_0_0,ov7670_interface,{x_ipProduct=Vivado 2018.1,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=ov7670_interface,x_ipVersion=1.0,x_ipCoreRevision=2003101103,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
-module pulsante_LF_valid_to_AXIS_0 (
+module reset_3_ov7670_interface_0_0 (
   ap_clk,
-  ap_rst_n,
+  ap_rst,
   ap_start,
   ap_done,
   ap_idle,
   ap_ready,
   data_in_V,
-  frame_valid,
-  line_valid,
-  outputStream_V_V_TVALID,
-  outputStream_V_V_TREADY,
-  outputStream_V_V_TDATA
+  href_V,
+  vsync_V,
+  data_out_V,
+  line_valid_V,
+  frame_valid_V
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME ap_clk, ASSOCIATED_BUSIF outputStream_V_V, ASSOCIATED_RESET ap_rst_n, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}, FREQ_HZ 24000000, PHASE 0.000, CLK_DOMAI\
-N design_1_PCLK" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME ap_clk, ASSOCIATED_RESET ap_rst, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}, FREQ_HZ 24000000, PHASE 0.000, CLK_DOMAIN design_1_PCLK" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 ap_clk CLK" *)
 input wire ap_clk;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME ap_rst_n, POLARITY ACTIVE_LOW, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {RST {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 ap_rst_n RST" *)
-input wire ap_rst_n;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME ap_rst, POLARITY ACTIVE_HIGH, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {RST {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 ap_rst RST" *)
+input wire ap_rst;
 (* X_INTERFACE_INFO = "xilinx.com:interface:acc_handshake:1.0 ap_ctrl start" *)
 input wire ap_start;
 (* X_INTERFACE_INFO = "xilinx.com:interface:acc_handshake:1.0 ap_ctrl done" *)
@@ -90,36 +90,39 @@ output wire ap_ready;
 e false}}}}}" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 data_in_V DATA" *)
 input wire [7 : 0] data_in_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME frame_valid, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} va\
-lue false}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 frame_valid DATA" *)
-input wire frame_valid;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME line_valid, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} val\
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME href_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value f\
+alse}}}}}" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 href_V DATA" *)
+input wire [0 : 0] href_V;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME vsync_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value \
+false}}}}}" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 vsync_V DATA" *)
+input wire [0 : 0] vsync_V;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME data_out_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} val\
 ue false}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 line_valid DATA" *)
-input wire line_valid;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 outputStream_V_V TVALID" *)
-output wire outputStream_V_V_TVALID;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 outputStream_V_V TREADY" *)
-input wire outputStream_V_V_TREADY;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME outputStream_V_V, TDATA_NUM_BYTES 1, TUSER_WIDTH 0, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} TDATA {datatype {name {attribs {resolve_type immediate depen\
-dency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} TDATA_WIDTH 8}, TDEST_WIDTH 0, TID_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 24000000, PHASE 0.000, C\
-LK_DOMAIN design_1_PCLK" *)
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 outputStream_V_V TDATA" *)
-output wire [7 : 0] outputStream_V_V_TDATA;
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 data_out_V DATA" *)
+output wire [7 : 0] data_out_V;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME line_valid_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} v\
+alue false}}}}}" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 line_valid_V DATA" *)
+output wire [0 : 0] line_valid_V;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME frame_valid_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} \
+value false}}}}}" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 frame_valid_V DATA" *)
+output wire [0 : 0] frame_valid_V;
 
-  LF_valid_to_AXIS inst (
+  ov7670_interface inst (
     .ap_clk(ap_clk),
-    .ap_rst_n(ap_rst_n),
+    .ap_rst(ap_rst),
     .ap_start(ap_start),
     .ap_done(ap_done),
     .ap_idle(ap_idle),
     .ap_ready(ap_ready),
     .data_in_V(data_in_V),
-    .frame_valid(frame_valid),
-    .line_valid(line_valid),
-    .outputStream_V_V_TVALID(outputStream_V_V_TVALID),
-    .outputStream_V_V_TREADY(outputStream_V_V_TREADY),
-    .outputStream_V_V_TDATA(outputStream_V_V_TDATA)
+    .href_V(href_V),
+    .vsync_V(vsync_V),
+    .data_out_V(data_out_V),
+    .line_valid_V(line_valid_V),
+    .frame_valid_V(frame_valid_V)
   );
 endmodule
