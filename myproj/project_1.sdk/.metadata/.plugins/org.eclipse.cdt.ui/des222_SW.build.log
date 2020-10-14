@@ -1,0 +1,16 @@
+10:54:13 **** Build of configuration Debug for project des222_SW ****
+make all 
+Building file: ../src/application.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/application.o" -I../../dess222_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/application.d" -MT"src/application.o" -o "src/application.o" "../src/application.c"
+In file included from ../src/application.h:13:0,
+                 from ../src/application.c:9:
+../src/axis_to_ddr_writer.h:13:10: fatal error: xov7670_prova.h: No such file or directory
+ #include "xov7670_prova.h"
+          ^~~~~~~~~~~~~~~~~
+compilation terminated.
+src/subdir.mk:63: set di istruzioni per l'obiettivo "src/application.o" non riuscito
+make: *** [src/application.o] Errore 1
+
+10:54:13 Build Finished (took 565ms)
+

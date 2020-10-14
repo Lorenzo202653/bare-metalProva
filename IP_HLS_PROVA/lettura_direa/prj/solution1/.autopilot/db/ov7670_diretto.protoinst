@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"ov7670_diretto": {
+			"proto_instances": {
+			}
+		}
+	}
+}

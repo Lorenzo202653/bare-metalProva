@@ -1,0 +1,30 @@
+
+#ifndef OV7670_DIRETTO_H_
+#define OV7670_DIRETTO_H_
+
+#include <unistd.h>
+#include "platform.h"
+#include "xaxidma.h"
+
+XOv7670_diretto_Config* diretto_config;
+XOv7670_diretto diretto;
+
+#define MEM_BASE_ADDR		0x00000000
+#define NUMBER_OF_TRANSFERS	10
+#define DDR_BASE_ADDR	XPAR_PSU_DDR_0_S_AXI_BASEADDR
+#define MEM_BASE_ADDR		(DDR_BASE_ADDR + 0x1000000)
+#define TX_BUFFER_BASE		(MEM_BASE_ADDR + 0x00100000)
+#define RX_BUFFER_BASE		(MEM_BASE_ADDR + 0x00300000)
+#define MAX_PKT_LEN		0x20
+#define TEST_START_VALUE	0xC
+
+
+int init_ov7670_diretto(void);
+int configue_ov7670_diretto(void);
+
+
+
+int CheckData(void);
+void dma_prova();
+XAxiDma AxiDma;
+#endif /* OV7670_DIRETTO_H_ */

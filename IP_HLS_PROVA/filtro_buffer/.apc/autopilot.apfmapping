@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="filtrob.h" path="/media/kidre/Dati/GIT_TEST/bare-metalProva/IP_HLS_PROVA/filtro_buffer/.settings/filtrob.h"/>
+    <originFiles name="filtrob.cpp" path="/media/kidre/Dati/GIT_TEST/bare-metalProva/IP_HLS_PROVA/filtro_buffer/.settings/filtrob.cpp"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>

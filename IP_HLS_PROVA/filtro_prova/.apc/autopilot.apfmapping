@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="filtro_prova.h" path="/media/kidre/Dati/GIT_TEST/bare-metalProva/IP_HLS_PROVA/filtro_prova/.settings/filtro_prova.h"/>
+    <originFiles name="filtro_prova.cpp" path="/media/kidre/Dati/GIT_TEST/bare-metalProva/IP_HLS_PROVA/filtro_prova/.settings/filtro_prova.cpp"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>

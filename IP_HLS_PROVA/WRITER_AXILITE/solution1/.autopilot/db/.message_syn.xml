@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1310" content="Cannot find source file axis_to_ddr_writer.cpp; skipping it." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Pragmas Time (s): cpu = 00:00:00.39 ; elapsed = 00:00:00.44 . Memory (MB): peak = 351.609 ; gain = 0.129 ; free physical = 338 ; free virtual = 19911" tag=""/>
+	<Message prefix="[HLS 200-70]" severity="ERROR" keynum="HLS_70_1308" content="Cannot find any design unit to elaborate." tag=""/>
+	<Message prefix="[HLS 200-150]" severity="INFO" keynum="11" content="Error in linking the design.
+    while executing
+&quot;source /media/kidre/Dati/GIT_TEST/IP_HLS_PROVA/WRITER_AXILITE/solution1/csynth.tcl&quot;
+    invoked from within
+&quot;hls::main /media/kidre/Dati/GIT_TEST/IP_HLS_PROVA/WRITER_AXILITE/solution1/csynth.tcl&quot;
+    (&quot;uplevel&quot; body line 1)
+    invoked from within
+&quot;uplevel 1 hls::main {*}$args&quot;
+    (procedure &quot;hls_proc&quot; line 5)
+    invoked from within
+&quot;hls_proc $argv&quot;" tag=""/>
+</Messages>

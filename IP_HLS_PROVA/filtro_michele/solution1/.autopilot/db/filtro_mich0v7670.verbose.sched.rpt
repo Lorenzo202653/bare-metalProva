@@ -1,0 +1,248 @@
+
+
+================================================================
+== Vivado HLS Report for 'filtro_mich0v7670'
+================================================================
+* Date:           Tue Sep 22 18:03:38 2020
+
+* Version:        2018.1 (Build 2188600 on Wed Apr 04 19:04:02 MDT 2018)
+* Project:        filtro_michele
+* Solution:       solution1
+* Product family: zynquplus
+* Target device:  xczu3eg-sbva484-1-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      8.75|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    3|    9|    3|    9|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 11
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	4  / (grayscale_valid_load)
+	3  / (!grayscale_valid_load)
+3 --> 
+	11  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+
+* FSM state operations: 
+
+ <State 1> : 1.00ns
+ST_1 : Operation 12 [1/1] (1.00ns)   --->   "%outStream_grayscale_1 = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %outStream_grayscale_V)"   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 13 [2/2] (0.00ns)   --->   "%tmp_V = call i8 @_ssdm_op_Read.axis.volatile.i8P(i8* %inStream_V_V)" [filtro_michele/.settings/filtro.cpp:44]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+
+ <State 2> : 2.84ns
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%enable_raw_stream_re = call i1 @_ssdm_op_Read.ap_none.i1(i1 %enable_raw_stream)"
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%tmp_cast = sext i32 %outStream_grayscale_1 to i33"
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %gmem), !map !62"
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %inStream_V_V), !map !68"
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1 %enable_raw_stream), !map !72"
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %outStream_LUMA_V_V), !map !78"
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %outStream_CHROMA_V_V), !map !82"
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([18 x i8]* @filtro_mich0v7670_st) nounwind"
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i1 %enable_raw_stream, [8 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [filtro_michele/.settings/filtro.cpp:27]
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %inStream_V_V, [5 x i8]* @p_str2, i32 1, i32 1, [5 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [filtro_michele/.settings/filtro.cpp:28]
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %gmem, [6 x i8]* @p_str4, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 32, [5 x i8]* @p_str5, [6 x i8]* @p_str6, [1 x i8]* @p_str1, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [filtro_michele/.settings/filtro.cpp:29]
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %outStream_grayscale_V, [10 x i8]* @mode, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 32, [1 x i8]* @bundle, [6 x i8]* @p_str6, [1 x i8]* @p_str1, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [filtro_michele/.settings/filtro.cpp:29]
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %outStream_LUMA_V_V, [5 x i8]* @p_str2, i32 1, i32 1, [5 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [filtro_michele/.settings/filtro.cpp:30]
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %outStream_CHROMA_V_V, [5 x i8]* @p_str2, i32 1, i32 1, [5 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [filtro_michele/.settings/filtro.cpp:31]
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i32 0, i32 1, [1 x i8]* @p_str1) nounwind" [filtro_michele/.settings/filtro.cpp:34]
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i32* @inner_index_V, i32 1, [1 x i8]* @p_str1) nounwind" [filtro_michele/.settings/filtro.cpp:37]
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i1* @grayscale_valid, i32 1, [1 x i8]* @p_str1) nounwind" [filtro_michele/.settings/filtro.cpp:40]
+ST_2 : Operation 31 [1/2] (0.00ns)   --->   "%tmp_V = call i8 @_ssdm_op_Read.axis.volatile.i8P(i8* %inStream_V_V)" [filtro_michele/.settings/filtro.cpp:44]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%grayscale_valid_load = load i1* @grayscale_valid, align 1" [filtro_michele/.settings/filtro.cpp:46]
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "br i1 %grayscale_valid_load, label %._crit_edge67, label %1" [filtro_michele/.settings/filtro.cpp:46]
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "br i1 %enable_raw_stream_re, label %2, label %._crit_edge69" [filtro_michele/.settings/filtro.cpp:61]
+ST_2 : Operation 35 [2/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i8P(i8* %outStream_CHROMA_V_V, i8 %tmp_V)" [filtro_michele/.settings/filtro.cpp:62]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%inner_index_V_load = load i32* @inner_index_V, align 4" [filtro_michele/.settings/filtro.cpp:47]
+ST_2 : Operation 37 [1/1] (1.11ns)   --->   "%tmp_3 = icmp eq i32 %inner_index_V_load, 307200" [filtro_michele/.settings/filtro.cpp:47]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.11> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 38 [1/1] (0.52ns)   --->   "%offset = select i1 %tmp_3, i32 0, i32 %inner_index_V_load" [filtro_michele/.settings/filtro.cpp:47]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%tmp_5_cast = sext i32 %offset to i33" [filtro_michele/.settings/filtro.cpp:53]
+ST_2 : Operation 40 [1/1] (1.20ns)   --->   "%outStream_grayscale_s = add i33 %tmp_5_cast, %tmp_cast" [filtro_michele/.settings/filtro.cpp:53]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.20> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "%outStream_grayscale_2 = sext i33 %outStream_grayscale_s to i64" [filtro_michele/.settings/filtro.cpp:53]
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%gmem_addr = getelementptr i8* %gmem, i64 %outStream_grayscale_2" [filtro_michele/.settings/filtro.cpp:53]
+ST_2 : Operation 43 [1/1] (1.20ns)   --->   "%tmp_6 = add i32 %offset, 1" [filtro_michele/.settings/filtro.cpp:54]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.20> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "store i32 %tmp_6, i32* @inner_index_V, align 4" [filtro_michele/.settings/filtro.cpp:54]
+
+ <State 3> : 0.00ns
+ST_3 : Operation 45 [1/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i8P(i8* %outStream_CHROMA_V_V, i8 %tmp_V)" [filtro_michele/.settings/filtro.cpp:62]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_3 : Operation 46 [1/1] (0.00ns)   --->   "br label %._crit_edge69" [filtro_michele/.settings/filtro.cpp:62]
+ST_3 : Operation 47 [1/1] (0.00ns)   --->   "br label %3"
+
+ <State 4> : 8.75ns
+ST_4 : Operation 48 [1/1] (8.75ns)   --->   "%gmem_addr_req = call i1 @_ssdm_op_WriteReq.m_axi.i8P(i8* %gmem_addr, i32 1)" [filtro_michele/.settings/filtro.cpp:53]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+ <State 5> : 8.75ns
+ST_5 : Operation 49 [1/1] (8.75ns)   --->   "call void @_ssdm_op_Write.m_axi.i8P(i8* %gmem_addr, i8 0, i1 true)" [filtro_michele/.settings/filtro.cpp:53]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+ <State 6> : 8.75ns
+ST_6 : Operation 50 [5/5] (8.75ns)   --->   "%gmem_addr_resp = call i1 @_ssdm_op_WriteResp.m_axi.i8P(i8* %gmem_addr)" [filtro_michele/.settings/filtro.cpp:53]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+ <State 7> : 8.75ns
+ST_7 : Operation 51 [4/5] (8.75ns)   --->   "%gmem_addr_resp = call i1 @_ssdm_op_WriteResp.m_axi.i8P(i8* %gmem_addr)" [filtro_michele/.settings/filtro.cpp:53]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+ <State 8> : 8.75ns
+ST_8 : Operation 52 [3/5] (8.75ns)   --->   "%gmem_addr_resp = call i1 @_ssdm_op_WriteResp.m_axi.i8P(i8* %gmem_addr)" [filtro_michele/.settings/filtro.cpp:53]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+ <State 9> : 8.75ns
+ST_9 : Operation 53 [2/5] (8.75ns)   --->   "%gmem_addr_resp = call i1 @_ssdm_op_WriteResp.m_axi.i8P(i8* %gmem_addr)" [filtro_michele/.settings/filtro.cpp:53]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+ <State 10> : 8.75ns
+ST_10 : Operation 54 [1/5] (8.75ns)   --->   "%gmem_addr_resp = call i1 @_ssdm_op_WriteResp.m_axi.i8P(i8* %gmem_addr)" [filtro_michele/.settings/filtro.cpp:53]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_10 : Operation 55 [1/1] (0.00ns)   --->   "br i1 %enable_raw_stream_re, label %0, label %._crit_edge68" [filtro_michele/.settings/filtro.cpp:56]
+ST_10 : Operation 56 [2/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i8P(i8* %outStream_LUMA_V_V, i8 %tmp_V)" [filtro_michele/.settings/filtro.cpp:57]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+
+ <State 11> : 0.33ns
+ST_11 : Operation 57 [1/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i8P(i8* %outStream_LUMA_V_V, i8 %tmp_V)" [filtro_michele/.settings/filtro.cpp:57]   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_11 : Operation 58 [1/1] (0.00ns)   --->   "br label %._crit_edge68" [filtro_michele/.settings/filtro.cpp:57]
+ST_11 : Operation 59 [1/1] (0.00ns)   --->   "br label %3" [filtro_michele/.settings/filtro.cpp:58]
+ST_11 : Operation 60 [1/1] (0.33ns)   --->   "%tmp_9 = xor i1 %grayscale_valid_load, true" [filtro_michele/.settings/filtro.cpp:65]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 61 [1/1] (0.00ns)   --->   "store i1 %tmp_9, i1* @grayscale_valid, align 1" [filtro_michele/.settings/filtro.cpp:65]
+ST_11 : Operation 62 [1/1] (0.00ns)   --->   "ret void" [filtro_michele/.settings/filtro.cpp:67]
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1ns
+The critical path consists of the following:
+	s_axi read on port 'outStream_grayscale_V' [10]  (1 ns)
+
+ <State 2>: 2.84ns
+The critical path consists of the following:
+	'load' operation ('inner_index_V_load', filtro_michele/.settings/filtro.cpp:47) on static variable 'inner_index_V' [38]  (0 ns)
+	'icmp' operation ('tmp_3', filtro_michele/.settings/filtro.cpp:47) [39]  (1.11 ns)
+	'select' operation ('offset', filtro_michele/.settings/filtro.cpp:47) [40]  (0.525 ns)
+	'add' operation ('outStream_grayscale_s', filtro_michele/.settings/filtro.cpp:53) [42]  (1.2 ns)
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'gmem' (filtro_michele/.settings/filtro.cpp:53) [45]  (8.75 ns)
+
+ <State 5>: 8.75ns
+The critical path consists of the following:
+	bus write on port 'gmem' (filtro_michele/.settings/filtro.cpp:53) [46]  (8.75 ns)
+
+ <State 6>: 8.75ns
+The critical path consists of the following:
+	bus access on port 'gmem' (filtro_michele/.settings/filtro.cpp:53) [47]  (8.75 ns)
+
+ <State 7>: 8.75ns
+The critical path consists of the following:
+	bus access on port 'gmem' (filtro_michele/.settings/filtro.cpp:53) [47]  (8.75 ns)
+
+ <State 8>: 8.75ns
+The critical path consists of the following:
+	bus access on port 'gmem' (filtro_michele/.settings/filtro.cpp:53) [47]  (8.75 ns)
+
+ <State 9>: 8.75ns
+The critical path consists of the following:
+	bus access on port 'gmem' (filtro_michele/.settings/filtro.cpp:53) [47]  (8.75 ns)
+
+ <State 10>: 8.75ns
+The critical path consists of the following:
+	bus access on port 'gmem' (filtro_michele/.settings/filtro.cpp:53) [47]  (8.75 ns)
+
+ <State 11>: 0.331ns
+The critical path consists of the following:
+	'xor' operation ('tmp_9', filtro_michele/.settings/filtro.cpp:65) [57]  (0.331 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

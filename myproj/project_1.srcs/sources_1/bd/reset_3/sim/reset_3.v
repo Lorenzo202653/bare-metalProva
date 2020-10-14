@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
-//Date        : Thu Aug 27 12:40:40 2020
+//Date        : Mon Sep 28 10:37:02 2020
 //Host        : kidre-N551JX running 64-bit Ubuntu 16.04.7 LTS
 //Command     : generate_target reset_3.bd
 //Design      : reset_3
@@ -187,9 +187,8 @@ module OV7670_GRAYSCALE_TO_AXIS_imp_K6SLVG
   output outStream_raw_LUMA_tvalid;
   input [0:0]vsync;
 
-  wire [7:0]LF_valid_to_AXIS_outputStream_V_V_TDATA;
-  wire LF_valid_to_AXIS_outputStream_V_V_TREADY;
-  wire LF_valid_to_AXIS_outputStream_V_V_TVALID;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire [7:0]LF_valid_to_AXIS_outputStream_V_V_TDATA;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire LF_valid_to_AXIS_outputStream_V_V_TVALID;
   wire PCLK_1;
   wire [39:0]S00_AXI_1_ARADDR;
   wire [1:0]S00_AXI_1_ARBURST;
@@ -336,9 +335,10 @@ module OV7670_GRAYSCALE_TO_AXIS_imp_K6SLVG
   wire ddr_to_axis_reader_SD_0_outStream_channel_1_V_TVALID;
   wire [0:0]enable_raw_stream_1;
   wire [0:0]href_V_1;
+  (* DEBUG = "true" *) (* MARK_DEBUG *) wire mux_sd_ov_1_data_in_ov7670_V_V_TREADY;
   wire [7:0]mux_sd_ov_1_outputStream_V_V_TDATA;
-  wire mux_sd_ov_1_outputStream_V_V_TREADY;
   wire mux_sd_ov_1_outputStream_V_V_TVALID;
+  wire ov7670_LUMA_CHROMA_0_inStream_V_V_TREADY;
   wire [7:0]ov7670_LUMA_CHROMA_0_outStream_CHROMA_V_V_TDATA;
   wire ov7670_LUMA_CHROMA_0_outStream_CHROMA_V_V_TREADY;
   wire ov7670_LUMA_CHROMA_0_outStream_CHROMA_V_V_TVALID;
@@ -451,7 +451,7 @@ module OV7670_GRAYSCALE_TO_AXIS_imp_K6SLVG
         .frame_valid(ov7670_interface_0_frame_valid_V),
         .line_valid(ov7670_interface_0_line_valid_V),
         .outputStream_V_V_TDATA(LF_valid_to_AXIS_outputStream_V_V_TDATA),
-        .outputStream_V_V_TREADY(LF_valid_to_AXIS_outputStream_V_V_TREADY),
+        .outputStream_V_V_TREADY(mux_sd_ov_1_data_in_ov7670_V_V_TREADY),
         .outputStream_V_V_TVALID(LF_valid_to_AXIS_outputStream_V_V_TVALID));
   reset_3_axi_interconnect_0_0 axi_interconnect_0
        (.ACLK(PCLK_1),
@@ -666,18 +666,23 @@ module OV7670_GRAYSCALE_TO_AXIS_imp_K6SLVG
         .s_axi_AXILiteS_WREADY(axi_interconnect_0_M00_AXI_WREADY),
         .s_axi_AXILiteS_WSTRB(axi_interconnect_0_M00_AXI_WSTRB),
         .s_axi_AXILiteS_WVALID(axi_interconnect_0_M00_AXI_WVALID));
+  reset_3_ila_0_1 ila_0
+       (.clk(PCLK_1),
+        .probe0(LF_valid_to_AXIS_outputStream_V_V_TVALID),
+        .probe1(mux_sd_ov_1_data_in_ov7670_V_V_TREADY),
+        .probe2(LF_valid_to_AXIS_outputStream_V_V_TDATA));
   reset_3_mux_sd_ov_1_0 mux_sd_ov_1
        (.ap_clk(PCLK_1),
         .ap_rst_n(proc_sys_reset_0_peripheral_aresetn),
         .ap_start(ap_start_1),
         .data_in_ov7670_V_V_TDATA(LF_valid_to_AXIS_outputStream_V_V_TDATA),
-        .data_in_ov7670_V_V_TREADY(LF_valid_to_AXIS_outputStream_V_V_TREADY),
+        .data_in_ov7670_V_V_TREADY(mux_sd_ov_1_data_in_ov7670_V_V_TREADY),
         .data_in_ov7670_V_V_TVALID(LF_valid_to_AXIS_outputStream_V_V_TVALID),
         .data_in_sd_V_V_TDATA(ddr_to_axis_reader_SD_0_outStream_channel_1_V_TDATA),
         .data_in_sd_V_V_TREADY(ddr_to_axis_reader_SD_0_outStream_channel_1_V_TREADY),
         .data_in_sd_V_V_TVALID(ddr_to_axis_reader_SD_0_outStream_channel_1_V_TVALID),
         .outputStream_V_V_TDATA(mux_sd_ov_1_outputStream_V_V_TDATA),
-        .outputStream_V_V_TREADY(mux_sd_ov_1_outputStream_V_V_TREADY),
+        .outputStream_V_V_TREADY(ov7670_LUMA_CHROMA_0_inStream_V_V_TREADY),
         .outputStream_V_V_TVALID(mux_sd_ov_1_outputStream_V_V_TVALID),
         .s_axi_AXILiteS_ARADDR(axi_interconnect_0_M01_AXI_ARADDR[4:0]),
         .s_axi_AXILiteS_ARREADY(axi_interconnect_0_M01_AXI_ARREADY),
@@ -702,7 +707,7 @@ module OV7670_GRAYSCALE_TO_AXIS_imp_K6SLVG
         .ap_start(ap_start_1),
         .enable_raw_stream(enable_raw_stream_1),
         .inStream_V_V_TDATA(mux_sd_ov_1_outputStream_V_V_TDATA),
-        .inStream_V_V_TREADY(mux_sd_ov_1_outputStream_V_V_TREADY),
+        .inStream_V_V_TREADY(ov7670_LUMA_CHROMA_0_inStream_V_V_TREADY),
         .inStream_V_V_TVALID(mux_sd_ov_1_outputStream_V_V_TVALID),
         .outStream_CHROMA_V_V_TDATA(ov7670_LUMA_CHROMA_0_outStream_CHROMA_V_V_TDATA),
         .outStream_CHROMA_V_V_TREADY(ov7670_LUMA_CHROMA_0_outStream_CHROMA_V_V_TREADY),
@@ -3288,7 +3293,7 @@ module m05_couplers_imp_1UDPX6Z
   assign m05_couplers_to_m05_couplers_WVALID = S_AXI_wvalid[0];
 endmodule
 
-(* CORE_GENERATION_INFO = "reset_3,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=reset_3,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=52,numReposBlks=29,numNonXlnxBlks=0,numHierBlks=23,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=9,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "reset_3.hwdef" *) 
+(* CORE_GENERATION_INFO = "reset_3,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=reset_3,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=53,numReposBlks=30,numNonXlnxBlks=0,numHierBlks=23,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=9,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "reset_3.hwdef" *) 
 module reset_3
    (LED_FRAME_VALID,
     OV7670_RESET,

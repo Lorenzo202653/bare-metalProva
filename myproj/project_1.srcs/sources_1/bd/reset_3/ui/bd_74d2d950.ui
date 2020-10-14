@@ -1,0 +1,60 @@
+{
+   ExpandedHierarchyInLayout: "",
+   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 TLS
+#  -string -flagsOSRD
+preplace port AXIM_READER_SD -pg 1 -y 300 -defaultsOSRD
+preplace port outStream_raw_LUMA -pg 1 -y 540 -defaultsOSRD
+preplace port S00_AXI -pg 1 -y 50 -defaultsOSRD
+preplace port ap_clk -pg 1 -y 70 -defaultsOSRD
+preplace port outStream_raw_CHROMA -pg 1 -y 560 -defaultsOSRD
+preplace port outStream_V_V -pg 1 -y 520 -defaultsOSRD
+preplace portBus vsync -pg 1 -y 540 -defaultsOSRD
+preplace portBus ap_start -pg 1 -y 440 -defaultsOSRD
+preplace portBus LED_FRAME_VALID -pg 1 -y 720 -defaultsOSRD
+preplace portBus enable_raw_stream -pg 1 -y 620 -defaultsOSRD
+preplace portBus href -pg 1 -y 520 -defaultsOSRD
+preplace portBus ap_rst -pg 1 -y 480 -defaultsOSRD
+preplace portBus data_in -pg 1 -y 500 -defaultsOSRD
+preplace portBus ap_rst_n -pg 1 -y 90 -defaultsOSRD
+preplace inst ddr_to_axis_reader_SD_0 -pg 1 -lvl 2 -y 230 -defaultsOSRD
+preplace inst ov7670_LUMA_CHROMA_0 -pg 1 -lvl 5 -y 540 -defaultsOSRD
+preplace inst c_counter_binary_0 -pg 1 -lvl 5 -y 730 -defaultsOSRD
+preplace inst ila_0 -pg 1 -lvl 3 -y 720 -defaultsOSRD
+preplace inst axi_interconnect_0 -pg 1 -lvl 1 -y 130 -defaultsOSRD
+preplace inst axi_interconnect_1 -pg 1 -lvl 5 -y 300 -defaultsOSRD
+preplace inst ov7670_interface_0 -pg 1 -lvl 1 -y 480 -defaultsOSRD
+preplace inst mux_sd_ov_1 -pg 1 -lvl 4 -y 450 -defaultsOSRD
+preplace inst LF_valid_to_AXIS -pg 1 -lvl 2 -y 540 -defaultsOSRD
+preplace netloc mux_sd_ov_1_outputStream_V_V_TDATA 1 4 1 1840
+preplace netloc href_V_1 1 0 1 NJ
+preplace netloc PCLK_1 1 0 5 30 280 440 660 960 630 1180 630 1860
+preplace netloc mux_sd_ov_1_data_in_ov7670_V_V_TREADY 1 2 2 940 480 N
+preplace netloc LF_valid_to_AXIS_outputStream_V_V_TDATA 1 2 2 950 500 N
+preplace netloc ov7670_LUMA_CHROMA_0_outStream_CHROMA_V_V 1 5 1 NJ
+preplace netloc ddr_to_axis_reader_SD_0_m_axi_base_ddr_addr 1 2 3 NJ 240 N 240 N
+preplace netloc ap_start_1 1 0 5 20 600 410 400 N 400 1190J 600 1870J
+preplace netloc mux_sd_ov_1_outputStream_V_V 1 4 1 1900
+preplace netloc LF_valid_to_AXIS_outputStream_V_V_TVALID 1 2 2 930 460 N
+preplace netloc ov7670_LUMA_CHROMA_0_inStream_V_V_TREADY 1 4 1 1850
+preplace netloc mux_sd_ov_1_outputStream_V_V_TVALID 1 4 1 1890
+preplace netloc reset_24M_peripheral_reset 1 0 1 NJ
+preplace netloc ov7670_interface_0_data_out_V 1 1 1 430
+preplace netloc data_in_V_1 1 0 1 NJ
+preplace netloc vsync_V_1 1 0 1 NJ
+preplace netloc ov7670_interface_0_frame_valid_V 1 1 4 400 810 NJ 810 1180J 730 NJ
+preplace netloc ov7670_LUMA_CHROMA_0_outStream_grayscale_V_V 1 5 1 NJ
+preplace netloc S00_AXI_1 1 0 1 NJ
+preplace netloc axi_interconnect_0_M00_AXI 1 1 1 460
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 0 5 20 270 460 420 N 420 1160 610 1880
+preplace netloc axi_interconnect_0_M01_AXI 1 1 3 NJ 140 N 140 1190
+preplace netloc ov7670_interface_0_line_valid_V 1 1 1 420
+preplace netloc ov7670_LUMA_CHROMA_0_outStream_LUMA_V_V 1 5 1 NJ
+preplace netloc axi_interconnect_1_M00_AXI 1 5 1 NJ
+preplace netloc ddr_to_axis_reader_SD_0_outStream_channel_1_V 1 2 2 N 200 1180
+preplace netloc LF_valid_to_AXIS_outputStream_V_V 1 2 2 920 440 N
+preplace netloc c_counter_binary_0_THRESH0 1 5 1 NJ
+preplace netloc enable_raw_stream_1 1 0 5 NJ 620 450J 410 NJ 410 1170J 620 NJ
+levelinfo -pg 1 0 220 690 1060 1540 2160 2440 -top -130 -bot 920
+",
+}
+0

@@ -1,0 +1,43 @@
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2018.1/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'kidre' on host 'kidre-N551JX' (Linux_x86_64 version 4.15.0-118-generic) on Thu Oct 08 19:03:16 CEST 2020
+INFO: [HLS 200-10] On os Ubuntu 16.04.7 LTS
+INFO: [HLS 200-10] In directory '/media/kidre/Dati/GIT_TEST/bare-metalProva/IP_HLS_PROVA'
+INFO: [HLS 200-10] Opening project '/media/kidre/Dati/GIT_TEST/bare-metalProva/IP_HLS_PROVA/interface_prova'.
+INFO: [HLS 200-10] Adding design file 'interface_prova/.settings/7670inter_prova.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'interface_prova/.settings/7670inter_prova.h' to the project
+INFO: [HLS 200-10] Opening solution '/media/kidre/Dati/GIT_TEST/bare-metalProva/IP_HLS_PROVA/interface_prova/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu3eg-sbva484-1-e'
+INFO: [HLS 200-10] Analyzing design file 'interface_prova/.settings/7670inter_prova.cpp' ...
+WARNING: [HLS 200-40] In file included from interface_prova/.settings/7670inter_prova.cpp:1:
+In file included from interface_prova/.settings/7670inter_prova.cpp:1:
+interface_prova/.settings/7670inter_prova.h:32:6: error: expected unqualified-id
+void 7670inter_prova(volatile uint8_t data_in, bit href, bit vsync, hls::stream<uint8_t> &data_out, volatile bit *line_valid, volatile bit *frame_valid);
+     ^
+In file included from interface_prova/.settings/7670inter_prova.cpp:1:
+interface_prova/.settings/7670inter_prova.cpp:5:6: error: expected unqualified-id
+void 7670inter_prova(volatile uint8_t data_in, bit href, bit vsync, hls::stream<uint8_t> &data_out, volatile bit *line_valid, volatile bit *frame_valid)
+     ^
+2 errors generated.
+ERROR: [HLS 200-70] Compilation errors found:
+Pragma processor failed: In file included from interface_prova/.settings/7670inter_prova.cpp:1:
+In file included from interface_prova/.settings/7670inter_prova.cpp:1:
+interface_prova/.settings/7670inter_prova.h:32:6: error: expected unqualified-id
+void 7670inter_prova(volatile uint8_t data_in, bit href, bit vsync, hls::stream<uint8_t> &data_out, volatile bit *line_valid, volatile bit *frame_valid);
+     ^
+In file included from interface_prova/.settings/7670inter_prova.cpp:1:
+interface_prova/.settings/7670inter_prova.cpp:5:6: error: expected unqualified-id
+void 7670inter_prova(volatile uint8_t data_in, bit href, bit vsync, hls::stream<uint8_t> &data_out, volatile bit *line_valid, volatile bit *frame_valid)
+     ^
+2 errors generated.
+Failed checking during preprocessing.
+    while executing
+"source /media/kidre/Dati/GIT_TEST/bare-metalProva/IP_HLS_PROVA/interface_prova/solution1/csynth.tcl"
+    invoked from within
+"hls::main /media/kidre/Dati/GIT_TEST/bare-metalProva/IP_HLS_PROVA/interface_prova/solution1/csynth.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$args"
+    (procedure "hls_proc" line 5)
+    invoked from within
+"hls_proc $argv"

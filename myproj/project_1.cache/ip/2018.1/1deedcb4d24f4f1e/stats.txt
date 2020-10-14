@@ -1,0 +1,3 @@
+NumberHits:1
+Timestamp: Mon Sep 21 09:41:07 UTC 2020
+VLNV: xilinx.com:hls:ov7670_prova:1.0

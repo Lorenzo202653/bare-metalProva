@@ -6301,6 +6301,21 @@
           <spirit:configurableElementValue spirit:referenceId="appcore">xilinx.com:ip:axi_interconnect:2.1</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>ila_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="ila" spirit:vendor="xilinx.com" spirit:version="6.2"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">reset_3_ila_0_1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_NUM_OF_PROBES">3</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_EN_STRG_QUAL">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_PROBE2_MU_CNT">2</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_PROBE1_MU_CNT">2</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_PROBE0_MU_CNT">2</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="ALL_PROBE_SAME_MU_CNT">2</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_ENABLE_ILA_AXI_MON">false</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_MONITOR_TYPE">Native</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
     </spirit:componentInstances>
     <spirit:interconnections>
       <spirit:interconnection>
@@ -6350,6 +6365,7 @@
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="S00_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="M01_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="M00_ACLK"/>
+        <spirit:internalPortReference spirit:componentRef="ila_0" spirit:portRef="clk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>ap_start_1</spirit:name>
@@ -6419,6 +6435,51 @@
         <spirit:name>vsync_V_1</spirit:name>
         <spirit:externalPortReference spirit:portRef="vsync"/>
         <spirit:internalPortReference spirit:componentRef="ov7670_interface_0" spirit:portRef="vsync_V"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>mux_sd_ov_1_outputStream_V_V_TVALID</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="mux_sd_ov_1" spirit:portRef="outputStream_V_V_TVALID"/>
+        <spirit:internalPortReference spirit:componentRef="ov7670_LUMA_CHROMA_0" spirit:portRef="inStream_V_V_TVALID"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>ov7670_LUMA_CHROMA_0_inStream_V_V_TREADY</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="ov7670_LUMA_CHROMA_0" spirit:portRef="inStream_V_V_TREADY"/>
+        <spirit:internalPortReference spirit:componentRef="mux_sd_ov_1" spirit:portRef="outputStream_V_V_TREADY"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>mux_sd_ov_1_outputStream_V_V_TDATA</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="mux_sd_ov_1" spirit:portRef="outputStream_V_V_TDATA"/>
+        <spirit:internalPortReference spirit:componentRef="ov7670_LUMA_CHROMA_0" spirit:portRef="inStream_V_V_TDATA"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>LF_valid_to_AXIS_outputStream_V_V_TDATA</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="LF_valid_to_AXIS" spirit:portRef="outputStream_V_V_TDATA"/>
+        <spirit:internalPortReference spirit:componentRef="mux_sd_ov_1" spirit:portRef="data_in_ov7670_V_V_TDATA"/>
+        <spirit:internalPortReference spirit:componentRef="ila_0" spirit:portRef="probe2"/>
+        <bd:hdl_attributes>
+          <bd:hdl_attribute bd:name="DEBUG" bd:value="true"/>
+          <bd:hdl_attribute bd:name="MARK_DEBUG" bd:value="true"/>
+        </bd:hdl_attributes>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>mux_sd_ov_1_data_in_ov7670_V_V_TREADY</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="mux_sd_ov_1" spirit:portRef="data_in_ov7670_V_V_TREADY"/>
+        <spirit:internalPortReference spirit:componentRef="LF_valid_to_AXIS" spirit:portRef="outputStream_V_V_TREADY"/>
+        <spirit:internalPortReference spirit:componentRef="ila_0" spirit:portRef="probe1"/>
+        <bd:hdl_attributes>
+          <bd:hdl_attribute bd:name="DEBUG" bd:value="true"/>
+          <bd:hdl_attribute bd:name="MARK_DEBUG" bd:value="true"/>
+        </bd:hdl_attributes>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>LF_valid_to_AXIS_outputStream_V_V_TVALID</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="LF_valid_to_AXIS" spirit:portRef="outputStream_V_V_TVALID"/>
+        <spirit:internalPortReference spirit:componentRef="mux_sd_ov_1" spirit:portRef="data_in_ov7670_V_V_TVALID"/>
+        <spirit:internalPortReference spirit:componentRef="ila_0" spirit:portRef="probe0"/>
+        <bd:hdl_attributes>
+          <bd:hdl_attribute bd:name="DEBUG" bd:value="true"/>
+          <bd:hdl_attribute bd:name="MARK_DEBUG" bd:value="true"/>
+        </bd:hdl_attributes>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
     <spirit:hierConnections>

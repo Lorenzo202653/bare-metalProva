@@ -1,0 +1,9 @@
+<annotationInfo>
+<item  id="39" filename="filtro_prova/.settings/filtro_prova.cpp" linenumber="53" name="tmp_3" contextFuncName="ov7670_prova" moduleName="ov7670_prova" rtlName="tmp_3_fu_124_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="20" fileDirectory="/home/kidre"></item>
+<item  id="40" filename="filtro_prova/.settings/filtro_prova.cpp" linenumber="53" name="t_V" contextFuncName="ov7670_prova" moduleName="ov7670_prova" rtlName="t_V_fu_130_p3" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="32" fileDirectory="/home/kidre"></item>
+<item  id="41" filename="filtro_prova/.settings/filtro_prova.cpp" linenumber="55" name="tmp" contextFuncName="ov7670_prova" moduleName="ov7670_prova" rtlName="tmp_fu_138_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/kidre"></item>
+<item  id="42" filename="filtro_prova/.settings/filtro_prova.cpp" linenumber="55" name="offset" contextFuncName="ov7670_prova" moduleName="ov7670_prova" rtlName="offset_fu_141_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="39" fileDirectory="/home/kidre"></item>
+<item  id="43" filename="filtro_prova/.settings/filtro_prova.cpp" linenumber="59" name="tmp_7" contextFuncName="ov7670_prova" moduleName="ov7670_prova" rtlName="tmp_7_fu_147_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/kidre"></item>
+<item  id="48" filename="filtro_prova/.settings/filtro_prova.cpp" linenumber="60" name="tmp_8" contextFuncName="ov7670_prova" moduleName="ov7670_prova" rtlName="tmp_8_fu_157_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="39" fileDirectory="/home/kidre"></item>
+<item  id="57" filename="filtro_prova/.settings/filtro_prova.cpp" linenumber="73" name="tmp_s" contextFuncName="ov7670_prova" moduleName="ov7670_prova" rtlName="tmp_s_fu_169_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="2" fileDirectory="/home/kidre"></item>
+</annotationInfo>

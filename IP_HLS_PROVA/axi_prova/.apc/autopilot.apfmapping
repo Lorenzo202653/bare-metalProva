@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="axi_write_prova.cpp" path="/media/kidre/Dati/GIT_TEST/IP_HLS_PROVA/axi_prova/.settings/axi_write_prova.cpp"/>
+    <originFiles name="axi_write_prova.h" path="/media/kidre/Dati/GIT_TEST/IP_HLS_PROVA/axi_prova/.settings/axi_write_prova.h"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>

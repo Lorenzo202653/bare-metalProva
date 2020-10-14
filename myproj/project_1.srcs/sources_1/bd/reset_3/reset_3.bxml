@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="35">
   <CompositeFile CompositeFileTopName="reset_3" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1598524881"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1598524881"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1598524881"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1598524881"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1601282224"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1601282224"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1601282224"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1601282224"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip/reset_3_ENABLE_RAW_STREAM_0/reset_3_ENABLE_RAW_STREAM_0.xci" Type="IP">
         <Instance HierarchyPath="ENABLE_RAW_STREAM"/>
@@ -56,7 +56,6 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip/reset_3_processing_system7_0_axi_periph_0/reset_3_processing_system7_0_axi_periph_0.xci" Type="IP">
-        <Instance HierarchyPath="processing_system7_0_axi_periph"/>
         <Properties IsEditable="false" IsVisible="false" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -96,7 +95,6 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip/reset_3_axi_mem_intercon_reader_0/reset_3_axi_mem_intercon_reader_0.xci" Type="IP">
-        <Instance HierarchyPath="VDMA/axi_mem_intercon_reader"/>
         <Properties IsEditable="false" IsVisible="false" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -104,7 +102,6 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip/reset_3_axi_mem_intercon_writer_0/reset_3_axi_mem_intercon_writer_0.xci" Type="IP">
-        <Instance HierarchyPath="VDMA/axi_mem_intercon_writer"/>
         <Properties IsEditable="false" IsVisible="false" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -184,7 +181,6 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip/reset_3_axi_interconnect_1_0/reset_3_axi_interconnect_1_0.xci" Type="IP">
-        <Instance HierarchyPath="OV7670_GRAYSCALE_TO_AXIS/axi_interconnect_1"/>
         <Properties IsEditable="false" IsVisible="false" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -232,7 +228,6 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip/reset_3_axi_interconnect_0_0/reset_3_axi_interconnect_0_0.xci" Type="IP">
-        <Instance HierarchyPath="OV7670_GRAYSCALE_TO_AXIS/axi_interconnect_0"/>
         <Properties IsEditable="false" IsVisible="false" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -256,6 +251,14 @@
       <File Name="sim/reset_3.v" Type="Verilog">
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/reset_3_ila_0_1/reset_3_ila_0_1.xci" Type="IP">
+        <Instance HierarchyPath="OV7670_GRAYSCALE_TO_AXIS/ila_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip/reset_3_auto_ds_1/reset_3_auto_ds_1.xci" Type="IP">

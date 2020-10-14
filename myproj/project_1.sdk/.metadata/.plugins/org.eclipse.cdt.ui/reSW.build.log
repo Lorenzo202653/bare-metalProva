@@ -1,0 +1,30 @@
+09:15:47 **** Auto Build of configuration Debug for project reSW ****
+make all 
+Building file: ../src/application.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/application.o" -I../../des_buffer_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/application.d" -MT"src/application.o" -o "src/application.o" "../src/application.c"
+In file included from ../src/application.h:14:0,
+                 from ../src/application.c:9:
+../src/ddr_to_axis_reader.h:14:1: error: unknown type name 'XDdr_to_axis_reader'
+ XDdr_to_axis_reader reader;
+ ^~~~~~~~~~~~~~~~~~~
+In file included from ../src/application.h:15:0,
+                 from ../src/application.c:9:
+../src/ddr_to_axis_reader_SD.h:12:1: error: unknown type name 'XDdr_to_axis_reader_sd'
+ XDdr_to_axis_reader_sd reader_sd;
+ ^~~~~~~~~~~~~~~~~~~~~~
+In file included from ../src/platform.h:21:0,
+                 from ../src/interrupts.h:15,
+                 from ../src/application.h:18,
+                 from ../src/application.c:9:
+../src/mux_sd_ov.h:6:8: error: unknown type name 'XMux_sd_ov'
+ static XMux_sd_ov mux;
+        ^~~~~~~~~~
+../src/mux_sd_ov.h:6:19: warning: 'mux' defined but not used [-Wunused-variable]
+ static XMux_sd_ov mux;
+                   ^~~
+src/subdir.mk:72: set di istruzioni per l'obiettivo "src/application.o" non riuscito
+make: *** [src/application.o] Errore 1
+
+09:15:47 Build Finished (took 514ms)
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="ov7670_memcpy" xd:componentRef="ov7670_memcpy" xd:initiationInterval="9" xd:clockPeriod="100.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
+  <xd:arg xd:name="*(data_out)" xd:originalName="data_out" xd:direction="inout" xd:interfaceRef="m_axi_gmem" xd:busTypeRef="aximm" xd:arraySize="32" xd:dataWidth="8" xd:bufferDirection="out"/>
+  <xd:arg xd:name="data_in" xd:originalName="data_in" xd:direction="in" xd:interfaceRef="data_in" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="8"/>
+  <xd:arg xd:name="href" xd:originalName="href" xd:direction="in" xd:interfaceRef="href_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="1"/>
+  <xd:arg xd:name="vsync" xd:originalName="vsync" xd:direction="in" xd:interfaceRef="vsync_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="1"/>
+  <xd:arg xd:name="data_out" xd:originalName="data_out" xd:direction="in" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:aximmInterfaceRef="m_axi_gmem" xd:dataWidth="32" xd:offset="0x10" xd:handshakeRef="ap_none"/>
+  <xd:arg xd:name="*(line_valid)" xd:originalName="line_valid" xd:direction="out" xd:interfaceRef="line_valid_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="1" xd:firstOut="1"/>
+  <xd:arg xd:name="*(frame_valid)" xd:originalName="frame_valid" xd:direction="out" xd:interfaceRef="frame_valid_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="1" xd:firstOut="1"/>
+  <xd:latencyEstimates xd:best-case="2" xd:worst-case="8" xd:average-case="3"/>
+  <xd:resourceEstimates xd:LUT="1192" xd:FF="741" xd:BRAM="2" xd:DSP="0"/>
+</xd:acceleratorMap>

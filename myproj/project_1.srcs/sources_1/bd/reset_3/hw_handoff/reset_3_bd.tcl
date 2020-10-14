@@ -337,6 +337,19 @@ proc create_hier_cell_OV7670_GRAYSCALE_TO_AXIS { parentCell nameHier } {
   # Create instance: ddr_to_axis_reader_SD_0, and set properties
   set ddr_to_axis_reader_SD_0 [ create_bd_cell -type ip -vlnv xilinx.com:hls:ddr_to_axis_reader_SD:1.0 ddr_to_axis_reader_SD_0 ]
 
+  # Create instance: ila_0, and set properties
+  set ila_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_0 ]
+  set_property -dict [ list \
+   CONFIG.ALL_PROBE_SAME_MU_CNT {2} \
+   CONFIG.C_ENABLE_ILA_AXI_MON {false} \
+   CONFIG.C_EN_STRG_QUAL {1} \
+   CONFIG.C_MONITOR_TYPE {Native} \
+   CONFIG.C_NUM_OF_PROBES {3} \
+   CONFIG.C_PROBE0_MU_CNT {2} \
+   CONFIG.C_PROBE1_MU_CNT {2} \
+   CONFIG.C_PROBE2_MU_CNT {2} \
+ ] $ila_0
+
   # Create instance: mux_sd_ov_1, and set properties
   set mux_sd_ov_1 [ create_bd_cell -type ip -vlnv xilinx.com:hls:mux_sd_ov:1.0 mux_sd_ov_1 ]
 
@@ -360,12 +373,27 @@ proc create_hier_cell_OV7670_GRAYSCALE_TO_AXIS { parentCell nameHier } {
   connect_bd_intf_net -intf_net ov7670_LUMA_CHROMA_0_outStream_grayscale_V_V [get_bd_intf_pins outStream_V_V] [get_bd_intf_pins ov7670_LUMA_CHROMA_0/outStream_grayscale_V_V]
 
   # Create port connections
-  connect_bd_net -net PCLK_1 [get_bd_pins ap_clk] [get_bd_pins LF_valid_to_AXIS/ap_clk] [get_bd_pins axi_interconnect_0/ACLK] [get_bd_pins axi_interconnect_0/M00_ACLK] [get_bd_pins axi_interconnect_0/M01_ACLK] [get_bd_pins axi_interconnect_0/S00_ACLK] [get_bd_pins axi_interconnect_1/ACLK] [get_bd_pins axi_interconnect_1/M00_ACLK] [get_bd_pins axi_interconnect_1/S00_ACLK] [get_bd_pins ddr_to_axis_reader_SD_0/ap_clk] [get_bd_pins mux_sd_ov_1/ap_clk] [get_bd_pins ov7670_LUMA_CHROMA_0/ap_clk] [get_bd_pins ov7670_interface_0/ap_clk]
+  connect_bd_net -net LF_valid_to_AXIS_outputStream_V_V_TDATA [get_bd_pins LF_valid_to_AXIS/outputStream_V_V_TDATA] [get_bd_pins ila_0/probe2] [get_bd_pins mux_sd_ov_1/data_in_ov7670_V_V_TDATA]
+  set_property -dict [ list \
+HDL_ATTRIBUTE.DEBUG {true} \
+ ] [get_bd_nets LF_valid_to_AXIS_outputStream_V_V_TDATA]
+  connect_bd_net -net LF_valid_to_AXIS_outputStream_V_V_TVALID [get_bd_pins LF_valid_to_AXIS/outputStream_V_V_TVALID] [get_bd_pins ila_0/probe0] [get_bd_pins mux_sd_ov_1/data_in_ov7670_V_V_TVALID]
+  set_property -dict [ list \
+HDL_ATTRIBUTE.DEBUG {true} \
+ ] [get_bd_nets LF_valid_to_AXIS_outputStream_V_V_TVALID]
+  connect_bd_net -net PCLK_1 [get_bd_pins ap_clk] [get_bd_pins LF_valid_to_AXIS/ap_clk] [get_bd_pins axi_interconnect_0/ACLK] [get_bd_pins axi_interconnect_0/M00_ACLK] [get_bd_pins axi_interconnect_0/M01_ACLK] [get_bd_pins axi_interconnect_0/S00_ACLK] [get_bd_pins axi_interconnect_1/ACLK] [get_bd_pins axi_interconnect_1/M00_ACLK] [get_bd_pins axi_interconnect_1/S00_ACLK] [get_bd_pins ddr_to_axis_reader_SD_0/ap_clk] [get_bd_pins ila_0/clk] [get_bd_pins mux_sd_ov_1/ap_clk] [get_bd_pins ov7670_LUMA_CHROMA_0/ap_clk] [get_bd_pins ov7670_interface_0/ap_clk]
   connect_bd_net -net ap_start_1 [get_bd_pins ap_start] [get_bd_pins LF_valid_to_AXIS/ap_start] [get_bd_pins mux_sd_ov_1/ap_start] [get_bd_pins ov7670_LUMA_CHROMA_0/ap_start] [get_bd_pins ov7670_interface_0/ap_start]
   connect_bd_net -net c_counter_binary_0_THRESH0 [get_bd_pins LED_FRAME_VALID] [get_bd_pins c_counter_binary_0/THRESH0]
   connect_bd_net -net data_in_V_1 [get_bd_pins data_in] [get_bd_pins ov7670_interface_0/data_in_V]
   connect_bd_net -net enable_raw_stream_1 [get_bd_pins enable_raw_stream] [get_bd_pins ov7670_LUMA_CHROMA_0/enable_raw_stream]
   connect_bd_net -net href_V_1 [get_bd_pins href] [get_bd_pins ov7670_interface_0/href_V]
+  connect_bd_net -net mux_sd_ov_1_data_in_ov7670_V_V_TREADY [get_bd_pins LF_valid_to_AXIS/outputStream_V_V_TREADY] [get_bd_pins ila_0/probe1] [get_bd_pins mux_sd_ov_1/data_in_ov7670_V_V_TREADY]
+  set_property -dict [ list \
+HDL_ATTRIBUTE.DEBUG {true} \
+ ] [get_bd_nets mux_sd_ov_1_data_in_ov7670_V_V_TREADY]
+  connect_bd_net -net mux_sd_ov_1_outputStream_V_V_TDATA [get_bd_pins mux_sd_ov_1/outputStream_V_V_TDATA] [get_bd_pins ov7670_LUMA_CHROMA_0/inStream_V_V_TDATA]
+  connect_bd_net -net mux_sd_ov_1_outputStream_V_V_TVALID [get_bd_pins mux_sd_ov_1/outputStream_V_V_TVALID] [get_bd_pins ov7670_LUMA_CHROMA_0/inStream_V_V_TVALID]
+  connect_bd_net -net ov7670_LUMA_CHROMA_0_inStream_V_V_TREADY [get_bd_pins mux_sd_ov_1/outputStream_V_V_TREADY] [get_bd_pins ov7670_LUMA_CHROMA_0/inStream_V_V_TREADY]
   connect_bd_net -net ov7670_interface_0_data_out_V [get_bd_pins LF_valid_to_AXIS/data_in_V] [get_bd_pins ov7670_interface_0/data_out_V]
   connect_bd_net -net ov7670_interface_0_frame_valid_V [get_bd_pins LF_valid_to_AXIS/frame_valid] [get_bd_pins c_counter_binary_0/CLK] [get_bd_pins ov7670_interface_0/frame_valid_V]
   connect_bd_net -net ov7670_interface_0_line_valid_V [get_bd_pins LF_valid_to_AXIS/line_valid] [get_bd_pins ov7670_interface_0/line_valid_V]

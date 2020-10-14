@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Register 'inner_index_V' is power-on initialization." projectName="filtro_prova" solutionName="solution1" date="2020-09-21T11:35:32.858+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'grayscale_valid' is power-on initialization." projectName="filtro_prova" solutionName="solution1" date="2020-09-21T11:35:32.834+0200" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-505] Ignore pipeline pragma in Loop whose tripcount is only 1 in function 'ov7670_prova'." projectName="filtro_prova" solutionName="solution1" date="2020-09-21T11:35:30.413+0200" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

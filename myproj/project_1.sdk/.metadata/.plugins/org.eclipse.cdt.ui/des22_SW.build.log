@@ -1,0 +1,15 @@
+14:18:20 **** Build of configuration Debug for project des22_SW ****
+make all 
+Building file: ../src/read_sd_card.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/read_sd_card.o" -I../../des22_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/read_sd_card.d" -MT"src/read_sd_card.o" -o "src/read_sd_card.o" "../src/read_sd_card.c"
+In file included from ../src/read_sd_card.c:7:0:
+../src/read_sd_card.h:10:10: fatal error: xparameters.h: No such file or directory
+src/subdir.mk:63: set di istruzioni per l'obiettivo "src/read_sd_card.o" non riuscito
+ #include "xparameters.h"
+          ^~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/read_sd_card.o] Errore 1
+
+14:18:20 Build Finished (took 523ms)
+

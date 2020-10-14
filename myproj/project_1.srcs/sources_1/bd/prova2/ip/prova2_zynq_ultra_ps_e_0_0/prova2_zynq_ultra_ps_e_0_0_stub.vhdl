@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
--- Date        : Fri Sep  4 12:26:20 2020
+-- Date        : Fri Sep  4 12:26:17 2020
 -- Host        : kidre-N551JX running 64-bit Ubuntu 16.04.7 LTS
--- Command     : write_vhdl -force -mode synth_stub
---               /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/prova2/ip/prova2_zynq_ultra_ps_e_0_0/prova2_zynq_ultra_ps_e_0_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top prova2_zynq_ultra_ps_e_0_0 -prefix
+--               prova2_zynq_ultra_ps_e_0_0_ prova2_zynq_ultra_ps_e_0_0_stub.vhdl
 -- Design      : prova2_zynq_ultra_ps_e_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xczu3eg-sbva484-1-e

@@ -249,7 +249,6 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip/prova2_auto_us_0/prova2_auto_us_0.xci" Type="IP">
-        <Instance HierarchyPath="VDMA/axi_mem_intercon_writer/s00_couplers/auto_us"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -257,7 +256,6 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip/prova2_auto_ds_0/prova2_auto_ds_0.xci" Type="IP">
-        <Instance HierarchyPath="processing_system7_0_axi_periph/s00_couplers/auto_ds"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -265,7 +263,6 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip/prova2_auto_pc_0/prova2_auto_pc_0.xci" Type="IP">
-        <Instance HierarchyPath="processing_system7_0_axi_periph/s00_couplers/auto_pc"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

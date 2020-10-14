@@ -1,0 +1,2 @@
+ov7670_diretto_AXILiteS_s_axi
+ov7670_diretto

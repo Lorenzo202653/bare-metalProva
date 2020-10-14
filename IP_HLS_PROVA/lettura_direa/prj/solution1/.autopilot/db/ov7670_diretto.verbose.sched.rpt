@@ -1,0 +1,434 @@
+
+
+================================================================
+== Vivado HLS Report for 'ov7670_diretto'
+================================================================
+* Date:           Tue Oct  6 16:43:24 2020
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        prj
+* Solution:       solution1
+* Product family: zynquplus
+* Target device:  xczu9eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.750|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+------+-----+------+---------+
+    |   Latency  |  Interval  | Pipeline|
+    | min |  max | min |  max |   Type  |
+    +-----+------+-----+------+---------+
+    |    1|  1294|    1|  1294|   none  |
+    +-----+------+-----+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------------+------+------+----------+-----------+-----------+------+----------+
+        |                           |   Latency   | Iteration|  Initiation Interval  | Trip |          |
+        |         Loop Name         |  min |  max |  Latency |  achieved |   target  | Count| Pipelined|
+        +---------------------------+------+------+----------+-----------+-----------+------+----------+
+        |- memcpy.data_out.tmp.gep  |  1281|  1281|         3|          1|          1|  1280|    yes   |
+        +---------------------------+------+------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 23
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 3, States = { 16 17 18 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / (!vsync_V_read & first_load)
+	23  / (!first_load & !tmp_4) | (!first_load & href_V_read) | (!first_load & !or_cond) | (vsync_V_read & !tmp_4) | (vsync_V_read & href_V_read) | (vsync_V_read & !or_cond)
+	9  / (!first_load & or_cond & !href_V_read & tmp_4) | (vsync_V_read & or_cond & !href_V_read & tmp_4)
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	23  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+	19  / (exitcond)
+	17  / (!exitcond)
+17 --> 
+	18  / true
+18 --> 
+	16  / true
+19 --> 
+	20  / true
+20 --> 
+	21  / true
+21 --> 
+	22  / true
+22 --> 
+	23  / true
+23 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.01>
+ST_1 : Operation 24 [1/1] (1.00ns)   --->   "%data_out_offset_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %data_out_offset)"   --->   Operation 24 'read' 'data_out_offset_read' <Predicate = true> <Delay = 1.00> <Core = "s_axilite">   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%vsync_V_read = call i1 @_ssdm_op_Read.ap_none.i1(i1 %vsync_V)"   --->   Operation 25 'read' 'vsync_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%href_V_read = call i1 @_ssdm_op_Read.ap_none.i1(i1 %href_V)"   --->   Operation 26 'read' 'href_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%data_in_V_read = call i8 @_ssdm_op_Read.ap_none.i8(i8 %data_in_V)"   --->   Operation 27 'read' 'data_in_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%tmp_5 = sext i32 %data_out_offset_read to i64"   --->   Operation 28 'sext' 'tmp_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%tmp_5_cast = sext i32 %data_out_offset_read to i33"   --->   Operation 29 'sext' 'tmp_5_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%data_out_addr_1 = getelementptr i8* %data_out, i64 %tmp_5"   --->   Operation 30 'getelementptr' 'data_out_addr_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %data_out), !map !35"   --->   Operation 31 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8 %data_in_V), !map !41"   --->   Operation 32 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1 %href_V), !map !47"   --->   Operation 33 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1 %vsync_V), !map !51"   --->   Operation 34 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %line_valid_V), !map !55"   --->   Operation 35 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %frame_valid_V), !map !61"   --->   Operation 36 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([15 x i8]* @ov7670_diretto_str) nounwind"   --->   Operation 37 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8 %data_in_V, [8 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [lettura_diretta.cpp:9]   --->   Operation 38 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i1 %href_V, [8 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [lettura_diretta.cpp:10]   --->   Operation 39 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i1 %vsync_V, [8 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [lettura_diretta.cpp:11]   --->   Operation 40 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i1* %line_valid_V, [8 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [lettura_diretta.cpp:13]   --->   Operation 41 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i1* %frame_valid_V, [8 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [lettura_diretta.cpp:14]   --->   Operation 42 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %data_out, [6 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 32, [9 x i8]* @p_str3, [6 x i8]* @p_str4, [1 x i8]* @p_str1, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [lettura_diretta.cpp:16]   --->   Operation 43 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %data_out_offset, [10 x i8]* @mode, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 32, [1 x i8]* @bundle, [6 x i8]* @p_str4, [1 x i8]* @p_str1, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [lettura_diretta.cpp:16]   --->   Operation 44 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 0, [10 x i8]* @p_str5, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [lettura_diretta.cpp:17]   --->   Operation 45 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([1280 x i8]* @tmp, [1 x i8]* @p_str1, [12 x i8]* @p_str6, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)" [lettura_diretta.cpp:23]   --->   Operation 46 'specmemcore' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i32 1, [1 x i8]* @p_str1) nounwind" [lettura_diretta.cpp:26]   --->   Operation 47 'specreset' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i32* @count_lines, i32 1, [1 x i8]* @p_str1) nounwind" [lettura_diretta.cpp:27]   --->   Operation 48 'specreset' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i32* @count_readings, i32 1, [1 x i8]* @p_str1) nounwind" [lettura_diretta.cpp:28]   --->   Operation 49 'specreset' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecReset(i1* @first, i32 1, [1 x i8]* @p_str1) nounwind" [lettura_diretta.cpp:29]   --->   Operation 50 'specreset' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "br i1 %vsync_V_read, label %._crit_edge, label %1" [lettura_diretta.cpp:31]   --->   Operation 51 'br' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%first_load = load i1* @first, align 1" [lettura_diretta.cpp:31]   --->   Operation 52 'load' 'first_load' <Predicate = (!vsync_V_read)> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "br i1 %first_load, label %2, label %._crit_edge" [lettura_diretta.cpp:31]   --->   Operation 53 'br' <Predicate = (!vsync_V_read)> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "store i1 false, i1* @first, align 1" [lettura_diretta.cpp:38]   --->   Operation 54 'store' <Predicate = (!first_load) | (vsync_V_read)> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.28ns)   --->   "%p_not = xor i1 %vsync_V_read, true" [lettura_diretta.cpp:40]   --->   Operation 55 'xor' 'p_not' <Predicate = (!first_load) | (vsync_V_read)> <Delay = 0.28> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%count_lines_load = load i32* @count_lines, align 4" [lettura_diretta.cpp:40]   --->   Operation 56 'load' 'count_lines_load' <Predicate = (!first_load) | (vsync_V_read)> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.99ns)   --->   "%tmp_1_1 = icmp ult i32 %count_lines_load, 480" [lettura_diretta.cpp:40]   --->   Operation 57 'icmp' 'tmp_1_1' <Predicate = (!first_load) | (vsync_V_read)> <Delay = 0.99> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 58 [1/1] (0.28ns)   --->   "%or_cond = and i1 %tmp_1_1, %p_not" [lettura_diretta.cpp:40]   --->   Operation 58 'and' 'or_cond' <Predicate = (!first_load) | (vsync_V_read)> <Delay = 0.28> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "br i1 %or_cond, label %3, label %10" [lettura_diretta.cpp:40]   --->   Operation 59 'br' <Predicate = (!first_load) | (vsync_V_read)> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.99ns)   --->   "%tmp_1 = icmp eq i32 %count_lines_load, 480" [lettura_diretta.cpp:67]   --->   Operation 60 'icmp' 'tmp_1' <Predicate = (!first_load & !or_cond) | (vsync_V_read & !or_cond)> <Delay = 0.99> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 61 [1/1] (0.28ns)   --->   "%or_cond1 = and i1 %tmp_1, %p_not" [lettura_diretta.cpp:67]   --->   Operation 61 'and' 'or_cond1' <Predicate = (!first_load & !or_cond) | (vsync_V_read & !or_cond)> <Delay = 0.28> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_none.volatile.i1P(i1* %frame_valid_V, i1 false)" [lettura_diretta.cpp:67]   --->   Operation 62 'write' <Predicate = (!first_load & !or_cond) | (vsync_V_read & !or_cond)> <Delay = 0.00>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "br i1 %or_cond1, label %12, label %11" [lettura_diretta.cpp:67]   --->   Operation 63 'br' <Predicate = (!first_load & !or_cond) | (vsync_V_read & !or_cond)> <Delay = 0.00>
+ST_1 : Operation 64 [1/1] (0.65ns)   --->   "store i32 0, i32* @count_lines, align 4" [lettura_diretta.cpp:73]   --->   Operation 64 'store' <Predicate = (!first_load & !or_cond & !or_cond1) | (vsync_V_read & !or_cond & !or_cond1)> <Delay = 0.65>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "br label %12"   --->   Operation 65 'br' <Predicate = (!first_load & !or_cond & !or_cond1) | (vsync_V_read & !or_cond & !or_cond1)> <Delay = 0.00>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "br label %13"   --->   Operation 66 'br' <Predicate = (!first_load & !or_cond) | (vsync_V_read & !or_cond)> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_none.volatile.i1P(i1* %frame_valid_V, i1 true)" [lettura_diretta.cpp:43]   --->   Operation 67 'write' <Predicate = (!first_load & or_cond) | (vsync_V_read & or_cond)> <Delay = 0.00>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%count_readings_load = load i32* @count_readings, align 4" [lettura_diretta.cpp:47]   --->   Operation 68 'load' 'count_readings_load' <Predicate = (!first_load & or_cond) | (vsync_V_read & or_cond)> <Delay = 0.00>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "br i1 %href_V_read, label %4, label %5" [lettura_diretta.cpp:44]   --->   Operation 69 'br' <Predicate = (!first_load & or_cond) | (vsync_V_read & or_cond)> <Delay = 0.00>
+ST_1 : Operation 70 [1/1] (0.99ns)   --->   "%tmp_4 = icmp eq i32 %count_readings_load, 1280" [lettura_diretta.cpp:55]   --->   Operation 70 'icmp' 'tmp_4' <Predicate = (!first_load & or_cond & !href_V_read) | (vsync_V_read & or_cond & !href_V_read)> <Delay = 0.99> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "br i1 %tmp_4, label %6, label %7" [lettura_diretta.cpp:55]   --->   Operation 71 'br' <Predicate = (!first_load & or_cond & !href_V_read) | (vsync_V_read & or_cond & !href_V_read)> <Delay = 0.00>
+ST_1 : Operation 72 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_none.volatile.i1P(i1* %line_valid_V, i1 false)" [lettura_diretta.cpp:65]   --->   Operation 72 'write' <Predicate = (!first_load & or_cond & !href_V_read & !tmp_4) | (vsync_V_read & or_cond & !href_V_read & !tmp_4)> <Delay = 0.00>
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "br label %8"   --->   Operation 73 'br' <Predicate = (!first_load & or_cond & !href_V_read & !tmp_4) | (vsync_V_read & or_cond & !href_V_read & !tmp_4)> <Delay = 0.00>
+ST_1 : Operation 74 [1/1] (0.00ns)   --->   "%tmp_1_2 = trunc i32 %count_lines_load to i9" [lettura_diretta.cpp:40]   --->   Operation 74 'trunc' 'tmp_1_2' <Predicate = (!first_load & or_cond & !href_V_read & tmp_4) | (vsync_V_read & or_cond & !href_V_read & tmp_4)> <Delay = 0.00>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%p_shl = call i19 @_ssdm_op_BitConcatenate.i19.i9.i10(i9 %tmp_1_2, i10 0)" [lettura_diretta.cpp:57]   --->   Operation 75 'bitconcatenate' 'p_shl' <Predicate = (!first_load & or_cond & !href_V_read & tmp_4) | (vsync_V_read & or_cond & !href_V_read & tmp_4)> <Delay = 0.00>
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%p_shl_cast = zext i19 %p_shl to i20" [lettura_diretta.cpp:57]   --->   Operation 76 'zext' 'p_shl_cast' <Predicate = (!first_load & or_cond & !href_V_read & tmp_4) | (vsync_V_read & or_cond & !href_V_read & tmp_4)> <Delay = 0.00>
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "%p_shl6 = call i17 @_ssdm_op_BitConcatenate.i17.i9.i8(i9 %tmp_1_2, i8 0)" [lettura_diretta.cpp:57]   --->   Operation 77 'bitconcatenate' 'p_shl6' <Predicate = (!first_load & or_cond & !href_V_read & tmp_4) | (vsync_V_read & or_cond & !href_V_read & tmp_4)> <Delay = 0.00>
+ST_1 : Operation 78 [1/1] (0.00ns)   --->   "%p_shl6_cast = zext i17 %p_shl6 to i20" [lettura_diretta.cpp:57]   --->   Operation 78 'zext' 'p_shl6_cast' <Predicate = (!first_load & or_cond & !href_V_read & tmp_4) | (vsync_V_read & or_cond & !href_V_read & tmp_4)> <Delay = 0.00>
+ST_1 : Operation 79 [1/1] (0.88ns)   --->   "%offset = add i20 %p_shl6_cast, %p_shl_cast" [lettura_diretta.cpp:57]   --->   Operation 79 'add' 'offset' <Predicate = (!first_load & or_cond & !href_V_read & tmp_4) | (vsync_V_read & or_cond & !href_V_read & tmp_4)> <Delay = 0.88> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 80 [1/1] (0.00ns)   --->   "%tmp_6_cast = zext i20 %offset to i33" [lettura_diretta.cpp:58]   --->   Operation 80 'zext' 'tmp_6_cast' <Predicate = (!first_load & or_cond & !href_V_read & tmp_4) | (vsync_V_read & or_cond & !href_V_read & tmp_4)> <Delay = 0.00>
+ST_1 : Operation 81 [1/1] (1.01ns)   --->   "%data_out2_sum = add i33 %tmp_5_cast, %tmp_6_cast" [lettura_diretta.cpp:58]   --->   Operation 81 'add' 'data_out2_sum' <Predicate = (!first_load & or_cond & !href_V_read & tmp_4) | (vsync_V_read & or_cond & !href_V_read & tmp_4)> <Delay = 1.01> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 82 [1/1] (0.00ns)   --->   "%data_out2_sum_cast = sext i33 %data_out2_sum to i64" [lettura_diretta.cpp:58]   --->   Operation 82 'sext' 'data_out2_sum_cast' <Predicate = (!first_load & or_cond & !href_V_read & tmp_4) | (vsync_V_read & or_cond & !href_V_read & tmp_4)> <Delay = 0.00>
+ST_1 : Operation 83 [1/1] (0.00ns)   --->   "%data_out_addr = getelementptr i8* %data_out, i64 %data_out2_sum_cast" [lettura_diretta.cpp:58]   --->   Operation 83 'getelementptr' 'data_out_addr' <Predicate = (!first_load & or_cond & !href_V_read & tmp_4) | (vsync_V_read & or_cond & !href_V_read & tmp_4)> <Delay = 0.00>
+ST_1 : Operation 84 [2/2] (1.23ns)   --->   "%empty = load i8* getelementptr inbounds ([1280 x i8]* @tmp, i64 0, i64 0), align 16" [lettura_diretta.cpp:58]   --->   Operation 84 'load' 'empty' <Predicate = (!first_load & or_cond & !href_V_read & tmp_4) | (vsync_V_read & or_cond & !href_V_read & tmp_4)> <Delay = 1.23> <Core = "RAM_2P_BRAM">   --->   Core 42 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 1280> <RAM>
+ST_1 : Operation 85 [1/1] (0.00ns)   --->   "%tmp_2 = zext i32 %count_readings_load to i64" [lettura_diretta.cpp:47]   --->   Operation 85 'zext' 'tmp_2' <Predicate = (!first_load & or_cond & href_V_read) | (vsync_V_read & or_cond & href_V_read)> <Delay = 0.00>
+ST_1 : Operation 86 [1/1] (0.00ns)   --->   "%tmp_addr = getelementptr inbounds [1280 x i8]* @tmp, i64 0, i64 %tmp_2" [lettura_diretta.cpp:47]   --->   Operation 86 'getelementptr' 'tmp_addr' <Predicate = (!first_load & or_cond & href_V_read) | (vsync_V_read & or_cond & href_V_read)> <Delay = 0.00>
+ST_1 : Operation 87 [1/1] (1.23ns)   --->   "store i8 %data_in_V_read, i8* %tmp_addr, align 1" [lettura_diretta.cpp:47]   --->   Operation 87 'store' <Predicate = (!first_load & or_cond & href_V_read) | (vsync_V_read & or_cond & href_V_read)> <Delay = 1.23> <Core = "RAM_2P_BRAM">   --->   Core 42 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 1280> <RAM>
+ST_1 : Operation 88 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_none.volatile.i1P(i1* %line_valid_V, i1 true)" [lettura_diretta.cpp:52]   --->   Operation 88 'write' <Predicate = (!first_load & or_cond & href_V_read) | (vsync_V_read & or_cond & href_V_read)> <Delay = 0.00>
+ST_1 : Operation 89 [1/1] (1.01ns)   --->   "%tmp_3 = add i32 %count_readings_load, 1" [lettura_diretta.cpp:53]   --->   Operation 89 'add' 'tmp_3' <Predicate = (!first_load & or_cond & href_V_read) | (vsync_V_read & or_cond & href_V_read)> <Delay = 1.01> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 90 [1/1] (0.65ns)   --->   "store i32 %tmp_3, i32* @count_readings, align 4" [lettura_diretta.cpp:53]   --->   Operation 90 'store' <Predicate = (!first_load & or_cond & href_V_read) | (vsync_V_read & or_cond & href_V_read)> <Delay = 0.65>
+ST_1 : Operation 91 [1/1] (0.00ns)   --->   "br label %9" [lettura_diretta.cpp:54]   --->   Operation 91 'br' <Predicate = (!first_load & or_cond & href_V_read) | (vsync_V_read & or_cond & href_V_read)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 8.75>
+ST_2 : Operation 92 [1/1] (8.75ns)   --->   "%data_out_addr_2_req = call i1 @_ssdm_op_WriteReq.m_axi.i8P(i8* %data_out_addr_1, i32 1)" [lettura_diretta.cpp:35]   --->   Operation 92 'writereq' 'data_out_addr_2_req' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 3 <SV = 2> <Delay = 8.75>
+ST_3 : Operation 93 [1/1] (8.75ns)   --->   "call void @_ssdm_op_Write.m_axi.volatile.i8P(i8* %data_out_addr_1, i8 0, i1 true)" [lettura_diretta.cpp:35]   --->   Operation 93 'write' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 4 <SV = 3> <Delay = 8.75>
+ST_4 : Operation 94 [5/5] (8.75ns)   --->   "%data_out_addr_2_resp = call i1 @_ssdm_op_WriteResp.m_axi.i8P(i8* %data_out_addr_1)" [lettura_diretta.cpp:35]   --->   Operation 94 'writeresp' 'data_out_addr_2_resp' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 5 <SV = 4> <Delay = 8.75>
+ST_5 : Operation 95 [4/5] (8.75ns)   --->   "%data_out_addr_2_resp = call i1 @_ssdm_op_WriteResp.m_axi.i8P(i8* %data_out_addr_1)" [lettura_diretta.cpp:35]   --->   Operation 95 'writeresp' 'data_out_addr_2_resp' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 6 <SV = 5> <Delay = 8.75>
+ST_6 : Operation 96 [3/5] (8.75ns)   --->   "%data_out_addr_2_resp = call i1 @_ssdm_op_WriteResp.m_axi.i8P(i8* %data_out_addr_1)" [lettura_diretta.cpp:35]   --->   Operation 96 'writeresp' 'data_out_addr_2_resp' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 7 <SV = 6> <Delay = 8.75>
+ST_7 : Operation 97 [2/5] (8.75ns)   --->   "%data_out_addr_2_resp = call i1 @_ssdm_op_WriteResp.m_axi.i8P(i8* %data_out_addr_1)" [lettura_diretta.cpp:35]   --->   Operation 97 'writeresp' 'data_out_addr_2_resp' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 8 <SV = 7> <Delay = 8.75>
+ST_8 : Operation 98 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_none.volatile.i1P(i1* %frame_valid_V, i1 false)" [lettura_diretta.cpp:33]   --->   Operation 98 'write' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 99 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_none.volatile.i1P(i1* %line_valid_V, i1 false)" [lettura_diretta.cpp:34]   --->   Operation 99 'write' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 100 [1/5] (8.75ns)   --->   "%data_out_addr_2_resp = call i1 @_ssdm_op_WriteResp.m_axi.i8P(i8* %data_out_addr_1)" [lettura_diretta.cpp:35]   --->   Operation 100 'writeresp' 'data_out_addr_2_resp' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_8 : Operation 101 [1/1] (0.00ns)   --->   "br label %14" [lettura_diretta.cpp:36]   --->   Operation 101 'br' <Predicate = true> <Delay = 0.00>
+
+State 9 <SV = 1> <Delay = 8.75>
+ST_9 : Operation 102 [1/2] (1.23ns)   --->   "%empty = load i8* getelementptr inbounds ([1280 x i8]* @tmp, i64 0, i64 0), align 16" [lettura_diretta.cpp:58]   --->   Operation 102 'load' 'empty' <Predicate = true> <Delay = 1.23> <Core = "RAM_2P_BRAM">   --->   Core 42 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 1280> <RAM>
+ST_9 : Operation 103 [1/1] (8.75ns)   --->   "%data_out_addr_req = call i1 @_ssdm_op_WriteReq.m_axi.i8P(i8* %data_out_addr, i32 1)" [lettura_diretta.cpp:58]   --->   Operation 103 'writereq' 'data_out_addr_req' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 10 <SV = 2> <Delay = 8.75>
+ST_10 : Operation 104 [1/1] (8.75ns)   --->   "call void @_ssdm_op_Write.m_axi.i8P(i8* %data_out_addr, i8 %empty, i1 true)" [lettura_diretta.cpp:58]   --->   Operation 104 'write' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 11 <SV = 3> <Delay = 8.75>
+ST_11 : Operation 105 [5/5] (8.75ns)   --->   "%data_out_addr_resp = call i1 @_ssdm_op_WriteResp.m_axi.i8P(i8* %data_out_addr)" [lettura_diretta.cpp:58]   --->   Operation 105 'writeresp' 'data_out_addr_resp' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 12 <SV = 4> <Delay = 8.75>
+ST_12 : Operation 106 [4/5] (8.75ns)   --->   "%data_out_addr_resp = call i1 @_ssdm_op_WriteResp.m_axi.i8P(i8* %data_out_addr)" [lettura_diretta.cpp:58]   --->   Operation 106 'writeresp' 'data_out_addr_resp' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 13 <SV = 5> <Delay = 8.75>
+ST_13 : Operation 107 [3/5] (8.75ns)   --->   "%data_out_addr_resp = call i1 @_ssdm_op_WriteResp.m_axi.i8P(i8* %data_out_addr)" [lettura_diretta.cpp:58]   --->   Operation 107 'writeresp' 'data_out_addr_resp' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 14 <SV = 6> <Delay = 8.75>
+ST_14 : Operation 108 [2/5] (8.75ns)   --->   "%data_out_addr_resp = call i1 @_ssdm_op_WriteResp.m_axi.i8P(i8* %data_out_addr)" [lettura_diretta.cpp:58]   --->   Operation 108 'writeresp' 'data_out_addr_resp' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 15 <SV = 7> <Delay = 8.75>
+ST_15 : Operation 109 [1/5] (8.75ns)   --->   "%data_out_addr_resp = call i1 @_ssdm_op_WriteResp.m_axi.i8P(i8* %data_out_addr)" [lettura_diretta.cpp:58]   --->   Operation 109 'writeresp' 'data_out_addr_resp' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_15 : Operation 110 [1/1] (8.75ns)   --->   "%data_out_addr_wr_req = call i1 @_ssdm_op_WriteReq.m_axi.i8P(i8* %data_out_addr, i32 1280)" [lettura_diretta.cpp:58]   --->   Operation 110 'writereq' 'data_out_addr_wr_req' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_15 : Operation 111 [1/1] (0.65ns)   --->   "br label %burst.wr.header" [lettura_diretta.cpp:58]   --->   Operation 111 'br' <Predicate = true> <Delay = 0.65>
+
+State 16 <SV = 8> <Delay = 1.23>
+ST_16 : Operation 112 [1/1] (0.00ns)   --->   "%indvar = phi i11 [ 0, %6 ], [ %indvar_next, %burst.wr.body ]" [lettura_diretta.cpp:58]   --->   Operation 112 'phi' 'indvar' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 113 [1/1] (0.94ns)   --->   "%exitcond = icmp eq i11 %indvar, -768" [lettura_diretta.cpp:58]   --->   Operation 113 'icmp' 'exitcond' <Predicate = true> <Delay = 0.94> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 114 [1/1] (0.00ns)   --->   "%empty_2 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 1280, i64 1280, i64 1280)"   --->   Operation 114 'speclooptripcount' 'empty_2' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 115 [1/1] (0.79ns)   --->   "%indvar_next = add i11 %indvar, 1" [lettura_diretta.cpp:58]   --->   Operation 115 'add' 'indvar_next' <Predicate = true> <Delay = 0.79> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 116 [1/1] (0.00ns)   --->   "br i1 %exitcond, label %burst.wr.end, label %burst.wr.body" [lettura_diretta.cpp:58]   --->   Operation 116 'br' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 117 [1/1] (0.00ns)   --->   "%indvar1 = zext i11 %indvar to i64" [lettura_diretta.cpp:58]   --->   Operation 117 'zext' 'indvar1' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_16 : Operation 118 [1/1] (0.00ns)   --->   "%tmp_addr_1 = getelementptr [1280 x i8]* @tmp, i64 0, i64 %indvar1" [lettura_diretta.cpp:58]   --->   Operation 118 'getelementptr' 'tmp_addr_1' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_16 : Operation 119 [2/2] (1.23ns)   --->   "%tmp_gep23 = load i8* %tmp_addr_1, align 1" [lettura_diretta.cpp:58]   --->   Operation 119 'load' 'tmp_gep23' <Predicate = (!exitcond)> <Delay = 1.23> <Core = "RAM_2P_BRAM">   --->   Core 42 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 1280> <RAM>
+
+State 17 <SV = 9> <Delay = 1.23>
+ST_17 : Operation 120 [1/2] (1.23ns)   --->   "%tmp_gep23 = load i8* %tmp_addr_1, align 1" [lettura_diretta.cpp:58]   --->   Operation 120 'load' 'tmp_gep23' <Predicate = (!exitcond)> <Delay = 1.23> <Core = "RAM_2P_BRAM">   --->   Core 42 'RAM_2P_BRAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 1280> <RAM>
+
+State 18 <SV = 10> <Delay = 8.75>
+ST_18 : Operation 121 [1/1] (0.00ns)   --->   "%burstwrite_rbegin = call i32 (...)* @_ssdm_op_SpecRegionBegin([18 x i8]* @burstwrite_OC_region)" [lettura_diretta.cpp:58]   --->   Operation 121 'specregionbegin' 'burstwrite_rbegin' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_18 : Operation 122 [1/1] (0.00ns)   --->   "%empty_3 = call i32 (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str7)" [lettura_diretta.cpp:58]   --->   Operation 122 'specpipeline' 'empty_3' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_18 : Operation 123 [1/1] (0.00ns)   --->   "%empty_4 = call i32 (...)* @_ssdm_op_SpecLoopName([24 x i8]* @memcpy_OC_data_out_O)" [lettura_diretta.cpp:58]   --->   Operation 123 'specloopname' 'empty_4' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_18 : Operation 124 [1/1] (8.75ns)   --->   "call void @_ssdm_op_Write.m_axi.i8P(i8* %data_out_addr, i8 %tmp_gep23, i1 true)" [lettura_diretta.cpp:58]   --->   Operation 124 'write' <Predicate = (!exitcond)> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_18 : Operation 125 [1/1] (0.00ns)   --->   "%burstwrite_rend = call i32 (...)* @_ssdm_op_SpecRegionEnd([18 x i8]* @burstwrite_OC_region, i32 %burstwrite_rbegin)" [lettura_diretta.cpp:58]   --->   Operation 125 'specregionend' 'burstwrite_rend' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_18 : Operation 126 [1/1] (0.00ns)   --->   "br label %burst.wr.header" [lettura_diretta.cpp:58]   --->   Operation 126 'br' <Predicate = (!exitcond)> <Delay = 0.00>
+
+State 19 <SV = 9> <Delay = 8.75>
+ST_19 : Operation 127 [5/5] (8.75ns)   --->   "%data_out_addr_wr_res = call i1 @_ssdm_op_WriteResp.m_axi.i8P(i8* %data_out_addr)" [lettura_diretta.cpp:58]   --->   Operation 127 'writeresp' 'data_out_addr_wr_res' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_19 : Operation 128 [1/1] (0.65ns)   --->   "store i32 0, i32* @count_readings, align 4" [lettura_diretta.cpp:61]   --->   Operation 128 'store' <Predicate = true> <Delay = 0.65>
+ST_19 : Operation 129 [1/1] (1.01ns)   --->   "%tmp_8 = add i32 %count_lines_load, 1" [lettura_diretta.cpp:62]   --->   Operation 129 'add' 'tmp_8' <Predicate = true> <Delay = 1.01> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.01> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 130 [1/1] (0.65ns)   --->   "store i32 %tmp_8, i32* @count_lines, align 4" [lettura_diretta.cpp:62]   --->   Operation 130 'store' <Predicate = true> <Delay = 0.65>
+
+State 20 <SV = 10> <Delay = 8.75>
+ST_20 : Operation 131 [4/5] (8.75ns)   --->   "%data_out_addr_wr_res = call i1 @_ssdm_op_WriteResp.m_axi.i8P(i8* %data_out_addr)" [lettura_diretta.cpp:58]   --->   Operation 131 'writeresp' 'data_out_addr_wr_res' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 21 <SV = 11> <Delay = 8.75>
+ST_21 : Operation 132 [3/5] (8.75ns)   --->   "%data_out_addr_wr_res = call i1 @_ssdm_op_WriteResp.m_axi.i8P(i8* %data_out_addr)" [lettura_diretta.cpp:58]   --->   Operation 132 'writeresp' 'data_out_addr_wr_res' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 22 <SV = 12> <Delay = 8.75>
+ST_22 : Operation 133 [2/5] (8.75ns)   --->   "%data_out_addr_wr_res = call i1 @_ssdm_op_WriteResp.m_axi.i8P(i8* %data_out_addr)" [lettura_diretta.cpp:58]   --->   Operation 133 'writeresp' 'data_out_addr_wr_res' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 23 <SV = 13> <Delay = 8.75>
+ST_23 : Operation 134 [1/5] (8.75ns)   --->   "%data_out_addr_wr_res = call i1 @_ssdm_op_WriteResp.m_axi.i8P(i8* %data_out_addr)" [lettura_diretta.cpp:58]   --->   Operation 134 'writeresp' 'data_out_addr_wr_res' <Predicate = (!first_load & or_cond & !href_V_read & tmp_4) | (vsync_V_read & or_cond & !href_V_read & tmp_4)> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_23 : Operation 135 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_none.volatile.i1P(i1* %line_valid_V, i1 false)" [lettura_diretta.cpp:60]   --->   Operation 135 'write' <Predicate = (!first_load & or_cond & !href_V_read & tmp_4) | (vsync_V_read & or_cond & !href_V_read & tmp_4)> <Delay = 0.00>
+ST_23 : Operation 136 [1/1] (0.00ns)   --->   "br label %8" [lettura_diretta.cpp:63]   --->   Operation 136 'br' <Predicate = (!first_load & or_cond & !href_V_read & tmp_4) | (vsync_V_read & or_cond & !href_V_read & tmp_4)> <Delay = 0.00>
+ST_23 : Operation 137 [1/1] (0.00ns)   --->   "br label %9"   --->   Operation 137 'br' <Predicate = (!first_load & or_cond & !href_V_read) | (vsync_V_read & or_cond & !href_V_read)> <Delay = 0.00>
+ST_23 : Operation 138 [1/1] (0.00ns)   --->   "br label %13" [lettura_diretta.cpp:66]   --->   Operation 138 'br' <Predicate = (!first_load & or_cond) | (vsync_V_read & or_cond)> <Delay = 0.00>
+ST_23 : Operation 139 [1/1] (0.00ns)   --->   "br label %14" [lettura_diretta.cpp:75]   --->   Operation 139 'br' <Predicate = (!first_load) | (vsync_V_read)> <Delay = 0.00>
+ST_23 : Operation 140 [1/1] (0.00ns)   --->   "ret void" [lettura_diretta.cpp:76]   --->   Operation 140 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 2.02ns
+The critical path consists of the following:
+	s_axi read on port 'data_out_offset' [12]  (1 ns)
+	'add' operation ('data_out2_sum', lettura_diretta.cpp:58) [85]  (1.02 ns)
+
+ <State 2>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'data_out' (lettura_diretta.cpp:35) [46]  (8.75 ns)
+
+ <State 3>: 8.75ns
+The critical path consists of the following:
+	bus write on port 'data_out' (lettura_diretta.cpp:35) [47]  (8.75 ns)
+
+ <State 4>: 8.75ns
+The critical path consists of the following:
+	bus access on port 'data_out' (lettura_diretta.cpp:35) [48]  (8.75 ns)
+
+ <State 5>: 8.75ns
+The critical path consists of the following:
+	bus access on port 'data_out' (lettura_diretta.cpp:35) [48]  (8.75 ns)
+
+ <State 6>: 8.75ns
+The critical path consists of the following:
+	bus access on port 'data_out' (lettura_diretta.cpp:35) [48]  (8.75 ns)
+
+ <State 7>: 8.75ns
+The critical path consists of the following:
+	bus access on port 'data_out' (lettura_diretta.cpp:35) [48]  (8.75 ns)
+
+ <State 8>: 8.75ns
+The critical path consists of the following:
+	bus access on port 'data_out' (lettura_diretta.cpp:35) [48]  (8.75 ns)
+
+ <State 9>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'data_out' (lettura_diretta.cpp:58) [89]  (8.75 ns)
+
+ <State 10>: 8.75ns
+The critical path consists of the following:
+	bus write on port 'data_out' (lettura_diretta.cpp:58) [90]  (8.75 ns)
+
+ <State 11>: 8.75ns
+The critical path consists of the following:
+	bus access on port 'data_out' (lettura_diretta.cpp:58) [91]  (8.75 ns)
+
+ <State 12>: 8.75ns
+The critical path consists of the following:
+	bus access on port 'data_out' (lettura_diretta.cpp:58) [91]  (8.75 ns)
+
+ <State 13>: 8.75ns
+The critical path consists of the following:
+	bus access on port 'data_out' (lettura_diretta.cpp:58) [91]  (8.75 ns)
+
+ <State 14>: 8.75ns
+The critical path consists of the following:
+	bus access on port 'data_out' (lettura_diretta.cpp:58) [91]  (8.75 ns)
+
+ <State 15>: 8.75ns
+The critical path consists of the following:
+	bus access on port 'data_out' (lettura_diretta.cpp:58) [91]  (8.75 ns)
+
+ <State 16>: 1.24ns
+The critical path consists of the following:
+	'phi' operation ('indvar', lettura_diretta.cpp:58) with incoming values : ('indvar_next', lettura_diretta.cpp:58) [95]  (0 ns)
+	'getelementptr' operation ('tmp_addr_1', lettura_diretta.cpp:58) [105]  (0 ns)
+	'load' operation ('tmp_gep23', lettura_diretta.cpp:58) on array 'tmp' [106]  (1.24 ns)
+
+ <State 17>: 1.24ns
+The critical path consists of the following:
+	'load' operation ('tmp_gep23', lettura_diretta.cpp:58) on array 'tmp' [106]  (1.24 ns)
+
+ <State 18>: 8.75ns
+The critical path consists of the following:
+	bus write on port 'data_out' (lettura_diretta.cpp:58) [107]  (8.75 ns)
+
+ <State 19>: 8.75ns
+The critical path consists of the following:
+	bus access on port 'data_out' (lettura_diretta.cpp:58) [111]  (8.75 ns)
+
+ <State 20>: 8.75ns
+The critical path consists of the following:
+	bus access on port 'data_out' (lettura_diretta.cpp:58) [111]  (8.75 ns)
+
+ <State 21>: 8.75ns
+The critical path consists of the following:
+	bus access on port 'data_out' (lettura_diretta.cpp:58) [111]  (8.75 ns)
+
+ <State 22>: 8.75ns
+The critical path consists of the following:
+	bus access on port 'data_out' (lettura_diretta.cpp:58) [111]  (8.75 ns)
+
+ <State 23>: 8.75ns
+The critical path consists of the following:
+	bus access on port 'data_out' (lettura_diretta.cpp:58) [111]  (8.75 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

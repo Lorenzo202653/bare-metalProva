@@ -1,4 +1,0 @@
-THIRPARTY=false
-HW_PROJECT_REFERENCE=hls_write_prova_HW
-PROCESSOR=psu_cortexa53_0
-MSS_FILE=system.mss

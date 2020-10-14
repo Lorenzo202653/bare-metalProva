@@ -1,0 +1,19 @@
+09:41:58 **** Auto Build of configuration Debug for project res3333 ****
+make all 
+Building file: ../src/application.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/application.o" -I../../res3_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/application.d" -MT"src/application.o" -o "src/application.o" "../src/application.c"
+In file included from ../src/application.h:13:0,
+                 from ../src/application.c:9:
+../src/axis_to_ddr_writer.h:17:1: error: unknown type name 'XOv7670_prova'
+ XOv7670_prova ov7670;
+ ^~~~~~~~~~~~~
+../src/axis_to_ddr_writer.h:18:1: error: unknown type name 'XOv7670_prova_Config'; did you mean 'XGpio_Config'?
+ XOv7670_prova_Config *ov7670_config;
+ ^~~~~~~~~~~~~~~~~~~~
+ XGpio_Config
+make: *** [src/application.o] Errore 1
+src/subdir.mk:63: set di istruzioni per l'obiettivo "src/application.o" non riuscito
+
+09:41:59 Build Finished (took 517ms)
+

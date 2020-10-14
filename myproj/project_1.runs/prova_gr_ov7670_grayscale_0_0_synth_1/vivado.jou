@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Tue Oct 13 17:43:10 2020
+# Process ID: 22972
+# Current directory: /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/prova_gr_ov7670_grayscale_0_0_synth_1
+# Command line: vivado -log prova_gr_ov7670_grayscale_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source prova_gr_ov7670_grayscale_0_0.tcl
+# Log file: /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/prova_gr_ov7670_grayscale_0_0_synth_1/prova_gr_ov7670_grayscale_0_0.vds
+# Journal file: /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/prova_gr_ov7670_grayscale_0_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source prova_gr_ov7670_grayscale_0_0.tcl -notrace

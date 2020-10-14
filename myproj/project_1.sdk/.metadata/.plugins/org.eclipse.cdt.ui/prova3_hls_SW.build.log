@@ -1,6 +1,116 @@
-17:11:14 **** Incremental Build of configuration Debug for project prova3_hls_SW ****
+14:19:01 **** Build of configuration Debug for project prova3_hls_SW ****
 make all 
-make: Nessuna operazione da eseguire per "all".
+Building file: ../src/application.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/application.o" -I../../prova3_hls_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/application.d" -MT"src/application.o" -o "src/application.o" "../src/application.c"
+../src/application.c: In function 'start_application':
+../src/application.c:122:18: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
+   uint8_t dato_p=(uint8_t*)(0x13000000);
+                  ^
+../src/application.c:125:35: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'uint8_t * {aka unsigned char *}' [-Wformat=]
+   printf("DATO_indirizzo: con ep %x\n\r  ",&dato_p);
+                                  ~^        ~~~~~~~
+                                  %hhn
+../src/application.c:129:31: warning: format '%p' expects argument of type 'void *', but argument 2 has type 'int' [-Wformat=]
+          printf("DATO: con p %p\n\r  ",dato_p);
+                              ~^
+                              %d
+Finished building: ../src/application.c
+ 
+Building file: ../src/axi_gpio_frame_intr.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/axi_gpio_frame_intr.o" -I../../prova3_hls_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/axi_gpio_frame_intr.d" -MT"src/axi_gpio_frame_intr.o" -o "src/axi_gpio_frame_intr.o" "../src/axi_gpio_frame_intr.c"
+Finished building: ../src/axi_gpio_frame_intr.c
+ 
+Building file: ../src/axi_gpio_pl_reset.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/axi_gpio_pl_reset.o" -I../../prova3_hls_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/axi_gpio_pl_reset.d" -MT"src/axi_gpio_pl_reset.o" -o "src/axi_gpio_pl_reset.o" "../src/axi_gpio_pl_reset.c"
+Finished building: ../src/axi_gpio_pl_reset.c
+ 
+Building file: ../src/axis_to_ddr_writer.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/axis_to_ddr_writer.o" -I../../prova3_hls_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/axis_to_ddr_writer.d" -MT"src/axis_to_ddr_writer.o" -o "src/axis_to_ddr_writer.o" "../src/axis_to_ddr_writer.c"
+../src/axis_to_ddr_writer.c: In function 'getFrameIndex':
+../src/axis_to_ddr_writer.c:94:19: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
+    uint8_t dato_p=(uint8_t*)( 0x13000000);
+                   ^
+Finished building: ../src/axis_to_ddr_writer.c
+ 
+Building file: ../src/ddr_to_axis_reader.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ddr_to_axis_reader.o" -I../../prova3_hls_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/ddr_to_axis_reader.d" -MT"src/ddr_to_axis_reader.o" -o "src/ddr_to_axis_reader.o" "../src/ddr_to_axis_reader.c"
+Finished building: ../src/ddr_to_axis_reader.c
+ 
+Building file: ../src/frame_buffer_interrupt.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/frame_buffer_interrupt.o" -I../../prova3_hls_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/frame_buffer_interrupt.d" -MT"src/frame_buffer_interrupt.o" -o "src/frame_buffer_interrupt.o" "../src/frame_buffer_interrupt.c"
+Finished building: ../src/frame_buffer_interrupt.c
+ 
+Building file: ../src/i2c_interrupt.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/i2c_interrupt.o" -I../../prova3_hls_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/i2c_interrupt.d" -MT"src/i2c_interrupt.o" -o "src/i2c_interrupt.o" "../src/i2c_interrupt.c"
+Finished building: ../src/i2c_interrupt.c
+ 
+Building file: ../src/interrupts.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/interrupts.o" -I../../prova3_hls_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/interrupts.d" -MT"src/interrupts.o" -o "src/interrupts.o" "../src/interrupts.c"
+../src/interrupts.c: In function 'configure_interrupts':
+../src/interrupts.c:57:47: warning: passing argument 2 of 'configure_i2c_interrupt' from incompatible pointer type [-Wincompatible-pointer-types]
+  configure_i2c_interrupt(InterruptController, &Iic);
+                                               ^
+In file included from ../src/interrupts.h:14:0,
+                 from ../src/interrupts.c:9:
+../src/i2c_interrupt.h:15:5: note: expected 'XScuGic * {aka struct <anonymous> *}' but argument is of type 'XIicPs * {aka struct <anonymous> *}'
+ int configure_i2c_interrupt(XScuGic* gicInst, XScuGic* IicPsPtr);
+     ^~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/interrupts.c
+ 
+Building file: ../src/ov7670_config_i2c.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ov7670_config_i2c.o" -I../../prova3_hls_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/ov7670_config_i2c.d" -MT"src/ov7670_config_i2c.o" -o "src/ov7670_config_i2c.o" "../src/ov7670_config_i2c.c"
+Finished building: ../src/ov7670_config_i2c.c
+ 
+Building file: ../src/platform.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../prova3_hls_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building file: ../src/read_sd_card.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/read_sd_card.o" -I../../prova3_hls_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/read_sd_card.d" -MT"src/read_sd_card.o" -o "src/read_sd_card.o" "../src/read_sd_card.c"
+Finished building: ../src/read_sd_card.c
+ 
+Building file: ../src/test.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/test.o" -I../../prova3_hls_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/test.d" -MT"src/test.o" -o "src/test.o" "../src/test.c"
+Finished building: ../src/test.c
+ 
+Building file: ../src/test_SD_main.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/test_SD_main.o" -I../../prova3_hls_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/test_SD_main.d" -MT"src/test_SD_main.o" -o "src/test_SD_main.o" "../src/test_SD_main.c"
+Finished building: ../src/test_SD_main.c
+ 
+Building file: ../src/zynq_gic.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/zynq_gic.o" -I../../prova3_hls_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/zynq_gic.d" -MT"src/zynq_gic.o" -o "src/zynq_gic.o" "../src/zynq_gic.c"
+Finished building: ../src/zynq_gic.c
+ 
+Building file: ../src/zynq_i2c.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/zynq_i2c.o" -I../../prova3_hls_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/zynq_i2c.d" -MT"src/zynq_i2c.o" -o "src/zynq_i2c.o" "../src/zynq_i2c.c"
+Finished building: ../src/zynq_i2c.c
+ 
+Building target: prova3_hls_SW.elf
+Invoking: ARM v8 gcc linker
+aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -L../../prova3_hls_bsp_0/psu_cortexa53_0/lib -o "prova3_hls_SW.elf"  ./src/application.o ./src/axi_gpio_frame_intr.o ./src/axi_gpio_pl_reset.o ./src/axis_to_ddr_writer.o ./src/ddr_to_axis_reader.o ./src/frame_buffer_interrupt.o ./src/i2c_interrupt.o ./src/interrupts.o ./src/main.o ./src/ov7670_config_i2c.o ./src/platform.o ./src/read_sd_card.o ./src/test.o ./src/test_SD_main.o ./src/zynq_gic.o ./src/zynq_i2c.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+Finished building target: prova3_hls_SW.elf
+ 
+Invoking: ARM v8 Print Size
+aarch64-none-elf-size prova3_hls_SW.elf  |tee "prova3_hls_SW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 151644	   8048	 331040	 490732	  77cec	prova3_hls_SW.elf
+Finished building: prova3_hls_SW.elf.size
+ 
 
-17:11:15 Build Finished (took 521ms)
+14:19:02 Build Finished (took 1s.414ms)
 

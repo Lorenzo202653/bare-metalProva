@@ -1,0 +1,16 @@
+18:31:12 **** Incremental Build of configuration Debug for project memcp_sw ****
+make all 
+Building file: ../src/application.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/application.o" -I../../memcp_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/application.d" -MT"src/application.o" -o "src/application.o" "../src/application.c"
+In file included from ../src/application.h:12:0,
+                 from ../src/application.c:9:
+../src/platform_config.h:19:10: fatal error: xov7670_memcpy.h: No such file or directory
+ #include "xov7670_memcpy.h"
+          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+src/subdir.mk:39: set di istruzioni per l'obiettivo "src/application.o" non riuscito
+make: *** [src/application.o] Errore 1
+
+18:31:12 Build Finished (took 625ms)
+

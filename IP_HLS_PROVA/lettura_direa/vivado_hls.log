@@ -1,0 +1,62 @@
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'gianluca' on host 'Aldebaran' (Linux_x86_64 version 5.4.0-48-generic) on Tue Oct 06 16:43:15 CEST 2020
+INFO: [HLS 200-10] On os Ubuntu 18.04.5 LTS
+INFO: [HLS 200-10] In directory '/home/gianluca/Downloads/lettura_diretta'
+INFO: [HLS 200-10] Opening project '/home/gianluca/Downloads/lettura_diretta/prj'.
+INFO: [HLS 200-10] Adding design file 'lettura_diretta.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'lettura_diretta.h' to the project
+INFO: [HLS 200-10] Opening solution '/home/gianluca/Downloads/lettura_diretta/prj/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xczu9eg-ffvb1156-2-i'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'lettura_diretta.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 437.969 ; gain = 0.102 ; free physical = 308 ; free virtual = 13649
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 437.969 ; gain = 0.102 ; free physical = 308 ; free virtual = 13649
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 437.969 ; gain = 0.102 ; free physical = 306 ; free virtual = 13648
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 437.969 ; gain = 0.102 ; free physical = 305 ; free virtual = 13647
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 565.867 ; gain = 128.000 ; free physical = 284 ; free virtual = 13626
+INFO: [HLS 200-444] Inferring multiple bus burst write of a total cumulative length 1280 on port 'data_out' (lettura_diretta.cpp:58:4). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 565.867 ; gain = 128.000 ; free physical = 292 ; free virtual = 13634
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'ov7670_diretto' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ov7670_diretto' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'memcpy.data_out.tmp.gep'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 8.16 seconds; current allocated memory: 67.638 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 68.118 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ov7670_diretto' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'ov7670_diretto/data_out' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ov7670_diretto/data_in_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ov7670_diretto/href_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ov7670_diretto/vsync_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ov7670_diretto/data_out_offset' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ov7670_diretto/line_valid_V' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'line_valid_V' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ov7670_diretto/frame_valid_V' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'frame_valid_V' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on function 'ov7670_diretto' to 's_axilite & ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'first' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'count_lines' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'count_readings' is power-on initialization.
+INFO: [RTGEN 206-100] Bundling port 'return' and 'data_out_offset' to AXI-Lite port AXILiteS.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ov7670_diretto'.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 69.235 MB.
+INFO: [RTMG 210-278] Implementing memory 'ov7670_diretto_tmp_ram (RAM_2P_BRAM)' using block RAMs with power-on initialization.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 565.867 ; gain = 128.000 ; free physical = 277 ; free virtual = 13621
+INFO: [SYSC 207-301] Generating SystemC RTL for ov7670_diretto.
+INFO: [VHDL 208-304] Generating VHDL RTL for ov7670_diretto.
+INFO: [VLOG 209-307] Generating Verilog RTL for ov7670_diretto.
+INFO: [HLS 200-112] Total elapsed time: 8.87 seconds; peak allocated memory: 69.235 MB.

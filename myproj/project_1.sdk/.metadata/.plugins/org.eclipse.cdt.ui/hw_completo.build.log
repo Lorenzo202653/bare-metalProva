@@ -1,4 +1,4 @@
-15:22:09 **** Build of configuration Debug for project hw_completo ****
+14:20:54 **** Build of configuration Debug for project hw_completo ****
 make all 
 Building file: ../src/application.c
 Invoking: ARM v8 gcc compiler
@@ -101,5 +101,5 @@ aarch64-none-elf-size hw_completo.elf  |tee "hw_completo.elf.size"
 Finished building: hw_completo.elf.size
  
 
-15:22:10 Build Finished (took 1s.464ms)
+14:20:55 Build Finished (took 1s.523ms)
 

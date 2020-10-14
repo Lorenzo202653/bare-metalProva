@@ -1,0 +1,6 @@
+10:59:43 **** Build of project design2_bsp_0 ****
+make -k all 
+make: ***  Nessuna regola per generare l'obiettivo "all".
+
+10:59:43 Build Finished (took 519ms)
+

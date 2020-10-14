@@ -1,0 +1,291 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Tue Oct 13 17:43:10 2020
+# Process ID: 22971
+# Current directory: /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/prova_gr_ov7670_interface_0_0_synth_1
+# Command line: vivado -log prova_gr_ov7670_interface_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source prova_gr_ov7670_interface_0_0.tcl
+# Log file: /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/prova_gr_ov7670_interface_0_0_synth_1/prova_gr_ov7670_interface_0_0.vds
+# Journal file: /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/prova_gr_ov7670_interface_0_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source prova_gr_ov7670_interface_0_0.tcl -notrace
+Command: synth_design -top prova_gr_ov7670_interface_0_0 -part xczu3eg-sbva484-1-e -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 23026 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1565.699 ; gain = 0.000 ; free physical = 512 ; free virtual = 15501
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'prova_gr_ov7670_interface_0_0' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/prova_gr/ip/prova_gr_ov7670_interface_0_0/synth/prova_gr_ov7670_interface_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'ov7670_interface' [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/prova_gr/ipshared/3b76/hdl/verilog/ov7670_interface.v:12]
+	Parameter ap_ST_fsm_state1 bound to: 1'b1 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/prova_gr/ipshared/3b76/hdl/verilog/ov7670_interface.v:49]
+INFO: [Synth 8-6155] done synthesizing module 'ov7670_interface' (1#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/prova_gr/ipshared/3b76/hdl/verilog/ov7670_interface.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'prova_gr_ov7670_interface_0_0' (2#1) [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/prova_gr/ip/prova_gr_ov7670_interface_0_0/synth/prova_gr_ov7670_interface_0_0.v:57]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1565.699 ; gain = 0.000 ; free physical = 484 ; free virtual = 15489
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1565.699 ; gain = 0.000 ; free physical = 458 ; free virtual = 15467
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1565.699 ; gain = 0.000 ; free physical = 458 ; free virtual = 15467
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xczu3eg-sbva484-1-e
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/prova_gr/ip/prova_gr_ov7670_interface_0_0/constraints/ov7670_interface_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/prova_gr/ip/prova_gr_ov7670_interface_0_0/constraints/ov7670_interface_ooc.xdc] for cell 'inst'
+Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/prova_gr_ov7670_interface_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/prova_gr_ov7670_interface_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2317.977 ; gain = 0.000 ; free physical = 626 ; free virtual = 13436
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:38 ; elapsed = 00:01:09 . Memory (MB): peak = 2317.977 ; gain = 752.277 ; free physical = 748 ; free virtual = 13595
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu3eg-sbva484-1-e
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:38 ; elapsed = 00:01:09 . Memory (MB): peak = 2317.977 ; gain = 752.277 ; free physical = 749 ; free virtual = 13597
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/prova_gr_ov7670_interface_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:01:09 . Memory (MB): peak = 2317.977 ; gain = 752.277 ; free physical = 748 ; free virtual = 13597
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "tmp_4_fu_165_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tmp_2_fu_143_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:38 ; elapsed = 00:01:09 . Memory (MB): peak = 2317.977 ; gain = 752.277 ; free physical = 720 ; free virtual = 13577
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module ov7670_interface 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 360 (col length:72)
+BRAMs: 432 (col length: RAMB18 72 RAMB36 36)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5545] ROM "tmp_4_fu_165_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tmp_2_fu_143_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\ap_CS_fsm_reg[0] )
+WARNING: [Synth 8-3332] Sequential element (ap_CS_fsm_reg[0]) is unused and will be removed from module ov7670_interface.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:01:10 . Memory (MB): peak = 2317.977 ; gain = 752.277 ; free physical = 656 ; free virtual = 13545
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:08 ; elapsed = 00:02:04 . Memory (MB): peak = 2723.391 ; gain = 1157.691 ; free physical = 126 ; free virtual = 11239
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:08 ; elapsed = 00:02:04 . Memory (MB): peak = 2744.422 ; gain = 1178.723 ; free physical = 153 ; free virtual = 11280
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:08 ; elapsed = 00:02:04 . Memory (MB): peak = 2752.430 ; gain = 1186.730 ; free physical = 147 ; free virtual = 11278
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:09 ; elapsed = 00:02:05 . Memory (MB): peak = 2752.430 ; gain = 1186.730 ; free physical = 154 ; free virtual = 11280
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:09 ; elapsed = 00:02:05 . Memory (MB): peak = 2752.430 ; gain = 1186.730 ; free physical = 158 ; free virtual = 11284
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:09 ; elapsed = 00:02:05 . Memory (MB): peak = 2752.430 ; gain = 1186.730 ; free physical = 168 ; free virtual = 11293
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:09 ; elapsed = 00:02:05 . Memory (MB): peak = 2752.430 ; gain = 1186.730 ; free physical = 172 ; free virtual = 11297
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:09 ; elapsed = 00:02:05 . Memory (MB): peak = 2752.430 ; gain = 1186.730 ; free physical = 174 ; free virtual = 11299
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:09 ; elapsed = 00:02:05 . Memory (MB): peak = 2752.430 ; gain = 1186.730 ; free physical = 177 ; free virtual = 11303
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY8 |     8|
+|2     |LUT1   |     2|
+|3     |LUT2   |    33|
+|4     |LUT3   |     1|
+|5     |LUT4   |    18|
+|6     |LUT5   |     3|
+|7     |LUT6   |    13|
+|8     |FDRE   |    65|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------+-----------------+------+
+|      |Instance |Module           |Cells |
++------+---------+-----------------+------+
+|1     |top      |                 |   143|
+|2     |  inst   |ov7670_interface |   143|
++------+---------+-----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:09 ; elapsed = 00:02:05 . Memory (MB): peak = 2752.430 ; gain = 1186.730 ; free physical = 182 ; free virtual = 11308
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:53 ; elapsed = 00:01:20 . Memory (MB): peak = 2752.430 ; gain = 434.453 ; free physical = 219 ; free virtual = 11350
+Synthesis Optimization Complete : Time (s): cpu = 00:01:09 ; elapsed = 00:02:05 . Memory (MB): peak = 2752.438 ; gain = 1186.730 ; free physical = 219 ; free virtual = 11350
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+21 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:11 ; elapsed = 00:02:08 . Memory (MB): peak = 2787.445 ; gain = 1229.750 ; free physical = 275 ; free virtual = 11275
+INFO: [Common 17-1381] The checkpoint '/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/prova_gr_ov7670_interface_0_0_synth_1/prova_gr_ov7670_interface_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/prova_gr/ip/prova_gr_ov7670_interface_0_0/prova_gr_ov7670_interface_0_0.xci
+INFO: [Common 17-1381] The checkpoint '/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.runs/prova_gr_ov7670_interface_0_0_synth_1/prova_gr_ov7670_interface_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file prova_gr_ov7670_interface_0_0_utilization_synth.rpt -pb prova_gr_ov7670_interface_0_0_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.17 . Memory (MB): peak = 2811.457 ; gain = 0.000 ; free physical = 161 ; free virtual = 11217
+INFO: [Common 17-206] Exiting Vivado at Tue Oct 13 17:46:16 2020...

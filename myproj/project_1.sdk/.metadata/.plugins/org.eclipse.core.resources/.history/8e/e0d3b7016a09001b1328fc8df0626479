@@ -1,0 +1,47 @@
+
+#include "ov7670_diretto.h"
+
+
+int init_ov7670_diretto(void) {
+	XAxiDma_Config *CfgPtr;
+	int Status;
+
+	diretto_config = XOv7670_diretto_LookupConfig(XPAR_XOV7670_DIRETTO_0_DEVICE_ID);
+	if (diretto_config == NULL)
+		{
+			perror("Device config not found in init_ov7670_diretto");
+			return XST_FAILURE;
+		}
+	if (XOv7670_diretto_CfgInitialize(&diretto, diretto_config))
+		{
+			perror("Error init_ov7670_diretto");
+			return XST_FAILURE;
+		}
+
+	CfgPtr = XAxiDma_LookupConfig(XPAR_AXI_DMA_0_DEVICE_ID);
+		if (!CfgPtr) {
+			xil_printf("No config found for %d\r\n", XPAR_AXI_DMA_0_DEVICE_ID);
+			return XST_FAILURE;
+		}
+
+		Status = XAxiDma_CfgInitialize(&AxiDma, CfgPtr);
+		if (Status != XST_SUCCESS) {
+			xil_printf("Initialization failed %d\r\n", Status);
+			return XST_FAILURE;
+		}
+
+		if(XAxiDma_HasSg(&AxiDma)){
+			xil_printf("Device configured as SG mode \r\n");
+			return XST_FAILURE;
+		}
+
+
+	return XST_SUCCESS;
+}
+
+int configue_ov7670_diretto(void) {
+	XOv7670_diretto_EnableAutoRestart(&diretto);
+	XOv7670_diretto_Start(&diretto);
+
+	return XST_SUCCESS;
+}

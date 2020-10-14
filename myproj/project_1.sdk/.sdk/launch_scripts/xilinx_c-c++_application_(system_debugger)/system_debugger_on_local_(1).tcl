@@ -4,12 +4,12 @@ targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-
 rst -system
 after 3000
 targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0} -index 0
-fpga -file /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.sdk/dioP/design_1_wrapper.bit
+fpga -file /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.sdk/prova_gr_wrapper_hw_platform_0/prova_gr_wrapper.bit
 targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
-loadhw -hw /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.sdk/dioP/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
+loadhw -hw /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.sdk/prova_gr_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}]
 configparams force-mem-access 1
 targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
-source /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.sdk/dioP/psu_init.tcl
+source /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.sdk/prova_gr_wrapper_hw_platform_0/psu_init.tcl
 psu_init
 after 1000
 psu_ps_pl_isolation_removal
@@ -18,7 +18,7 @@ psu_ps_pl_reset_config
 catch {psu_protection}
 targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
 rst -processor
-dow /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.sdk/sorgenti_app/Debug/sorgenti_app.elf
+dow /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.sdk/----gr/Debug/----gr.elf
 configparams force-mem-access 0
 targets -set -nocase -filter {name =~"*A53*0" && jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A"} -index 1
 con

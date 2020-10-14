@@ -1,0 +1,26 @@
+17:15:35 **** Auto Build of configuration Debug for project ----gr ****
+make all 
+Invoking: ARM v8 Print Size
+aarch64-none-elf-size ----gr.elf  |tee "----gr.elf.size"
+aarch64-none-elf-size: opzione non riconosciuta "----gr.elf"
+Uso: aarch64-none-elf-size [opzioni] [file]
+ Visualizza la dimensione delle sezioni all'interno dei file binari
+ Se non è specificato alcun file di input, viene usato a.out
+ Le opzioni sono:
+  -A|-B     --format={sysv|berkeley}  Seleziona lo stile di output (predefinito è berkeley)
+  -o|-d|-x  --radix={8|10|16}         Visualizza i numeri in ottale, decimale o esadecimale
+  -t        --totals                  Visualizza le dimensioni totali (solo Berkeley)
+            --common                  Visualizza la dimensione totale per i simboli *COM*
+            --target=<nomebfd>        Imposta il formato del file binario
+makefile:43: set di istruzioni per l'obiettivo "----gr.elf.size" non riuscito
+            @<file>                   Legge le opzioni dal <file>
+  -h        --help                    Visualizza questo aiuto
+  -v        --version                 Visualizza la versione del programma
+
+aarch64-none-elf-size: obiettivi supportati: elf64-littleaarch64 elf64-bigaarch64 elf32-littleaarch64 elf32-bigaarch64 elf32-littlearm elf32-bigarm elf64-little elf64-big elf32-little elf32-big plugin srec symbolsrec verilog tekhex binary ihex
+tee: opzione non riconosciuta "----gr.elf.size"
+Try 'tee --help' for more information.
+make: *** [----gr.elf.size] Errore 1
+
+17:15:36 Build Finished (took 517ms)
+

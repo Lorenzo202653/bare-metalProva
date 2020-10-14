@@ -157,13 +157,11 @@ proc create_hier_cell_VDMA { parentCell nameHier } {
   current_bd_instance $hier_obj
 
   # Create interface pins
-  create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:aximm_rtl:1.0 AXIM_READER
   create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:aximm_rtl:1.0 AXIM_WRITER
   create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 AXIS_IN
   create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 AXIS_IN_RAW_CHROMA
   create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 AXIS_IN_RAW_LUMA
   create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:aximm_rtl:1.0 s_axi_AXILiteS
-  create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:aximm_rtl:1.0 s_axi_AXILiteS1
   create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:aximm_rtl:1.0 s_axi_AXILite_raw_CHROMA
   create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:aximm_rtl:1.0 s_axi_AXILite_raw_LUMA
 
@@ -174,13 +172,6 @@ proc create_hier_cell_VDMA { parentCell nameHier } {
   create_bd_pin -dir I -type clk clk_vdma
   create_bd_pin -dir O -from 7 -to 0 -type data frame_index_V
   create_bd_pin -dir I -from 0 -to 0 -type rst interconnect_aresetn
-
-  # Create instance: axi_mem_intercon_reader, and set properties
-  set axi_mem_intercon_reader [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 axi_mem_intercon_reader ]
-  set_property -dict [ list \
-   CONFIG.NUM_MI {1} \
-   CONFIG.SYNCHRONIZATION_STAGES {2} \
- ] $axi_mem_intercon_reader
 
   # Create instance: axi_mem_intercon_writer, and set properties
   set axi_mem_intercon_writer [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 axi_mem_intercon_writer ]
@@ -223,9 +214,6 @@ proc create_hier_cell_VDMA { parentCell nameHier } {
   # Create instance: axis_to_ddr_writer_LUMA, and set properties
   set axis_to_ddr_writer_LUMA [ create_bd_cell -type ip -vlnv xilinx.com:hls:axis_to_ddr_writer:1.0 axis_to_ddr_writer_LUMA ]
 
-  # Create instance: ddr_to_axis_reader_0, and set properties
-  set ddr_to_axis_reader_0 [ create_bd_cell -type ip -vlnv xilinx.com:hls:ddr_to_axis_reader:1.0 ddr_to_axis_reader_0 ]
-
   # Create interface connections
   connect_bd_intf_net -intf_net AXIS_IN_RAW_CHROMA_1 [get_bd_intf_pins AXIS_IN_RAW_CHROMA] [get_bd_intf_pins axis_data_fifo_raw_CHROMA/S_AXIS]
   connect_bd_intf_net -intf_net AXIS_IN_RAW_LUMA_1 [get_bd_intf_pins AXIS_IN_RAW_LUMA] [get_bd_intf_pins axis_data_fifo_raw_LUMA/S_AXIS]
@@ -233,24 +221,21 @@ proc create_hier_cell_VDMA { parentCell nameHier } {
   connect_bd_intf_net -intf_net S01_AXI_1 [get_bd_intf_pins axi_mem_intercon_writer/S01_AXI] [get_bd_intf_pins axis_to_ddr_writer_CHROMA/m_axi_base_ddr_addr]
   connect_bd_intf_net -intf_net S02_AXI_1 [get_bd_intf_pins axi_mem_intercon_writer/S02_AXI] [get_bd_intf_pins axis_to_ddr_writer_LUMA/m_axi_base_ddr_addr]
   connect_bd_intf_net -intf_net axi_mem_intercon_M00_AXI [get_bd_intf_pins AXIM_WRITER] [get_bd_intf_pins axi_mem_intercon_writer/M00_AXI]
-  connect_bd_intf_net -intf_net axi_mem_intercon_reader_M00_AXI [get_bd_intf_pins AXIM_READER] [get_bd_intf_pins axi_mem_intercon_reader/M00_AXI]
   connect_bd_intf_net -intf_net axis_data_fifo_0_M_AXIS [get_bd_intf_pins axis_data_fifo_raw_LUMA/M_AXIS] [get_bd_intf_pins axis_to_ddr_writer_LUMA/inputStream_V]
   connect_bd_intf_net -intf_net axis_data_fifo_1_M_AXIS [get_bd_intf_pins axis_data_fifo_raw_CHROMA/M_AXIS] [get_bd_intf_pins axis_to_ddr_writer_CHROMA/inputStream_V]
   connect_bd_intf_net -intf_net axis_data_fifo_pipeline_to_writer_M_AXIS [get_bd_intf_pins axis_data_fifo_pipeline_to_writer/M_AXIS] [get_bd_intf_pins axis_to_ddr_writer_0/inputStream_V]
   connect_bd_intf_net -intf_net axis_to_ddr_writer_0_m_axi_base_ddr_addr [get_bd_intf_pins axi_mem_intercon_writer/S00_AXI] [get_bd_intf_pins axis_to_ddr_writer_0/m_axi_base_ddr_addr]
-  connect_bd_intf_net -intf_net ddr_to_axis_reader_0_m_axi_base_ddr_addr [get_bd_intf_pins axi_mem_intercon_reader/S00_AXI] [get_bd_intf_pins ddr_to_axis_reader_0/m_axi_base_ddr_addr]
-  connect_bd_intf_net -intf_net s_axi_AXILiteS1_1 [get_bd_intf_pins s_axi_AXILiteS1] [get_bd_intf_pins ddr_to_axis_reader_0/s_axi_AXILiteS]
   connect_bd_intf_net -intf_net s_axi_AXILiteS_1 [get_bd_intf_pins s_axi_AXILiteS] [get_bd_intf_pins axis_to_ddr_writer_0/s_axi_AXILiteS]
   connect_bd_intf_net -intf_net s_axi_AXILite_raw_CHROMA_1 [get_bd_intf_pins s_axi_AXILite_raw_CHROMA] [get_bd_intf_pins axis_to_ddr_writer_CHROMA/s_axi_AXILiteS]
   connect_bd_intf_net -intf_net s_axi_AXILite_raw_LUMA_1 [get_bd_intf_pins s_axi_AXILite_raw_LUMA] [get_bd_intf_pins axis_to_ddr_writer_LUMA/s_axi_AXILiteS]
 
   # Create port connections
-  connect_bd_net -net CLOCK_100M_1 [get_bd_pins clk_vdma] [get_bd_pins axi_mem_intercon_reader/ACLK] [get_bd_pins axi_mem_intercon_reader/M00_ACLK] [get_bd_pins axi_mem_intercon_reader/S00_ACLK] [get_bd_pins axi_mem_intercon_writer/ACLK] [get_bd_pins axi_mem_intercon_writer/M00_ACLK] [get_bd_pins axi_mem_intercon_writer/S00_ACLK] [get_bd_pins axi_mem_intercon_writer/S01_ACLK] [get_bd_pins axi_mem_intercon_writer/S02_ACLK] [get_bd_pins axis_data_fifo_pipeline_to_writer/m_axis_aclk] [get_bd_pins axis_data_fifo_raw_CHROMA/m_axis_aclk] [get_bd_pins axis_data_fifo_raw_LUMA/m_axis_aclk] [get_bd_pins axis_to_ddr_writer_0/ap_clk] [get_bd_pins axis_to_ddr_writer_CHROMA/ap_clk] [get_bd_pins axis_to_ddr_writer_LUMA/ap_clk] [get_bd_pins ddr_to_axis_reader_0/ap_clk]
+  connect_bd_net -net CLOCK_100M_1 [get_bd_pins clk_vdma] [get_bd_pins axi_mem_intercon_writer/ACLK] [get_bd_pins axi_mem_intercon_writer/M00_ACLK] [get_bd_pins axi_mem_intercon_writer/S00_ACLK] [get_bd_pins axi_mem_intercon_writer/S01_ACLK] [get_bd_pins axi_mem_intercon_writer/S02_ACLK] [get_bd_pins axis_data_fifo_pipeline_to_writer/m_axis_aclk] [get_bd_pins axis_data_fifo_raw_CHROMA/m_axis_aclk] [get_bd_pins axis_data_fifo_raw_LUMA/m_axis_aclk] [get_bd_pins axis_to_ddr_writer_0/ap_clk] [get_bd_pins axis_to_ddr_writer_CHROMA/ap_clk] [get_bd_pins axis_to_ddr_writer_LUMA/ap_clk]
   connect_bd_net -net PCLK_1 [get_bd_pins clk_in] [get_bd_pins axis_data_fifo_pipeline_to_writer/s_axis_aclk] [get_bd_pins axis_data_fifo_raw_CHROMA/s_axis_aclk] [get_bd_pins axis_data_fifo_raw_LUMA/s_axis_aclk]
   connect_bd_net -net aresetn_in_1 [get_bd_pins aresetn_in] [get_bd_pins axis_data_fifo_pipeline_to_writer/s_axis_aresetn] [get_bd_pins axis_data_fifo_raw_CHROMA/s_axis_aresetn] [get_bd_pins axis_data_fifo_raw_LUMA/s_axis_aresetn]
-  connect_bd_net -net axis_to_ddr_writer_0_frame_index_V [get_bd_pins frame_index_V] [get_bd_pins axis_to_ddr_writer_0/frame_index_V] [get_bd_pins ddr_to_axis_reader_0/frame_index_V]
-  connect_bd_net -net rst_processing_system7_0_100M_interconnect_aresetn [get_bd_pins interconnect_aresetn] [get_bd_pins axi_mem_intercon_reader/ARESETN] [get_bd_pins axi_mem_intercon_writer/ARESETN]
-  connect_bd_net -net rst_processing_system7_0_100M_peripheral_aresetn [get_bd_pins aresetn_vdma] [get_bd_pins axi_mem_intercon_reader/M00_ARESETN] [get_bd_pins axi_mem_intercon_reader/S00_ARESETN] [get_bd_pins axi_mem_intercon_writer/M00_ARESETN] [get_bd_pins axi_mem_intercon_writer/S00_ARESETN] [get_bd_pins axi_mem_intercon_writer/S01_ARESETN] [get_bd_pins axi_mem_intercon_writer/S02_ARESETN] [get_bd_pins axis_data_fifo_pipeline_to_writer/m_axis_aresetn] [get_bd_pins axis_data_fifo_raw_CHROMA/m_axis_aresetn] [get_bd_pins axis_data_fifo_raw_LUMA/m_axis_aresetn] [get_bd_pins axis_to_ddr_writer_0/ap_rst_n] [get_bd_pins axis_to_ddr_writer_CHROMA/ap_rst_n] [get_bd_pins axis_to_ddr_writer_LUMA/ap_rst_n] [get_bd_pins ddr_to_axis_reader_0/ap_rst_n]
+  connect_bd_net -net axis_to_ddr_writer_0_frame_index_V [get_bd_pins frame_index_V] [get_bd_pins axis_to_ddr_writer_0/frame_index_V]
+  connect_bd_net -net rst_processing_system7_0_100M_interconnect_aresetn [get_bd_pins interconnect_aresetn] [get_bd_pins axi_mem_intercon_writer/ARESETN]
+  connect_bd_net -net rst_processing_system7_0_100M_peripheral_aresetn [get_bd_pins aresetn_vdma] [get_bd_pins axi_mem_intercon_writer/M00_ARESETN] [get_bd_pins axi_mem_intercon_writer/S00_ARESETN] [get_bd_pins axi_mem_intercon_writer/S01_ARESETN] [get_bd_pins axi_mem_intercon_writer/S02_ARESETN] [get_bd_pins axis_data_fifo_pipeline_to_writer/m_axis_aresetn] [get_bd_pins axis_data_fifo_raw_CHROMA/m_axis_aresetn] [get_bd_pins axis_data_fifo_raw_LUMA/m_axis_aresetn] [get_bd_pins axis_to_ddr_writer_0/ap_rst_n] [get_bd_pins axis_to_ddr_writer_CHROMA/ap_rst_n] [get_bd_pins axis_to_ddr_writer_LUMA/ap_rst_n]
 
   # Restore current instance
   current_bd_instance $oldCurInst
@@ -291,15 +276,15 @@ proc create_hier_cell_OV7670_GRAYSCALE_TO_AXIS { parentCell nameHier } {
   current_bd_instance $hier_obj
 
   # Create interface pins
-  create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:aximm_rtl:1.0 AXIM_READER_SD
-  create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:aximm_rtl:1.0 S00_AXI
-  create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 outStream_V_V
+  create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:aximm_rtl:1.0 m_axi_outStream_grayscale_V
   create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 outStream_raw_CHROMA
   create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 outStream_raw_LUMA
+  create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:aximm_rtl:1.0 s_axi_AXILiteS
 
   # Create pins
   create_bd_pin -dir O -from 0 -to 0 -type data LED_FRAME_VALID
   create_bd_pin -dir I -type clk ap_clk
+  create_bd_pin -dir O ap_done1
   create_bd_pin -dir I -from 0 -to 0 -type rst ap_rst
   create_bd_pin -dir I -from 0 -to 0 -type rst ap_rst_n
   create_bd_pin -dir I -from 0 -to 0 ap_start
@@ -311,20 +296,6 @@ proc create_hier_cell_OV7670_GRAYSCALE_TO_AXIS { parentCell nameHier } {
   # Create instance: LF_valid_to_AXIS, and set properties
   set LF_valid_to_AXIS [ create_bd_cell -type ip -vlnv xilinx.com:hls:LF_valid_to_AXIS:1.0 LF_valid_to_AXIS ]
 
-  # Create instance: axi_interconnect_0, and set properties
-  set axi_interconnect_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 axi_interconnect_0 ]
-  set_property -dict [ list \
-   CONFIG.NUM_MI {2} \
-   CONFIG.SYNCHRONIZATION_STAGES {2} \
- ] $axi_interconnect_0
-
-  # Create instance: axi_interconnect_1, and set properties
-  set axi_interconnect_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 axi_interconnect_1 ]
-  set_property -dict [ list \
-   CONFIG.NUM_MI {1} \
-   CONFIG.SYNCHRONIZATION_STAGES {2} \
- ] $axi_interconnect_1
-
   # Create instance: c_counter_binary_0, and set properties
   set c_counter_binary_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:c_counter_binary:12.0 c_counter_binary_0 ]
   set_property -dict [ list \
@@ -334,42 +305,34 @@ proc create_hier_cell_OV7670_GRAYSCALE_TO_AXIS { parentCell nameHier } {
    CONFIG.Threshold_Value {F} \
  ] $c_counter_binary_0
 
-  # Create instance: ddr_to_axis_reader_SD_0, and set properties
-  set ddr_to_axis_reader_SD_0 [ create_bd_cell -type ip -vlnv xilinx.com:hls:ddr_to_axis_reader_SD:1.0 ddr_to_axis_reader_SD_0 ]
-
-  # Create instance: mux_sd_ov_1, and set properties
-  set mux_sd_ov_1 [ create_bd_cell -type ip -vlnv xilinx.com:hls:mux_sd_ov:1.0 mux_sd_ov_1 ]
-
-  # Create instance: ov7670_LUMA_CHROMA_0, and set properties
-  set ov7670_LUMA_CHROMA_0 [ create_bd_cell -type ip -vlnv xilinx.com:hls:ov7670_LUMA_CHROMA:1.0 ov7670_LUMA_CHROMA_0 ]
-
   # Create instance: ov7670_interface_0, and set properties
   set ov7670_interface_0 [ create_bd_cell -type ip -vlnv xilinx.com:hls:ov7670_interface:1.0 ov7670_interface_0 ]
 
+  # Create instance: ov7670_prova_0, and set properties
+  set ov7670_prova_0 [ create_bd_cell -type ip -vlnv xilinx.com:hls:ov7670_prova:1.0 ov7670_prova_0 ]
+
   # Create interface connections
-  connect_bd_intf_net -intf_net LF_valid_to_AXIS_outputStream_V_V [get_bd_intf_pins LF_valid_to_AXIS/outputStream_V_V] [get_bd_intf_pins mux_sd_ov_1/data_in_ov7670_V_V]
-  connect_bd_intf_net -intf_net S00_AXI_1 [get_bd_intf_pins S00_AXI] [get_bd_intf_pins axi_interconnect_0/S00_AXI]
-  connect_bd_intf_net -intf_net axi_interconnect_0_M00_AXI [get_bd_intf_pins axi_interconnect_0/M00_AXI] [get_bd_intf_pins ddr_to_axis_reader_SD_0/s_axi_AXILiteS]
-  connect_bd_intf_net -intf_net axi_interconnect_0_M01_AXI [get_bd_intf_pins axi_interconnect_0/M01_AXI] [get_bd_intf_pins mux_sd_ov_1/s_axi_AXILiteS]
-  connect_bd_intf_net -intf_net axi_interconnect_1_M00_AXI [get_bd_intf_pins AXIM_READER_SD] [get_bd_intf_pins axi_interconnect_1/M00_AXI]
-  connect_bd_intf_net -intf_net ddr_to_axis_reader_SD_0_m_axi_base_ddr_addr [get_bd_intf_pins axi_interconnect_1/S00_AXI] [get_bd_intf_pins ddr_to_axis_reader_SD_0/m_axi_base_ddr_addr]
-  connect_bd_intf_net -intf_net ddr_to_axis_reader_SD_0_outStream_channel_1_V [get_bd_intf_pins ddr_to_axis_reader_SD_0/outStream_channel_1_V] [get_bd_intf_pins mux_sd_ov_1/data_in_sd_V_V]
-  connect_bd_intf_net -intf_net mux_sd_ov_1_outputStream_V_V [get_bd_intf_pins mux_sd_ov_1/outputStream_V_V] [get_bd_intf_pins ov7670_LUMA_CHROMA_0/inStream_V_V]
-  connect_bd_intf_net -intf_net ov7670_LUMA_CHROMA_0_outStream_CHROMA_V_V [get_bd_intf_pins outStream_raw_CHROMA] [get_bd_intf_pins ov7670_LUMA_CHROMA_0/outStream_CHROMA_V_V]
-  connect_bd_intf_net -intf_net ov7670_LUMA_CHROMA_0_outStream_LUMA_V_V [get_bd_intf_pins outStream_raw_LUMA] [get_bd_intf_pins ov7670_LUMA_CHROMA_0/outStream_LUMA_V_V]
-  connect_bd_intf_net -intf_net ov7670_LUMA_CHROMA_0_outStream_grayscale_V_V [get_bd_intf_pins outStream_V_V] [get_bd_intf_pins ov7670_LUMA_CHROMA_0/outStream_grayscale_V_V]
+  connect_bd_intf_net -intf_net LF_valid_to_AXIS_outputStream_V_V [get_bd_intf_pins LF_valid_to_AXIS/outputStream_V_V] [get_bd_intf_pins ov7670_prova_0/inStream_V_V]
+  connect_bd_intf_net -intf_net ov7670_prova_0_m_axi_outStream_grayscale [get_bd_intf_pins m_axi_outStream_grayscale_V] [get_bd_intf_pins ov7670_prova_0/m_axi_outStream_grayscale]
+  connect_bd_intf_net -intf_net ov7670_prova_0_outStream_CHROMA_V_V [get_bd_intf_pins outStream_raw_CHROMA] [get_bd_intf_pins ov7670_prova_0/outStream_CHROMA_V_V]
+  connect_bd_intf_net -intf_net ov7670_prova_0_outStream_LUMA_V_V [get_bd_intf_pins outStream_raw_LUMA] [get_bd_intf_pins ov7670_prova_0/outStream_LUMA_V_V]
+  connect_bd_intf_net -intf_net s_axi_AXILiteS_1 [get_bd_intf_pins s_axi_AXILiteS] [get_bd_intf_pins ov7670_prova_0/s_axi_AXILiteS]
 
   # Create port connections
-  connect_bd_net -net PCLK_1 [get_bd_pins ap_clk] [get_bd_pins LF_valid_to_AXIS/ap_clk] [get_bd_pins axi_interconnect_0/ACLK] [get_bd_pins axi_interconnect_0/M00_ACLK] [get_bd_pins axi_interconnect_0/M01_ACLK] [get_bd_pins axi_interconnect_0/S00_ACLK] [get_bd_pins axi_interconnect_1/ACLK] [get_bd_pins axi_interconnect_1/M00_ACLK] [get_bd_pins axi_interconnect_1/S00_ACLK] [get_bd_pins ddr_to_axis_reader_SD_0/ap_clk] [get_bd_pins mux_sd_ov_1/ap_clk] [get_bd_pins ov7670_LUMA_CHROMA_0/ap_clk] [get_bd_pins ov7670_interface_0/ap_clk]
-  connect_bd_net -net ap_start_1 [get_bd_pins ap_start] [get_bd_pins LF_valid_to_AXIS/ap_start] [get_bd_pins mux_sd_ov_1/ap_start] [get_bd_pins ov7670_LUMA_CHROMA_0/ap_start] [get_bd_pins ov7670_interface_0/ap_start]
+  connect_bd_net -net PCLK_1 [get_bd_pins ap_clk] [get_bd_pins LF_valid_to_AXIS/ap_clk] [get_bd_pins ov7670_interface_0/ap_clk] [get_bd_pins ov7670_prova_0/ap_clk]
+  connect_bd_net -net ap_done [get_bd_pins ap_done1] [get_bd_pins LF_valid_to_AXIS/ap_done]
+  set_property -dict [ list \
+HDL_ATTRIBUTE.DEBUG {true} \
+ ] [get_bd_nets ap_done]
+  connect_bd_net -net ap_start_1 [get_bd_pins ap_start] [get_bd_pins LF_valid_to_AXIS/ap_start] [get_bd_pins ov7670_interface_0/ap_start]
   connect_bd_net -net c_counter_binary_0_THRESH0 [get_bd_pins LED_FRAME_VALID] [get_bd_pins c_counter_binary_0/THRESH0]
   connect_bd_net -net data_in_V_1 [get_bd_pins data_in] [get_bd_pins ov7670_interface_0/data_in_V]
-  connect_bd_net -net enable_raw_stream_1 [get_bd_pins enable_raw_stream] [get_bd_pins ov7670_LUMA_CHROMA_0/enable_raw_stream]
+  connect_bd_net -net enable_raw_stream_1 [get_bd_pins enable_raw_stream] [get_bd_pins ov7670_prova_0/enable_raw_stream]
   connect_bd_net -net href_V_1 [get_bd_pins href] [get_bd_pins ov7670_interface_0/href_V]
   connect_bd_net -net ov7670_interface_0_data_out_V [get_bd_pins LF_valid_to_AXIS/data_in_V] [get_bd_pins ov7670_interface_0/data_out_V]
   connect_bd_net -net ov7670_interface_0_frame_valid_V [get_bd_pins LF_valid_to_AXIS/frame_valid] [get_bd_pins c_counter_binary_0/CLK] [get_bd_pins ov7670_interface_0/frame_valid_V]
   connect_bd_net -net ov7670_interface_0_line_valid_V [get_bd_pins LF_valid_to_AXIS/line_valid] [get_bd_pins ov7670_interface_0/line_valid_V]
-  connect_bd_net -net proc_sys_reset_0_peripheral_aresetn [get_bd_pins ap_rst_n] [get_bd_pins LF_valid_to_AXIS/ap_rst_n] [get_bd_pins axi_interconnect_0/ARESETN] [get_bd_pins axi_interconnect_0/M00_ARESETN] [get_bd_pins axi_interconnect_0/M01_ARESETN] [get_bd_pins axi_interconnect_0/S00_ARESETN] [get_bd_pins axi_interconnect_1/ARESETN] [get_bd_pins axi_interconnect_1/M00_ARESETN] [get_bd_pins axi_interconnect_1/S00_ARESETN] [get_bd_pins ddr_to_axis_reader_SD_0/ap_rst_n] [get_bd_pins mux_sd_ov_1/ap_rst_n] [get_bd_pins ov7670_LUMA_CHROMA_0/ap_rst_n]
+  connect_bd_net -net proc_sys_reset_0_peripheral_aresetn [get_bd_pins ap_rst_n] [get_bd_pins LF_valid_to_AXIS/ap_rst_n] [get_bd_pins ov7670_prova_0/ap_rst_n]
   connect_bd_net -net reset_24M_peripheral_reset [get_bd_pins ap_rst] [get_bd_pins ov7670_interface_0/ap_rst]
   connect_bd_net -net vsync_V_1 [get_bd_pins vsync] [get_bd_pins ov7670_interface_0/vsync_V]
 
@@ -414,7 +377,6 @@ proc create_root_design { parentCell } {
 
   # Create ports
   set LED_FRAME_VALID [ create_bd_port -dir O -from 0 -to 0 -type data LED_FRAME_VALID ]
-  set Led_test_gpio [ create_bd_port -dir O -from 0 -to 0 -type data Led_test_gpio ]
   set OV7670_RESET [ create_bd_port -dir O -from 0 -to 0 -type rst OV7670_RESET ]
   set PCLK [ create_bd_port -dir I -type clk PCLK ]
   set_property -dict [ list \
@@ -429,7 +391,6 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
    CONFIG.LAYERED_METADATA {xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}} \
  ] $href_V
-  set reset_sw [ create_bd_port -dir I -type intr reset_sw ]
   set vsync_V [ create_bd_port -dir I -from 0 -to 0 -type data vsync_V ]
   set_property -dict [ list \
    CONFIG.LAYERED_METADATA {xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}} \
@@ -464,13 +425,19 @@ proc create_root_design { parentCell } {
    CONFIG.C_GPIO_WIDTH {1} \
  ] $axi_gpio_pl_reset
 
+  # Create instance: axi_interconnect_0, and set properties
+  set axi_interconnect_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 axi_interconnect_0 ]
+  set_property -dict [ list \
+   CONFIG.NUM_MI {1} \
+ ] $axi_interconnect_0
+
   # Create instance: clk_wiz_0, and set properties
   set clk_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0 ]
   set_property -dict [ list \
    CONFIG.CLKOUT1_DRIVES {Buffer} \
-   CONFIG.CLKOUT1_JITTER {329.137} \
-   CONFIG.CLKOUT1_PHASE_ERROR {404.105} \
-   CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {24.001} \
+   CONFIG.CLKOUT1_JITTER {155.487} \
+   CONFIG.CLKOUT1_PHASE_ERROR {87.180} \
+   CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {24.000} \
    CONFIG.CLKOUT1_USED {true} \
    CONFIG.CLKOUT2_DRIVES {Buffer} \
    CONFIG.CLKOUT2_JITTER {204.875} \
@@ -482,10 +449,10 @@ proc create_root_design { parentCell } {
    CONFIG.CLKOUT5_DRIVES {Buffer} \
    CONFIG.CLKOUT6_DRIVES {Buffer} \
    CONFIG.CLKOUT7_DRIVES {Buffer} \
-   CONFIG.MMCM_CLKFBOUT_MULT_F {60.125} \
-   CONFIG.MMCM_CLKOUT0_DIVIDE_F {41.750} \
+   CONFIG.MMCM_CLKFBOUT_MULT_F {12.000} \
+   CONFIG.MMCM_CLKOUT0_DIVIDE_F {50.000} \
    CONFIG.MMCM_CLKOUT1_DIVIDE {1} \
-   CONFIG.MMCM_DIVCLK_DIVIDE {6} \
+   CONFIG.MMCM_DIVCLK_DIVIDE {1} \
    CONFIG.NUM_OUT_CLKS {1} \
    CONFIG.PHASESHIFT_MODE {WAVEFORM} \
    CONFIG.SECONDARY_SOURCE {Single_ended_clock_capable_pin} \
@@ -503,7 +470,7 @@ proc create_root_design { parentCell } {
   # Create instance: processing_system7_0_axi_periph, and set properties
   set processing_system7_0_axi_periph [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 processing_system7_0_axi_periph ]
   set_property -dict [ list \
-   CONFIG.NUM_MI {7} \
+   CONFIG.NUM_MI {6} \
    CONFIG.SYNCHRONIZATION_STAGES {2} \
  ] $processing_system7_0_axi_periph
 
@@ -513,8 +480,13 @@ proc create_root_design { parentCell } {
   # Create instance: reset_24M, and set properties
   set reset_24M [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 reset_24M ]
 
-  # Create instance: xlconcat, and set properties
-  set xlconcat [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat ]
+  # Create instance: system_ila_0, and set properties
+  set system_ila_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:system_ila:1.1 system_ila_0 ]
+  set_property -dict [ list \
+   CONFIG.C_MON_TYPE {NATIVE} \
+   CONFIG.C_NUM_OF_PROBES {1} \
+   CONFIG.C_PROBE0_TYPE {0} \
+ ] $system_ila_0
 
   # Create instance: zynq_ultra_ps_e_0, and set properties
   set zynq_ultra_ps_e_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:zynq_ultra_ps_e:3.2 zynq_ultra_ps_e_0 ]
@@ -534,7 +506,7 @@ proc create_root_design { parentCell } {
    CONFIG.PCIE_BOARD_INTERFACE {custom} \
    CONFIG.PJTAG_BOARD_INTERFACE {custom} \
    CONFIG.PMU_BOARD_INTERFACE {custom} \
-   CONFIG.PSU_BANK_0_IO_STANDARD {LVCMOS33} \
+   CONFIG.PSU_BANK_0_IO_STANDARD {LVCMOS18} \
    CONFIG.PSU_BANK_1_IO_STANDARD {LVCMOS18} \
    CONFIG.PSU_BANK_2_IO_STANDARD {LVCMOS18} \
    CONFIG.PSU_BANK_3_IO_STANDARD {LVCMOS18} \
@@ -627,7 +599,7 @@ proc create_root_design { parentCell } {
    CONFIG.PSU_MIO_24_INPUT_TYPE {schmitt} \
    CONFIG.PSU_MIO_24_PULLUPDOWN {pullup} \
    CONFIG.PSU_MIO_24_SLEW {slow} \
-   CONFIG.PSU_MIO_25_DIRECTION {in} \
+   CONFIG.PSU_MIO_25_DIRECTION {inout} \
    CONFIG.PSU_MIO_25_DRIVE_STRENGTH {12} \
    CONFIG.PSU_MIO_25_INPUT_TYPE {schmitt} \
    CONFIG.PSU_MIO_25_PULLUPDOWN {pullup} \
@@ -932,8 +904,8 @@ proc create_root_design { parentCell } {
    CONFIG.PSU_MIO_9_INPUT_TYPE {schmitt} \
    CONFIG.PSU_MIO_9_PULLUPDOWN {pullup} \
    CONFIG.PSU_MIO_9_SLEW {slow} \
-   CONFIG.PSU_MIO_TREE_PERIPHERALS {UART 1#UART 1#UART 0#UART 0#I2C 1#I2C 1#SPI 1#GPIO0 MIO#GPIO0 MIO#SPI 1#SPI 1#SPI 1#GPIO0 MIO#SD 0#SD 0#SD 0#SD 0#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#SD 0#SD 0#GPIO0 MIO#SD 0#SD 0#PMU GPI 0#DPAUX#DPAUX#DPAUX#DPAUX#GPIO1 MIO#PMU GPO 0#PMU GPO 1#PMU GPO 2#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#SPI 0#GPIO1 MIO#GPIO1 MIO#SPI 0#SPI 0#SPI 0#GPIO1 MIO#GPIO1 MIO#SD 1#SD 1#SD 1#SD 1#SD 1#SD 1#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#GPIO2 MIO#GPIO2 MIO} \
-   CONFIG.PSU_MIO_TREE_SIGNALS {txd#rxd#rxd#txd#scl_out#sda_out#sclk_out#gpio0[7]#gpio0[8]#n_ss_out[0]#miso#mosi#gpio0[12]#sdio0_data_out[0]#sdio0_data_out[1]#sdio0_data_out[2]#sdio0_data_out[3]#gpio0[17]#gpio0[18]#gpio0[19]#gpio0[20]#sdio0_cmd_out#sdio0_clk_out#gpio0[23]#sdio0_cd_n#sdio0_wp#gpi[0]#dp_aux_data_out#dp_hot_plug_detect#dp_aux_data_oe#dp_aux_data_in#gpio1[31]#gpo[0]#gpo[1]#gpo[2]#gpio1[35]#gpio1[36]#gpio1[37]#sclk_out#gpio1[39]#gpio1[40]#n_ss_out[0]#miso#mosi#gpio1[44]#gpio1[45]#sdio1_data_out[0]#sdio1_data_out[1]#sdio1_data_out[2]#sdio1_data_out[3]#sdio1_cmd_out#sdio1_clk_out#ulpi_clk_in#ulpi_dir#ulpi_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#ulpi_tx_data[4]#ulpi_tx_data[5]#ulpi_tx_data[6]#ulpi_tx_data[7]#ulpi_clk_in#ulpi_dir#ulpi_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#ulpi_tx_data[4]#ulpi_tx_data[5]#ulpi_tx_data[6]#ulpi_tx_data[7]#gpio2[76]#gpio2[77]} \
+   CONFIG.PSU_MIO_TREE_PERIPHERALS {UART 1#UART 1#UART 0#UART 0#I2C 1#I2C 1#SPI 1#GPIO0 MIO#GPIO0 MIO#SPI 1#SPI 1#SPI 1#GPIO0 MIO#SD 0#SD 0#SD 0#SD 0#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#GPIO0 MIO#SD 0#SD 0#GPIO0 MIO#SD 0#GPIO0 MIO#PMU GPI 0#DPAUX#DPAUX#DPAUX#DPAUX#GPIO1 MIO#PMU GPO 0#PMU GPO 1#PMU GPO 2#GPIO1 MIO#GPIO1 MIO#GPIO1 MIO#SPI 0#GPIO1 MIO#GPIO1 MIO#SPI 0#SPI 0#SPI 0#GPIO1 MIO#GPIO1 MIO#SD 1#SD 1#SD 1#SD 1#SD 1#SD 1#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#USB 1#GPIO2 MIO#GPIO2 MIO} \
+   CONFIG.PSU_MIO_TREE_SIGNALS {txd#rxd#rxd#txd#scl_out#sda_out#sclk_out#gpio0[7]#gpio0[8]#n_ss_out[0]#miso#mosi#gpio0[12]#sdio0_data_out[0]#sdio0_data_out[1]#sdio0_data_out[2]#sdio0_data_out[3]#gpio0[17]#gpio0[18]#gpio0[19]#gpio0[20]#sdio0_cmd_out#sdio0_clk_out#gpio0[23]#sdio0_cd_n#gpio0[25]#gpi[0]#dp_aux_data_out#dp_hot_plug_detect#dp_aux_data_oe#dp_aux_data_in#gpio1[31]#gpo[0]#gpo[1]#gpo[2]#gpio1[35]#gpio1[36]#gpio1[37]#sclk_out#gpio1[39]#gpio1[40]#n_ss_out[0]#miso#mosi#gpio1[44]#gpio1[45]#sdio1_data_out[0]#sdio1_data_out[1]#sdio1_data_out[2]#sdio1_data_out[3]#sdio1_cmd_out#sdio1_clk_out#ulpi_clk_in#ulpi_dir#ulpi_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#ulpi_tx_data[4]#ulpi_tx_data[5]#ulpi_tx_data[6]#ulpi_tx_data[7]#ulpi_clk_in#ulpi_dir#ulpi_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#ulpi_tx_data[4]#ulpi_tx_data[5]#ulpi_tx_data[6]#ulpi_tx_data[7]#gpio2[76]#gpio2[77]} \
    CONFIG.PSU_PERIPHERAL_BOARD_PRESET {} \
    CONFIG.PSU_SD0_INTERNAL_BUS_WIDTH {4} \
    CONFIG.PSU_SD1_INTERNAL_BUS_WIDTH {4} \
@@ -1750,7 +1722,7 @@ proc create_root_design { parentCell } {
    CONFIG.PSU__PROTECTION__FPD_SEGMENTS {SA:0xFD1A0000 ;SIZE:1280;UNIT:KB ;RegionTZ:Secure ;WrAllowed:Read/Write;subsystemId:PMU Firmware|SA:0xFD000000 ;SIZE:64;UNIT:KB ;RegionTZ:Secure ;WrAllowed:Read/Write;subsystemId:PMU Firmware|SA:0xFD010000 ;SIZE:64;UNIT:KB ;RegionTZ:Secure ;WrAllowed:Read/Write;subsystemId:PMU Firmware|SA:0xFD020000 ;SIZE:64;UNIT:KB ;RegionTZ:Secure ;WrAllowed:Read/Write;subsystemId:PMU Firmware|SA:0xFD030000 ;SIZE:64;UNIT:KB ;RegionTZ:Secure ;WrAllowed:Read/Write;subsystemId:PMU Firmware|SA:0xFD040000 ;SIZE:64;UNIT:KB ;RegionTZ:Secure ;WrAllowed:Read/Write;subsystemId:PMU Firmware|SA:0xFD050000 ;SIZE:64;UNIT:KB ;RegionTZ:Secure ;WrAllowed:Read/Write;subsystemId:PMU Firmware|SA:0xFD610000 ;SIZE:512;UNIT:KB ;RegionTZ:Secure ;WrAllowed:Read/Write;subsystemId:PMU Firmware|SA:0xFD5D0000 ;SIZE:64;UNIT:KB ;RegionTZ:Secure ;WrAllowed:Read/Write;subsystemId:PMU Firmware} \
    CONFIG.PSU__PROTECTION__LOCK_UNUSED_SEGMENTS {0} \
    CONFIG.PSU__PROTECTION__LPD_SEGMENTS {SA:0xFF980000 ;SIZE:64;UNIT:KB ;RegionTZ:Secure ;WrAllowed:Read/Write;subsystemId:PMU Firmware|SA:0xFF5E0000 ;SIZE:2560;UNIT:KB ;RegionTZ:Secure ;WrAllowed:Read/Write;subsystemId:PMU Firmware|SA:0xFFCC0000 ;SIZE:64;UNIT:KB ;RegionTZ:Secure ;WrAllowed:Read/Write;subsystemId:PMU Firmware|SA:0xFF180000 ;SIZE:768;UNIT:KB ;RegionTZ:Secure ;WrAllowed:Read/Write;subsystemId:PMU Firmware|SA:0xFF410000 ;SIZE:640;UNIT:KB ;RegionTZ:Secure ;WrAllowed:Read/Write;subsystemId:PMU Firmware|SA:0xFFA70000 ;SIZE:64;UNIT:KB ;RegionTZ:Secure ;WrAllowed:Read/Write;subsystemId:PMU Firmware|SA:0xFF9A0000 ;SIZE:64;UNIT:KB ;RegionTZ:Secure ;WrAllowed:Read/Write;subsystemId:PMU Firmware} \
-   CONFIG.PSU__PROTECTION__MASTERS {USB1:NonSecure;1|USB0:NonSecure;1|S_AXI_LPD:NA;0|S_AXI_HPC1_FPD:NA;0|S_AXI_HPC0_FPD:NA;0|S_AXI_HP3_FPD:NA;0|S_AXI_HP2_FPD:NA;1|S_AXI_HP1_FPD:NA;1|S_AXI_HP0_FPD:NA;1|S_AXI_ACP:NA;0|S_AXI_ACE:NA;0|SD1:NonSecure;1|SD0:NonSecure;1|SATA1:NonSecure;0|SATA0:NonSecure;0|RPU1:Secure;1|RPU0:Secure;1|QSPI:NonSecure;0|PMU:NA;1|PCIe:NonSecure;0|NAND:NonSecure;0|LDMA:NonSecure;1|GPU:NonSecure;1|GEM3:NonSecure;0|GEM2:NonSecure;0|GEM1:NonSecure;0|GEM0:NonSecure;0|FDMA:NonSecure;1|DP:NonSecure;1|DAP:NA;1|Coresight:NA;1|CSU:NA;1|APU:NA;1} \
+   CONFIG.PSU__PROTECTION__MASTERS {USB1:NonSecure;1|USB0:NonSecure;1|S_AXI_LPD:NA;0|S_AXI_HPC1_FPD:NA;0|S_AXI_HPC0_FPD:NA;0|S_AXI_HP3_FPD:NA;0|S_AXI_HP2_FPD:NA;0|S_AXI_HP1_FPD:NA;1|S_AXI_HP0_FPD:NA;1|S_AXI_ACP:NA;0|S_AXI_ACE:NA;0|SD1:NonSecure;1|SD0:NonSecure;1|SATA1:NonSecure;0|SATA0:NonSecure;0|RPU1:Secure;1|RPU0:Secure;1|QSPI:NonSecure;0|PMU:NA;1|PCIe:NonSecure;0|NAND:NonSecure;0|LDMA:NonSecure;1|GPU:NonSecure;1|GEM3:NonSecure;0|GEM2:NonSecure;0|GEM1:NonSecure;0|GEM0:NonSecure;0|FDMA:NonSecure;1|DP:NonSecure;1|DAP:NA;1|Coresight:NA;1|CSU:NA;1|APU:NA;1} \
    CONFIG.PSU__PROTECTION__MASTERS_TZ {GEM0:NonSecure|SD1:NonSecure|GEM2:NonSecure|GEM1:NonSecure|GEM3:NonSecure|PCIe:NonSecure|DP:NonSecure|NAND:NonSecure|GPU:NonSecure|USB1:NonSecure|USB0:NonSecure|LDMA:NonSecure|FDMA:NonSecure|QSPI:NonSecure|SD0:NonSecure} \
    CONFIG.PSU__PROTECTION__OCM_SEGMENTS {NONE} \
    CONFIG.PSU__PROTECTION__PRESUBSYSTEMS {NONE} \
@@ -1780,8 +1752,8 @@ proc create_root_design { parentCell } {
    CONFIG.PSU__SD0__GRP_CD__ENABLE {1} \
    CONFIG.PSU__SD0__GRP_CD__IO {MIO 24} \
    CONFIG.PSU__SD0__GRP_POW__ENABLE {0} \
-   CONFIG.PSU__SD0__GRP_WP__ENABLE {1} \
-   CONFIG.PSU__SD0__GRP_WP__IO {MIO 25} \
+   CONFIG.PSU__SD0__GRP_WP__ENABLE {0} \
+   CONFIG.PSU__SD0__GRP_WP__IO {<Select>} \
    CONFIG.PSU__SD0__PERIPHERAL__ENABLE {1} \
    CONFIG.PSU__SD0__PERIPHERAL__IO {MIO 13 .. 16 21 22} \
    CONFIG.PSU__SD0__RESET__ENABLE {0} \
@@ -1894,7 +1866,7 @@ proc create_root_design { parentCell } {
    CONFIG.PSU__USE__IRQ0 {1} \
    CONFIG.PSU__USE__IRQ1 {0} \
    CONFIG.PSU__USE__M_AXI_GP0 {1} \
-   CONFIG.PSU__USE__M_AXI_GP1 {1} \
+   CONFIG.PSU__USE__M_AXI_GP1 {0} \
    CONFIG.PSU__USE__M_AXI_GP2 {0} \
    CONFIG.PSU__USE__PROC_EVENT_BUS {0} \
    CONFIG.PSU__USE__RPU_LEGACY_INTERRUPT {0} \
@@ -1910,7 +1882,7 @@ proc create_root_design { parentCell } {
    CONFIG.PSU__USE__S_AXI_GP1 {0} \
    CONFIG.PSU__USE__S_AXI_GP2 {1} \
    CONFIG.PSU__USE__S_AXI_GP3 {1} \
-   CONFIG.PSU__USE__S_AXI_GP4 {1} \
+   CONFIG.PSU__USE__S_AXI_GP4 {0} \
    CONFIG.PSU__USE__S_AXI_GP5 {0} \
    CONFIG.PSU__USE__S_AXI_GP6 {0} \
    CONFIG.PSU__USE__USB3_0_HUB {0} \
@@ -1940,43 +1912,40 @@ proc create_root_design { parentCell } {
  ] $zynq_ultra_ps_e_0
 
   # Create interface connections
-  connect_bd_intf_net -intf_net OV7670_GRAYSCALE_TO_AXIS_AXIM_READER_SD [get_bd_intf_pins OV7670_GRAYSCALE_TO_AXIS/AXIM_READER_SD] [get_bd_intf_pins zynq_ultra_ps_e_0/S_AXI_HP2_FPD]
-  connect_bd_intf_net -intf_net OV7670_GRAYSCALE_TO_AXIS_outStream_V_V [get_bd_intf_pins OV7670_GRAYSCALE_TO_AXIS/outStream_V_V] [get_bd_intf_pins VDMA/AXIS_IN]
   connect_bd_intf_net -intf_net OV7670_GRAYSCALE_TO_AXIS_outStream_raw_CHROMA [get_bd_intf_pins OV7670_GRAYSCALE_TO_AXIS/outStream_raw_CHROMA] [get_bd_intf_pins VDMA/AXIS_IN_RAW_CHROMA]
   connect_bd_intf_net -intf_net OV7670_GRAYSCALE_TO_AXIS_outStream_raw_LUMA [get_bd_intf_pins OV7670_GRAYSCALE_TO_AXIS/outStream_raw_LUMA] [get_bd_intf_pins VDMA/AXIS_IN_RAW_LUMA]
-  connect_bd_intf_net -intf_net S00_AXI_1 [get_bd_intf_pins OV7670_GRAYSCALE_TO_AXIS/S00_AXI] [get_bd_intf_pins zynq_ultra_ps_e_0/M_AXI_HPM1_FPD]
+  connect_bd_intf_net -intf_net S00_AXI_1 [get_bd_intf_pins OV7670_GRAYSCALE_TO_AXIS/m_axi_outStream_grayscale_V] [get_bd_intf_pins axi_interconnect_0/S00_AXI]
   connect_bd_intf_net -intf_net S00_AXI_2 [get_bd_intf_pins processing_system7_0_axi_periph/S00_AXI] [get_bd_intf_pins zynq_ultra_ps_e_0/M_AXI_HPM0_FPD]
-  connect_bd_intf_net -intf_net VDMA_AXIM_READER [get_bd_intf_pins VDMA/AXIM_READER] [get_bd_intf_pins zynq_ultra_ps_e_0/S_AXI_HP0_FPD]
   connect_bd_intf_net -intf_net VDMA_AXIM_WRITER [get_bd_intf_pins VDMA/AXIM_WRITER] [get_bd_intf_pins zynq_ultra_ps_e_0/S_AXI_HP1_FPD]
+  connect_bd_intf_net -intf_net axi_interconnect_0_M00_AXI [get_bd_intf_pins axi_interconnect_0/M00_AXI] [get_bd_intf_pins zynq_ultra_ps_e_0/S_AXI_HP0_FPD]
   connect_bd_intf_net -intf_net processing_system7_0_axi_periph_M00_AXI [get_bd_intf_pins axi_gpio_frame_intr/S_AXI] [get_bd_intf_pins processing_system7_0_axi_periph/M00_AXI]
   connect_bd_intf_net -intf_net processing_system7_0_axi_periph_M01_AXI [get_bd_intf_pins axi_gpio_pl_reset/S_AXI] [get_bd_intf_pins processing_system7_0_axi_periph/M01_AXI]
   connect_bd_intf_net -intf_net processing_system7_0_axi_periph_M02_AXI [get_bd_intf_pins VDMA/s_axi_AXILiteS] [get_bd_intf_pins processing_system7_0_axi_periph/M02_AXI]
-  connect_bd_intf_net -intf_net processing_system7_0_axi_periph_M03_AXI [get_bd_intf_pins VDMA/s_axi_AXILiteS1] [get_bd_intf_pins processing_system7_0_axi_periph/M03_AXI]
   connect_bd_intf_net -intf_net processing_system7_0_axi_periph_M04_AXI [get_bd_intf_pins VDMA/s_axi_AXILite_raw_LUMA] [get_bd_intf_pins processing_system7_0_axi_periph/M04_AXI]
   connect_bd_intf_net -intf_net processing_system7_0_axi_periph_M05_AXI [get_bd_intf_pins VDMA/s_axi_AXILite_raw_CHROMA] [get_bd_intf_pins processing_system7_0_axi_periph/M05_AXI]
+  connect_bd_intf_net -intf_net s_axi_AXILiteS_1 [get_bd_intf_pins OV7670_GRAYSCALE_TO_AXIS/s_axi_AXILiteS] [get_bd_intf_pins processing_system7_0_axi_periph/M03_AXI]
 
   # Create port connections
   connect_bd_net -net ENABLE_RAW_STREAM_dout [get_bd_pins ENABLE_RAW_STREAM/dout] [get_bd_pins OV7670_GRAYSCALE_TO_AXIS/enable_raw_stream]
   connect_bd_net -net OV7670_GRAYSCALE_TO_AXIS_Q [get_bd_ports LED_FRAME_VALID] [get_bd_pins OV7670_GRAYSCALE_TO_AXIS/LED_FRAME_VALID]
-  connect_bd_net -net PCLK_1 [get_bd_ports PCLK] [get_bd_pins OV7670_GRAYSCALE_TO_AXIS/ap_clk] [get_bd_pins VDMA/clk_in] [get_bd_pins processing_system7_0_axi_periph/M06_ACLK] [get_bd_pins reset_24M/slowest_sync_clk] [get_bd_pins zynq_ultra_ps_e_0/maxihpm1_fpd_aclk] [get_bd_pins zynq_ultra_ps_e_0/saxihp2_fpd_aclk]
+  connect_bd_net -net OV7670_GRAYSCALE_TO_AXIS_ap_done1 [get_bd_pins OV7670_GRAYSCALE_TO_AXIS/ap_done1] [get_bd_pins system_ila_0/probe0]
   connect_bd_net -net ap_start_1 [get_bd_pins OV7670_GRAYSCALE_TO_AXIS/ap_start] [get_bd_pins const_true/dout]
-  connect_bd_net -net axi_gpio_frame_intr_ip2intc_irpt [get_bd_pins axi_gpio_frame_intr/ip2intc_irpt] [get_bd_pins xlconcat/In0]
+  connect_bd_net -net axi_gpio_frame_intr_ip2intc_irpt [get_bd_pins axi_gpio_frame_intr/ip2intc_irpt] [get_bd_pins zynq_ultra_ps_e_0/pl_ps_irq0]
   connect_bd_net -net axis_to_ddr_writer_0_frame_index_V [get_bd_pins VDMA/frame_index_V] [get_bd_pins axi_gpio_frame_intr/gpio_io_i]
-  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_ports XCLK] [get_bd_pins clk_wiz_0/clk_out1]
+  connect_bd_net -net clk_net [get_bd_ports PCLK] [get_bd_pins OV7670_GRAYSCALE_TO_AXIS/ap_clk] [get_bd_pins VDMA/clk_in] [get_bd_pins axi_interconnect_0/S00_ACLK] [get_bd_pins processing_system7_0_axi_periph/M03_ACLK] [get_bd_pins reset_24M/slowest_sync_clk]
+  connect_bd_net -net clk_wiz_0_clk_out2 [get_bd_ports XCLK] [get_bd_pins clk_wiz_0/clk_out1]
   connect_bd_net -net data_in_V_1 [get_bd_ports data_in_V] [get_bd_pins OV7670_GRAYSCALE_TO_AXIS/data_in]
-  connect_bd_net -net ext_reset_in_1 [get_bd_ports Led_test_gpio] [get_bd_ports OV7670_RESET] [get_bd_pins axi_gpio_pl_reset/gpio_io_o] [get_bd_pins reset_100M/ext_reset_in] [get_bd_pins reset_24M/ext_reset_in]
+  connect_bd_net -net ext_reset_in_1 [get_bd_ports OV7670_RESET] [get_bd_pins axi_gpio_pl_reset/gpio_io_o]
   connect_bd_net -net href_V_1 [get_bd_ports href_V] [get_bd_pins OV7670_GRAYSCALE_TO_AXIS/href]
-  connect_bd_net -net proc_sys_reset_0_peripheral_aresetn [get_bd_pins OV7670_GRAYSCALE_TO_AXIS/ap_rst_n] [get_bd_pins VDMA/aresetn_in] [get_bd_pins reset_24M/peripheral_aresetn]
-  connect_bd_net -net proc_sys_reset_0_peripheral_aresetn1 [get_bd_pins axi_gpio_pl_reset/s_axi_aresetn] [get_bd_pins proc_sys_reset_0/peripheral_aresetn]
+  connect_bd_net -net proc_sys_reset_0_peripheral_aresetn [get_bd_pins OV7670_GRAYSCALE_TO_AXIS/ap_rst_n] [get_bd_pins VDMA/aresetn_in] [get_bd_pins axi_interconnect_0/S00_ARESETN] [get_bd_pins processing_system7_0_axi_periph/M03_ARESETN] [get_bd_pins reset_24M/peripheral_aresetn]
+  connect_bd_net -net proc_sys_reset_0_peripheral_aresetn1 [get_bd_pins axi_gpio_pl_reset/s_axi_aresetn] [get_bd_pins axi_interconnect_0/M00_ARESETN] [get_bd_pins proc_sys_reset_0/peripheral_aresetn]
   connect_bd_net -net reset_24M_peripheral_reset [get_bd_pins OV7670_GRAYSCALE_TO_AXIS/ap_rst] [get_bd_pins reset_24M/peripheral_reset]
-  connect_bd_net -net reset_sw_1 [get_bd_ports reset_sw] [get_bd_pins xlconcat/In1]
   connect_bd_net -net rst_processing_system7_0_100M_interconnect_aresetn [get_bd_pins VDMA/interconnect_aresetn] [get_bd_pins reset_100M/interconnect_aresetn]
   connect_bd_net -net rst_processing_system7_0_100M_peripheral_aresetn [get_bd_pins VDMA/aresetn_vdma] [get_bd_pins axi_gpio_frame_intr/s_axi_aresetn] [get_bd_pins reset_100M/peripheral_aresetn]
   connect_bd_net -net vsync_V_1 [get_bd_ports vsync_V] [get_bd_pins OV7670_GRAYSCALE_TO_AXIS/vsync]
-  connect_bd_net -net xlconcat_dout [get_bd_pins xlconcat/dout] [get_bd_pins zynq_ultra_ps_e_0/pl_ps_irq0]
-  connect_bd_net -net xlconstant_0_dout [get_bd_pins proc_sys_reset_0/interconnect_aresetn] [get_bd_pins processing_system7_0_axi_periph/ARESETN] [get_bd_pins processing_system7_0_axi_periph/M00_ARESETN] [get_bd_pins processing_system7_0_axi_periph/M01_ARESETN] [get_bd_pins processing_system7_0_axi_periph/M02_ARESETN] [get_bd_pins processing_system7_0_axi_periph/M03_ARESETN] [get_bd_pins processing_system7_0_axi_periph/M04_ARESETN] [get_bd_pins processing_system7_0_axi_periph/M05_ARESETN] [get_bd_pins processing_system7_0_axi_periph/M06_ARESETN] [get_bd_pins processing_system7_0_axi_periph/S00_ARESETN]
-  connect_bd_net -net zynq_ultra_ps_e_0_pl_clk0 [get_bd_pins VDMA/clk_vdma] [get_bd_pins axi_gpio_frame_intr/s_axi_aclk] [get_bd_pins axi_gpio_pl_reset/s_axi_aclk] [get_bd_pins clk_wiz_0/clk_in1] [get_bd_pins proc_sys_reset_0/slowest_sync_clk] [get_bd_pins processing_system7_0_axi_periph/ACLK] [get_bd_pins processing_system7_0_axi_periph/M00_ACLK] [get_bd_pins processing_system7_0_axi_periph/M01_ACLK] [get_bd_pins processing_system7_0_axi_periph/M02_ACLK] [get_bd_pins processing_system7_0_axi_periph/M03_ACLK] [get_bd_pins processing_system7_0_axi_periph/M04_ACLK] [get_bd_pins processing_system7_0_axi_periph/M05_ACLK] [get_bd_pins processing_system7_0_axi_periph/S00_ACLK] [get_bd_pins reset_100M/slowest_sync_clk] [get_bd_pins zynq_ultra_ps_e_0/maxihpm0_fpd_aclk] [get_bd_pins zynq_ultra_ps_e_0/pl_clk0] [get_bd_pins zynq_ultra_ps_e_0/saxihp0_fpd_aclk] [get_bd_pins zynq_ultra_ps_e_0/saxihp1_fpd_aclk]
-  connect_bd_net -net zynq_ultra_ps_e_0_pl_resetn0 [get_bd_pins proc_sys_reset_0/ext_reset_in] [get_bd_pins zynq_ultra_ps_e_0/pl_resetn0]
+  connect_bd_net -net xlconstant_0_dout [get_bd_pins axi_interconnect_0/ARESETN] [get_bd_pins proc_sys_reset_0/interconnect_aresetn] [get_bd_pins processing_system7_0_axi_periph/ARESETN] [get_bd_pins processing_system7_0_axi_periph/M00_ARESETN] [get_bd_pins processing_system7_0_axi_periph/M01_ARESETN] [get_bd_pins processing_system7_0_axi_periph/M02_ARESETN] [get_bd_pins processing_system7_0_axi_periph/M04_ARESETN] [get_bd_pins processing_system7_0_axi_periph/M05_ARESETN] [get_bd_pins processing_system7_0_axi_periph/S00_ARESETN]
+  connect_bd_net -net zynq_ultra_ps_e_0_pl_clk0 [get_bd_pins VDMA/clk_vdma] [get_bd_pins axi_gpio_frame_intr/s_axi_aclk] [get_bd_pins axi_gpio_pl_reset/s_axi_aclk] [get_bd_pins axi_interconnect_0/ACLK] [get_bd_pins axi_interconnect_0/M00_ACLK] [get_bd_pins clk_wiz_0/clk_in1] [get_bd_pins proc_sys_reset_0/slowest_sync_clk] [get_bd_pins processing_system7_0_axi_periph/ACLK] [get_bd_pins processing_system7_0_axi_periph/M00_ACLK] [get_bd_pins processing_system7_0_axi_periph/M01_ACLK] [get_bd_pins processing_system7_0_axi_periph/M02_ACLK] [get_bd_pins processing_system7_0_axi_periph/M04_ACLK] [get_bd_pins processing_system7_0_axi_periph/M05_ACLK] [get_bd_pins processing_system7_0_axi_periph/S00_ACLK] [get_bd_pins reset_100M/slowest_sync_clk] [get_bd_pins system_ila_0/clk] [get_bd_pins zynq_ultra_ps_e_0/maxihpm0_fpd_aclk] [get_bd_pins zynq_ultra_ps_e_0/pl_clk0] [get_bd_pins zynq_ultra_ps_e_0/saxihp0_fpd_aclk] [get_bd_pins zynq_ultra_ps_e_0/saxihp1_fpd_aclk]
+  connect_bd_net -net zynq_ultra_ps_e_0_pl_resetn0 [get_bd_pins proc_sys_reset_0/ext_reset_in] [get_bd_pins reset_100M/ext_reset_in] [get_bd_pins reset_24M/ext_reset_in] [get_bd_pins zynq_ultra_ps_e_0/pl_resetn0]
 
   # Create address segments
   create_bd_addr_seg -range 0x00001000 -offset 0xA0040000 [get_bd_addr_spaces zynq_ultra_ps_e_0/Data] [get_bd_addr_segs axi_gpio_frame_intr/S_AXI/Reg] SEG_axi_gpio_frame_intr_Reg
@@ -1984,19 +1953,15 @@ proc create_root_design { parentCell } {
   create_bd_addr_seg -range 0x00010000 -offset 0xA0000000 [get_bd_addr_spaces zynq_ultra_ps_e_0/Data] [get_bd_addr_segs VDMA/axis_to_ddr_writer_0/s_axi_AXILiteS/Reg] SEG_axis_to_ddr_writer_0_Reg
   create_bd_addr_seg -range 0x00010000 -offset 0xA0010000 [get_bd_addr_spaces zynq_ultra_ps_e_0/Data] [get_bd_addr_segs VDMA/axis_to_ddr_writer_CHROMA/s_axi_AXILiteS/Reg] SEG_axis_to_ddr_writer_CHROMA_Reg
   create_bd_addr_seg -range 0x00010000 -offset 0xA0020000 [get_bd_addr_spaces zynq_ultra_ps_e_0/Data] [get_bd_addr_segs VDMA/axis_to_ddr_writer_LUMA/s_axi_AXILiteS/Reg] SEG_axis_to_ddr_writer_LUMA_Reg
-  create_bd_addr_seg -range 0x00010000 -offset 0xA0030000 [get_bd_addr_spaces zynq_ultra_ps_e_0/Data] [get_bd_addr_segs VDMA/ddr_to_axis_reader_0/s_axi_AXILiteS/Reg] SEG_ddr_to_axis_reader_0_Reg
-  create_bd_addr_seg -range 0x00010000 -offset 0xB0000000 [get_bd_addr_spaces zynq_ultra_ps_e_0/Data] [get_bd_addr_segs OV7670_GRAYSCALE_TO_AXIS/ddr_to_axis_reader_SD_0/s_axi_AXILiteS/Reg] SEG_ddr_to_axis_reader_SD_0_Reg
-  create_bd_addr_seg -range 0x00010000 -offset 0xB0010000 [get_bd_addr_spaces zynq_ultra_ps_e_0/Data] [get_bd_addr_segs OV7670_GRAYSCALE_TO_AXIS/mux_sd_ov_1/s_axi_AXILiteS/Reg] SEG_mux_sd_ov_1_Reg
-  create_bd_addr_seg -range 0x80000000 -offset 0x00000000 [get_bd_addr_spaces OV7670_GRAYSCALE_TO_AXIS/ddr_to_axis_reader_SD_0/Data_m_axi_base_ddr_addr] [get_bd_addr_segs zynq_ultra_ps_e_0/SAXIGP4/HP2_DDR_LOW] SEG_zynq_ultra_ps_e_0_HP2_DDR_LOW
-  create_bd_addr_seg -range 0x01000000 -offset 0xFF000000 [get_bd_addr_spaces OV7670_GRAYSCALE_TO_AXIS/ddr_to_axis_reader_SD_0/Data_m_axi_base_ddr_addr] [get_bd_addr_segs zynq_ultra_ps_e_0/SAXIGP4/HP2_LPS_OCM] SEG_zynq_ultra_ps_e_0_HP2_LPS_OCM
+  create_bd_addr_seg -range 0x00010000 -offset 0xA0030000 [get_bd_addr_spaces zynq_ultra_ps_e_0/Data] [get_bd_addr_segs OV7670_GRAYSCALE_TO_AXIS/ov7670_prova_0/s_axi_AXILiteS/Reg] SEG_ov7670_prova_0_Reg
+  create_bd_addr_seg -range 0x80000000 -offset 0x00000000 [get_bd_addr_spaces OV7670_GRAYSCALE_TO_AXIS/ov7670_prova_0/Data_m_axi_outStream_grayscale] [get_bd_addr_segs zynq_ultra_ps_e_0/SAXIGP2/HP0_DDR_LOW] SEG_zynq_ultra_ps_e_0_HP0_DDR_LOW
+  create_bd_addr_seg -range 0x01000000 -offset 0xFF000000 [get_bd_addr_spaces OV7670_GRAYSCALE_TO_AXIS/ov7670_prova_0/Data_m_axi_outStream_grayscale] [get_bd_addr_segs zynq_ultra_ps_e_0/SAXIGP2/HP0_LPS_OCM] SEG_zynq_ultra_ps_e_0_HP0_LPS_OCM
   create_bd_addr_seg -range 0x80000000 -offset 0x00000000 [get_bd_addr_spaces VDMA/axis_to_ddr_writer_0/Data_m_axi_base_ddr_addr] [get_bd_addr_segs zynq_ultra_ps_e_0/SAXIGP3/HP1_DDR_LOW] SEG_zynq_ultra_ps_e_0_HP1_DDR_LOW
   create_bd_addr_seg -range 0x01000000 -offset 0xFF000000 [get_bd_addr_spaces VDMA/axis_to_ddr_writer_0/Data_m_axi_base_ddr_addr] [get_bd_addr_segs zynq_ultra_ps_e_0/SAXIGP3/HP1_LPS_OCM] SEG_zynq_ultra_ps_e_0_HP1_LPS_OCM
   create_bd_addr_seg -range 0x80000000 -offset 0x00000000 [get_bd_addr_spaces VDMA/axis_to_ddr_writer_CHROMA/Data_m_axi_base_ddr_addr] [get_bd_addr_segs zynq_ultra_ps_e_0/SAXIGP3/HP1_DDR_LOW] SEG_zynq_ultra_ps_e_0_HP1_DDR_LOW
   create_bd_addr_seg -range 0x01000000 -offset 0xFF000000 [get_bd_addr_spaces VDMA/axis_to_ddr_writer_CHROMA/Data_m_axi_base_ddr_addr] [get_bd_addr_segs zynq_ultra_ps_e_0/SAXIGP3/HP1_LPS_OCM] SEG_zynq_ultra_ps_e_0_HP1_LPS_OCM
   create_bd_addr_seg -range 0x80000000 -offset 0x00000000 [get_bd_addr_spaces VDMA/axis_to_ddr_writer_LUMA/Data_m_axi_base_ddr_addr] [get_bd_addr_segs zynq_ultra_ps_e_0/SAXIGP3/HP1_DDR_LOW] SEG_zynq_ultra_ps_e_0_HP1_DDR_LOW
   create_bd_addr_seg -range 0x01000000 -offset 0xFF000000 [get_bd_addr_spaces VDMA/axis_to_ddr_writer_LUMA/Data_m_axi_base_ddr_addr] [get_bd_addr_segs zynq_ultra_ps_e_0/SAXIGP3/HP1_LPS_OCM] SEG_zynq_ultra_ps_e_0_HP1_LPS_OCM
-  create_bd_addr_seg -range 0x80000000 -offset 0x00000000 [get_bd_addr_spaces VDMA/ddr_to_axis_reader_0/Data_m_axi_base_ddr_addr] [get_bd_addr_segs zynq_ultra_ps_e_0/SAXIGP2/HP0_DDR_LOW] SEG_zynq_ultra_ps_e_0_HP0_DDR_LOW
-  create_bd_addr_seg -range 0x01000000 -offset 0xFF000000 [get_bd_addr_spaces VDMA/ddr_to_axis_reader_0/Data_m_axi_base_ddr_addr] [get_bd_addr_segs zynq_ultra_ps_e_0/SAXIGP2/HP0_LPS_OCM] SEG_zynq_ultra_ps_e_0_HP0_LPS_OCM
 
 
   # Restore current instance

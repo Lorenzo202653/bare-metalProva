@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Register 'count_readings' is power-on initialization." projectName="lettura_memcpy" solutionName="solution1" date="2020-10-09T15:06:26.014+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'first' is power-on initialization." projectName="lettura_memcpy" solutionName="solution1" date="2020-10-09T15:06:25.994+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'count_lines' is power-on initialization." projectName="lettura_memcpy" solutionName="solution1" date="2020-10-09T15:06:25.979+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'frame_valid_V' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port." projectName="lettura_memcpy" solutionName="solution1" date="2020-10-09T15:06:25.928+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'line_valid_V' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port." projectName="lettura_memcpy" solutionName="solution1" date="2020-10-09T15:06:25.883+0200" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

@@ -1,0 +1,15 @@
+17:02:41 **** Incremental Build of configuration Debug for project gr_write_sw ****
+make all 
+Building file: ../src/read_sd_card.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/read_sd_card.o" -I../../gr_write_sw_bsp/psu_cortexa53_0/include -MMD -MP -MF"src/read_sd_card.d" -MT"src/read_sd_card.o" -o "src/read_sd_card.o" "../src/read_sd_card.c"
+In file included from ../src/read_sd_card.c:7:0:
+../src/read_sd_card.h:14:10: fatal error: ff.h: No such file or directory
+ #include "ff.h"
+          ^~~~~~
+compilation terminated.
+src/subdir.mk:63: set di istruzioni per l'obiettivo "src/read_sd_card.o" non riuscito
+make: *** [src/read_sd_card.o] Errore 1
+
+17:02:41 Build Finished (took 514ms)
+

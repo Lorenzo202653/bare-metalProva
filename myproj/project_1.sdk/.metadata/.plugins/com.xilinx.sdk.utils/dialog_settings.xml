@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<item value="/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.sdk" key="com.xilinx.sdk.hw.ui.hwspec.last"/>
+	<item value="/home/kidre/Scaricati" key="hwspec_file_selection"/>
 	<item value="/media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.sdk" key="last_stored_selection"/>
 </section>

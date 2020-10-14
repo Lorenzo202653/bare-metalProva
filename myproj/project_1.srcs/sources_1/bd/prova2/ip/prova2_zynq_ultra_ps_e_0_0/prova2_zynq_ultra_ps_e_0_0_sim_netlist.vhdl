@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
--- Date        : Fri Sep  4 12:26:20 2020
+-- Date        : Fri Sep  4 12:26:17 2020
 -- Host        : kidre-N551JX running 64-bit Ubuntu 16.04.7 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/prova2/ip/prova2_zynq_ultra_ps_e_0_0/prova2_zynq_ultra_ps_e_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top prova2_zynq_ultra_ps_e_0_0 -prefix
+--               prova2_zynq_ultra_ps_e_0_0_ prova2_zynq_ultra_ps_e_0_0_sim_netlist.vhdl
 -- Design      : prova2_zynq_ultra_ps_e_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -1584,8 +1584,6 @@ entity prova2_zynq_ultra_ps_e_0_0_zynq_ultra_ps_e_v3_2_0_zynq_ultra_ps_e is
   attribute C_USE_DIFF_RW_CLK_GP6 of prova2_zynq_ultra_ps_e_0_0_zynq_ultra_ps_e_v3_2_0_zynq_ultra_ps_e : entity is 0;
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of prova2_zynq_ultra_ps_e_0_0_zynq_ultra_ps_e_v3_2_0_zynq_ultra_ps_e : entity is "prova2_zynq_ultra_ps_e_0_0.hwdef";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of prova2_zynq_ultra_ps_e_0_0_zynq_ultra_ps_e_v3_2_0_zynq_ultra_ps_e : entity is "zynq_ultra_ps_e_v3_2_0_zynq_ultra_ps_e";
   attribute PSS_IO : string;
   attribute PSS_IO of prova2_zynq_ultra_ps_e_0_0_zynq_ultra_ps_e_v3_2_0_zynq_ultra_ps_e : entity is "Signal Name, DiffPair Type, DiffPair Signal,Direction, Site Type, IO Standard, Drive (mA), Slew Rate, Pull Type, IBIS Model, ODT, OUTPUT_IMPEDANCE " & LF &
  "UART1_TXD, , , OUT, PS_MIO0_500, LVCMOS18, 12, FAST, PULLUP, PS_MIO_LVCMOS18_F_12,,  " & LF &

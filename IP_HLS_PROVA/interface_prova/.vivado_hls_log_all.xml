@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog>
+        <logs message="ERROR: [HLS 200-70] Compilation errors found:&#xA;Pragma processor failed: In file included from interface_prova/.settings/7670inter_prova.cpp:1:&#xA;In file included from interface_prova/.settings/7670inter_prova.cpp:1:&#xA;interface_prova/.settings/7670inter_prova.h:32:6: error: expected unqualified-id&#xA;void 7670inter_prova(volatile uint8_t data_in, bit href, bit vsync, hls::stream&lt;uint8_t> &amp;data_out, volatile bit *line_valid, volatile bit *frame_valid);&#xA;     ^&#xA;In file included from interface_prova/.settings/7670inter_prova.cpp:1:&#xA;interface_prova/.settings/7670inter_prova.cpp:5:6: error: expected unqualified-id&#xA;void 7670inter_prova(volatile uint8_t data_in, bit href, bit vsync, hls::stream&lt;uint8_t> &amp;data_out, volatile bit *line_valid, volatile bit *frame_valid)&#xA;     ^&#xA;2 errors generated.&#xA;Failed checking during preprocessing.&#xA;    while executing&#xA;&quot;source /media/kidre/Dati/GIT_TEST/bare-metalProva/IP_HLS_PROVA/interface_prova/solution1/csynth.tcl&quot;&#xA;    invoked from within&#xA;&quot;hls::main /media/kidre/Dati/GIT_TEST/bare-metalProva/IP_HLS_PROVA/interface_prova/solution1/csynth.tcl&quot;&#xA;    (&quot;uplevel&quot; body line 1)&#xA;    invoked from within&#xA;&quot;uplevel 1 hls::main {*}$args&quot;&#xA;    (procedure &quot;hls_proc&quot; line 5)&#xA;    invoked from within&#xA;&quot;hls_proc $argv&quot;&#xA;" projectName="interface_prova" solutionName="solution1" date="2020-10-08T19:03:19.180+0200"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [HLS 200-40] In file included from interface_prova/.settings/7670inter_prova.cpp:1:&#xA;In file included from interface_prova/.settings/7670inter_prova.cpp:1:&#xA;interface_prova/.settings/7670inter_prova.h:32:6: error: expected unqualified-id&#xA;void 7670inter_prova(volatile uint8_t data_in, bit href, bit vsync, hls::stream&lt;uint8_t> &amp;data_out, volatile bit *line_valid, volatile bit *frame_valid);&#xA;     ^&#xA;In file included from interface_prova/.settings/7670inter_prova.cpp:1:&#xA;interface_prova/.settings/7670inter_prova.cpp:5:6: error: expected unqualified-id&#xA;void 7670inter_prova(volatile uint8_t data_in, bit href, bit vsync, hls::stream&lt;uint8_t> &amp;data_out, volatile bit *line_valid, volatile bit *frame_valid)&#xA;     ^&#xA;2 errors generated." projectName="interface_prova" solutionName="solution1" date="2020-10-08T19:03:19.163+0200" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

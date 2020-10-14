@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="7670inter_prova.cpp" path="/media/kidre/Dati/GIT_TEST/bare-metalProva/IP_HLS_PROVA/interface_prova/.settings/7670inter_prova.cpp"/>
+    <originFiles name="7670inter_prova.h" path="/media/kidre/Dati/GIT_TEST/bare-metalProva/IP_HLS_PROVA/interface_prova/.settings/7670inter_prova.h"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1312" content="Analyzing design file &apos;filtro_buffer/.settings/filtrob.cpp&apos; ..." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1465" content="Validating synthesis directives ..." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Pragmas Time (s): cpu = 00:00:27 ; elapsed = 00:00:14 . Memory (MB): peak = 351.609 ; gain = 0.129 ; free physical = 2586 ; free virtual = 16517" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Linking Time (s): cpu = 00:00:29 ; elapsed = 00:00:16 . Memory (MB): peak = 351.609 ; gain = 0.129 ; free physical = 2579 ; free virtual = 16516" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1467" content="Starting code transformations ..." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Standard Transforms Time (s): cpu = 00:00:30 ; elapsed = 00:00:17 . Memory (MB): peak = 351.668 ; gain = 0.188 ; free physical = 2567 ; free virtual = 16511" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1472" content="Checking synthesizability ..." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Synthesizability Time (s): cpu = 00:00:30 ; elapsed = 00:00:17 . Memory (MB): peak = 351.668 ; gain = 0.188 ; free physical = 2564 ; free virtual = 16509" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Pre-synthesis Time (s): cpu = 00:00:32 ; elapsed = 00:00:18 . Memory (MB): peak = 479.480 ; gain = 128.000 ; free physical = 2539 ; free virtual = 16487" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Architecture Synthesis Time (s): cpu = 00:00:32 ; elapsed = 00:00:19 . Memory (MB): peak = 479.480 ; gain = 128.000 ; free physical = 2537 ; free virtual = 16485" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1317" content="Starting hardware synthesis ..." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1385" content="Synthesizing &apos;ov7670_buffer&apos; ..." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-42]" severity="INFO" keynum="HLS_42_1438" content="-- Implementing module &apos;ov7670_buffer&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 18.87 seconds; current allocated memory: 70.838 MB." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.01 seconds; current allocated memory: 70.999 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;ov7670_buffer&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;ov7670_buffer/gmem&apos; to &apos;m_axi&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;ov7670_buffer/inStream_V_V&apos; to &apos;axis&apos; (register, both mode)." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;ov7670_buffer/outStream_grayscale_V&apos; to &apos;s_axilite &amp; ap_none&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;ov7670_buffer/enable_raw_stream&apos; to &apos;ap_none&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;ov7670_buffer/outStream_LUMA_V_V&apos; to &apos;axis&apos; (register, both mode)." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;ov7670_buffer/outStream_CHROMA_V_V&apos; to &apos;axis&apos; (register, both mode)." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on function &apos;ov7670_buffer&apos; to &apos;ap_ctrl_hs&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="374" content="Register &apos;grayscale_valid&apos; is power-on initialization." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="364" content="Bundling port &apos;outStream_grayscale_V&apos; to AXI-Lite port AXILiteS." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;ov7670_buffer/m_axi_gmem_AWVALID&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;ov7670_buffer/m_axi_gmem_AWVALID&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;ov7670_buffer/m_axi_gmem_AWREADY&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;ov7670_buffer/m_axi_gmem_AWADDR&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;ov7670_buffer/m_axi_gmem_AWADDR&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;ov7670_buffer/m_axi_gmem_AWID&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;ov7670_buffer/m_axi_gmem_AWID&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;ov7670_buffer/m_axi_gmem_AWLEN&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;ov7670_buffer/m_axi_gmem_AWLEN&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;ov7670_buffer/m_axi_gmem_AWSIZE&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;ov7670_buffer/m_axi_gmem_AWSIZE&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;ov7670_buffer/m_axi_gmem_AWBURST&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;ov7670_buffer/m_axi_gmem_AWBURST&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;ov7670_buffer/m_axi_gmem_AWLOCK&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;ov7670_buffer/m_axi_gmem_AWLOCK&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;ov7670_buffer/m_axi_gmem_AWCACHE&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;ov7670_buffer/m_axi_gmem_AWCACHE&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;ov7670_buffer/m_axi_gmem_AWPROT&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;ov7670_buffer/m_axi_gmem_AWPROT&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;ov7670_buffer/m_axi_gmem_AWQOS&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;ov7670_buffer/m_axi_gmem_AWQOS&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;ov7670_buffer/m_axi_gmem_AWREGION&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;ov7670_buffer/m_axi_gmem_AWREGION&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;ov7670_buffer/m_axi_gmem_AWUSER&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;ov7670_buffer/m_axi_gmem_AWUSER&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;ov7670_buffer/m_axi_gmem_WVALID&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;ov7670_buffer/m_axi_gmem_WVALID&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;ov7670_buffer/m_axi_gmem_WREADY&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;ov7670_buffer/m_axi_gmem_WDATA&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;ov7670_buffer/m_axi_gmem_WDATA&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;ov7670_buffer/m_axi_gmem_WSTRB&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;ov7670_buffer/m_axi_gmem_WSTRB&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;ov7670_buffer/m_axi_gmem_WLAST&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;ov7670_buffer/m_axi_gmem_WLAST&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;ov7670_buffer/m_axi_gmem_WID&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;ov7670_buffer/m_axi_gmem_WID&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;ov7670_buffer/m_axi_gmem_WUSER&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;ov7670_buffer/m_axi_gmem_WUSER&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;ov7670_buffer/m_axi_gmem_ARVALID&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;ov7670_buffer/m_axi_gmem_ARVALID&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;ov7670_buffer/m_axi_gmem_ARREADY&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;ov7670_buffer/m_axi_gmem_ARADDR&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;ov7670_buffer/m_axi_gmem_ARADDR&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;ov7670_buffer/m_axi_gmem_ARID&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;ov7670_buffer/m_axi_gmem_ARID&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;ov7670_buffer/m_axi_gmem_ARLEN&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;ov7670_buffer/m_axi_gmem_ARLEN&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;ov7670_buffer/m_axi_gmem_ARSIZE&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;ov7670_buffer/m_axi_gmem_ARSIZE&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;ov7670_buffer/m_axi_gmem_ARBURST&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;ov7670_buffer/m_axi_gmem_ARBURST&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;ov7670_buffer/m_axi_gmem_ARLOCK&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;ov7670_buffer/m_axi_gmem_ARLOCK&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;ov7670_buffer/m_axi_gmem_ARCACHE&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;ov7670_buffer/m_axi_gmem_ARCACHE&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;ov7670_buffer/m_axi_gmem_ARPROT&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;ov7670_buffer/m_axi_gmem_ARPROT&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;ov7670_buffer/m_axi_gmem_ARQOS&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;ov7670_buffer/m_axi_gmem_ARQOS&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;ov7670_buffer/m_axi_gmem_ARREGION&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;ov7670_buffer/m_axi_gmem_ARREGION&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;ov7670_buffer/m_axi_gmem_ARUSER&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;ov7670_buffer/m_axi_gmem_ARUSER&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;ov7670_buffer/m_axi_gmem_RVALID&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;ov7670_buffer/m_axi_gmem_RREADY&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;ov7670_buffer/m_axi_gmem_RREADY&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;ov7670_buffer/m_axi_gmem_RDATA&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;ov7670_buffer/m_axi_gmem_RLAST&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;ov7670_buffer/m_axi_gmem_RID&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;ov7670_buffer/m_axi_gmem_RUSER&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;ov7670_buffer/m_axi_gmem_RRESP&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;ov7670_buffer/m_axi_gmem_BVALID&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;ov7670_buffer/m_axi_gmem_BREADY&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="252" content="Setting dangling out port &apos;ov7670_buffer/m_axi_gmem_BREADY&apos; to 0." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;ov7670_buffer/m_axi_gmem_BRESP&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;ov7670_buffer/m_axi_gmem_BID&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;ov7670_buffer/m_axi_gmem_BUSER&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;ov7670_buffer&apos;." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.14 seconds; current allocated memory: 71.692 MB." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished generating all RTL models Time (s): cpu = 00:00:33 ; elapsed = 00:00:20 . Memory (MB): peak = 479.480 ; gain = 128.000 ; free physical = 2531 ; free virtual = 16483" tag=""/>
+	<Message prefix="[SYSC 207-301]" severity="INFO" keynum="SYSC_301_1065" content="Generating SystemC RTL for ov7670_buffer." tag=""/>
+	<Message prefix="[VHDL 208-304]" severity="INFO" keynum="VHDL_304_1066" content="Generating VHDL RTL for ov7670_buffer." tag=""/>
+	<Message prefix="[VLOG 209-307]" severity="INFO" keynum="VLOG_307_1067" content="Generating Verilog RTL for ov7670_buffer." tag=""/>
+	<Message prefix="[HLS 200-112]" severity="INFO" keynum="472" content="Total elapsed time: 19.84 seconds; peak allocated memory: 71.692 MB." tag=""/>
+</Messages>

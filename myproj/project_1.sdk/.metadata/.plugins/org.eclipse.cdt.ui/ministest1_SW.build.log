@@ -1,0 +1,16 @@
+14:24:03 **** Auto Build of configuration Debug for project ministest1_SW ****
+make all 
+Building file: ../src/application.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/application.o" -I../../ministest1_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/application.d" -MT"src/application.o" -o "src/application.o" "../src/application.c"
+In file included from ../src/application.h:12:0,
+                 from ../src/application.c:9:
+../src/platform_config.h:16:10: fatal error: xaxis_to_ddr_writer.h: No such file or directory
+ #include "xaxis_to_ddr_writer.h"
+src/subdir.mk:63: set di istruzioni per l'obiettivo "src/application.o" non riuscito
+          ^~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/application.o] Errore 1
+
+14:24:03 Build Finished (took 582ms)
+

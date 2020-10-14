@@ -16,6 +16,11 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param power.enableLutRouteBelPower 1
+set_param power.enableCarry8RouteBelPower 1
+set_param power.enableUnconnectedCarry8PinPower 1
+set_param xicom.use_bs_reader 1
+set_param power.BramSDPPropagationFix 1
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 create_project -in_memory -part xczu3eg-sbva484-1-e
@@ -32,7 +37,8 @@ set_property target_language Verilog [current_project]
 set_property board_part em.avnet.com:ultra96:part0:1.0 [current_project]
 set_property ip_repo_paths {
   /media/kidre/Dati/GIT_TEST/bare-metalProva/SmartCamera
-  /media/kidre/Dati/GIT_TEST/IP_HLS_PROVA/axi_prova
+  /media/kidre/Dati/GIT_TEST/bare-metalProva/IP_HLS_PROVA/axi_prova
+  /home/kidre/Video/filtro_bello
 } [current_project]
 set_property ip_output_repo /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]

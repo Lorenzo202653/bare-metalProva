@@ -1,0 +1,33 @@
+14:18:47 **** Build of configuration Debug for project minitest_SWW ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../minitest_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:62:3: warning: implicit declaration of function 'Xil_DCacheDisable' [-Wimplicit-function-declaration]
+   Xil_DCacheDisable();
+   ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:63:7: warning: unused variable 'status' [-Wunused-variable]
+   int status;
+       ^~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building file: ../src/platform.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../minitest_bsp_0/psu_cortexa53_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: minitest_SWW.elf
+Invoking: ARM v8 gcc linker
+aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -L../../minitest_bsp_0/psu_cortexa53_0/lib -o "minitest_SWW.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+Finished building target: minitest_SWW.elf
+ 
+Invoking: ARM v8 Print Size
+aarch64-none-elf-size minitest_SWW.elf  |tee "minitest_SWW.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  53624	   4448	  20792	  78864	  13410	minitest_SWW.elf
+Finished building: minitest_SWW.elf.size
+ 
+
+14:18:48 Build Finished (took 613ms)
+

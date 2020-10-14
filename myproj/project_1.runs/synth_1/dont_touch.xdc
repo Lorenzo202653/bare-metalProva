@@ -3,112 +3,82 @@
 
 # XDC: new/design_1_wrapper.xdc
 
-# Block Designs: bd/hls_prova3/hls_prova3.bd
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hls_prova3 || ORIG_REF_NAME==hls_prova3} -quiet] -quiet
+# Block Designs: bd/prova_gr/prova_gr.bd
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==prova_gr || ORIG_REF_NAME==prova_gr} -quiet] -quiet
 
-# IP: bd/hls_prova3/ip/hls_prova3_ENABLE_RAW_STREAM_0/hls_prova3_ENABLE_RAW_STREAM_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hls_prova3_ENABLE_RAW_STREAM_0 || ORIG_REF_NAME==hls_prova3_ENABLE_RAW_STREAM_0} -quiet] -quiet
+# IP: bd/prova_gr/ip/prova_gr_ENABLE_RAW_STREAM_0/prova_gr_ENABLE_RAW_STREAM_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==prova_gr_ENABLE_RAW_STREAM_0 || ORIG_REF_NAME==prova_gr_ENABLE_RAW_STREAM_0} -quiet] -quiet
 
-# IP: bd/hls_prova3/ip/hls_prova3_axi_gpio_frame_intr_0/hls_prova3_axi_gpio_frame_intr_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hls_prova3_axi_gpio_frame_intr_0 || ORIG_REF_NAME==hls_prova3_axi_gpio_frame_intr_0} -quiet] -quiet
+# IP: bd/prova_gr/ip/prova_gr_axi_gpio_frame_intr_0/prova_gr_axi_gpio_frame_intr_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==prova_gr_axi_gpio_frame_intr_0 || ORIG_REF_NAME==prova_gr_axi_gpio_frame_intr_0} -quiet] -quiet
 
-# IP: bd/hls_prova3/ip/hls_prova3_axi_gpio_pl_reset_0/hls_prova3_axi_gpio_pl_reset_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hls_prova3_axi_gpio_pl_reset_0 || ORIG_REF_NAME==hls_prova3_axi_gpio_pl_reset_0} -quiet] -quiet
+# IP: bd/prova_gr/ip/prova_gr_axi_gpio_pl_reset_0/prova_gr_axi_gpio_pl_reset_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==prova_gr_axi_gpio_pl_reset_0 || ORIG_REF_NAME==prova_gr_axi_gpio_pl_reset_0} -quiet] -quiet
 
-# IP: bd/hls_prova3/ip/hls_prova3_clk_wiz_0_0/hls_prova3_clk_wiz_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hls_prova3_clk_wiz_0_0 || ORIG_REF_NAME==hls_prova3_clk_wiz_0_0} -quiet] -quiet
+# IP: bd/prova_gr/ip/prova_gr_clk_wiz_0_0/prova_gr_clk_wiz_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==prova_gr_clk_wiz_0_0 || ORIG_REF_NAME==prova_gr_clk_wiz_0_0} -quiet] -quiet
 
-# IP: bd/hls_prova3/ip/hls_prova3_const_true_0/hls_prova3_const_true_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hls_prova3_const_true_0 || ORIG_REF_NAME==hls_prova3_const_true_0} -quiet] -quiet
+# IP: bd/prova_gr/ip/prova_gr_const_true_0/prova_gr_const_true_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==prova_gr_const_true_0 || ORIG_REF_NAME==prova_gr_const_true_0} -quiet] -quiet
 
-# IP: bd/hls_prova3/ip/hls_prova3_proc_sys_reset_0_0/hls_prova3_proc_sys_reset_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hls_prova3_proc_sys_reset_0_0 || ORIG_REF_NAME==hls_prova3_proc_sys_reset_0_0} -quiet] -quiet
+# IP: bd/prova_gr/ip/prova_gr_proc_sys_reset_0_0/prova_gr_proc_sys_reset_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==prova_gr_proc_sys_reset_0_0 || ORIG_REF_NAME==prova_gr_proc_sys_reset_0_0} -quiet] -quiet
 
-# IP: bd/hls_prova3/ip/hls_prova3_processing_system7_0_axi_periph_0/hls_prova3_processing_system7_0_axi_periph_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hls_prova3_processing_system7_0_axi_periph_0 || ORIG_REF_NAME==hls_prova3_processing_system7_0_axi_periph_0} -quiet] -quiet
+# IP: bd/prova_gr/ip/prova_gr_processing_system7_0_axi_periph_0/prova_gr_processing_system7_0_axi_periph_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==prova_gr_processing_system7_0_axi_periph_0 || ORIG_REF_NAME==prova_gr_processing_system7_0_axi_periph_0} -quiet] -quiet
 
-# IP: bd/hls_prova3/ip/hls_prova3_reset_100M_0/hls_prova3_reset_100M_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hls_prova3_reset_100M_0 || ORIG_REF_NAME==hls_prova3_reset_100M_0} -quiet] -quiet
+# IP: bd/prova_gr/ip/prova_gr_reset_100M_0/prova_gr_reset_100M_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==prova_gr_reset_100M_0 || ORIG_REF_NAME==prova_gr_reset_100M_0} -quiet] -quiet
 
-# IP: bd/hls_prova3/ip/hls_prova3_reset_24M_0/hls_prova3_reset_24M_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hls_prova3_reset_24M_0 || ORIG_REF_NAME==hls_prova3_reset_24M_0} -quiet] -quiet
+# IP: bd/prova_gr/ip/prova_gr_reset_24M_0/prova_gr_reset_24M_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==prova_gr_reset_24M_0 || ORIG_REF_NAME==prova_gr_reset_24M_0} -quiet] -quiet
 
-# IP: bd/hls_prova3/ip/hls_prova3_zynq_ultra_ps_e_0_0/hls_prova3_zynq_ultra_ps_e_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hls_prova3_zynq_ultra_ps_e_0_0 || ORIG_REF_NAME==hls_prova3_zynq_ultra_ps_e_0_0} -quiet] -quiet
+# IP: bd/prova_gr/ip/prova_gr_system_ila_0_0/prova_gr_system_ila_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==prova_gr_system_ila_0_0 || ORIG_REF_NAME==prova_gr_system_ila_0_0} -quiet] -quiet
 
-# IP: bd/hls_prova3/ip/hls_prova3_xbar_2/hls_prova3_xbar_2.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hls_prova3_xbar_2 || ORIG_REF_NAME==hls_prova3_xbar_2} -quiet] -quiet
+# IP: bd/prova_gr/ip/prova_gr_zynq_ultra_ps_e_0_0/prova_gr_zynq_ultra_ps_e_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==prova_gr_zynq_ultra_ps_e_0_0 || ORIG_REF_NAME==prova_gr_zynq_ultra_ps_e_0_0} -quiet] -quiet
 
-# IP: bd/hls_prova3/ip/hls_prova3_auto_ds_1/hls_prova3_auto_ds_1.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hls_prova3_auto_ds_1 || ORIG_REF_NAME==hls_prova3_auto_ds_1} -quiet] -quiet
+# IP: bd/prova_gr/ip/prova_gr_c_counter_binary_0_0/prova_gr_c_counter_binary_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==prova_gr_c_counter_binary_0_0 || ORIG_REF_NAME==prova_gr_c_counter_binary_0_0} -quiet] -quiet
 
-# IP: bd/hls_prova3/ip/hls_prova3_auto_pc_1/hls_prova3_auto_pc_1.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hls_prova3_auto_pc_1 || ORIG_REF_NAME==hls_prova3_auto_pc_1} -quiet] -quiet
+# IP: bd/prova_gr/ip/prova_gr_ov7670_interface_0_0/prova_gr_ov7670_interface_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==prova_gr_ov7670_interface_0_0 || ORIG_REF_NAME==prova_gr_ov7670_interface_0_0} -quiet] -quiet
 
-# IP: bd/hls_prova3/ip/hls_prova3_axi_mem_intercon_reader_0/hls_prova3_axi_mem_intercon_reader_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hls_prova3_axi_mem_intercon_reader_0 || ORIG_REF_NAME==hls_prova3_axi_mem_intercon_reader_0} -quiet] -quiet
+# IP: bd/prova_gr/ip/prova_gr_LF_valid_to_AXIS_0/prova_gr_LF_valid_to_AXIS_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==prova_gr_LF_valid_to_AXIS_0 || ORIG_REF_NAME==prova_gr_LF_valid_to_AXIS_0} -quiet] -quiet
 
-# IP: bd/hls_prova3/ip/hls_prova3_axi_mem_intercon_writer_0/hls_prova3_axi_mem_intercon_writer_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hls_prova3_axi_mem_intercon_writer_0 || ORIG_REF_NAME==hls_prova3_axi_mem_intercon_writer_0} -quiet] -quiet
+# IP: bd/prova_gr/ip/prova_gr_ov7670_grayscale_0_0/prova_gr_ov7670_grayscale_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==prova_gr_ov7670_grayscale_0_0 || ORIG_REF_NAME==prova_gr_ov7670_grayscale_0_0} -quiet] -quiet
 
-# IP: bd/hls_prova3/ip/hls_prova3_axis_data_fifo_pipeline_to_writer_0/hls_prova3_axis_data_fifo_pipeline_to_writer_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hls_prova3_axis_data_fifo_pipeline_to_writer_0 || ORIG_REF_NAME==hls_prova3_axis_data_fifo_pipeline_to_writer_0} -quiet] -quiet
+# IP: bd/prova_gr/ip/prova_gr_xbar_1/prova_gr_xbar_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==prova_gr_xbar_1 || ORIG_REF_NAME==prova_gr_xbar_1} -quiet] -quiet
 
-# IP: bd/hls_prova3/ip/hls_prova3_axis_data_fifo_raw_CHROMA_0/hls_prova3_axis_data_fifo_raw_CHROMA_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hls_prova3_axis_data_fifo_raw_CHROMA_0 || ORIG_REF_NAME==hls_prova3_axis_data_fifo_raw_CHROMA_0} -quiet] -quiet
+# IP: bd/prova_gr/ip/prova_gr_axi_mem_intercon_writer_0/prova_gr_axi_mem_intercon_writer_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==prova_gr_axi_mem_intercon_writer_0 || ORIG_REF_NAME==prova_gr_axi_mem_intercon_writer_0} -quiet] -quiet
 
-# IP: bd/hls_prova3/ip/hls_prova3_axis_data_fifo_raw_LUMA_0/hls_prova3_axis_data_fifo_raw_LUMA_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hls_prova3_axis_data_fifo_raw_LUMA_0 || ORIG_REF_NAME==hls_prova3_axis_data_fifo_raw_LUMA_0} -quiet] -quiet
+# IP: bd/prova_gr/ip/prova_gr_axis_data_fifo_pipeline_to_writer_0/prova_gr_axis_data_fifo_pipeline_to_writer_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==prova_gr_axis_data_fifo_pipeline_to_writer_0 || ORIG_REF_NAME==prova_gr_axis_data_fifo_pipeline_to_writer_0} -quiet] -quiet
 
-# IP: bd/hls_prova3/ip/hls_prova3_axis_to_ddr_writer_CHROMA_0/hls_prova3_axis_to_ddr_writer_CHROMA_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hls_prova3_axis_to_ddr_writer_CHROMA_0 || ORIG_REF_NAME==hls_prova3_axis_to_ddr_writer_CHROMA_0} -quiet] -quiet
+# IP: bd/prova_gr/ip/prova_gr_axis_to_ddr_writer_0_0/prova_gr_axis_to_ddr_writer_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==prova_gr_axis_to_ddr_writer_0_0 || ORIG_REF_NAME==prova_gr_axis_to_ddr_writer_0_0} -quiet] -quiet
 
-# IP: bd/hls_prova3/ip/hls_prova3_axis_to_ddr_writer_LUMA_0/hls_prova3_axis_to_ddr_writer_LUMA_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hls_prova3_axis_to_ddr_writer_LUMA_0 || ORIG_REF_NAME==hls_prova3_axis_to_ddr_writer_LUMA_0} -quiet] -quiet
+# IP: bd/prova_gr/ip/prova_gr_auto_ds_2/prova_gr_auto_ds_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==prova_gr_auto_ds_2 || ORIG_REF_NAME==prova_gr_auto_ds_2} -quiet] -quiet
 
-# IP: bd/hls_prova3/ip/hls_prova3_ddr_to_axis_reader_0_0/hls_prova3_ddr_to_axis_reader_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hls_prova3_ddr_to_axis_reader_0_0 || ORIG_REF_NAME==hls_prova3_ddr_to_axis_reader_0_0} -quiet] -quiet
+# IP: bd/prova_gr/ip/prova_gr_auto_pc_2/prova_gr_auto_pc_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==prova_gr_auto_pc_2 || ORIG_REF_NAME==prova_gr_auto_pc_2} -quiet] -quiet
 
-# IP: bd/hls_prova3/ip/hls_prova3_axi_write_prova_0_0/hls_prova3_axi_write_prova_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hls_prova3_axi_write_prova_0_0 || ORIG_REF_NAME==hls_prova3_axi_write_prova_0_0} -quiet] -quiet
+# IP: bd/prova_gr/ip/prova_gr_auto_ds_1/prova_gr_auto_ds_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==prova_gr_auto_ds_1 || ORIG_REF_NAME==prova_gr_auto_ds_1} -quiet] -quiet
 
-# IP: bd/hls_prova3/ip/hls_prova3_xbar_1/hls_prova3_xbar_1.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hls_prova3_xbar_1 || ORIG_REF_NAME==hls_prova3_xbar_1} -quiet] -quiet
+# IP: bd/prova_gr/ip/prova_gr_auto_pc_1/prova_gr_auto_pc_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==prova_gr_auto_pc_1 || ORIG_REF_NAME==prova_gr_auto_pc_1} -quiet] -quiet
 
-# IP: bd/hls_prova3/ip/hls_prova3_auto_us_0/hls_prova3_auto_us_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hls_prova3_auto_us_0 || ORIG_REF_NAME==hls_prova3_auto_us_0} -quiet] -quiet
+# IP: bd/prova_gr/ip/prova_gr_auto_ds_0/prova_gr_auto_ds_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==prova_gr_auto_ds_0 || ORIG_REF_NAME==prova_gr_auto_ds_0} -quiet] -quiet
 
-# IP: bd/hls_prova3/ip/hls_prova3_LF_valid_to_AXIS_0/hls_prova3_LF_valid_to_AXIS_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hls_prova3_LF_valid_to_AXIS_0 || ORIG_REF_NAME==hls_prova3_LF_valid_to_AXIS_0} -quiet] -quiet
+# IP: bd/prova_gr/ip/prova_gr_auto_pc_0/prova_gr_auto_pc_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==prova_gr_auto_pc_0 || ORIG_REF_NAME==prova_gr_auto_pc_0} -quiet] -quiet
 
-# IP: bd/hls_prova3/ip/hls_prova3_axi_interconnect_1_0/hls_prova3_axi_interconnect_1_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hls_prova3_axi_interconnect_1_0 || ORIG_REF_NAME==hls_prova3_axi_interconnect_1_0} -quiet] -quiet
-
-# IP: bd/hls_prova3/ip/hls_prova3_c_counter_binary_0_0/hls_prova3_c_counter_binary_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hls_prova3_c_counter_binary_0_0 || ORIG_REF_NAME==hls_prova3_c_counter_binary_0_0} -quiet] -quiet
-
-# IP: bd/hls_prova3/ip/hls_prova3_ddr_to_axis_reader_SD_0_0/hls_prova3_ddr_to_axis_reader_SD_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hls_prova3_ddr_to_axis_reader_SD_0_0 || ORIG_REF_NAME==hls_prova3_ddr_to_axis_reader_SD_0_0} -quiet] -quiet
-
-# IP: bd/hls_prova3/ip/hls_prova3_mux_sd_ov_1_0/hls_prova3_mux_sd_ov_1_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hls_prova3_mux_sd_ov_1_0 || ORIG_REF_NAME==hls_prova3_mux_sd_ov_1_0} -quiet] -quiet
-
-# IP: bd/hls_prova3/ip/hls_prova3_ov7670_LUMA_CHROMA_0_0/hls_prova3_ov7670_LUMA_CHROMA_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hls_prova3_ov7670_LUMA_CHROMA_0_0 || ORIG_REF_NAME==hls_prova3_ov7670_LUMA_CHROMA_0_0} -quiet] -quiet
-
-# IP: bd/hls_prova3/ip/hls_prova3_ov7670_interface_0_0/hls_prova3_ov7670_interface_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hls_prova3_ov7670_interface_0_0 || ORIG_REF_NAME==hls_prova3_ov7670_interface_0_0} -quiet] -quiet
-
-# IP: bd/hls_prova3/ip/hls_prova3_axi_interconnect_0_0/hls_prova3_axi_interconnect_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hls_prova3_axi_interconnect_0_0 || ORIG_REF_NAME==hls_prova3_axi_interconnect_0_0} -quiet] -quiet
-
-# IP: bd/hls_prova3/ip/hls_prova3_xbar_0/hls_prova3_xbar_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hls_prova3_xbar_0 || ORIG_REF_NAME==hls_prova3_xbar_0} -quiet] -quiet
-
-# IP: bd/hls_prova3/ip/hls_prova3_auto_ds_0/hls_prova3_auto_ds_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hls_prova3_auto_ds_0 || ORIG_REF_NAME==hls_prova3_auto_ds_0} -quiet] -quiet
-
-# IP: bd/hls_prova3/ip/hls_prova3_auto_pc_0/hls_prova3_auto_pc_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hls_prova3_auto_pc_0 || ORIG_REF_NAME==hls_prova3_auto_pc_0} -quiet] -quiet
-
-# XDC: bd/hls_prova3/hls_prova3_ooc.xdc
+# XDC: bd/prova_gr/prova_gr_ooc.xdc
