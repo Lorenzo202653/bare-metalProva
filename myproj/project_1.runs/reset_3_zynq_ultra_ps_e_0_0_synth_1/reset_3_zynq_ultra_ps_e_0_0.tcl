@@ -16,13 +16,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param power.enableLutRouteBelPower 1
-set_param power.enableCarry8RouteBelPower 1
-set_param power.enableUnconnectedCarry8PinPower 1
-set_param power.BramSDPPropagationFix 1
-set_param iopl.placeRegionalClockInstsInIOPlacer 0
-set_param iopl.placeGlobalClockInstsInIOPlacer 0
-set_msg_config -id {Common 17-41} -limit 10000000
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 create_project -in_memory -part xczu3eg-sbva484-1-e
@@ -37,7 +30,13 @@ set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part em.avnet.com:ultra96:part0:1.0 [current_project]
-set_property ip_repo_paths /media/kidre/Dati/GIT_TEST/bare-metalProva/SmartCamera [current_project]
+set_property ip_repo_paths {
+  /media/kidre/Dati/GIT_TEST/bare-metalProva/SmartCamera
+  /media/kidre/Dati/GIT_TEST/bare-metalProva/IP_HLS_PROVA/axi_prova
+  /home/kidre/Video/filtro_0
+  /media/kidre/Dati/GIT_TEST/bare-metalProva/IP_HLS_PROVA/lettura_diretta
+  /media/kidre/Dati/GIT_TEST/bare-metalProva/IP_HLS_PROVA/lettura_memcpy
+} [current_project]
 set_property ip_output_repo /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_ip -quiet /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/reset_3/ip/reset_3_zynq_ultra_ps_e_0_0/reset_3_zynq_ultra_ps_e_0_0.xci

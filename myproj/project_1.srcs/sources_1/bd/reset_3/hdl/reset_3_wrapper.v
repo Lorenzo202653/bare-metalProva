@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
-//Date        : Mon Sep 28 10:37:02 2020
+//Date        : Wed Oct 14 17:40:37 2020
 //Host        : kidre-N551JX running 64-bit Ubuntu 16.04.7 LTS
 //Command     : generate_target reset_3_wrapper.bd
 //Design      : reset_3_wrapper

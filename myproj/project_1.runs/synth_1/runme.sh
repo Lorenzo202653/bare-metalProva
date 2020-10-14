@@ -36,4 +36,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log prova_gr_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source prova_gr_wrapper.tcl
+EAStep vivado -log reset_3_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source reset_3_wrapper.tcl

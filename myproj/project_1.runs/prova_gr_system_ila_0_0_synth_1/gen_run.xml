@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="prova_gr_system_ila_0_0_synth_1" LaunchPart="xczu3eg-sbva484-1-e" LaunchTime="1602271425">
-  <File Type="RDS-UTIL" Name="prova_gr_system_ila_0_0_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="prova_gr_system_ila_0_0_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="prova_gr_system_ila_0_0_utilization_synth.rpt"/>
   <File Type="RDS-RDS" Name="prova_gr_system_ila_0_0.vds"/>
   <File Type="RDS-DCP" Name="prova_gr_system_ila_0_0.dcp"/>
   <File Type="PA-TCL" Name="prova_gr_system_ila_0_0.tcl"/>

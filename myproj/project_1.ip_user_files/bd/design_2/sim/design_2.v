@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
-//Date        : Fri Oct  2 15:17:26 2020
+//Date        : Fri Oct  2 15:40:39 2020
 //Host        : kidre-N551JX running 64-bit Ubuntu 16.04.7 LTS
 //Command     : generate_target design_2.bd
 //Design      : design_2
@@ -147,6 +147,9 @@ module OV7670_GRAYSCALE_TO_AXIS_imp_2J9JEX
   input s_axi_AXILiteS_wvalid;
   input [0:0]vsync;
 
+  wire [7:0]LF_valid_to_AXIS_outputStream_V_V_TDATA;
+  wire LF_valid_to_AXIS_outputStream_V_V_TREADY;
+  wire LF_valid_to_AXIS_outputStream_V_V_TVALID;
   wire PCLK_1;
   (* DEBUG = "true" *) (* MARK_DEBUG *) wire ap_done;
   wire [0:0]ap_start_1;
@@ -157,47 +160,47 @@ module OV7670_GRAYSCALE_TO_AXIS_imp_2J9JEX
   wire [7:0]ov7670_interface_0_data_out_V;
   wire [0:0]ov7670_interface_0_frame_valid_V;
   wire [0:0]ov7670_interface_0_line_valid_V;
-  wire [31:0]ov7670_prova_1_m_axi_outStream_grayscale_ARADDR;
-  wire [1:0]ov7670_prova_1_m_axi_outStream_grayscale_ARBURST;
-  wire [3:0]ov7670_prova_1_m_axi_outStream_grayscale_ARCACHE;
-  wire [7:0]ov7670_prova_1_m_axi_outStream_grayscale_ARLEN;
-  wire [1:0]ov7670_prova_1_m_axi_outStream_grayscale_ARLOCK;
-  wire [2:0]ov7670_prova_1_m_axi_outStream_grayscale_ARPROT;
-  wire [3:0]ov7670_prova_1_m_axi_outStream_grayscale_ARQOS;
-  wire ov7670_prova_1_m_axi_outStream_grayscale_ARREADY;
-  wire [3:0]ov7670_prova_1_m_axi_outStream_grayscale_ARREGION;
-  wire [2:0]ov7670_prova_1_m_axi_outStream_grayscale_ARSIZE;
-  wire ov7670_prova_1_m_axi_outStream_grayscale_ARVALID;
-  wire [31:0]ov7670_prova_1_m_axi_outStream_grayscale_AWADDR;
-  wire [1:0]ov7670_prova_1_m_axi_outStream_grayscale_AWBURST;
-  wire [3:0]ov7670_prova_1_m_axi_outStream_grayscale_AWCACHE;
-  wire [7:0]ov7670_prova_1_m_axi_outStream_grayscale_AWLEN;
-  wire [1:0]ov7670_prova_1_m_axi_outStream_grayscale_AWLOCK;
-  wire [2:0]ov7670_prova_1_m_axi_outStream_grayscale_AWPROT;
-  wire [3:0]ov7670_prova_1_m_axi_outStream_grayscale_AWQOS;
-  wire ov7670_prova_1_m_axi_outStream_grayscale_AWREADY;
-  wire [3:0]ov7670_prova_1_m_axi_outStream_grayscale_AWREGION;
-  wire [2:0]ov7670_prova_1_m_axi_outStream_grayscale_AWSIZE;
-  wire ov7670_prova_1_m_axi_outStream_grayscale_AWVALID;
-  wire ov7670_prova_1_m_axi_outStream_grayscale_BREADY;
-  wire [1:0]ov7670_prova_1_m_axi_outStream_grayscale_BRESP;
-  wire ov7670_prova_1_m_axi_outStream_grayscale_BVALID;
-  wire [31:0]ov7670_prova_1_m_axi_outStream_grayscale_RDATA;
-  wire ov7670_prova_1_m_axi_outStream_grayscale_RLAST;
-  wire ov7670_prova_1_m_axi_outStream_grayscale_RREADY;
-  wire [1:0]ov7670_prova_1_m_axi_outStream_grayscale_RRESP;
-  wire ov7670_prova_1_m_axi_outStream_grayscale_RVALID;
-  wire [31:0]ov7670_prova_1_m_axi_outStream_grayscale_WDATA;
-  wire ov7670_prova_1_m_axi_outStream_grayscale_WLAST;
-  wire ov7670_prova_1_m_axi_outStream_grayscale_WREADY;
-  wire [3:0]ov7670_prova_1_m_axi_outStream_grayscale_WSTRB;
-  wire ov7670_prova_1_m_axi_outStream_grayscale_WVALID;
-  wire [7:0]ov7670_prova_1_outStream_CHROMA_V_V_TDATA;
-  wire ov7670_prova_1_outStream_CHROMA_V_V_TREADY;
-  wire ov7670_prova_1_outStream_CHROMA_V_V_TVALID;
-  wire [7:0]ov7670_prova_1_outStream_LUMA_V_V_TDATA;
-  wire ov7670_prova_1_outStream_LUMA_V_V_TREADY;
-  wire ov7670_prova_1_outStream_LUMA_V_V_TVALID;
+  wire [31:0]ov7670_prova_0_m_axi_outStream_grayscale_ARADDR;
+  wire [1:0]ov7670_prova_0_m_axi_outStream_grayscale_ARBURST;
+  wire [3:0]ov7670_prova_0_m_axi_outStream_grayscale_ARCACHE;
+  wire [7:0]ov7670_prova_0_m_axi_outStream_grayscale_ARLEN;
+  wire [1:0]ov7670_prova_0_m_axi_outStream_grayscale_ARLOCK;
+  wire [2:0]ov7670_prova_0_m_axi_outStream_grayscale_ARPROT;
+  wire [3:0]ov7670_prova_0_m_axi_outStream_grayscale_ARQOS;
+  wire ov7670_prova_0_m_axi_outStream_grayscale_ARREADY;
+  wire [3:0]ov7670_prova_0_m_axi_outStream_grayscale_ARREGION;
+  wire [2:0]ov7670_prova_0_m_axi_outStream_grayscale_ARSIZE;
+  wire ov7670_prova_0_m_axi_outStream_grayscale_ARVALID;
+  wire [31:0]ov7670_prova_0_m_axi_outStream_grayscale_AWADDR;
+  wire [1:0]ov7670_prova_0_m_axi_outStream_grayscale_AWBURST;
+  wire [3:0]ov7670_prova_0_m_axi_outStream_grayscale_AWCACHE;
+  wire [7:0]ov7670_prova_0_m_axi_outStream_grayscale_AWLEN;
+  wire [1:0]ov7670_prova_0_m_axi_outStream_grayscale_AWLOCK;
+  wire [2:0]ov7670_prova_0_m_axi_outStream_grayscale_AWPROT;
+  wire [3:0]ov7670_prova_0_m_axi_outStream_grayscale_AWQOS;
+  wire ov7670_prova_0_m_axi_outStream_grayscale_AWREADY;
+  wire [3:0]ov7670_prova_0_m_axi_outStream_grayscale_AWREGION;
+  wire [2:0]ov7670_prova_0_m_axi_outStream_grayscale_AWSIZE;
+  wire ov7670_prova_0_m_axi_outStream_grayscale_AWVALID;
+  wire ov7670_prova_0_m_axi_outStream_grayscale_BREADY;
+  wire [1:0]ov7670_prova_0_m_axi_outStream_grayscale_BRESP;
+  wire ov7670_prova_0_m_axi_outStream_grayscale_BVALID;
+  wire [31:0]ov7670_prova_0_m_axi_outStream_grayscale_RDATA;
+  wire ov7670_prova_0_m_axi_outStream_grayscale_RLAST;
+  wire ov7670_prova_0_m_axi_outStream_grayscale_RREADY;
+  wire [1:0]ov7670_prova_0_m_axi_outStream_grayscale_RRESP;
+  wire ov7670_prova_0_m_axi_outStream_grayscale_RVALID;
+  wire [31:0]ov7670_prova_0_m_axi_outStream_grayscale_WDATA;
+  wire ov7670_prova_0_m_axi_outStream_grayscale_WLAST;
+  wire ov7670_prova_0_m_axi_outStream_grayscale_WREADY;
+  wire [3:0]ov7670_prova_0_m_axi_outStream_grayscale_WSTRB;
+  wire ov7670_prova_0_m_axi_outStream_grayscale_WVALID;
+  wire [7:0]ov7670_prova_0_outStream_CHROMA_V_V_TDATA;
+  wire ov7670_prova_0_outStream_CHROMA_V_V_TREADY;
+  wire ov7670_prova_0_outStream_CHROMA_V_V_TVALID;
+  wire [7:0]ov7670_prova_0_outStream_LUMA_V_V_TDATA;
+  wire ov7670_prova_0_outStream_LUMA_V_V_TREADY;
+  wire ov7670_prova_0_outStream_LUMA_V_V_TVALID;
   wire [0:0]proc_sys_reset_0_peripheral_aresetn;
   wire [0:0]reset_24M_peripheral_reset;
   wire [4:0]s_axi_AXILiteS_1_ARADDR;
@@ -226,47 +229,47 @@ module OV7670_GRAYSCALE_TO_AXIS_imp_2J9JEX
   assign data_in_V_1 = data_in[7:0];
   assign enable_raw_stream_1 = enable_raw_stream[0];
   assign href_V_1 = href[0];
-  assign m_axi_outStream_grayscale_V_araddr[31:0] = ov7670_prova_1_m_axi_outStream_grayscale_ARADDR;
-  assign m_axi_outStream_grayscale_V_arburst[1:0] = ov7670_prova_1_m_axi_outStream_grayscale_ARBURST;
-  assign m_axi_outStream_grayscale_V_arcache[3:0] = ov7670_prova_1_m_axi_outStream_grayscale_ARCACHE;
-  assign m_axi_outStream_grayscale_V_arlen[7:0] = ov7670_prova_1_m_axi_outStream_grayscale_ARLEN;
-  assign m_axi_outStream_grayscale_V_arlock[1:0] = ov7670_prova_1_m_axi_outStream_grayscale_ARLOCK;
-  assign m_axi_outStream_grayscale_V_arprot[2:0] = ov7670_prova_1_m_axi_outStream_grayscale_ARPROT;
-  assign m_axi_outStream_grayscale_V_arqos[3:0] = ov7670_prova_1_m_axi_outStream_grayscale_ARQOS;
-  assign m_axi_outStream_grayscale_V_arregion[3:0] = ov7670_prova_1_m_axi_outStream_grayscale_ARREGION;
-  assign m_axi_outStream_grayscale_V_arsize[2:0] = ov7670_prova_1_m_axi_outStream_grayscale_ARSIZE;
-  assign m_axi_outStream_grayscale_V_arvalid = ov7670_prova_1_m_axi_outStream_grayscale_ARVALID;
-  assign m_axi_outStream_grayscale_V_awaddr[31:0] = ov7670_prova_1_m_axi_outStream_grayscale_AWADDR;
-  assign m_axi_outStream_grayscale_V_awburst[1:0] = ov7670_prova_1_m_axi_outStream_grayscale_AWBURST;
-  assign m_axi_outStream_grayscale_V_awcache[3:0] = ov7670_prova_1_m_axi_outStream_grayscale_AWCACHE;
-  assign m_axi_outStream_grayscale_V_awlen[7:0] = ov7670_prova_1_m_axi_outStream_grayscale_AWLEN;
-  assign m_axi_outStream_grayscale_V_awlock[1:0] = ov7670_prova_1_m_axi_outStream_grayscale_AWLOCK;
-  assign m_axi_outStream_grayscale_V_awprot[2:0] = ov7670_prova_1_m_axi_outStream_grayscale_AWPROT;
-  assign m_axi_outStream_grayscale_V_awqos[3:0] = ov7670_prova_1_m_axi_outStream_grayscale_AWQOS;
-  assign m_axi_outStream_grayscale_V_awregion[3:0] = ov7670_prova_1_m_axi_outStream_grayscale_AWREGION;
-  assign m_axi_outStream_grayscale_V_awsize[2:0] = ov7670_prova_1_m_axi_outStream_grayscale_AWSIZE;
-  assign m_axi_outStream_grayscale_V_awvalid = ov7670_prova_1_m_axi_outStream_grayscale_AWVALID;
-  assign m_axi_outStream_grayscale_V_bready = ov7670_prova_1_m_axi_outStream_grayscale_BREADY;
-  assign m_axi_outStream_grayscale_V_rready = ov7670_prova_1_m_axi_outStream_grayscale_RREADY;
-  assign m_axi_outStream_grayscale_V_wdata[31:0] = ov7670_prova_1_m_axi_outStream_grayscale_WDATA;
-  assign m_axi_outStream_grayscale_V_wlast = ov7670_prova_1_m_axi_outStream_grayscale_WLAST;
-  assign m_axi_outStream_grayscale_V_wstrb[3:0] = ov7670_prova_1_m_axi_outStream_grayscale_WSTRB;
-  assign m_axi_outStream_grayscale_V_wvalid = ov7670_prova_1_m_axi_outStream_grayscale_WVALID;
-  assign outStream_raw_CHROMA_tdata[7:0] = ov7670_prova_1_outStream_CHROMA_V_V_TDATA;
-  assign outStream_raw_CHROMA_tvalid = ov7670_prova_1_outStream_CHROMA_V_V_TVALID;
-  assign outStream_raw_LUMA_tdata[7:0] = ov7670_prova_1_outStream_LUMA_V_V_TDATA;
-  assign outStream_raw_LUMA_tvalid = ov7670_prova_1_outStream_LUMA_V_V_TVALID;
-  assign ov7670_prova_1_m_axi_outStream_grayscale_ARREADY = m_axi_outStream_grayscale_V_arready;
-  assign ov7670_prova_1_m_axi_outStream_grayscale_AWREADY = m_axi_outStream_grayscale_V_awready;
-  assign ov7670_prova_1_m_axi_outStream_grayscale_BRESP = m_axi_outStream_grayscale_V_bresp[1:0];
-  assign ov7670_prova_1_m_axi_outStream_grayscale_BVALID = m_axi_outStream_grayscale_V_bvalid;
-  assign ov7670_prova_1_m_axi_outStream_grayscale_RDATA = m_axi_outStream_grayscale_V_rdata[31:0];
-  assign ov7670_prova_1_m_axi_outStream_grayscale_RLAST = m_axi_outStream_grayscale_V_rlast;
-  assign ov7670_prova_1_m_axi_outStream_grayscale_RRESP = m_axi_outStream_grayscale_V_rresp[1:0];
-  assign ov7670_prova_1_m_axi_outStream_grayscale_RVALID = m_axi_outStream_grayscale_V_rvalid;
-  assign ov7670_prova_1_m_axi_outStream_grayscale_WREADY = m_axi_outStream_grayscale_V_wready;
-  assign ov7670_prova_1_outStream_CHROMA_V_V_TREADY = outStream_raw_CHROMA_tready;
-  assign ov7670_prova_1_outStream_LUMA_V_V_TREADY = outStream_raw_LUMA_tready;
+  assign m_axi_outStream_grayscale_V_araddr[31:0] = ov7670_prova_0_m_axi_outStream_grayscale_ARADDR;
+  assign m_axi_outStream_grayscale_V_arburst[1:0] = ov7670_prova_0_m_axi_outStream_grayscale_ARBURST;
+  assign m_axi_outStream_grayscale_V_arcache[3:0] = ov7670_prova_0_m_axi_outStream_grayscale_ARCACHE;
+  assign m_axi_outStream_grayscale_V_arlen[7:0] = ov7670_prova_0_m_axi_outStream_grayscale_ARLEN;
+  assign m_axi_outStream_grayscale_V_arlock[1:0] = ov7670_prova_0_m_axi_outStream_grayscale_ARLOCK;
+  assign m_axi_outStream_grayscale_V_arprot[2:0] = ov7670_prova_0_m_axi_outStream_grayscale_ARPROT;
+  assign m_axi_outStream_grayscale_V_arqos[3:0] = ov7670_prova_0_m_axi_outStream_grayscale_ARQOS;
+  assign m_axi_outStream_grayscale_V_arregion[3:0] = ov7670_prova_0_m_axi_outStream_grayscale_ARREGION;
+  assign m_axi_outStream_grayscale_V_arsize[2:0] = ov7670_prova_0_m_axi_outStream_grayscale_ARSIZE;
+  assign m_axi_outStream_grayscale_V_arvalid = ov7670_prova_0_m_axi_outStream_grayscale_ARVALID;
+  assign m_axi_outStream_grayscale_V_awaddr[31:0] = ov7670_prova_0_m_axi_outStream_grayscale_AWADDR;
+  assign m_axi_outStream_grayscale_V_awburst[1:0] = ov7670_prova_0_m_axi_outStream_grayscale_AWBURST;
+  assign m_axi_outStream_grayscale_V_awcache[3:0] = ov7670_prova_0_m_axi_outStream_grayscale_AWCACHE;
+  assign m_axi_outStream_grayscale_V_awlen[7:0] = ov7670_prova_0_m_axi_outStream_grayscale_AWLEN;
+  assign m_axi_outStream_grayscale_V_awlock[1:0] = ov7670_prova_0_m_axi_outStream_grayscale_AWLOCK;
+  assign m_axi_outStream_grayscale_V_awprot[2:0] = ov7670_prova_0_m_axi_outStream_grayscale_AWPROT;
+  assign m_axi_outStream_grayscale_V_awqos[3:0] = ov7670_prova_0_m_axi_outStream_grayscale_AWQOS;
+  assign m_axi_outStream_grayscale_V_awregion[3:0] = ov7670_prova_0_m_axi_outStream_grayscale_AWREGION;
+  assign m_axi_outStream_grayscale_V_awsize[2:0] = ov7670_prova_0_m_axi_outStream_grayscale_AWSIZE;
+  assign m_axi_outStream_grayscale_V_awvalid = ov7670_prova_0_m_axi_outStream_grayscale_AWVALID;
+  assign m_axi_outStream_grayscale_V_bready = ov7670_prova_0_m_axi_outStream_grayscale_BREADY;
+  assign m_axi_outStream_grayscale_V_rready = ov7670_prova_0_m_axi_outStream_grayscale_RREADY;
+  assign m_axi_outStream_grayscale_V_wdata[31:0] = ov7670_prova_0_m_axi_outStream_grayscale_WDATA;
+  assign m_axi_outStream_grayscale_V_wlast = ov7670_prova_0_m_axi_outStream_grayscale_WLAST;
+  assign m_axi_outStream_grayscale_V_wstrb[3:0] = ov7670_prova_0_m_axi_outStream_grayscale_WSTRB;
+  assign m_axi_outStream_grayscale_V_wvalid = ov7670_prova_0_m_axi_outStream_grayscale_WVALID;
+  assign outStream_raw_CHROMA_tdata[7:0] = ov7670_prova_0_outStream_CHROMA_V_V_TDATA;
+  assign outStream_raw_CHROMA_tvalid = ov7670_prova_0_outStream_CHROMA_V_V_TVALID;
+  assign outStream_raw_LUMA_tdata[7:0] = ov7670_prova_0_outStream_LUMA_V_V_TDATA;
+  assign outStream_raw_LUMA_tvalid = ov7670_prova_0_outStream_LUMA_V_V_TVALID;
+  assign ov7670_prova_0_m_axi_outStream_grayscale_ARREADY = m_axi_outStream_grayscale_V_arready;
+  assign ov7670_prova_0_m_axi_outStream_grayscale_AWREADY = m_axi_outStream_grayscale_V_awready;
+  assign ov7670_prova_0_m_axi_outStream_grayscale_BRESP = m_axi_outStream_grayscale_V_bresp[1:0];
+  assign ov7670_prova_0_m_axi_outStream_grayscale_BVALID = m_axi_outStream_grayscale_V_bvalid;
+  assign ov7670_prova_0_m_axi_outStream_grayscale_RDATA = m_axi_outStream_grayscale_V_rdata[31:0];
+  assign ov7670_prova_0_m_axi_outStream_grayscale_RLAST = m_axi_outStream_grayscale_V_rlast;
+  assign ov7670_prova_0_m_axi_outStream_grayscale_RRESP = m_axi_outStream_grayscale_V_rresp[1:0];
+  assign ov7670_prova_0_m_axi_outStream_grayscale_RVALID = m_axi_outStream_grayscale_V_rvalid;
+  assign ov7670_prova_0_m_axi_outStream_grayscale_WREADY = m_axi_outStream_grayscale_V_wready;
+  assign ov7670_prova_0_outStream_CHROMA_V_V_TREADY = outStream_raw_CHROMA_tready;
+  assign ov7670_prova_0_outStream_LUMA_V_V_TREADY = outStream_raw_LUMA_tready;
   assign proc_sys_reset_0_peripheral_aresetn = ap_rst_n[0];
   assign reset_24M_peripheral_reset = ap_rst[0];
   assign s_axi_AXILiteS_1_ARADDR = s_axi_AXILiteS_araddr[4:0];
@@ -295,7 +298,9 @@ module OV7670_GRAYSCALE_TO_AXIS_imp_2J9JEX
         .data_in_V(ov7670_interface_0_data_out_V),
         .frame_valid(ov7670_interface_0_frame_valid_V),
         .line_valid(ov7670_interface_0_line_valid_V),
-        .outputStream_V_V_TREADY(1'b1));
+        .outputStream_V_V_TDATA(LF_valid_to_AXIS_outputStream_V_V_TDATA),
+        .outputStream_V_V_TREADY(LF_valid_to_AXIS_outputStream_V_V_TREADY),
+        .outputStream_V_V_TVALID(LF_valid_to_AXIS_outputStream_V_V_TVALID));
   design_2_c_counter_binary_0_1 c_counter_binary_0
        (.CLK(ov7670_interface_0_frame_valid_V),
         .THRESH0(c_counter_binary_0_THRESH0));
@@ -309,53 +314,54 @@ module OV7670_GRAYSCALE_TO_AXIS_imp_2J9JEX
         .href_V(href_V_1),
         .line_valid_V(ov7670_interface_0_line_valid_V),
         .vsync_V(vsync_V_1));
-  design_2_ov7670_prova_1_0 ov7670_prova_1
+  design_2_ov7670_prova_0_1 ov7670_prova_0
        (.ap_clk(PCLK_1),
         .ap_rst_n(proc_sys_reset_0_peripheral_aresetn),
         .enable_raw_stream(enable_raw_stream_1),
-        .inStream_V_V_TDATA({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .inStream_V_V_TVALID(1'b0),
-        .m_axi_outStream_grayscale_ARADDR(ov7670_prova_1_m_axi_outStream_grayscale_ARADDR),
-        .m_axi_outStream_grayscale_ARBURST(ov7670_prova_1_m_axi_outStream_grayscale_ARBURST),
-        .m_axi_outStream_grayscale_ARCACHE(ov7670_prova_1_m_axi_outStream_grayscale_ARCACHE),
-        .m_axi_outStream_grayscale_ARLEN(ov7670_prova_1_m_axi_outStream_grayscale_ARLEN),
-        .m_axi_outStream_grayscale_ARLOCK(ov7670_prova_1_m_axi_outStream_grayscale_ARLOCK),
-        .m_axi_outStream_grayscale_ARPROT(ov7670_prova_1_m_axi_outStream_grayscale_ARPROT),
-        .m_axi_outStream_grayscale_ARQOS(ov7670_prova_1_m_axi_outStream_grayscale_ARQOS),
-        .m_axi_outStream_grayscale_ARREADY(ov7670_prova_1_m_axi_outStream_grayscale_ARREADY),
-        .m_axi_outStream_grayscale_ARREGION(ov7670_prova_1_m_axi_outStream_grayscale_ARREGION),
-        .m_axi_outStream_grayscale_ARSIZE(ov7670_prova_1_m_axi_outStream_grayscale_ARSIZE),
-        .m_axi_outStream_grayscale_ARVALID(ov7670_prova_1_m_axi_outStream_grayscale_ARVALID),
-        .m_axi_outStream_grayscale_AWADDR(ov7670_prova_1_m_axi_outStream_grayscale_AWADDR),
-        .m_axi_outStream_grayscale_AWBURST(ov7670_prova_1_m_axi_outStream_grayscale_AWBURST),
-        .m_axi_outStream_grayscale_AWCACHE(ov7670_prova_1_m_axi_outStream_grayscale_AWCACHE),
-        .m_axi_outStream_grayscale_AWLEN(ov7670_prova_1_m_axi_outStream_grayscale_AWLEN),
-        .m_axi_outStream_grayscale_AWLOCK(ov7670_prova_1_m_axi_outStream_grayscale_AWLOCK),
-        .m_axi_outStream_grayscale_AWPROT(ov7670_prova_1_m_axi_outStream_grayscale_AWPROT),
-        .m_axi_outStream_grayscale_AWQOS(ov7670_prova_1_m_axi_outStream_grayscale_AWQOS),
-        .m_axi_outStream_grayscale_AWREADY(ov7670_prova_1_m_axi_outStream_grayscale_AWREADY),
-        .m_axi_outStream_grayscale_AWREGION(ov7670_prova_1_m_axi_outStream_grayscale_AWREGION),
-        .m_axi_outStream_grayscale_AWSIZE(ov7670_prova_1_m_axi_outStream_grayscale_AWSIZE),
-        .m_axi_outStream_grayscale_AWVALID(ov7670_prova_1_m_axi_outStream_grayscale_AWVALID),
-        .m_axi_outStream_grayscale_BREADY(ov7670_prova_1_m_axi_outStream_grayscale_BREADY),
-        .m_axi_outStream_grayscale_BRESP(ov7670_prova_1_m_axi_outStream_grayscale_BRESP),
-        .m_axi_outStream_grayscale_BVALID(ov7670_prova_1_m_axi_outStream_grayscale_BVALID),
-        .m_axi_outStream_grayscale_RDATA(ov7670_prova_1_m_axi_outStream_grayscale_RDATA),
-        .m_axi_outStream_grayscale_RLAST(ov7670_prova_1_m_axi_outStream_grayscale_RLAST),
-        .m_axi_outStream_grayscale_RREADY(ov7670_prova_1_m_axi_outStream_grayscale_RREADY),
-        .m_axi_outStream_grayscale_RRESP(ov7670_prova_1_m_axi_outStream_grayscale_RRESP),
-        .m_axi_outStream_grayscale_RVALID(ov7670_prova_1_m_axi_outStream_grayscale_RVALID),
-        .m_axi_outStream_grayscale_WDATA(ov7670_prova_1_m_axi_outStream_grayscale_WDATA),
-        .m_axi_outStream_grayscale_WLAST(ov7670_prova_1_m_axi_outStream_grayscale_WLAST),
-        .m_axi_outStream_grayscale_WREADY(ov7670_prova_1_m_axi_outStream_grayscale_WREADY),
-        .m_axi_outStream_grayscale_WSTRB(ov7670_prova_1_m_axi_outStream_grayscale_WSTRB),
-        .m_axi_outStream_grayscale_WVALID(ov7670_prova_1_m_axi_outStream_grayscale_WVALID),
-        .outStream_CHROMA_V_V_TDATA(ov7670_prova_1_outStream_CHROMA_V_V_TDATA),
-        .outStream_CHROMA_V_V_TREADY(ov7670_prova_1_outStream_CHROMA_V_V_TREADY),
-        .outStream_CHROMA_V_V_TVALID(ov7670_prova_1_outStream_CHROMA_V_V_TVALID),
-        .outStream_LUMA_V_V_TDATA(ov7670_prova_1_outStream_LUMA_V_V_TDATA),
-        .outStream_LUMA_V_V_TREADY(ov7670_prova_1_outStream_LUMA_V_V_TREADY),
-        .outStream_LUMA_V_V_TVALID(ov7670_prova_1_outStream_LUMA_V_V_TVALID),
+        .inStream_V_V_TDATA(LF_valid_to_AXIS_outputStream_V_V_TDATA),
+        .inStream_V_V_TREADY(LF_valid_to_AXIS_outputStream_V_V_TREADY),
+        .inStream_V_V_TVALID(LF_valid_to_AXIS_outputStream_V_V_TVALID),
+        .m_axi_outStream_grayscale_ARADDR(ov7670_prova_0_m_axi_outStream_grayscale_ARADDR),
+        .m_axi_outStream_grayscale_ARBURST(ov7670_prova_0_m_axi_outStream_grayscale_ARBURST),
+        .m_axi_outStream_grayscale_ARCACHE(ov7670_prova_0_m_axi_outStream_grayscale_ARCACHE),
+        .m_axi_outStream_grayscale_ARLEN(ov7670_prova_0_m_axi_outStream_grayscale_ARLEN),
+        .m_axi_outStream_grayscale_ARLOCK(ov7670_prova_0_m_axi_outStream_grayscale_ARLOCK),
+        .m_axi_outStream_grayscale_ARPROT(ov7670_prova_0_m_axi_outStream_grayscale_ARPROT),
+        .m_axi_outStream_grayscale_ARQOS(ov7670_prova_0_m_axi_outStream_grayscale_ARQOS),
+        .m_axi_outStream_grayscale_ARREADY(ov7670_prova_0_m_axi_outStream_grayscale_ARREADY),
+        .m_axi_outStream_grayscale_ARREGION(ov7670_prova_0_m_axi_outStream_grayscale_ARREGION),
+        .m_axi_outStream_grayscale_ARSIZE(ov7670_prova_0_m_axi_outStream_grayscale_ARSIZE),
+        .m_axi_outStream_grayscale_ARVALID(ov7670_prova_0_m_axi_outStream_grayscale_ARVALID),
+        .m_axi_outStream_grayscale_AWADDR(ov7670_prova_0_m_axi_outStream_grayscale_AWADDR),
+        .m_axi_outStream_grayscale_AWBURST(ov7670_prova_0_m_axi_outStream_grayscale_AWBURST),
+        .m_axi_outStream_grayscale_AWCACHE(ov7670_prova_0_m_axi_outStream_grayscale_AWCACHE),
+        .m_axi_outStream_grayscale_AWLEN(ov7670_prova_0_m_axi_outStream_grayscale_AWLEN),
+        .m_axi_outStream_grayscale_AWLOCK(ov7670_prova_0_m_axi_outStream_grayscale_AWLOCK),
+        .m_axi_outStream_grayscale_AWPROT(ov7670_prova_0_m_axi_outStream_grayscale_AWPROT),
+        .m_axi_outStream_grayscale_AWQOS(ov7670_prova_0_m_axi_outStream_grayscale_AWQOS),
+        .m_axi_outStream_grayscale_AWREADY(ov7670_prova_0_m_axi_outStream_grayscale_AWREADY),
+        .m_axi_outStream_grayscale_AWREGION(ov7670_prova_0_m_axi_outStream_grayscale_AWREGION),
+        .m_axi_outStream_grayscale_AWSIZE(ov7670_prova_0_m_axi_outStream_grayscale_AWSIZE),
+        .m_axi_outStream_grayscale_AWVALID(ov7670_prova_0_m_axi_outStream_grayscale_AWVALID),
+        .m_axi_outStream_grayscale_BREADY(ov7670_prova_0_m_axi_outStream_grayscale_BREADY),
+        .m_axi_outStream_grayscale_BRESP(ov7670_prova_0_m_axi_outStream_grayscale_BRESP),
+        .m_axi_outStream_grayscale_BVALID(ov7670_prova_0_m_axi_outStream_grayscale_BVALID),
+        .m_axi_outStream_grayscale_RDATA(ov7670_prova_0_m_axi_outStream_grayscale_RDATA),
+        .m_axi_outStream_grayscale_RLAST(ov7670_prova_0_m_axi_outStream_grayscale_RLAST),
+        .m_axi_outStream_grayscale_RREADY(ov7670_prova_0_m_axi_outStream_grayscale_RREADY),
+        .m_axi_outStream_grayscale_RRESP(ov7670_prova_0_m_axi_outStream_grayscale_RRESP),
+        .m_axi_outStream_grayscale_RVALID(ov7670_prova_0_m_axi_outStream_grayscale_RVALID),
+        .m_axi_outStream_grayscale_WDATA(ov7670_prova_0_m_axi_outStream_grayscale_WDATA),
+        .m_axi_outStream_grayscale_WLAST(ov7670_prova_0_m_axi_outStream_grayscale_WLAST),
+        .m_axi_outStream_grayscale_WREADY(ov7670_prova_0_m_axi_outStream_grayscale_WREADY),
+        .m_axi_outStream_grayscale_WSTRB(ov7670_prova_0_m_axi_outStream_grayscale_WSTRB),
+        .m_axi_outStream_grayscale_WVALID(ov7670_prova_0_m_axi_outStream_grayscale_WVALID),
+        .outStream_CHROMA_V_V_TDATA(ov7670_prova_0_outStream_CHROMA_V_V_TDATA),
+        .outStream_CHROMA_V_V_TREADY(ov7670_prova_0_outStream_CHROMA_V_V_TREADY),
+        .outStream_CHROMA_V_V_TVALID(ov7670_prova_0_outStream_CHROMA_V_V_TVALID),
+        .outStream_LUMA_V_V_TDATA(ov7670_prova_0_outStream_LUMA_V_V_TDATA),
+        .outStream_LUMA_V_V_TREADY(ov7670_prova_0_outStream_LUMA_V_V_TREADY),
+        .outStream_LUMA_V_V_TVALID(ov7670_prova_0_outStream_LUMA_V_V_TVALID),
         .s_axi_AXILiteS_ARADDR(s_axi_AXILiteS_1_ARADDR),
         .s_axi_AXILiteS_ARREADY(s_axi_AXILiteS_1_ARREADY),
         .s_axi_AXILiteS_ARVALID(s_axi_AXILiteS_1_ARVALID),

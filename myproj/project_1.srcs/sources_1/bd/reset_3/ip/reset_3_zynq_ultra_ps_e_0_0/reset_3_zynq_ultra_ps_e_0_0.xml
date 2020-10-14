@@ -1190,7 +1190,7 @@
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.M_AXI_HPM1_FPD" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">true</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.M_AXI_HPM1_FPD" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -4812,7 +4812,7 @@
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.S_AXI_HP0_FPD" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">true</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.S_AXI_HP0_FPD" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -5998,7 +5998,7 @@
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.S_AXI_HP2_FPD" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">true</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.S_AXI_HP2_FPD" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -7314,7 +7314,7 @@
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.M_AXI_HPM1_FPD_ACLK" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">true</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.M_AXI_HPM1_FPD_ACLK" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -7704,7 +7704,7 @@
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.S_AXI_HP0_FPD_ACLK" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">true</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.S_AXI_HP0_FPD_ACLK" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -7834,7 +7834,7 @@
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.S_AXI_HP2_FPD_ACLK" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">true</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.S_AXI_HP2_FPD_ACLK" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -8289,7 +8289,7 @@
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.S_AXI_HP0_FPD_RCLK" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">true</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.S_AXI_HP0_FPD_RCLK" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -8354,7 +8354,7 @@
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.S_AXI_HP0_FPD_WCLK" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">true</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.S_AXI_HP0_FPD_WCLK" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -8549,7 +8549,7 @@
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.S_AXI_HP2_FPD_RCLK" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">true</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.S_AXI_HP2_FPD_RCLK" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -8614,7 +8614,7 @@
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.S_AXI_HP2_FPD_WCLK" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">true</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.S_AXI_HP2_FPD_WCLK" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -24501,7 +24501,7 @@
       <spirit:vendorExtensions>
         <xilinx:memoryMapInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="MEMMAP_ENABLEMENT.SAXIGP2" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">true</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="MEMMAP_ENABLEMENT.SAXIGP2" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:memoryMapInfo>
       </spirit:vendorExtensions>
@@ -26321,7 +26321,7 @@
       <spirit:vendorExtensions>
         <xilinx:memoryMapInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="MEMMAP_ENABLEMENT.SAXIGP4" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">true</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="MEMMAP_ENABLEMENT.SAXIGP4" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:memoryMapInfo>
       </spirit:vendorExtensions>
@@ -29980,11 +29980,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Aug 27 10:40:55 UTC 2020</spirit:value>
+            <spirit:value>Wed Oct 14 15:40:52 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:b43209c6</spirit:value>
+            <spirit:value>8:78ad19cb</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -30000,11 +30000,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Aug 27 10:40:57 UTC 2020</spirit:value>
+            <spirit:value>Wed Oct 14 15:40:54 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:b43209c6</spirit:value>
+            <spirit:value>8:78ad19cb</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -30035,7 +30035,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:53383fbf</spirit:value>
+            <spirit:value>8:91bf90c3</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -30051,11 +30051,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Aug 27 10:41:01 UTC 2020</spirit:value>
+            <spirit:value>Wed Oct 14 15:40:56 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:53383fbf</spirit:value>
+            <spirit:value>8:91bf90c3</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>sim_type</spirit:name>
@@ -30075,11 +30075,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Aug 27 10:41:01 UTC 2020</spirit:value>
+            <spirit:value>Wed Oct 14 15:40:56 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:53383fbf</spirit:value>
+            <spirit:value>8:91bf90c3</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>sim_type</spirit:name>
@@ -30102,11 +30102,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Aug 27 10:41:01 UTC 2020</spirit:value>
+            <spirit:value>Wed Oct 14 15:40:56 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:53383fbf</spirit:value>
+            <spirit:value>8:91bf90c3</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -30122,11 +30122,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Aug 27 10:41:01 UTC 2020</spirit:value>
+            <spirit:value>Wed Oct 14 15:40:56 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:53383fbf</spirit:value>
+            <spirit:value>8:91bf90c3</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>sim_type</spirit:name>
@@ -30146,11 +30146,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Aug 27 10:41:19 UTC 2020</spirit:value>
+            <spirit:value>Wed Oct 14 15:41:05 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:53383fbf</spirit:value>
+            <spirit:value>8:91bf90c3</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>sim_type</spirit:name>
@@ -30165,7 +30165,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:b43209c6</spirit:value>
+            <spirit:value>8:78ad19cb</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -30179,11 +30179,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Aug 27 10:44:21 UTC 2020</spirit:value>
+            <spirit:value>Wed Oct 14 15:44:52 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:b43209c6</spirit:value>
+            <spirit:value>8:78ad19cb</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -31137,7 +31137,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxihpm1_fpd_aclk" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxihpm1_fpd_aclk" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -31161,7 +31161,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_awid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_awid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -31185,7 +31185,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_awaddr" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_awaddr" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -31209,7 +31209,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_awlen" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_awlen" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -31233,7 +31233,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_awsize" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_awsize" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -31257,7 +31257,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_awburst" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_awburst" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -31277,7 +31277,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_awlock" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_awlock" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -31301,7 +31301,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_awcache" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_awcache" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -31325,7 +31325,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_awprot" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_awprot" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -31345,7 +31345,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_awvalid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_awvalid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -31369,7 +31369,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_awuser" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_awuser" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -31392,7 +31392,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_awready" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_awready" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -31416,7 +31416,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_wdata" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_wdata" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -31440,7 +31440,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_wstrb" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_wstrb" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -31460,7 +31460,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_wlast" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_wlast" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -31480,7 +31480,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_wvalid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_wvalid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -31503,7 +31503,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_wready" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_wready" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -31530,7 +31530,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_bid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_bid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -31557,7 +31557,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_bresp" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_bresp" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -31580,7 +31580,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_bvalid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_bvalid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -31600,7 +31600,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_bready" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_bready" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -31624,7 +31624,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_arid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_arid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -31648,7 +31648,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_araddr" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_araddr" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -31672,7 +31672,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_arlen" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_arlen" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -31696,7 +31696,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_arsize" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_arsize" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -31720,7 +31720,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_arburst" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_arburst" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -31740,7 +31740,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_arlock" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_arlock" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -31764,7 +31764,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_arcache" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_arcache" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -31788,7 +31788,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_arprot" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_arprot" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -31808,7 +31808,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_arvalid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_arvalid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -31832,7 +31832,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_aruser" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_aruser" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -31855,7 +31855,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_arready" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_arready" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -31882,7 +31882,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_rid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_rid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -31909,7 +31909,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_rdata" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_rdata" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -31936,7 +31936,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_rresp" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_rresp" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -31959,7 +31959,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_rlast" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_rlast" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -31982,7 +31982,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_rvalid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_rvalid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -32002,7 +32002,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_rready" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_rready" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -32026,7 +32026,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_awqos" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_awqos" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -32050,7 +32050,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_arqos" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.maxigp1_arqos" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -35336,7 +35336,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxihp0_fpd_aclk" xilinx:dependency="((spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)  &amp;&amp; (spirit:decode(id(PARAM_VALUE.PSU__USE_DIFF_RW_CLK_GP2)) =0))">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxihp0_fpd_aclk" xilinx:dependency="((spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)  &amp;&amp; (spirit:decode(id(PARAM_VALUE.PSU__USE_DIFF_RW_CLK_GP2)) =0))">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -35359,7 +35359,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_aruser" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_aruser" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -35382,7 +35382,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_awuser" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_awuser" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -35409,7 +35409,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_awid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_awid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -35436,7 +35436,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_awaddr" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_awaddr" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -35463,7 +35463,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_awlen" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_awlen" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -35490,7 +35490,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_awsize" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_awsize" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -35517,7 +35517,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_awburst" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_awburst" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -35540,7 +35540,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_awlock" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_awlock" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -35567,7 +35567,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_awcache" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_awcache" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -35594,7 +35594,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_awprot" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_awprot" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -35617,7 +35617,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_awvalid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_awvalid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -35637,7 +35637,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_awready" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_awready" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -35664,7 +35664,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_wdata" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_wdata" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -35691,7 +35691,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_wstrb" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_wstrb" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -35714,7 +35714,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_wlast" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_wlast" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -35737,7 +35737,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_wvalid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_wvalid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -35757,7 +35757,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_wready" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_wready" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -35781,7 +35781,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_bid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_bid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -35805,7 +35805,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_bresp" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_bresp" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -35825,7 +35825,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_bvalid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_bvalid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -35848,7 +35848,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_bready" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_bready" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -35875,7 +35875,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_arid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_arid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -35902,7 +35902,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_araddr" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_araddr" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -35929,7 +35929,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_arlen" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_arlen" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -35956,7 +35956,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_arsize" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_arsize" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -35983,7 +35983,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_arburst" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_arburst" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -36006,7 +36006,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_arlock" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_arlock" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -36033,7 +36033,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_arcache" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_arcache" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -36060,7 +36060,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_arprot" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_arprot" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -36083,7 +36083,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_arvalid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_arvalid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -36103,7 +36103,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_arready" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_arready" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -36127,7 +36127,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_rid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_rid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -36151,7 +36151,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_rdata" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_rdata" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -36175,7 +36175,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_rresp" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_rresp" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -36195,7 +36195,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_rlast" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_rlast" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -36215,7 +36215,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_rvalid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_rvalid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -36238,7 +36238,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_rready" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_rready" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -36265,7 +36265,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_awqos" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_awqos" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -36292,7 +36292,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_arqos" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp2_arqos" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -37560,7 +37560,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxihp2_fpd_aclk" xilinx:dependency="((spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1) &amp;&amp; (spirit:decode(id(PARAM_VALUE.PSU__USE_DIFF_RW_CLK_GP4)) = 0))">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxihp2_fpd_aclk" xilinx:dependency="((spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1) &amp;&amp; (spirit:decode(id(PARAM_VALUE.PSU__USE_DIFF_RW_CLK_GP4)) = 0))">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -37583,7 +37583,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_aruser" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_aruser" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -37606,7 +37606,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_awuser" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_awuser" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -37633,7 +37633,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_awid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_awid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -37660,7 +37660,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_awaddr" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_awaddr" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -37687,7 +37687,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_awlen" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_awlen" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -37714,7 +37714,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_awsize" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_awsize" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -37741,7 +37741,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_awburst" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_awburst" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -37764,7 +37764,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_awlock" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_awlock" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -37791,7 +37791,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_awcache" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_awcache" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -37818,7 +37818,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_awprot" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_awprot" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -37841,7 +37841,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_awvalid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_awvalid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -37861,7 +37861,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_awready" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_awready" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -37888,7 +37888,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_wdata" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_wdata" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -37915,7 +37915,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_wstrb" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_wstrb" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -37938,7 +37938,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_wlast" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_wlast" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -37961,7 +37961,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_wvalid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_wvalid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -37981,7 +37981,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_wready" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_wready" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -38005,7 +38005,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_bid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_bid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -38029,7 +38029,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_bresp" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_bresp" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -38049,7 +38049,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_bvalid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_bvalid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -38072,7 +38072,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_bready" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_bready" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -38099,7 +38099,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_arid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_arid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -38126,7 +38126,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_araddr" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_araddr" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -38153,7 +38153,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_arlen" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_arlen" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -38180,7 +38180,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_arsize" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_arsize" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -38207,7 +38207,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_arburst" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_arburst" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -38230,7 +38230,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_arlock" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_arlock" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -38257,7 +38257,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_arcache" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_arcache" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -38284,7 +38284,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_arprot" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_arprot" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -38307,7 +38307,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_arvalid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_arvalid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -38327,7 +38327,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_arready" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_arready" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -38351,7 +38351,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_rid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_rid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -38375,7 +38375,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_rdata" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_rdata" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -38399,7 +38399,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_rresp" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_rresp" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -38419,7 +38419,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_rlast" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_rlast" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -38439,7 +38439,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_rvalid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_rvalid" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -38462,7 +38462,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_rready" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_rready" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -38489,7 +38489,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_awqos" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_awqos" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -38516,7 +38516,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_arqos" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.saxigp4_arqos" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -64190,7 +64190,7 @@
         <spirit:vendorExtensions>
           <xilinx:parameterInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="MODELPARAM_ENABLEMENT.C_MAXIGP1_DATA_WIDTH" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="MODELPARAM_ENABLEMENT.C_MAXIGP1_DATA_WIDTH" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:parameterInfo>
         </spirit:vendorExtensions>
@@ -64234,7 +64234,7 @@
         <spirit:vendorExtensions>
           <xilinx:parameterInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="MODELPARAM_ENABLEMENT.C_SAXIGP2_DATA_WIDTH" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="MODELPARAM_ENABLEMENT.C_SAXIGP2_DATA_WIDTH" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:parameterInfo>
         </spirit:vendorExtensions>
@@ -64256,7 +64256,7 @@
         <spirit:vendorExtensions>
           <xilinx:parameterInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="MODELPARAM_ENABLEMENT.C_SAXIGP4_DATA_WIDTH" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="MODELPARAM_ENABLEMENT.C_SAXIGP4_DATA_WIDTH" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:parameterInfo>
         </spirit:vendorExtensions>
@@ -68340,7 +68340,7 @@
     <spirit:parameter>
       <spirit:name>PSU__PROTECTION__MASTERS</spirit:name>
       <spirit:displayName>PSU__PROTECTION__MASTERS</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PROTECTION__MASTERS" spirit:order="212">USB1:NonSecure;1|USB0:NonSecure;1|S_AXI_LPD:NA;0|S_AXI_HPC1_FPD:NA;0|S_AXI_HPC0_FPD:NA;0|S_AXI_HP3_FPD:NA;0|S_AXI_HP2_FPD:NA;1|S_AXI_HP1_FPD:NA;1|S_AXI_HP0_FPD:NA;1|S_AXI_ACP:NA;0|S_AXI_ACE:NA;0|SD1:NonSecure;1|SD0:NonSecure;1|SATA1:NonSecure;0|SATA0:NonSecure;0|RPU1:Secure;1|RPU0:Secure;1|QSPI:NonSecure;0|PMU:NA;1|PCIe:NonSecure;0|NAND:NonSecure;0|LDMA:NonSecure;1|GPU:NonSecure;1|GEM3:NonSecure;0|GEM2:NonSecure;0|GEM1:NonSecure;0|GEM0:NonSecure;0|FDMA:NonSecure;1|DP:NonSecure;1|DAP:NA;1|Coresig
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PROTECTION__MASTERS" spirit:order="212">USB1:NonSecure;1|USB0:NonSecure;1|S_AXI_LPD:NA;0|S_AXI_HPC1_FPD:NA;0|S_AXI_HPC0_FPD:NA;0|S_AXI_HP3_FPD:NA;0|S_AXI_HP2_FPD:NA;0|S_AXI_HP1_FPD:NA;1|S_AXI_HP0_FPD:NA;0|S_AXI_ACP:NA;0|S_AXI_ACE:NA;0|SD1:NonSecure;1|SD0:NonSecure;1|SATA1:NonSecure;0|SATA0:NonSecure;0|RPU1:Secure;1|RPU0:Secure;1|QSPI:NonSecure;0|PMU:NA;1|PCIe:NonSecure;0|NAND:NonSecure;0|LDMA:NonSecure;1|GPU:NonSecure;1|GEM3:NonSecure;0|GEM2:NonSecure;0|GEM1:NonSecure;0|GEM0:NonSecure;0|FDMA:NonSecure;1|DP:NonSecure;1|DAP:NA;1|Coresig
 ht:NA;1|CSU:NA;1|APU:NA;1</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
@@ -70519,7 +70519,7 @@ FA50000;FFA5FFFF;1|FPD;AFI_5;FD3B0000;FD3BFFFF;1|FPD;AFI_4;FD3A0000;FD3AFFFF;1|F
     <spirit:parameter>
       <spirit:name>PSU__USE__M_AXI_GP1</spirit:name>
       <spirit:displayName>PSU USE M AXI GP1</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__USE__M_AXI_GP1" spirit:choiceRef="choice_list_8af5a703" spirit:order="524">1</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__USE__M_AXI_GP1" spirit:choiceRef="choice_list_8af5a703" spirit:order="524">0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__M_AXI_GP1_SUPPORTS_NARROW_BURST</spirit:name>
@@ -70533,7 +70533,7 @@ FA50000;FFA5FFFF;1|FPD;AFI_5;FD3B0000;FD3BFFFF;1|FPD;AFI_4;FD3A0000;FD3AFFFF;1|F
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.PSU__MAXIGP1__DATA_WIDTH" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">true</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.PSU__MAXIGP1__DATA_WIDTH" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -70626,7 +70626,7 @@ FA50000;FFA5FFFF;1|FPD;AFI_5;FD3B0000;FD3BFFFF;1|FPD;AFI_4;FD3A0000;FD3AFFFF;1|F
     <spirit:parameter>
       <spirit:name>PSU__USE__S_AXI_GP2</spirit:name>
       <spirit:displayName>PSU USE S AXI GP2</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__USE__S_AXI_GP2" spirit:choiceRef="choice_list_8af5a703" spirit:order="537">1</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__USE__S_AXI_GP2" spirit:choiceRef="choice_list_8af5a703" spirit:order="537">0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__USE_DIFF_RW_CLK_GP2</spirit:name>
@@ -70635,7 +70635,7 @@ FA50000;FFA5FFFF;1|FPD;AFI_5;FD3B0000;FD3BFFFF;1|FPD;AFI_4;FD3A0000;FD3AFFFF;1|F
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.PSU__USE_DIFF_RW_CLK_GP2" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">true</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.PSU__USE_DIFF_RW_CLK_GP2" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -70647,7 +70647,7 @@ FA50000;FFA5FFFF;1|FPD;AFI_5;FD3B0000;FD3BFFFF;1|FPD;AFI_4;FD3A0000;FD3AFFFF;1|F
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.PSU__SAXIGP2__DATA_WIDTH" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">true</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.PSU__SAXIGP2__DATA_WIDTH" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -70684,7 +70684,7 @@ FA50000;FFA5FFFF;1|FPD;AFI_5;FD3B0000;FD3BFFFF;1|FPD;AFI_4;FD3A0000;FD3AFFFF;1|F
     <spirit:parameter>
       <spirit:name>PSU__USE__S_AXI_GP4</spirit:name>
       <spirit:displayName>PSU USE S AXI GP4</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__USE__S_AXI_GP4" spirit:choiceRef="choice_list_8af5a703" spirit:order="543">1</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__USE__S_AXI_GP4" spirit:choiceRef="choice_list_8af5a703" spirit:order="543">0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__USE_DIFF_RW_CLK_GP4</spirit:name>
@@ -70693,7 +70693,7 @@ FA50000;FFA5FFFF;1|FPD;AFI_5;FD3B0000;FD3BFFFF;1|FPD;AFI_4;FD3A0000;FD3AFFFF;1|F
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.PSU__USE_DIFF_RW_CLK_GP4" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">true</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.PSU__USE_DIFF_RW_CLK_GP4" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -70705,7 +70705,7 @@ FA50000;FFA5FFFF;1|FPD;AFI_5;FD3B0000;FD3BFFFF;1|FPD;AFI_4;FD3A0000;FD3AFFFF;1|F
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.PSU__SAXIGP4__DATA_WIDTH" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">true</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.PSU__SAXIGP4__DATA_WIDTH" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -77402,7 +77402,7 @@ FA50000;FFA5FFFF;1|FPD;AFI_5;FD3B0000;FD3BFFFF;1|FPD;AFI_4;FD3A0000;FD3AFFFF;1|F
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.PSU__M_AXI_GP1__FREQMHZ" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">true</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.PSU__M_AXI_GP1__FREQMHZ" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__M_AXI_GP1)) = 1)">false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -77450,7 +77450,7 @@ FA50000;FFA5FFFF;1|FPD;AFI_5;FD3B0000;FD3BFFFF;1|FPD;AFI_4;FD3A0000;FD3AFFFF;1|F
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.PSU__S_AXI_GP2__FREQMHZ" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">true</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.PSU__S_AXI_GP2__FREQMHZ" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP2)) = 1)">false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -77474,7 +77474,7 @@ FA50000;FFA5FFFF;1|FPD;AFI_5;FD3B0000;FD3BFFFF;1|FPD;AFI_4;FD3A0000;FD3AFFFF;1|F
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.PSU__S_AXI_GP4__FREQMHZ" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">true</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.PSU__S_AXI_GP4__FREQMHZ" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__USE__S_AXI_GP4)) = 1)">false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>

@@ -61,53 +61,50 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
+      <File Path="$PSRCDIR/sources_1/bd/reset_3/reset_3.bd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+        <CompFileExtendedInfo CompFileName="reset_3.bd" FileRelPathName="ip/reset_3_zynq_ultra_ps_e_0_0/reset_3_zynq_ultra_ps_e_0_0.xci">
+          <Proxy FileSetName="reset_3_zynq_ultra_ps_e_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="reset_3.bd" FileRelPathName="ip/reset_3_xbar_2/reset_3_xbar_2.xci">
+          <Proxy FileSetName="reset_3_xbar_2"/>
+        </CompFileExtendedInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/bd/reset_3/hdl/reset_3_wrapper.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/bd/prova_gr/prova_gr.bd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-        <CompFileExtendedInfo CompFileName="prova_gr.bd" FileRelPathName="ip/prova_gr_zynq_ultra_ps_e_0_0/prova_gr_zynq_ultra_ps_e_0_0.xci">
-          <Proxy FileSetName="prova_gr_zynq_ultra_ps_e_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="prova_gr.bd" FileRelPathName="ip/prova_gr_system_ila_0_0/prova_gr_system_ila_0_0.xci">
-          <Proxy FileSetName="prova_gr_system_ila_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="prova_gr.bd" FileRelPathName="ip/prova_gr_LF_valid_to_AXIS_0/prova_gr_LF_valid_to_AXIS_0.xci">
-          <Proxy FileSetName="prova_gr_LF_valid_to_AXIS_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="prova_gr.bd" FileRelPathName="ip/prova_gr_ov7670_interface_0_0/prova_gr_ov7670_interface_0_0.xci">
-          <Proxy FileSetName="prova_gr_ov7670_interface_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="prova_gr.bd" FileRelPathName="ip/prova_gr_axis_data_fifo_pipeline_to_writer_0/prova_gr_axis_data_fifo_pipeline_to_writer_0.xci">
-          <Proxy FileSetName="prova_gr_axis_data_fifo_pipeline_to_writer_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="prova_gr.bd" FileRelPathName="ip/prova_gr_xbar_1/prova_gr_xbar_1.xci">
-          <Proxy FileSetName="prova_gr_xbar_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="prova_gr.bd" FileRelPathName="ip/prova_gr_ov7670_grayscale_0_0/prova_gr_ov7670_grayscale_0_0.xci">
-          <Proxy FileSetName="prova_gr_ov7670_grayscale_0_0"/>
-        </CompFileExtendedInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/bd/prova_gr/hdl/prova_gr_wrapper.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/bd/memcp/memcp.bd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="memcp.bd" FileRelPathName="ip/memcp_xbar_1/memcp_xbar_1.xci">
-          <Proxy FileSetName="memcp_xbar_1"/>
+        <CompFileExtendedInfo CompFileName="prova_gr.bd" FileRelPathName="ip/prova_gr_system_ila_0_0/prova_gr_system_ila_0_0.xci">
+          <Proxy FileSetName="prova_gr_system_ila_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="prova_gr.bd" FileRelPathName="ip/prova_gr_zynq_ultra_ps_e_0_0/prova_gr_zynq_ultra_ps_e_0_0.xci">
+          <Proxy FileSetName="prova_gr_zynq_ultra_ps_e_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="prova_gr.bd" FileRelPathName="ip/prova_gr_LF_valid_to_AXIS_0/prova_gr_LF_valid_to_AXIS_0.xci">
+          <Proxy FileSetName="prova_gr_LF_valid_to_AXIS_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="prova_gr.bd" FileRelPathName="ip/prova_gr_xbar_1/prova_gr_xbar_1.xci">
+          <Proxy FileSetName="prova_gr_xbar_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="prova_gr.bd" FileRelPathName="ip/prova_gr_axis_data_fifo_pipeline_to_writer_0/prova_gr_axis_data_fifo_pipeline_to_writer_0.xci">
+          <Proxy FileSetName="prova_gr_axis_data_fifo_pipeline_to_writer_0"/>
         </CompFileExtendedInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/bd/memcp/hdl/memcp_wrapper.v">
+      <File Path="$PSRCDIR/sources_1/bd/prova_gr/hdl/prova_gr_wrapper.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -122,17 +119,17 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="ma.bd" FileRelPathName="ip/ma_ov7670_diretto_0_0/ma_ov7670_diretto_0_0.xci">
-          <Proxy FileSetName="ma_ov7670_diretto_0_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="ma.bd" FileRelPathName="ip/ma_zynq_ultra_ps_e_0_0/ma_zynq_ultra_ps_e_0_0.xci">
           <Proxy FileSetName="ma_zynq_ultra_ps_e_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="ma.bd" FileRelPathName="ip/ma_xbar_1/ma_xbar_1.xci">
-          <Proxy FileSetName="ma_xbar_1"/>
+        <CompFileExtendedInfo CompFileName="ma.bd" FileRelPathName="ip/ma_ov7670_diretto_0_0/ma_ov7670_diretto_0_0.xci">
+          <Proxy FileSetName="ma_ov7670_diretto_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="ma.bd" FileRelPathName="ip/ma_axi_dma_0_0/ma_axi_dma_0_0.xci">
           <Proxy FileSetName="ma_axi_dma_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="ma.bd" FileRelPathName="ip/ma_xbar_1/ma_xbar_1.xci">
+          <Proxy FileSetName="ma_xbar_1"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/ma/hdl/ma_wrapper.v">
@@ -162,120 +159,9 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/bd/reset_3/reset_3.bd">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-        <CompFileExtendedInfo CompFileName="reset_3.bd" FileRelPathName="ip/reset_3_ila_0_1/reset_3_ila_0_1.xci">
-          <Proxy FileSetName="reset_3_ila_0_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="reset_3.bd" FileRelPathName="ip/reset_3_xbar_2/reset_3_xbar_2.xci">
-          <Proxy FileSetName="reset_3_xbar_2"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="reset_3.bd" FileRelPathName="ip/reset_3_zynq_ultra_ps_e_0_0/reset_3_zynq_ultra_ps_e_0_0.xci">
-          <Proxy FileSetName="reset_3_zynq_ultra_ps_e_0_0"/>
-        </CompFileExtendedInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/bd/reset_3/hdl/reset_3_wrapper.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/bd/hls_prova3/hls_prova3.bd">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-        <CompFileExtendedInfo CompFileName="hls_prova3.bd" FileRelPathName="ip/hls_prova3_zynq_ultra_ps_e_0_0/hls_prova3_zynq_ultra_ps_e_0_0.xci">
-          <Proxy FileSetName="hls_prova3_zynq_ultra_ps_e_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="hls_prova3.bd" FileRelPathName="ip/hls_prova3_xbar_1/hls_prova3_xbar_1.xci">
-          <Proxy FileSetName="hls_prova3_xbar_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="hls_prova3.bd" FileRelPathName="ip/hls_prova3_axi_write_prova_0_0/hls_prova3_axi_write_prova_0_0.xci">
-          <Proxy FileSetName="hls_prova3_axi_write_prova_0_0"/>
-        </CompFileExtendedInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/bd/hls_prova3/hdl/hls_prova3_wrapper.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/bd/prova2/prova2.bd">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-        <CompFileExtendedInfo CompFileName="prova2.bd" FileRelPathName="ip/prova2_xbar_1/prova2_xbar_1.xci">
-          <Proxy FileSetName="prova2_xbar_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="prova2.bd" FileRelPathName="ip/prova2_zynq_ultra_ps_e_0_0/prova2_zynq_ultra_ps_e_0_0.xci">
-          <Proxy FileSetName="prova2_zynq_ultra_ps_e_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="prova2.bd" FileRelPathName="ip/prova2_xbar_0/prova2_xbar_0.xci">
-          <Proxy FileSetName="prova2_xbar_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="prova2.bd" FileRelPathName="ip/prova2_axi_write_prova_0_0/prova2_axi_write_prova_0_0.xci">
-          <Proxy FileSetName="prova2_axi_write_prova_0_0"/>
-        </CompFileExtendedInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/bd/pulsante/pulsante.bd">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-        <CompFileExtendedInfo CompFileName="pulsante.bd" FileRelPathName="ip/pulsante_xbar_2/pulsante_xbar_2.xci">
-          <Proxy FileSetName="pulsante_xbar_2"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="pulsante.bd" FileRelPathName="ip/pulsante_zynq_ultra_ps_e_0_0/pulsante_zynq_ultra_ps_e_0_0.xci">
-          <Proxy FileSetName="pulsante_zynq_ultra_ps_e_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="pulsante.bd" FileRelPathName="ip/pulsante_axi_gpio_frame_intr_0/pulsante_axi_gpio_frame_intr_0.xci">
-          <Proxy FileSetName="pulsante_axi_gpio_frame_intr_0"/>
-        </CompFileExtendedInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/bd/pulsante/hdl/pulsante_wrapper.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/bd/interrupt/interrupt.bd">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/bd/lettura_grayscale/lettura_grayscale.bd">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="prova_gr_wrapper"/>
+        <Option Name="TopModule" Val="reset_3_wrapper"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -309,75 +195,9 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="pulsante_zynq_ultra_ps_e_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/pulsante_zynq_ultra_ps_e_0_0">
-      <Config>
-        <Option Name="TopModule" Val="pulsante_zynq_ultra_ps_e_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="pulsante_axi_gpio_frame_intr_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/pulsante_axi_gpio_frame_intr_0">
-      <Config>
-        <Option Name="TopModule" Val="pulsante_axi_gpio_frame_intr_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="pulsante_xbar_2" Type="BlockSrcs" RelSrcDir="$PSRCDIR/pulsante_xbar_2">
-      <Config>
-        <Option Name="TopModule" Val="pulsante_xbar_2"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
     <FileSet Name="reset_3_xbar_2" Type="BlockSrcs" RelSrcDir="$PSRCDIR/reset_3_xbar_2">
       <Config>
         <Option Name="TopModule" Val="reset_3_xbar_2"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="prova2_zynq_ultra_ps_e_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/prova2_zynq_ultra_ps_e_0_0">
-      <Config>
-        <Option Name="TopModule" Val="prova2_zynq_ultra_ps_e_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="prova2_xbar_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/prova2_xbar_1">
-      <Config>
-        <Option Name="TopModule" Val="prova2_xbar_1"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="prova2_axi_write_prova_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/prova2_axi_write_prova_0_0">
-      <Config>
-        <Option Name="TopModule" Val="prova2_axi_write_prova_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="prova2_xbar_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/prova2_xbar_0">
-      <Config>
-        <Option Name="TopModule" Val="prova2_xbar_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="hls_prova3_xbar_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/hls_prova3_xbar_1">
-      <Config>
-        <Option Name="TopModule" Val="hls_prova3_xbar_1"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="hls_prova3_zynq_ultra_ps_e_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/hls_prova3_zynq_ultra_ps_e_0_0">
-      <Config>
-        <Option Name="TopModule" Val="hls_prova3_zynq_ultra_ps_e_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="hls_prova3_axi_write_prova_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/hls_prova3_axi_write_prova_0_0">
-      <Config>
-        <Option Name="TopModule" Val="hls_prova3_axi_write_prova_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="reset_3_ila_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/reset_3_ila_0_1">
-      <Config>
-        <Option Name="TopModule" Val="reset_3_ila_0_1"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -411,12 +231,6 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="memcp_xbar_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/memcp_xbar_1">
-      <Config>
-        <Option Name="TopModule" Val="memcp_xbar_1"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
     <FileSet Name="prova_gr_zynq_ultra_ps_e_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/prova_gr_zynq_ultra_ps_e_0_0">
       <Config>
         <Option Name="TopModule" Val="prova_gr_zynq_ultra_ps_e_0_0"/>
@@ -429,12 +243,6 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="prova_gr_ov7670_grayscale_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/prova_gr_ov7670_grayscale_0_0">
-      <Config>
-        <Option Name="TopModule" Val="prova_gr_ov7670_grayscale_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
     <FileSet Name="prova_gr_xbar_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/prova_gr_xbar_1">
       <Config>
         <Option Name="TopModule" Val="prova_gr_xbar_1"/>
@@ -444,12 +252,6 @@
     <FileSet Name="prova_gr_LF_valid_to_AXIS_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/prova_gr_LF_valid_to_AXIS_0">
       <Config>
         <Option Name="TopModule" Val="prova_gr_LF_valid_to_AXIS_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="prova_gr_ov7670_interface_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/prova_gr_ov7670_interface_0_0">
-      <Config>
-        <Option Name="TopModule" Val="prova_gr_ov7670_interface_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -503,106 +305,7 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="pulsante_zynq_ultra_ps_e_0_0_synth_1" Type="Ft3:Synth" SrcSet="pulsante_zynq_ultra_ps_e_0_0" Part="xczu3eg-sbva484-1-e" ConstrsSet="pulsante_zynq_ultra_ps_e_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/pulsante_zynq_ultra_ps_e_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="pulsante_axi_gpio_frame_intr_0_synth_1" Type="Ft3:Synth" SrcSet="pulsante_axi_gpio_frame_intr_0" Part="xczu3eg-sbva484-1-e" ConstrsSet="pulsante_axi_gpio_frame_intr_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/pulsante_axi_gpio_frame_intr_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="pulsante_xbar_2_synth_1" Type="Ft3:Synth" SrcSet="pulsante_xbar_2" Part="xczu3eg-sbva484-1-e" ConstrsSet="pulsante_xbar_2" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/pulsante_xbar_2_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
     <Run Id="reset_3_xbar_2_synth_1" Type="Ft3:Synth" SrcSet="reset_3_xbar_2" Part="xczu3eg-sbva484-1-e" ConstrsSet="reset_3_xbar_2" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/reset_3_xbar_2_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="prova2_zynq_ultra_ps_e_0_0_synth_1" Type="Ft3:Synth" SrcSet="prova2_zynq_ultra_ps_e_0_0" Part="xczu3eg-sbva484-1-e" ConstrsSet="prova2_zynq_ultra_ps_e_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/prova2_zynq_ultra_ps_e_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="prova2_xbar_1_synth_1" Type="Ft3:Synth" SrcSet="prova2_xbar_1" Part="xczu3eg-sbva484-1-e" ConstrsSet="prova2_xbar_1" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/prova2_xbar_1_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="prova2_axi_write_prova_0_0_synth_1" Type="Ft3:Synth" SrcSet="prova2_axi_write_prova_0_0" Part="xczu3eg-sbva484-1-e" ConstrsSet="prova2_axi_write_prova_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/prova2_axi_write_prova_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="prova2_xbar_0_synth_1" Type="Ft3:Synth" SrcSet="prova2_xbar_0" Part="xczu3eg-sbva484-1-e" ConstrsSet="prova2_xbar_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/prova2_xbar_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="hls_prova3_xbar_1_synth_1" Type="Ft3:Synth" SrcSet="hls_prova3_xbar_1" Part="xczu3eg-sbva484-1-e" ConstrsSet="hls_prova3_xbar_1" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/hls_prova3_xbar_1_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="hls_prova3_zynq_ultra_ps_e_0_0_synth_1" Type="Ft3:Synth" SrcSet="hls_prova3_zynq_ultra_ps_e_0_0" Part="xczu3eg-sbva484-1-e" ConstrsSet="hls_prova3_zynq_ultra_ps_e_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/hls_prova3_zynq_ultra_ps_e_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="hls_prova3_axi_write_prova_0_0_synth_1" Type="Ft3:Synth" SrcSet="hls_prova3_axi_write_prova_0_0" Part="xczu3eg-sbva484-1-e" ConstrsSet="hls_prova3_axi_write_prova_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/hls_prova3_axi_write_prova_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="reset_3_ila_0_1_synth_1" Type="Ft3:Synth" SrcSet="reset_3_ila_0_1" Part="xczu3eg-sbva484-1-e" ConstrsSet="reset_3_ila_0_1" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/reset_3_ila_0_1_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
@@ -656,15 +359,6 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="memcp_xbar_1_synth_1" Type="Ft3:Synth" SrcSet="memcp_xbar_1" Part="xczu3eg-sbva484-1-e" ConstrsSet="memcp_xbar_1" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/memcp_xbar_1_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
     <Run Id="prova_gr_zynq_ultra_ps_e_0_0_synth_1" Type="Ft3:Synth" SrcSet="prova_gr_zynq_ultra_ps_e_0_0" Part="xczu3eg-sbva484-1-e" ConstrsSet="prova_gr_zynq_ultra_ps_e_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/prova_gr_zynq_ultra_ps_e_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
@@ -675,15 +369,6 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
     <Run Id="prova_gr_system_ila_0_0_synth_1" Type="Ft3:Synth" SrcSet="prova_gr_system_ila_0_0" Part="xczu3eg-sbva484-1-e" ConstrsSet="prova_gr_system_ila_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/prova_gr_system_ila_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="prova_gr_ov7670_grayscale_0_0_synth_1" Type="Ft3:Synth" SrcSet="prova_gr_ov7670_grayscale_0_0" Part="xczu3eg-sbva484-1-e" ConstrsSet="prova_gr_ov7670_grayscale_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/prova_gr_ov7670_grayscale_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
@@ -703,20 +388,7 @@
     </Run>
     <Run Id="prova_gr_LF_valid_to_AXIS_0_synth_1" Type="Ft3:Synth" SrcSet="prova_gr_LF_valid_to_AXIS_0" Part="xczu3eg-sbva484-1-e" ConstrsSet="prova_gr_LF_valid_to_AXIS_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/prova_gr_LF_valid_to_AXIS_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="prova_gr_ov7670_interface_0_0_synth_1" Type="Ft3:Synth" SrcSet="prova_gr_ov7670_interface_0_0" Part="xczu3eg-sbva484-1-e" ConstrsSet="prova_gr_ov7670_interface_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/prova_gr_ov7670_interface_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -725,9 +397,7 @@
     </Run>
     <Run Id="prova_gr_axis_data_fifo_pipeline_to_writer_0_synth_1" Type="Ft3:Synth" SrcSet="prova_gr_axis_data_fifo_pipeline_to_writer_0" Part="xczu3eg-sbva484-1-e" ConstrsSet="prova_gr_axis_data_fifo_pipeline_to_writer_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/prova_gr_axis_data_fifo_pipeline_to_writer_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -767,183 +437,7 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="pulsante_zynq_ultra_ps_e_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-e" ConstrsSet="pulsante_zynq_ultra_ps_e_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="pulsante_zynq_ultra_ps_e_0_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="pulsante_axi_gpio_frame_intr_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-e" ConstrsSet="pulsante_axi_gpio_frame_intr_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="pulsante_axi_gpio_frame_intr_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="pulsante_xbar_2_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-e" ConstrsSet="pulsante_xbar_2" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="pulsante_xbar_2_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
     <Run Id="reset_3_xbar_2_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-e" ConstrsSet="reset_3_xbar_2" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="reset_3_xbar_2_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="prova2_zynq_ultra_ps_e_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-e" ConstrsSet="prova2_zynq_ultra_ps_e_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="prova2_zynq_ultra_ps_e_0_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="prova2_xbar_1_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-e" ConstrsSet="prova2_xbar_1" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="prova2_xbar_1_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="prova2_axi_write_prova_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-e" ConstrsSet="prova2_axi_write_prova_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="prova2_axi_write_prova_0_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="prova2_xbar_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-e" ConstrsSet="prova2_xbar_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="prova2_xbar_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="hls_prova3_xbar_1_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-e" ConstrsSet="hls_prova3_xbar_1" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="hls_prova3_xbar_1_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="hls_prova3_zynq_ultra_ps_e_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-e" ConstrsSet="hls_prova3_zynq_ultra_ps_e_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="hls_prova3_zynq_ultra_ps_e_0_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="hls_prova3_axi_write_prova_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-e" ConstrsSet="hls_prova3_axi_write_prova_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="hls_prova3_axi_write_prova_0_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="reset_3_ila_0_1_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-e" ConstrsSet="reset_3_ila_0_1" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="reset_3_ila_0_1_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
@@ -1039,22 +533,6 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="memcp_xbar_1_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-e" ConstrsSet="memcp_xbar_1" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="memcp_xbar_1_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
     <Run Id="prova_gr_zynq_ultra_ps_e_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-e" ConstrsSet="prova_gr_zynq_ultra_ps_e_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="prova_gr_zynq_ultra_ps_e_0_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
@@ -1072,22 +550,6 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
     <Run Id="prova_gr_system_ila_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-e" ConstrsSet="prova_gr_system_ila_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="prova_gr_system_ila_0_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="prova_gr_ov7670_grayscale_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-e" ConstrsSet="prova_gr_ov7670_grayscale_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="prova_gr_ov7670_grayscale_0_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
@@ -1121,27 +583,7 @@
     </Run>
     <Run Id="prova_gr_LF_valid_to_AXIS_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-e" ConstrsSet="prova_gr_LF_valid_to_AXIS_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="prova_gr_LF_valid_to_AXIS_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="prova_gr_ov7670_interface_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-e" ConstrsSet="prova_gr_ov7670_interface_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="prova_gr_ov7670_interface_0_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -1157,9 +599,7 @@
     </Run>
     <Run Id="prova_gr_axis_data_fifo_pipeline_to_writer_0_impl_1" Type="Ft2:EntireDesign" Part="xczu3eg-sbva484-1-e" ConstrsSet="prova_gr_axis_data_fifo_pipeline_to_writer_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="prova_gr_axis_data_fifo_pipeline_to_writer_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

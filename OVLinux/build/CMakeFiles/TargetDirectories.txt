@@ -1,0 +1,11 @@
+/home/OVLinux/build/CMakeFiles/axis_to_ddr_writer_linux.dir
+/home/OVLinux/build/CMakeFiles/ddr_to_axis_reader.dir
+/home/OVLinux/build/CMakeFiles/axis_to_ddr_writer.dir
+/home/OVLinux/build/CMakeFiles/ddr_to_axis_reader_linux.dir
+/home/OVLinux/build/CMakeFiles/gpio_linux.dir
+/home/OVLinux/build/CMakeFiles/edit_cache.dir
+/home/OVLinux/build/CMakeFiles/gpio.dir
+/home/OVLinux/build/CMakeFiles/ov7670Stop.dir
+/home/OVLinux/build/CMakeFiles/ov7670Start.dir
+/home/OVLinux/build/CMakeFiles/rebuild_cache.dir
+/home/OVLinux/build/CMakeFiles/getFrames.dir

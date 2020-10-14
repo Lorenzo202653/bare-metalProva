@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="ma_xbar_1_synth_1" LaunchPart="xczu3eg-sbva484-1-e" LaunchTime="1602086671">
-  <File Type="RDS-UTIL-PB" Name="ma_xbar_1_utilization_synth.pb"/>
   <File Type="RDS-UTIL" Name="ma_xbar_1_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="ma_xbar_1_utilization_synth.pb"/>
   <File Type="RDS-RDS" Name="ma_xbar_1.vds"/>
   <File Type="RDS-DCP" Name="ma_xbar_1.dcp"/>
   <File Type="PA-TCL" Name="ma_xbar_1.tcl"/>

@@ -1,5 +1,5 @@
 {
-   ExpandedHierarchyInLayout: "",
+   ExpandedHierarchyInLayout: "/VDMA|/OV7670_GRAYSCALE_TO_AXIS",
    guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 TLS
 #  -string -flagsOSRD
 preplace port XCLK -pg 1 -y 620 -defaultsOSRD

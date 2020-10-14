@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
-// Date        : Fri Oct  9 21:27:21 2020
+// Date        : Wed Oct 14 17:45:36 2020
 // Host        : kidre-N551JX running 64-bit Ubuntu 16.04.7 LTS
 // Command     : write_verilog -force -mode synth_stub
 //               /media/kidre/Dati/GIT_TEST/bare-metalProva/myproj/project_1.srcs/sources_1/bd/prova_gr/ip/prova_gr_xbar_1/prova_gr_xbar_1_stub.v

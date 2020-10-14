@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xczu3eg-sbva484-1-e" LaunchTime="1602603785">
-  <File Type="VDS-TIMING-PB" Name="prova_gr_wrapper_timing_summary_synth.pb"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="prova_gr_wrapper_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="prova_gr_wrapper.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="prova_gr_wrapper_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="prova_gr_wrapper_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="prova_gr_wrapper_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="prova_gr_wrapper.vds"/>
-  <File Type="REPORTS-TCL" Name="prova_gr_wrapper_reports.tcl"/>
-  <File Type="PA-TCL" Name="prova_gr_wrapper.tcl"/>
+<GenRun Id="synth_1" LaunchPart="xczu3eg-sbva484-1-e" LaunchTime="1602690083">
+  <File Type="VDS-TIMING-PB" Name="reset_3_wrapper_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="reset_3_wrapper_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="reset_3_wrapper.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="reset_3_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="reset_3_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="reset_3_wrapper_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="reset_3_wrapper.vds"/>
+  <File Type="REPORTS-TCL" Name="reset_3_wrapper_reports.tcl"/>
+  <File Type="PA-TCL" Name="reset_3_wrapper.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/bd/reset_3/reset_3.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/reset_3/hdl/reset_3_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/bd/prova_gr/prova_gr.bd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/bd/prova_gr/hdl/prova_gr_wrapper.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/bd/memcp/memcp.bd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -33,7 +33,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/bd/memcp/hdl/memcp_wrapper.v">
+    <File Path="$PSRCDIR/sources_1/bd/prova_gr/hdl/prova_gr_wrapper.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -73,81 +73,9 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/bd/reset_3/reset_3.bd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/bd/reset_3/hdl/reset_3_wrapper.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/bd/hls_prova3/hls_prova3.bd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/bd/hls_prova3/hdl/hls_prova3_wrapper.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/bd/prova2/prova2.bd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/bd/pulsante/pulsante.bd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/bd/pulsante/hdl/pulsante_wrapper.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/bd/interrupt/interrupt.bd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/bd/lettura_grayscale/lettura_grayscale.bd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="prova_gr_wrapper"/>
+      <Option Name="TopModule" Val="reset_3_wrapper"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -167,30 +95,16 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="prova_gr_axis_data_fifo_pipeline_to_writer_0"/>
   <BlockFileSet Type="BlockSrcs" Name="prova_gr_LF_valid_to_AXIS_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="prova_gr_ov7670_interface_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="prova_gr_xbar_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="prova_gr_ov7670_grayscale_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="prova_gr_system_ila_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="prova_gr_zynq_ultra_ps_e_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="memcp_xbar_1"/>
   <BlockFileSet Type="BlockSrcs" Name="ma_zynq_ultra_ps_e_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="ma_axi_dma_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="reset_3_ila_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="hls_prova3_axi_write_prova_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="prova_gr_axis_data_fifo_pipeline_to_writer_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="hls_prova3_zynq_ultra_ps_e_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="prova_gr_system_ila_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="hls_prova3_xbar_1"/>
   <BlockFileSet Type="BlockSrcs" Name="ma_xbar_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="prova2_xbar_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="prova2_xbar_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_2_clk_wiz_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="ma_ov7670_diretto_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="reset_3_xbar_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="pulsante_xbar_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="pulsante_axi_gpio_frame_intr_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_2_clk_wiz_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="prova2_axi_write_prova_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="pulsante_zynq_ultra_ps_e_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="prova2_zynq_ultra_ps_e_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="reset_3_zynq_ultra_ps_e_0_0"/>
 </GenRun>

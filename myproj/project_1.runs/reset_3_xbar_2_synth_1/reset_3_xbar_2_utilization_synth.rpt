@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
-| Date         : Thu Aug 27 12:44:26 2020
+| Date         : Wed Oct 14 17:45:02 2020
 | Host         : kidre-N551JX running 64-bit Ubuntu 16.04.7 LTS
 | Command      : report_utilization -file reset_3_xbar_2_utilization_synth.rpt -pb reset_3_xbar_2_utilization_synth.pb
 | Design       : reset_3_xbar_2
@@ -31,11 +31,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| CLB LUTs*               |  261 |     0 |     70560 |  0.37 |
-|   LUT as Logic          |  261 |     0 |     70560 |  0.37 |
+| CLB LUTs*               |  249 |     0 |     70560 |  0.35 |
+|   LUT as Logic          |  249 |     0 |     70560 |  0.35 |
 |   LUT as Memory         |    0 |     0 |     28800 |  0.00 |
-| CLB Registers           |  143 |     0 |    141120 |  0.10 |
-|   Register as Flip Flop |  143 |     0 |    141120 |  0.10 |
+| CLB Registers           |  142 |     0 |    141120 |  0.10 |
+|   Register as Flip Flop |  142 |     0 |    141120 |  0.10 |
 |   Register as Latch     |    0 |     0 |    141120 |  0.00 |
 | CARRY8                  |    0 |     0 |      8820 |  0.00 |
 | F7 Muxes                |    0 |     0 |     35280 |  0.00 |
@@ -60,7 +60,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 143   |          Yes |       Reset |            - |
+| 142   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -147,13 +147,13 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  143 |            Register |
-| LUT6     |  105 |                 CLB |
-| LUT5     |   74 |                 CLB |
-| LUT4     |   61 |                 CLB |
-| LUT3     |   43 |                 CLB |
-| LUT2     |   15 |                 CLB |
-| LUT1     |    3 |                 CLB |
+| FDRE     |  142 |            Register |
+| LUT5     |  111 |                 CLB |
+| LUT4     |   63 |                 CLB |
+| LUT6     |   57 |                 CLB |
+| LUT3     |   45 |                 CLB |
+| LUT2     |   12 |                 CLB |
+| LUT1     |    2 |                 CLB |
 +----------+------+---------------------+
 
 
